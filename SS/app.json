@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "PUPSyS",
-    "slug": "PUPSyS",
+    "name": "StudentSuccess",
+    "slug": "StudentSuccess",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FCFCFC"
       },
-      "package": "com.PUPSyS.PUPSyS"
+      "package": "com.wpivis.StudentSuccess"
     },
     "web": {
       "favicon": "./assets/favicon.png"
