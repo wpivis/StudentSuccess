@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "PUPSyS",
-    "slug": "PUPSyS",
+    "name": "WPI_Student_Success",
+    "slug": "WPI_Student_Success",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FCFCFC"
       },
-      "package": "com.PUPSyS.PUPSyS"
+      "package": "com.WPI_Student_Success.WPI_Student_Success"
     },
     "web": {
       "favicon": "./assets/favicon.png"
