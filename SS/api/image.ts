@@ -18,7 +18,7 @@ export enum AppDrawerItemIcon {
   Living = "home-outline",
   Wellness = "heart-outline",
   Diversity = "earth-outline",
-  Exploring = "footsteps-outline",
+  Exploring = "compass-outline",
   Safety = "shield-checkmark-outline",
   Technology = "desktop-outline",
   Finances = "cash-outline",
