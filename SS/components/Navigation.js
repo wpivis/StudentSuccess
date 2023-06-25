@@ -37,7 +37,8 @@ export function renderAppDrawerScreens() {
     const iconName = AppDrawerItemIcon[key];
     return (
       <AppDrawer.Screen
-        children={() => <DrawerPage pageKey={key} />}
+        key={key} // Important to note that "key" and "pageKey" are different. "key" is a React prop for differentiating elements rendered in a map()
+        children={() => <DrawerPage pageKey={key} />} // pageKey tells DrawerPage which page we want to render.
         name={label}
         options={{
           drawerLabel: label,
