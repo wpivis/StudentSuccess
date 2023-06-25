@@ -5,7 +5,7 @@ import { NavigationContainer, } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Ionicons" 
 
 // Component Imports
-import { AppDrawer, AppDrawerScreens, navTheme, } from "./components/Navigation";
+import { AppDrawer, renderAppDrawerScreens, navTheme, } from "./components/Navigation";
 
 // API Imports
 import { AppDrawerItemIcon } from "./api/image";
@@ -20,12 +20,12 @@ function App() {
 
   return (
     <View style={{height: '100%'}}>
-      <StatusBar backgroundColor={dark ? darkTheme.statusBarColor : lightTheme.statusBarColor} />
+      <StatusBar />
       <NavigationContainer theme={navTheme}>
         <AppDrawer.Navigator
           initialRouteName={AppDrawerItemName.Welcome}
         >
-          <AppDrawerScreens />
+          { renderAppDrawerScreens() }
         </AppDrawer.Navigator>
       </NavigationContainer>
     </View>

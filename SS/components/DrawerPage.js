@@ -2,10 +2,15 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { AppDrawerItemName } from '../api/navigation'
 
-export default function DrawerPage({key}) {
+/**
+ * A component for rendering page data for drawer items by drawer item key
+ * @param {string} params.pageKey - enum key for which page this will render 
+ * @returns View with data by page key
+ */
+export default function DrawerPage({pageKey}) {
   return (
     <View>
-      <Text>{AppDrawerItemName[key]}</Text>
+      <Text>{AppDrawerItemName[pageKey]}</Text>
     </View>
   )
 }

@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { AppDrawerItemName } from '../api/navigation';
 import { AppDrawerItemIcon } from '../api/image';
 import DrawerPage from './DrawerPage';
+import { Text } from 'react-native';
 
 /** 
  * The main App Stack navigator, allowing the user to visit pages not contained within the mainPage bottom tab navigation 
@@ -26,7 +27,7 @@ export const navTheme = {
 /**
  * AppDrawer navigation screens rendered from {@link AppDrawerItemName} enum values
  */
-export function AppDrawerScreens() {
+export function renderAppDrawerScreens() {
 
   // Get all members of AppDrawerItemName enum
   return Object.keys(AppDrawerItemName).map(key => {
@@ -36,7 +37,7 @@ export function AppDrawerScreens() {
     const iconName = AppDrawerItemIcon[key];
     return (
       <AppDrawer.Screen
-        component={<DrawerPage key={key} />}
+        children={() => <DrawerPage pageKey={key} />}
         name={label}
         options={{
           drawerLabel: label,
