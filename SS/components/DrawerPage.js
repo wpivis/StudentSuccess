@@ -9,7 +9,7 @@ import { AppDrawerItemName } from '../api/navigation'
  */
 export default function DrawerPage({pageKey}) {
   return (
-    <View>
+    <View style={{alignItems: "center", width: "100%", display: "flex", flexDirection: "column"}}>
       <Text>{AppDrawerItemName[pageKey]}</Text>
     </View>
   )
