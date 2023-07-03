@@ -2,24 +2,30 @@
  * Enum for navigation drawer item icons
  * @example
  * AppDrawerItemIcon.Welcome = "person-outline";
- * AppDrawerItemIcon.About = "person-outline";
- * AppDrawerItemIcon.Life = "person-outline";
+ * AppDrawerItemIcon.Emergency = "shield-checkmark-outline";
+ * AppDrawerItemIcon.Additional_Contacts = "keypad-outline";
  * @readonly
  * @enum {string}
  */
 export enum AppDrawerItemIcon {
   Welcome = "person-outline",
-  About = "help-outline",
-  Life = "key-outline",
-  Make_The_Most = "analytics-outline",
-  Getting_Around = "map-outline",
-  Academic_Success = "school-outline",
-  Project_Based_Learning = "hammer-outline",
-  Living = "home-outline",
-  Wellness = "heart-outline",
-  Diversity = "earth-outline",
-  Exploring = "compass-outline",
-  Safety = "shield-checkmark-outline",
-  Technology = "desktop-outline",
-  Finances = "cash-outline",
+  Emergency = "shield-checkmark-outline",
+  Additional_Contacts = "keypad-outline",
+  Technology_And_Library = "desktop-outline",
+  First_Year = "key-outline",
+  Transition = "library-outline",
+  Offices_And_Resources = "business-outline",
+  Academic_Resources = "school-outline",
+  Study_Tips = "book-outline",
+  Jobs = "briefcase-outline",
+  Health = "heart-outline",
+  Housing = "home-outline",
+  Dining = "restaurant-outline",
+  Transportation = "bus-outline",
+  Diversity_And_Inclusion = "earth-outline",
+  Financial_Resources = "cash-outline",
+  Getting_Involved = "rocket-outline",
+  Exploring_Worcester = "compass-outline",
+  FAQ = "help-outline",
+  Glossary = "list-outline",
 }
