@@ -3,8 +3,8 @@ const express = require('express');
 // Init express application
 const app = express();
 // Start listening on defined port
-app.listen(3000, () => {
-    console.log('Now listening on port ' + 3000);
+app.listen(3001, () => {
+    console.log('Now listening on port ' + 3001);
 });
 
 // Serve static files
