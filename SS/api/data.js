@@ -234,6 +234,104 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "Additional Contacts/Resources",
     },
+    {
+      type: "h3",
+      text: "Residential Services/Community Director",
+    },
+    {
+      type: "a",
+      text: "Residential Services/Community Director",
+      href: "https://www.wpi.edu/offices/residential-services-office",
+    },
+    {
+      type: "a",
+      text: "(508) 831-5643",
+      href: "callto:5088315643",
+    },
+    {
+      type: "h3",
+      text: "ODIME",
+    },
+    {
+      type: "a",
+      text: "ODIME",
+      href: "https://www.wpi.edu/offices/diversity",
+    },
+    {
+      type: "a",
+      text: "(508) 831-5796",
+      href: "callto:5088315796",
+    },
+    {
+      type: "h3",
+      text: "Dean of Students Office",
+    },
+    {
+      type: "a",
+      text: "Dean of Students Office",
+      href: "https://www.wpi.edu/offices/dean-students",
+    },
+    {
+      type: "a",
+      text: "(508) 831-5201",
+      href: "callto:5088315201",
+    },
+    {
+      type: "h3",
+      text: "Environmental Health and Safety",
+    },
+    {
+      type: "a",
+      text: "Environmental Health and Safety",
+      href: "https://www.wpi.edu/offices/environmental-health-safety",
+    },
+    {
+      type: "a",
+      text: "(508) 831-5298",
+      href: "callto:5088315298",
+    },
+    {
+      type: "h3",
+      text: "Collegiate Religious Center",
+    },
+    {
+      type: "a",
+      text: "Collegiate Religious Center",
+      href: "https://www.wpi.edu/student-experience/resources/collegiate-religious-center",
+    },
+    {
+      type: "a",
+      text: "(508) 831-4174",
+      href: "callto:5088314174",
+    },
+    {
+      type: "h3",
+      text: "ID Services",
+    },
+    {
+      type: "a",
+      text: "ID Services",
+      href: "https://www.wpi.edu/offices/id-services",
+    },
+    {
+      type: "a",
+      text: "(508) 831-5645",
+      href: "callto:5088315645",
+    },
+    {
+      type: "h3",
+      text: "Office of Accessibility Services",
+    },
+    {
+      type: "a",
+      text: "Office of Accessibility Services",
+      href: "https://www.wpi.edu/offices/office-accessibility-services",
+    },
+    {
+      type: "a",
+      text: "(508) 831-4908",
+      href: "callto:5088314908",
+    },
   ],
   Technology_And_Library: [
     {
