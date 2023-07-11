@@ -404,6 +404,22 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "Getting Involved",
     },
+    {
+      type: "h2",
+      text: "Clubs",
+    },
+    {
+      type: "h2",
+      text: "Greek Life",
+    },
+    {
+      type: "h2",
+      text: "Sports",
+    },
+    {
+      type: "h2",
+      text: "Student Testimonies",
+    },
   ],
   Exploring_Worcester: [
     {
