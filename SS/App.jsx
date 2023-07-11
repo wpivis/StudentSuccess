@@ -22,7 +22,7 @@ function App() {
     <View style={{height: '100%'}}>
       <StatusBar />
       <NavigationContainer theme={navTheme}>
-        <AppDrawer.Navigator
+      <AppDrawer.Navigator
           initialRouteName={AppDrawerItemName.Welcome}
         >
           { renderAppDrawerScreens() }
