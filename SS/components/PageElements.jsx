@@ -1,10 +1,11 @@
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 
 const WPICrimson = "#AC2B37";
 const WPIGray = '#A9B0B7';
 
 export function Header1({text}) {
  return (
+  <View style = {{ alignItems: 'center' }}>
   <Text 
     style={{
       color: WPICrimson, 
@@ -14,6 +15,7 @@ export function Header1({text}) {
   >
     {text}
   </Text>
+  </View>
  )
 }
 
@@ -22,10 +24,10 @@ export function Header2({text}) {
      <Text 
        style={{
          color: WPICrimson, 
-         fontSize: "1.75rem",
-         marginBottom: "1rem",
-         textAlignVertical: 'center', // Aligns the text vertically in the center
-         flex: 1
+         fontSize: "1.5rem",
+         marginBottom: "0.5rem",
+         marginHorizontal: "1rem",
+         textAlign: 'left'
        }}
      >
        {text}
@@ -38,8 +40,9 @@ export function Header3({text}) {
     <Text 
       style={{
         color: WPICrimson, 
-        fontSize: "2rem",
-        marginBottom: "1rem"
+        fontSize: "1.25rem",
+        marginBottom: "1rem",
+        marginHorizontal: "1rem",
       }}
     >
       {text}
@@ -53,7 +56,8 @@ export function Header4({text}) {
       style={{
         color: WPICrimson, 
         fontSize: "1rem",
-        marginBottom: "1rem"
+        marginBottom: "1rem",
+        marginHorizontal: "1rem",
       }}
     >
       {text}
@@ -66,7 +70,8 @@ export function Paragraph({text}) {
     <Text 
       style={{
         color: 'black', 
-        fontSize: "1rem"
+        fontSize: "1rem",
+        marginHorizontal: "1rem"
       }}
     >
       {text}
@@ -83,7 +88,9 @@ export function Anchor({href,text}) {
     <Text 
       style={{
         color: 'black', 
-        fontSize: "1rem"
+        fontSize: "1rem",
+        textDecorationLine: 'underline',
+        marginHorizontal: "1rem",
       }}
     >
       {text}
@@ -99,12 +106,11 @@ export function ListItem({text}) {
   return (
     <Text 
       style={{
-        color: 'black', 
-        fontSize: "1rem"
+        fontSize: "1.4rem",
+        marginHorizontal: "1.2rem",
       }}
     >
-      {text}
+      {'\u2022'} {text}
     </Text>
    )
-
 }

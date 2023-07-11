@@ -3,6 +3,7 @@ import React from 'react'
 import { AppDrawerItemName } from '../api/navigation'
 import { AppDrawerItemData } from '../api/data'
 import { Header1, Header2, Header3, Header4, Paragraph, Anchor, ListItem } from './PageElements'
+import { ScrollView } from 'react-native-gesture-handler'
 
 /**
  * A component for rendering page data for drawer items by drawer item key
@@ -11,9 +12,9 @@ import { Header1, Header2, Header3, Header4, Paragraph, Anchor, ListItem } from 
  */
 export default function DrawerPage({pageKey}) {
   return (
-    <View style={{alignItems: "center", width: "100%", display: "flex", flexDirection: "column"}}>
+    <ScrollView style={{width: "100%", display: "flex", flexDirection: "column"}}>
       { renderPage(AppDrawerItemData[pageKey]) }
-    </View>
+    </ScrollView>
   )
 }
 

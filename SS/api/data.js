@@ -23,7 +23,7 @@ export const AppDrawerItemData = {
     },
     {
       type: "li",
-      text: "Respect",
+      text:  "Respect",
       level: 0
     },
     {
@@ -235,7 +235,7 @@ export const AppDrawerItemData = {
       text: "Additional Contacts/Resources",
     },
     {
-      type: "h3",
+      type: "h2",
       text: "Residential Services/Community Director",
     },
     {
