@@ -486,6 +486,107 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "Academic Resources",
     },
+    {
+      type: "h2",
+      text: "Academic Advising",
+    },
+    {
+      type: "a",
+      text: "Academic Advising",
+      href: "https://www.wpi.edu/offices/academic-advising",
+    },
+    {
+      type: "li",
+      text: "How to Register for Courses",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "Tracking Sheets",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "Double Counting Courses",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "Transfer Credits",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "Double Majors and Minors",
+      level: 0,
+    },
+    {
+      type: "h2",
+      text: "Academic Resource Center",
+    },
+    {
+      type: "a",
+      text: "Academic Resource Center",
+      href: "https://www.wpi.edu/student-experience/resources/academic-resources-center",
+    },
+    {
+      type: "li",
+      text: "Individual Tutoring",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "MASH",
+      level: 0,
+    },
+    {
+      type: "h2",
+      text: "Writing Center",
+    },
+    {
+      type: "a",
+      text: "Writing Center",
+      href: "https://www.wpi.edu/student-experience/resources/writing-center",
+    },
+    {
+      type: "p",
+      text: "Located in Salisbury Hall",
+    },
+    {
+      type: "h2",
+      text: "Math Tutoring Center",
+    },
+    {
+      type: "a",
+      text: "Math Tutoring Center",
+      href: "https://www.wpi.edu/academics/departments/mathematical-sciences/math-tutoring-center-mtc",
+    },
+    {
+      type: "p",
+      text: "Located in Stratton Hall",
+    },
+    {
+      type: "h2",
+      text: "SWEET Center",
+    },
+    {
+      type: "a",
+      text: "SWEET Center",
+      href: "https://www.wpi.edu/academics/global-school/departments-programs-offices/sweet-center",
+    },
+    {
+      type: "p",
+      text: "Teamwork support",
+    },
+    {
+      type: "h2",
+      text: "Individual Department Offerings",
+    },
+    {
+      type: "li",
+      text: "Physics Lounge in Olin Hall",
+      level: 0,
+    },
   ],
   Study_Tips: [
     {
