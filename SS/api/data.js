@@ -599,6 +599,107 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "Internships, Jobs, and Fellowships",
     },
+    {
+      type: "h2",
+      text: "CDC",
+    },
+    {
+      type: "li",
+      text: "Resource Library for Students",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "Application Materials",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Career Plans",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Graduate School",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Handshake Resources",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "International Student Resources",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Interview Tips",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Job Offers",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "LGBTQ+ Career Resources",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Networking Tools",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Preparing for your Internship, CO-OP,and Job Search",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Social Media",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Resources for Students of Color",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Resources for Students with Disabilities",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Websites for Different Research Opportunities and Job/Internship Searches",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "Resources and Tips for Working Professionals and Alumni",
+      level: 1,
+    },
+    {
+      type: "h2",
+      text: "Tips for CO-OPs, Internships, and Job Search",
+    },
+    {
+      type: "h2",
+      text: "Fellowship Opportunities",
+    },
+    {
+      type: "li",
+      text: "EREE and STAR",
+      level: 0,
+    },
+    {
+      type: "h2",
+      text: "How to Ask for Letters of Recommendation",
+    },
   ],
   Health: [
     {
