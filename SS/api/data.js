@@ -380,6 +380,22 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "Health and Wellbeing",
     },
+    {
+      type: "h2",
+      text: "Health Services",
+    },
+    {
+      type: "h2",
+      text: "SDCC",
+    },
+    {
+      type: "h2",
+      text: "Center for Wellbeing",
+    },
+    {
+      type: "h2",
+      text: "New PE Credit Courses",
+    },
   ],
   Housing_Dining_Transportation: [
     {
@@ -392,11 +408,39 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "Diversity and Inclusion Organizations",
     },
+    {
+      type: "h2",
+      text: "Affinity Groups",
+    },
+    {
+      type: "h2",
+      text: "Religious Organizations",
+    },
+    {
+      type: "h2",
+      text: "LGBTQ+",
+    },
+    {
+      type: "h2",
+      text: "All Organizations Under ODIME",
+    },
   ],
   Financial_Resources: [
     {
       type: "h1",
       text: "Financial Resources",
+    },
+    {
+      type: "h2",
+      text: "Financial Aid and Work Study",
+    },
+    {
+      type: "h2",
+      text: "Bursar",
+    },
+    {
+      type: "h2",
+      text: "Student Employment Opportunities",
     },
   ],
   Getting_Involved: [
