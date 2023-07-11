@@ -627,6 +627,51 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "Housing, Dining, and Transportation",
     },
+    {
+      type: "h2",
+      text: "Accomidations During Breaks",
+    },
+    {
+      type: "h2",
+      text: "Hours and Locations for Different Dining Halls",
+    },
+    {
+      type: "h2",
+      text: "Meal Plan Options",
+    },
+    {
+      type: "h2",
+      text: "Residential Services",
+    },
+    {
+      type: "li",
+      text: "ID Services",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "Safety Protocols",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "Different housing locations on campus",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "How to find an off-campus apartment",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "Summer housing",
+      level: 0,
+    },
+    {
+      type: "h2",
+      text: "Transportation Services",
+    },
   ],
   Diversity_And_Inclusion: [
     {
