@@ -344,6 +344,73 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "First Year At WPI? Here's What to Expect:",
     },
+    {
+      type: "p",
+      text: "Keep a lookout for communications from various offices and departments throughout the summer!",
+    },
+    {
+      type: "h2",
+      text: "NSO Nub Resources",
+    },
+    {
+      type: "a",
+      text: "NSO Nub Resources",
+      href: "https://hub.wpi.edu/Me/My-NSO",
+    },
+    {
+      type: "h2",
+      text: "First Year Experience",
+    },
+    {
+      type: "h2",
+      text: "First Year Experience",
+    },
+    {
+      type: "a",
+      text: "First Year Experience",
+      href: "https://fye.wpi.edu/",
+    },
+    {
+      type: "h2",
+      text: "WPI Connections",
+    },
+    {
+      type: "a",
+      text: "WPI Connections",
+      href: "https://www.wpi.edu/offices/diversity/success-programs/connections",
+    },
+    {
+      type: "p",
+      text: "The mission of Connections is to assist incoming diverse WPI students with successfully navigating through the college transition while developing a community of leaders and scholars compelled to advocate for diversity, equity, inclusion, and belonging (DEIB), promote holistic development, and provide peer support.",
+    },
+    {
+      type: "h2",
+      text: "First Generation Success Program",
+    },
+    {
+      type: "a",
+      text: "First Generation Success Program",
+      href: "https://www.wpi.edu/offices/diversity/success-programs/first-gen-success-program",
+    },
+    {
+      type: "h2",
+      text: "Getting Your ID",
+    },
+    {
+      type: "li",
+      text: "Incoming first-year residential students will request their WPI ID through the housing application.",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "Visit ID Services to learn more about photos, replacing an ID, and how to request acecess.",
+      level: 0,
+    },
+    {
+      type: "a",
+      text: "ID Services",
+      href: "https://www.wpi.edu/offices/id-services",
+    },
   ],
   Transition: [
     {
