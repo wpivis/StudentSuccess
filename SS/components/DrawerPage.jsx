@@ -12,7 +12,6 @@ import { Header1, Header2, Header3, Header4, Paragraph, Anchor, ListItem } from 
 export default function DrawerPage({pageKey}) {
   return (
     <View style={{alignItems: "center", width: "100%", display: "flex", flexDirection: "column"}}>
-      <Text>{AppDrawerItemName[pageKey]}</Text>
       { renderPage(AppDrawerItemData[pageKey]) }
     </View>
   )
