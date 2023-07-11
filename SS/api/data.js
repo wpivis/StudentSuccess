@@ -417,6 +417,63 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "College Transition - What’s new at WPI?",
     },
+    {
+      type: "a",
+      text: "10 Things to Know About the WPI Plan",
+      href: "https://www.wpi.edu/project-based-learning/project-based-education/10-things-to-know-wpi-plan#:~:text=Instead%20of%20semesters%2C%20which%20are,core%20of%20the%20WPI%20Plan.",
+    },
+    {
+      type: "h2",
+      text: "Project-Based Approach",
+    },
+    {
+      type: "li",
+      text: "GPS Freshman Year Experience",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "IQP",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "MQP",
+      level: 0,
+    },
+    {
+      type: "h2",
+      text: "Hollistic Approach to the Humanities and Social Studies in STEM",
+    },
+    {
+      type: "h2",
+      text: "There are no Failing Grades",
+    },
+    {
+      type: "li",
+      text: "A/B/C/NR/SP/I",
+      level: 0,
+    },
+    {
+      type: "li",
+      text: "NR - No record; there are a certain number of these worked into your degree. Double check your fellowship/scholarship/financial aid guidelines.",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "I - Incomplete",
+      level: 1,
+    },
+    {
+      type: "li",
+      text: "SP - Satisfactory Pass",
+      level: 1,
+    },
+    {
+      type: "a",
+      text: "See More About the Grading System",
+      href: "https://www.wpi.edu/offices/registrar/policies-procedures/grade-system",
+    },
   ],
   Offices_And_Resources: [
     {
