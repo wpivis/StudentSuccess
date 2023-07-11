@@ -338,6 +338,68 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "Technology and Library Resources",
     },
+    {
+      type: "h2",
+      text: "IT Services and Support",
+    },
+    {
+      type: "a",
+      text: "IT Services and Support",
+      href: "https://www.wpi.edu/offices/services-support",
+    },
+    {
+      type: "a",
+      text: "(508) 831-5888",
+      href: "callto:5088315888",
+    },
+    {
+      type: "h2",
+      text: "ITS Hub",
+    },
+    {
+      type: "a",
+      text: "ITS Hub",
+      href: "https://hub.wpi.edu/spread/2/student-resources",
+    },
+    {
+      type: "p",
+      text: "How to access WiFi, access technology resources, the online store, how to utilize Gordon Library resources",
+    },
+    {
+      type: "h2",
+      text: "Gordon Library Databases",
+    },
+    {
+      type: "a",
+      text: "Gordon Library Databases",
+      href: "https://www.wpi.edu/library",
+    },
+    {
+      type: "h2",
+      text: "Academic Technology Center",
+    },
+    {
+      type: "a",
+      text: "Academic Technology Center",
+      href: "https://www.wpi.edu/offices/academic-technology-center",
+    },
+    {
+      type: "p",
+      text: "Renting equipment",
+    },
+    {
+      type: "h2",
+      text: "Academic and Research Computing",
+    },
+    {
+      type: "a",
+      text: "Academic and Research Computing",
+      href: "https://www.wpi.edu/offices/vice-provost-research/academic-research-computing",
+    },
+    {
+      type: "p",
+      text: "Laboratory and computing facilities, research resources",
+    },
   ],
   First_Year: [
     {
