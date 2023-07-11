@@ -542,6 +542,168 @@ export const AppDrawerItemData = {
       type: "h1",
       text: "Offices and Resources",
     },
+    {
+      type: "h2",
+      text: "Academic Advising",
+    },
+    {
+      type: "a",
+      text: "Academic Advising",
+      href: "https://www.wpi.edu/offices/academic-advising",
+    },
+    {
+      type: "h2",
+      text: "Accessibility Services",
+    },
+    {
+      type: "a",
+      text: "Accessibility Services",
+      href: "https://www.wpi.edu/offices/office-accessibility-services",
+    },
+    {
+      type: "h2",
+      text: "Bursar",
+    },
+    {
+      type: "a",
+      text: "Bursar",
+      href: "https://www.wpi.edu/offices/bursar",
+    },
+    {
+      type: "h2",
+      text: "Carreer Development Center",
+    },
+    {
+      type: "a",
+      text: "Carreer Development Center",
+      href: "https://www.wpi.edu/offices/career-development-center",
+    },
+    {
+      type: "h2",
+      text: "Center for Wellbeing",
+    },
+    {
+      type: "a",
+      text: "Center for Wellbeing",
+      href: "https://www.wpi.edu/student-experience/health-wellness/center-for-well-being",
+    },
+    {
+      type: "h2",
+      text: "Collegiate Religious Center",
+    },
+    {
+      type: "a",
+      text: "Collegiate Religious Center",
+      href: "https://www.wpi.edu/student-experience/resources/collegiate-religious-center",
+    },
+    {
+      type: "h2",
+      text: "Financial Aid",
+    },
+    {
+      type: "a",
+      text: "Financial Aid",
+      href: "https://www.wpi.edu/admissions/tuition-aid",
+    },
+    {
+      type: "h2",
+      text: "First Year Experience",
+    },
+    {
+      type: "a",
+      text: "First Year Experience",
+      href: "https://fye.wpi.edu/",
+    },
+    {
+      type: "h2",
+      text: "Gender, Sexuality, and Womens' Studies",
+    },
+    {
+      type: "a",
+      text: "Gender, Sexuality, and Women's Studies",
+      href: "https://www.wpi.edu/c/gendersexualitywomensstudies",
+    },
+    {
+      type: "h2",
+      text: "Health Services",
+    },
+    {
+      type: "a",
+      text: "Health Services",
+      href: "https://www.wpi.edu/student-experience/health-counseling/health-services",
+    },
+    {
+      type: "h2",
+      text: "Housing and Dining",
+    },
+    {
+      type: "a",
+      text: "Housing and Dining",
+      href: "https://www.wpi.edu/student-experience/housing-dining",
+    },
+    {
+      type: "h2",
+      text: "International House",
+    },
+    {
+      type: "a",
+      text: "International House",
+      href: "https://www.wpi.edu/offices/international-house",
+    },
+    {
+      type: "h2",
+      text: "Office of Diversity, Inclusion, and Multicultural Edication",
+    },
+    {
+      type: "a",
+      text: "Office of Diversity, Inclusion, and Multicultural Edication",
+      href: "https://www.wpi.edu/offices/diversity/resources",
+    },
+    {
+      type: "h2",
+      text: "Office of Equal Opportunity and Outreach (Title IX)",
+    },
+    {
+      type: "a",
+      text: "Office of Equal Opportunity and Outreach (Title IX)",
+      href: "https://www.wpi.edu/offices/equal-opportunity-outreach",
+    },
+    {
+      type: "h2",
+      text: "Residential Services",
+    },
+    {
+      type: "a",
+      text: "Residential Services",
+      href: "https://www.wpi.edu/offices/residential-services-office",
+    },
+    {
+      type: "h2",
+      text: "Student Development and Counseling Center",
+    },
+    {
+      type: "a",
+      text: "Student Development and Counseling Center",
+      href: "https://www.wpi.edu/offices/student-development-counseling-center",
+    },
+    {
+      type: "h2",
+      text: "Transportation Services",
+    },
+    {
+      type: "a",
+      text: "Transportation Services",
+      href: "https://www.wpi.edu/student-experience/resources/safety/campus-transportation",
+    },
+    {
+      type: "h2",
+      text: "WPI Student Experience",
+    },
+    {
+      type: "a",
+      text: "WPI Student Experience",
+      href: "https://www.wpi.edu/student-experience",
+    },
   ],
   Academic_Resources: [
     {
