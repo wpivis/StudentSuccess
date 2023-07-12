@@ -424,10 +424,6 @@ export const AppDrawerItemData = {
       text: "First Year Experience",
     },
     {
-      type: "h2",
-      text: "First Year Experience",
-    },
-    {
       type: "a",
       text: "First Year Experience",
       href: "https://fye.wpi.edu/",

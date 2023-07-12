@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { useCallback } from "react";
+import { Text, View, Linking, Pressable } from "react-native";
 
 const WPICrimson = "#AC2B37";
 const WPIGray = '#A9B0B7';
@@ -84,17 +85,33 @@ export function Paragraph({text}) {
  * @param {} param0 
  */
 export function Anchor({href,text}) {
+  
+  const handleClick = useCallback(async () => {
+    // Checking if the link is supported for links with custom URL scheme.
+    const supported = await Linking.canOpenURL(href);
+
+    if (supported) {
+      // Opening the link with some app, if the URL scheme is "http" the web link should be opened
+      // by some browser in the mobile
+      await Linking.openURL(href);
+    } else {
+      Alert.alert(`Don't know how to open this URL: ${href}`);
+    }
+  }, [href]);
+
   return (
-    <Text 
-      style={{
-        color: 'black', 
-        fontSize: "1rem",
-        textDecorationLine: 'underline',
-        marginHorizontal: "1rem",
-      }}
-    >
-      {text}
-    </Text>
+    <Pressable onPress={handleClick}>
+      <Text 
+        style={{
+          color: 'blue', 
+          fontSize: "1rem",
+          textDecorationLine: 'underline',
+          marginHorizontal: "1rem",
+        }}
+      >
+        {text}
+      </Text>
+    </Pressable>
    )
 }
 
