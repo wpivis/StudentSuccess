@@ -23,7 +23,7 @@ function App() {
       <StatusBar />
       <NavigationContainer theme={navTheme}>
       <AppDrawer.Navigator
-          initialRouteName={AppDrawerItemName.Welcome}
+          initialRouteName={AppDrawerItemName.Academics}
         >
           { renderAppDrawerScreens() }
         </AppDrawer.Navigator>

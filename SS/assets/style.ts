@@ -1,0 +1,1 @@
+export const crimson : string = "#AC2B37";

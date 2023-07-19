@@ -1,8 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { AppDrawerItemName } from '../api/navigation'
-import { AppDrawerItemData } from '../api/data'
-import { Header1, Header2, Header3, Header4, Paragraph, Anchor, ListItem } from './PageElements'
+import Academics from "../navigation/Academics";
 import { ScrollView } from 'react-native-gesture-handler'
 
 /**
@@ -11,33 +9,21 @@ import { ScrollView } from 'react-native-gesture-handler'
  * @returns View with data by page key
  */
 export default function DrawerPage({pageKey}) {
-  return (
-    <ScrollView style={{width: "100%", display: "flex", flexDirection: "column"}}>
-      { renderPage(AppDrawerItemData[pageKey]) }
-    </ScrollView>
-  )
-}
-
-function renderPage(pageData) {
-  return pageData.map((pageElement, index) => {
-    const pageElementType = pageElement.type;
-    switch (pageElementType) {
-      case "h1":
-        return <Header1 text={pageElement.text} key={index}/>;
-      case "h2":
-        return <Header2 text={pageElement.text} key={index}/>;
-      case "h3":
-        return <Header3 text={pageElement.text} key={index}/>;
-      case "h4":
-        return <Header4 text={pageElement.text} key={index}/>;
-      case "p":
-        return <Paragraph text={pageElement.text} key={index}/>;
-      case "a":
-        return <Anchor href={pageElement.href} text={pageElement.text} key={index}/>;
-      case "li":
-        return <ListItem href={pageElement.href} text={pageElement.text} key={index}/>;
+  
+  function renderPage() {
+    switch(pageKey) {
+      case "Academics":
+        return <Academics />
       default:
-        return;
+        return <Text>In Progress...</Text>
     }
-  })
+  }
+
+  return (
+    <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center",minHeight:"100%",}}>
+      <ScrollView style={{filter: "drop-shadow(1px 1px 5px rgba(0,0,0,0.5))", backgroundColor: "#ffffff", width: "100%", height:"100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+        { renderPage() }
+      </ScrollView>
+    </View>
+  )
 }
