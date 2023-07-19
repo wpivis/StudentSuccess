@@ -19,11 +19,14 @@ function App() {
   // Currently no Context / State to configure
 
   return (
-    <View style={{height: '100%', color: "#1F2327"}}>
+    <View style={{height: '100%', color: "#1F2327", }}>
       <StatusBar />
       <NavigationContainer theme={navTheme}>
-      <AppDrawer.Navigator
+        <AppDrawer.Navigator
           initialRouteName={AppDrawerItemName.Academics}
+          screenOptions={{
+            headerTintColor: "#FFFFFF",
+          }}
         >
           { renderAppDrawerScreens() }
         </AppDrawer.Navigator>

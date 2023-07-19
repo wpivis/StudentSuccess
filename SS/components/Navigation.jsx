@@ -41,6 +41,12 @@ export function renderAppDrawerScreens() {
         children={() => <DrawerPage pageKey={key} />} // pageKey tells DrawerPage which page we want to render.
         name={label}
         options={{
+          headerStyle: {
+            backgroundColor: "#1F2327",
+          },
+          headerTitleStyle: {
+            color: "#FFFFFF"
+          },
           drawerLabel: label,
           drawerIcon: ({ color, size }) => (
             <Icon name={iconName} size={size} color={color} />

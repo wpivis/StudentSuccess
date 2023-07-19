@@ -6,13 +6,16 @@ import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
 import makerSpace from "../assets/images/makerspace.jpg"
 import turtle from "../assets/images/turtle.jpg"
+import gps from "../assets/images/gps.jpg"
 import gompeiStatue from "../assets/images/gompeiStatue.jpg"
 import library from "../assets/images/library.jpg"
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform } from '../components/Layout'
-import { lorem, loremShort } from '../assets/style'
+import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
+import { lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 
 export default function Academics() {
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
   return (
     <ScrollView>
 
@@ -27,9 +30,11 @@ export default function Academics() {
           <SectionContentHeader.Title>Doing Good Across the Globe</SectionContentHeader.Title>
           <SectionContentHeader.Subtitle>A Degree Requirement that Changes Students, and the World</SectionContentHeader.Subtitle>
         </SectionContentHeader>
-        <LightGrayPlatform>
-          <Text style={{textIndent: "2rem"}}>{lorem}</Text>
-        </LightGrayPlatform>
+        <View style={{marginVertical: "1rem"}}>
+          <LightGrayPlatform maxWidth={textBlockMaxWidth}>
+            <Text style={{textIndent: "2rem"}}>{lorem}</Text>
+          </LightGrayPlatform>
+        </View>
         <ButtonCentered>Explore IQP Options</ButtonCentered>
         <ButtonCentered>See What Students are Saying</ButtonCentered>
         <HeaderRight>The MQP Program</HeaderRight>
@@ -37,7 +42,7 @@ export default function Academics() {
           <SectionContentHeader.Title>MQP Program Subtitle</SectionContentHeader.Title>
           <SectionContentHeader.Subtitle>MQP Program Subtitle Line 2</SectionContentHeader.Subtitle>
         </SectionContentHeader>
-        <TransparentPlatform>      
+        <TransparentPlatform maxWidth={textBlockMaxWidth}>      
           <Text style={{textIndent: "2rem"}}>{lorem}</Text>
         </TransparentPlatform>
         <ImageContainer imageSource={turtle} />
@@ -50,11 +55,17 @@ export default function Academics() {
           <SectionContentHeader.Title>GPS Classes Subtitle</SectionContentHeader.Title>
           <SectionContentHeader.Subtitle>GPS Classes Subtitle Line 2</SectionContentHeader.Subtitle>
         </SectionContentHeader>
-        <TransparentPlatform>      
-          <Text style={{textIndent: "2rem"}}>{lorem}</Text>
-        </TransparentPlatform>
-        <CenteredTitle>Tackling the World's Problems</CenteredTitle>
-        <TransparentPlatform>      
+        <View style={{marginBottom: "1rem"}}>
+          <TransparentPlatform maxWidth={textBlockMaxWidth}>      
+            <Text style={{textIndent: "2rem"}}>{lorem}</Text>
+          </TransparentPlatform>
+        </View>
+        <ImageContainer noMargin imageSource={gps} />
+        <RedBeam
+          title="Tackling the World's Problems"
+          text='The Great Problems Seminar (GPS) is a two-term course that immerses first-year students into university-level research and introduces them to the project-based curriculum at WPI. As part of The Global School at WPI, the course gives students and faculty the opportunity to step outside their disciplines to solve problems focused on themes of global importance. This culminates in annual Poster Presentation Days that celebrate students’ innovative research on a wide range of solutions to some of the world’s most critical challenges.'
+        />
+        <TransparentPlatform maxWidth={textBlockMaxWidth}>      
           <Text style={{textIndent: "2rem"}}>These first-year students tackled the issue of divided cities—and their analysis won the Undergraduate Humanities Diversity Award at the Humanities Education and Research Association Conference for the "best undergraduate conference paper that addresses race, ethnicity, gender, or sexuality."</Text>
         </TransparentPlatform>
       </ContentSection>
