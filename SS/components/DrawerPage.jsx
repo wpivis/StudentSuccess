@@ -20,8 +20,8 @@ export default function DrawerPage({pageKey}) {
   }
 
   return (
-    <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center",minHeight:"100%",}}>
-      <ScrollView style={{filter: "drop-shadow(1px 1px 5px rgba(0,0,0,0.5))", backgroundColor: "#ffffff", width: "100%", height:"100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+    <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
+      <ScrollView style={{filter: "drop-shadow(1px 1px 5px rgba(0,0,0,0.5))", backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
         { renderPage() }
       </ScrollView>
     </View>
