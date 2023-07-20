@@ -6,3 +6,19 @@ export const lorem : string = "Lorem ipsum dolor sit amet, consectetur adipiscin
 export const loremShort : string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 export const textBlockMaxWidth : number = 600;
+
+/** Styles for bold drop shadows, works on web and Android */
+export const dropShadowDark : object = {
+  filter: "drop-shadow(1px 1px 5px black)",
+  elevation: 5,
+};
+/** Styles for drop shadows, works on web and Android */
+export const dropShadow : object = {
+  filter: "drop-shadow(1px 1px 5px rgba(0,0,0,0.5))",
+  elevation: 2,
+};
+/** Styles for left-projecting drop shadows, works on web and Android */
+export const dropShadowLeft : object = {
+  filter: "drop-shadow(-1px 1px 5px rgba(0,0,0,0.5))",
+  elevation: 2,
+};

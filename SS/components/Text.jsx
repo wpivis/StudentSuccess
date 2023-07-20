@@ -1,5 +1,5 @@
 import { Text, View, Image } from "react-native";
-import { crimson, textSecondary } from "../assets/style";
+import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow } from "../assets/style";
 import { Component } from "react";
 
 
@@ -87,7 +87,15 @@ export function BracketedText(props) {
 
 export function ImageHeader(props) {
   return (
-    <View style={{width: "100%", height: "50vw", maxHeight: 300, minHeight: 200, filter: "drop-shadow(1px 1px 5px black)"}}>
+    <View 
+      style={{
+        ...dropShadowDark,
+        width: "100%", 
+        height: "50vw", 
+        maxHeight: 300, 
+        minHeight: 200
+      }}
+    >
       <Image source={props.image} style={{width: "100%", height: "50vw", maxHeight: 300, minHeight: 200, objectFit: "cover"}}/>
       <View 
         style={{
@@ -186,8 +194,8 @@ export function QuoteRight(props) {
     <View 
       style={{
         ...quoteStyle,
+        ...dropShadow,
         justifyContent: "flex-end",
-        filter: "drop-shadow(-1px 1px 5px rgba(0,0,0,0.5)",
       }}
     >
       <View 
@@ -252,8 +260,8 @@ export function QuoteLeft(props) {
     <View 
       style={{
         ...quoteStyle,
+        ...dropShadowLeft,
         justifyContent: "flex-start",
-        filter: "drop-shadow(-1px 1px 5px rgba(0,0,0,0.5)",
       }}
     >
       <Image source={getPointImage()} style={{height: 20, width: 20, marginRight: -10, transform: "rotate(-180deg)"}}/>
