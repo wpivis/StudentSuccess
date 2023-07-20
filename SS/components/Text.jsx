@@ -77,14 +77,14 @@ export function BracketedText(props) {
 
 export function ImageHeader(props) {
   return (
-    <View style={{width: "100%", height: 200, filter: "drop-shadow(1px 1px 5px black)"}}>
-      <Image source={props.image} style={{width: "100%", height: 200, objectFit: "cover"}}/>
+    <View style={{width: "100%", height: "50vw", maxHeight: 300, minHeight: 200, filter: "drop-shadow(1px 1px 5px black)"}}>
+      <Image source={props.image} style={{width: "100%", height: "50vw", maxHeight: 300, minHeight: 200, objectFit: "cover"}}/>
       <View 
         style={{
           width:"100%", 
           backgroundColor: "rgba(12,14,15, 0.8)", 
           height: 50, 
-          top: 150, 
+          top: "calc(100% - 50px)", 
           left: 0, 
           position: "absolute", 
           textAlign: "center",
@@ -103,10 +103,12 @@ export function ImageHeader(props) {
 
 export function PageHeader(props) {
   return (
-    <View style={{width: "100%", height: 100, marginVertical: "1rem"}}>
+    <View style={{width: "100%", height: 100, marginTop: "1rem", display: "flex", flex: "1", flexDirection: "row", alignItems: "center", justifyContent: "flex-start"}}>
       <View style={{width: "80%", backgroundColor: crimson, paddingVertical: "1.5rem", paddingHorizontal: ".5rem"}}>      
         <Text style={{color:"#f4f4f4", fontSize: 24}}>{props.children}</Text>
       </View>
+      <View style={{width: 20, backgroundColor: crimson, marginLeft: ".25rem", height:"100%"}} />      
+      <View style={{width: 10, backgroundColor: crimson, marginLeft: ".25rem", height:"100%"}} />      
     </View>
   )
 }
