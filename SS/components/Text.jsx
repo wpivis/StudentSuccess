@@ -13,14 +13,24 @@ export function HeaderRight(props) {
         width: "100%", 
         justifyContent: "center",
         paddingRight: "2rem", 
-        paddingLeft: "1rem", 
         height: 32,
         marginTop: "1rem",
       }}
     >
       <View style={{height: 0, width: "100%", display: "flex",  border: `2px dashed ${crimson}`}} />
-      <View style={{display: "flex", width: "fit-content", paddingHorizontal: "1rem", backgroundColor: "white", position: "absolute", top:"center", right: 0  }}>
-        <Text style={{color: crimson, fontSize: 24, fontWeight: "semibold"}}>
+      <View 
+        style={{
+          borderLeftColor: crimson, 
+          display: "flex", 
+          width: "fit-content", 
+          paddingHorizontal: "1rem", 
+          backgroundColor: "white", 
+          position: "absolute", 
+          top:"center", 
+          right: 0
+        }}
+      >
+        <Text style={{color: crimson, fontSize: 24, fontWeight: "bold"}}>
           {props.children}
         </Text>
       </View>
