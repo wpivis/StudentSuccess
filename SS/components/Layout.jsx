@@ -1,7 +1,7 @@
 import { Image, Text, View } from "react-native";
 
 import tower from "../assets/images/tower.png";
-import { crimson, textSecondary } from "../assets/style";
+import { crimson, dropShadow, textSecondary } from "../assets/style";
 
 export function TransparentPlatform(props) {
   return (
@@ -42,7 +42,7 @@ export function Footer() {
     <View style={{height: 110, width: "100%", backgroundColor: "#1F2327", marginTop: "1rem", display: "flex", flexDirection: "row", alignItems: "flex-end"}}>
       <View style={{paddingHorizontal: "0.5rem", paddingVertical: "1rem", height: "100%", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start"}}>
         <View>
-          <Text style={{fontSize: 16, color: "white"}}>WPI Student Success Project</Text>
+          <Text style={{fontSize: 16, color: "white"}}>WPI Student Success Handbook</Text>
           <Text style={{color: "white"}}>Subtitle / mission statement</Text>
         </View>
         <View>
@@ -56,7 +56,7 @@ export function Footer() {
 
 export function RedBeam({title, text}) {
   return (
-    <View style={{filter: "drop-shadow(1px 1px 5px rgba(0,0,0,0.5))", paddingBottom: "1rem", paddingHoizontal: "3rem", width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+    <View style={{...dropShadow, paddingBottom: "1rem", paddingHoizontal: "3rem", width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
       <View style={{backgroundColor: crimson, width: "100%", paddingVertical: "1rem", display: "flex", flexDirection: "column", alignItems:"center", justifyContent:"center"}}>
         <Text style={{color: "white", fontSize: 20}}>{title}</Text>
         <View style={{marginVertical: "0.5rem", borderRadius: 1, height: 2, width: "70%", backgroundColor: "white"}}/>

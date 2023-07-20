@@ -2,6 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import Academics from "../navigation/Academics";
 import { ScrollView } from 'react-native-gesture-handler'
+import { dropShadow } from '../assets/style';
 
 /**
  * A component for rendering page data for drawer items by drawer item key
@@ -22,7 +23,7 @@ export default function DrawerPage({pageKey}) {
   return (
     <ScrollView>
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <View style={{filter: "drop-shadow(1px 1px 5px rgba(0,0,0,0.5))", backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+        <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
           { renderPage() }
         </View>
       </View>
