@@ -272,8 +272,16 @@ export function QuoteLeft(props) {
 
 export function CenteredTitle(props) {
   return (
-    <View style={{width: "100%", textAlign: "center", paddingVertical: "1rem"}}>
+    <View style={{width: "100%", textAlign: "center", paddingVertical: "1rem", paddingHorizontal: "1rem"}}>
       <Text style={{fontWeight: "bold", fontSize: 24}}>{props.children}</Text>
+    </View>
+  )
+}
+
+export function BodyText(props){
+  return (
+    <View style={{width: "100%", textAlign: "left", paddingVertical: "0.5rem", paddingHorizontal: "1rem"}}>
+      <Text style={{fontWeight: "400", fontSize: 20, }}>{props.children}</Text>
     </View>
   )
 }

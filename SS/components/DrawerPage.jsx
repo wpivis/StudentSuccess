@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import Academics from "../navigation/Academics";
+import HomePage from "../navigation/HomePage";
 import { ScrollView } from 'react-native-gesture-handler'
 
 /**
@@ -14,6 +15,8 @@ export default function DrawerPage({pageKey}) {
     switch(pageKey) {
       case "Academics":
         return <Academics />
+      case "Welcome":
+        return <HomePage />
       default:
         return <Text>In Progress...</Text>
     }
