@@ -29,13 +29,17 @@ function App() {
             initialRouteName={AppDrawerItemName.HomePage}
             screenOptions={{
               headerTintColor: "#FFFFFF",
+              drawerStyle: {
+                backgroundColor: "#1f2327",
+              },
             }}
           >
             { renderAppDrawerScreens() }
           </AppDrawer.Navigator>
         </NavigationContainer>
       </View>
-    </PaperProvider>
+     </PaperProvider>
+
   );
 }
 

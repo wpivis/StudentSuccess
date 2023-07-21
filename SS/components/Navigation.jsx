@@ -47,6 +47,14 @@ export function renderAppDrawerScreens() {
           headerTitleStyle: {
             color: "#FFFFFF"
           },
+          drawerActiveTintColor: "#FFFFFF",
+          drawerInactiveTintColor: "#FFFFFF",
+          drawerItemStyle: {
+            borderBottomColor: "#FFFFFF",
+            borderBottomWidth: 1,
+            borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
+          },
           drawerLabel: label,
           drawerIcon: ({ color, size }) => (
             <Icon name={iconName} size={size} color={color} />

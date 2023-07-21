@@ -1,6 +1,6 @@
 import { View, Text, Pressable, Image } from 'react-native'
 import React, {Component} from 'react'
-import { crimson, textSecondary } from '../assets/style'
+import { crimson, dropShadow, textSecondary } from '../assets/style'
 
 import externalLink from "../assets/images/externalLink.png"
 
@@ -45,7 +45,7 @@ export function ButtonCentered(props) {
 
 export function ButtonBlock({header, text, onClick}) {
   return (
-    <View style={{paddingBottom: "1rem", display: "flex", flexDirection: "row", filter: "drop-shadow(1px 1px 5px rgba(0,0,0,0.5))"}}>
+    <View style={{...dropShadow, paddingBottom: "1rem", display: "flex", flexDirection: "row"}}>
       <View style={{marginHorizontal: "0.25rem", padding: "1rem", flex: 1, backgroundColor: "#e4e4e4", display:"flex", flexDirection: "column", alignItems:"start", justifyContent:"center"}}>
         <Text style={{fontWeight: "bold"}}>{header}</Text>
         <View style={{width: "100%", height: 1, backgroundColor: "#1F2327", marginVertical: '0.5rem'}}/>
