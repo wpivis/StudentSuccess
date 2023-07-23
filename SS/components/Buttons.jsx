@@ -18,7 +18,7 @@ export function ButtonCentered(props) {
         width: "100%", 
         alignItems: "center",
         justifyContent: "center",
-        marginTop: "1rem",
+        marginTop: 14,
       }}
     >
       <Pressable 
@@ -31,11 +31,11 @@ export function ButtonCentered(props) {
           alignItems: "center",
           border: `2px solid ${crimson}`,
           maxWidth: "80%",
-          padding: "5px",
+          padding: 5,
         }}
       >
-        <View style={{paddingRight: "1rem"}}>
-          <Text style={{width: "100%", color: crimson, fontWeight: 500}}>{props.children}</Text>
+        <View style={{paddingRight: 14}}>
+          <Text style={{width: "100%", color: crimson, fontWeight: "500"}}>{props.children}</Text>
         </View>
         <Image source={externalLink} style={{height: 14, width: 14}}/>
       </Pressable>
@@ -45,17 +45,18 @@ export function ButtonCentered(props) {
 
 export function ButtonBlock({header, text, onClick}) {
   return (
-    <View style={{...dropShadow, paddingBottom: "1rem", display: "flex", flexDirection: "row"}}>
-      <View style={{marginHorizontal: "0.25rem", padding: "1rem", flex: 1, backgroundColor: "#e4e4e4", display:"flex", flexDirection: "column", alignItems:"start", justifyContent:"center"}}>
+    <View style={{...dropShadow, paddingBottom: 14, display: "flex", flexDirection: "row"}}>
+      <View style={{marginLeft: 4, marginRight: 4, padding: 14, flex: 1, backgroundColor: "#e4e4e4", display:"flex", flexDirection: "column", alignItems:"flex-start", justifyContent:"center"}}>
         <Text style={{fontWeight: "bold"}}>{header}</Text>
-        <View style={{width: "100%", height: 1, backgroundColor: "#1F2327", marginVertical: '0.5rem'}}/>
+        <View style={{width: "100%", height: 1, backgroundColor: "#1F2327", marginTop: 7, marginBottom: 7}}/>
         <Text>{text}</Text>
       </View>
       <Pressable 
         onPress={onClick} 
         style={{
           width: 100,
-          marginHorizontal: "0.25rem",
+          marginLeft: 4, 
+          marginRight: 4,
           backgroundColor: crimson, 
           display:"flex", 
           flexDirection: "column", 

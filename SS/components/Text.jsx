@@ -12,9 +12,9 @@ export function HeaderRight(props) {
         flexDirection: "row", 
         width: "100%", 
         justifyContent: "center",
-        paddingRight: "2rem", 
+        paddingRight: 28, 
         height: 32,
-        marginTop: "1rem",
+        marginTop: 14,
       }}
     >
       <View style={{height: 0, width: "100%", display: "flex",  border: `2px dashed ${crimson}`}} />
@@ -22,11 +22,12 @@ export function HeaderRight(props) {
         style={{
           borderLeftColor: crimson, 
           display: "flex", 
-          width: "fit-content", 
-          paddingHorizontal: "1rem", 
+          //width: "fit-content", 
+          paddingLeft: 14, 
+          paddingRight: 14, 
           backgroundColor: "white", 
           position: "absolute", 
-          top:"center", 
+          top: "50%", 
           right: 0
         }}
       >
@@ -48,34 +49,35 @@ export function BracketedText(props) {
         flexDirection: "row", 
         justifyContent: "space-between",
         width: "100%", 
-        paddingHorizontal: "1rem",
-        marginTop: "1rem",
+        paddingLeft: 14, 
+        paddingRight: 14, 
+        marginTop: 14,
       }}
     >
       <View 
         style={{
           height: "100%",  
           flex: 1, 
-          maxWidth: "2rem",
-          borderTopWidth: "2px", 
-          borderBottomWidth: "2px",
-          borderLeftWidth: "2px",
+          maxWidth: 28,
+          borderTopWidth: 2, 
+          borderBottomWidth: 2,
+          borderLeftWidth: 2,
           borderTopColor: crimson,
           borderBottomColor: crimson,
           borderLeftColor: crimson,
         }}
       />
-      <View style={{height: "100%", paddingVertical: "2rem", flex: 10, textAlign:"center"}}>
+      <View style={{height: "100%", paddingTop: 28, paddingBottom: 28, flex: 10, textAlign:"center"}}>
         <Text>{props.children}</Text>
       </View>
       <View 
         style={{
           height: "100%", 
           flex: 1,
-          maxWidth: "2rem",
-          borderTopWidth: "2px", 
-          borderBottomWidth: "2px",
-          borderRightWidth: "2px",
+          maxWidth: 28,
+          borderTopWidth: 2, 
+          borderBottomWidth: 2,
+          borderRightWidth: 2,
           borderTopColor: crimson,
           borderBottomColor: crimson,
           borderRightColor: crimson,
@@ -91,19 +93,18 @@ export function ImageHeader(props) {
       style={{
         ...dropShadowDark,
         width: "100%", 
-        height: "50vw", 
+        //height: "50vw", 
         maxHeight: 300, 
         minHeight: 200
       }}
     >
-      <Image source={props.image} style={{width: "100%", height: "50vw", maxHeight: 300, minHeight: 200, objectFit: "cover"}}/>
+      <Image source={props.image} style={{width: "100%", height: "100%", maxHeight: 300, minHeight: 200, objectFit: "cover"}}/>
       <View 
         style={{
           width:"100%", 
           backgroundColor: "rgba(12,14,15, 0.8)", 
           height: 50, 
-          top: "calc(100% - 50px)", 
-          left: 0, 
+          zIndex: 2,
           position: "absolute", 
           textAlign: "center",
           display: "flex",
@@ -121,12 +122,12 @@ export function ImageHeader(props) {
 
 export function PageHeader(props) {
   return (
-    <View style={{width: "100%", height: 100, marginTop: "1rem", display: "flex", flex: "1", flexDirection: "row", alignItems: "center", justifyContent: "flex-start"}}>
-      <View style={{width: "80%", backgroundColor: crimson, paddingVertical: "1.5rem", paddingHorizontal: ".5rem"}}>      
+    <View style={{width: "100%", height: 100, marginTop: 14, display: "flex", flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start"}}>
+      <View style={{width: "80%", backgroundColor: crimson, paddingTop: 20, paddingBottom: 20, paddingLeft: 7, paddingRight: 7, }}>      
         <Text style={{color:"#f4f4f4", fontSize: 24}}>{props.children}</Text>
       </View>
-      <View style={{width: 20, backgroundColor: crimson, marginLeft: ".25rem", height:"100%"}} />      
-      <View style={{width: 10, backgroundColor: crimson, marginLeft: ".25rem", height:"100%"}} />      
+      <View style={{width: 20, backgroundColor: crimson, marginLeft: 4, height:"100%"}} />      
+      <View style={{width: 10, backgroundColor: crimson, marginLeft: 4, height:"100%"}} />      
     </View>
   )
 }
@@ -134,7 +135,7 @@ export function PageHeader(props) {
 export class SectionContentHeader extends Component {
 
   static Title(props) {
-    return <Text style={{fontSize: 24, fontWeight: 500}}>{props.children}</Text>
+    return <Text style={{fontSize: 24, fontWeight: "500"}}>{props.children}</Text>
   }
 
   static Subtitle(props) {
@@ -143,7 +144,7 @@ export class SectionContentHeader extends Component {
   
   render() {
     return (
-      <View style={{paddingLeft: ".5rem", paddingVertical: ".5rem"}}>
+      <View style={{paddingLeft: 7, paddingTop: 7, paddingBottom: 7}}>
         {this.props.children}
       </View>
     )
@@ -155,8 +156,10 @@ const quoteStyle = {
   flexDirection: "row",
   width: "100%",
   alignItems: "center",
-  paddingVertical: "1rem",
-  paddingHorizontal: "0.5rem",
+  paddingTop: 14, 
+  paddingBottom: 14,
+  paddingLeft: 7,
+  paddingRight: 7,
 }
 
 export function QuoteRight(props) {
@@ -200,10 +203,12 @@ export function QuoteRight(props) {
     >
       <View 
         style={{
-          paddingHorizontal: "1rem", 
-          paddingVertical: "2rem", 
+          paddingLeft: 14, 
+          paddingRight: 14, 
+          paddingTop: 28, 
+          paddingBottom: 28,
           backgroundColor: getBubbleColor(), 
-          borderRadius: "1rem",
+          borderRadius: 14,
           display: "flex",
           flexDirection: "row",
           justifyContent: "flex-end",
@@ -267,10 +272,12 @@ export function QuoteLeft(props) {
       <Image source={getPointImage()} style={{height: 20, width: 20, marginRight: -10, transform: "rotate(-180deg)"}}/>
       <View 
         style={{
-          paddingHorizontal: "1rem", 
-          paddingVertical: "2rem", 
+          paddingLeft: 14, 
+          paddingRight: 14, 
+          paddingTop: 28, 
+          paddingBottom: 28,
           backgroundColor: getBubbleColor(), 
-          borderRadius: "1rem",
+          borderRadius: 14,
           display: "flex",
           flexDirection: "row",
           justifyContent: "flex-end",
@@ -292,7 +299,7 @@ export function QuoteLeft(props) {
 
 export function CenteredTitle(props) {
   return (
-    <View style={{width: "100%", textAlign: "center", paddingVertical: "1rem"}}>
+    <View style={{width: "100%", textAlign: "center", paddingTop: 14, paddingBottom: 14}}>
       <Text style={{fontWeight: "bold", fontSize: 24}}>{props.children}</Text>
     </View>
   )
@@ -300,7 +307,7 @@ export function CenteredTitle(props) {
 
 export function GreayTextBeam(props) {
   return (
-    <View style={{width: "100%", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign:"center", marginBottom: "0.5rem", paddingVertical: "0.5rem", paddingHorizontal: "10%"}}>
+    <View style={{width: "100%", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign:"center", marginBottom: 7, paddingTop: 7, paddingBottom: 7, paddingLeft: "10%", paddingRight: "10%"}}>
       <Text>{props.children}</Text>
     </View>
   )

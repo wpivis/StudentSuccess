@@ -10,8 +10,8 @@ export function Header1({text}) {
   <Text 
     style={{
       color: WPICrimson, 
-      fontSize: "2rem",
-      marginBottom: "1rem"
+      fontSize: 28,
+      marginBottom: 14
     }}
   >
     {text}
@@ -25,9 +25,10 @@ export function Header2({text}) {
      <Text 
        style={{
          color: WPICrimson, 
-         fontSize: "1.5rem",
-         marginBottom: "0.5rem",
-         marginHorizontal: "1rem",
+         fontSize: 20,
+         marginBottom: 7,
+         marginTop: 14,
+         marginBottom: 14,
          textAlign: 'left'
        }}
      >
@@ -41,9 +42,10 @@ export function Header3({text}) {
     <Text 
       style={{
         color: WPICrimson, 
-        fontSize: "1.25rem",
-        marginBottom: "1rem",
-        marginHorizontal: "1rem",
+        fontSize: 16,
+        marginBottom: 14,
+        marginTop: 14,
+        marginBottom: 14,
       }}
     >
       {text}
@@ -56,9 +58,10 @@ export function Header4({text}) {
     <Text 
       style={{
         color: WPICrimson, 
-        fontSize: "1rem",
-        marginBottom: "1rem",
-        marginHorizontal: "1rem",
+        fontSize: 14,
+        marginBottom: 14,
+        marginTop: 14,
+        marginBottom: 14,
       }}
     >
       {text}
@@ -71,8 +74,9 @@ export function Paragraph({text}) {
     <Text 
       style={{
         color: 'black', 
-        fontSize: "1rem",
-        marginHorizontal: "1rem"
+        fontSize: 14,
+        marginTop: 14,
+        marginBottom: 14,
       }}
     >
       {text}
@@ -100,9 +104,10 @@ export function Anchor({href,text}) {
       <Text 
         style={{
           color: 'blue', 
-          fontSize: "1rem",
+          fontSize: 14,
           textDecorationLine: 'underline',
-          marginHorizontal: "1rem",
+          marginTop: 14,
+          marginBottom: 14,
         }}
       >
         {text}
@@ -119,8 +124,9 @@ export function ListItem({text}) {
   return (
     <Text 
       style={{
-        fontSize: "1.4rem",
-        marginHorizontal: "1.2rem",
+        fontSize: 20,
+        marginLeft: 8, 
+        marginRight: 8,
       }}
     >
       {'\u2022'} {text}

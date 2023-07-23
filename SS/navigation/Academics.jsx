@@ -30,9 +30,9 @@ export default function Academics() {
           <SectionContentHeader.Title>Doing Good Across the Globe</SectionContentHeader.Title>
           <SectionContentHeader.Subtitle>A Degree Requirement that Changes Students, and the World</SectionContentHeader.Subtitle>
         </SectionContentHeader>
-        <View style={{marginVertical: "1rem"}}>
+        <View style={{marginTop: 14, marginBottom: 14}}>
           <LightGrayPlatform maxWidth={textBlockMaxWidth}>
-            <Text style={{textIndent: "2rem"}}>{lorem}</Text>
+            <Text style={{textIndent: 28}}>{lorem}</Text>
           </LightGrayPlatform>
         </View>
         <ButtonCentered>Explore IQP Options</ButtonCentered>
@@ -43,7 +43,7 @@ export default function Academics() {
           <SectionContentHeader.Subtitle>MQP Program Subtitle Line 2</SectionContentHeader.Subtitle>
         </SectionContentHeader>
         <TransparentPlatform maxWidth={textBlockMaxWidth}>      
-          <Text style={{textIndent: "2rem"}}>{lorem}</Text>
+          <Text style={{textIndent: 28}}>{lorem}</Text>
         </TransparentPlatform>
         <ImageContainer imageSource={turtle} />
         <LightGrayPlatform>        
@@ -55,9 +55,9 @@ export default function Academics() {
           <SectionContentHeader.Title>GPS Classes Subtitle</SectionContentHeader.Title>
           <SectionContentHeader.Subtitle>GPS Classes Subtitle Line 2</SectionContentHeader.Subtitle>
         </SectionContentHeader>
-        <View style={{marginBottom: "1rem"}}>
+        <View style={{marginBottom: 14}}>
           <TransparentPlatform maxWidth={textBlockMaxWidth}>      
-            <Text style={{textIndent: "2rem"}}>{lorem}</Text>
+            <Text style={{textIndent: 28}}>{lorem}</Text>
           </TransparentPlatform>
         </View>
         <ImageContainer noMargin imageSource={gps} />
@@ -66,7 +66,7 @@ export default function Academics() {
           text='The Great Problems Seminar (GPS) is a two-term course that immerses first-year students into university-level research and introduces them to the project-based curriculum at WPI. As part of The Global School at WPI, the course gives students and faculty the opportunity to step outside their disciplines to solve problems focused on themes of global importance. This culminates in annual Poster Presentation Days that celebrate students’ innovative research on a wide range of solutions to some of the world’s most critical challenges.'
         />
         <TransparentPlatform maxWidth={textBlockMaxWidth}>      
-          <Text style={{textIndent: "2rem"}}>These first-year students tackled the issue of divided cities—and their analysis won the Undergraduate Humanities Diversity Award at the Humanities Education and Research Association Conference for the "best undergraduate conference paper that addresses race, ethnicity, gender, or sexuality."</Text>
+          <Text style={{textIndent: 28}}>These first-year students tackled the issue of divided cities—and their analysis won the Undergraduate Humanities Diversity Award at the Humanities Education and Research Association Conference for the "best undergraduate conference paper that addresses race, ethnicity, gender, or sexuality."</Text>
         </TransparentPlatform>
       </ContentSection>
 
@@ -93,7 +93,7 @@ export default function Academics() {
         <ImageHeader image={library}>Study Tips and Tricks</ImageHeader>
         <BracketedText>Some of your classes will be very difficult. Here’s what other students have said helped them through the toughest that WPI has to offer:</BracketedText>
         <ButtonCentered>See Your Resources</ButtonCentered>
-        <View style={{marginTop: "1rem"}}>
+        <View style={{marginTop: 14}}>
           <GreayTextBeam>"{loremShort}" -Author</GreayTextBeam>
           <GreayTextBeam>"{loremShort}" -Author</GreayTextBeam>
           <GreayTextBeam>"{loremShort}" -Author</GreayTextBeam>
