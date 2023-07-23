@@ -305,6 +305,14 @@ export function CenteredTitle(props) {
   )
 }
 
+export function BodyText(props){
+  return (
+    <View style={{width: "100%", textAlign: "left", paddingVertical: "0.5rem", paddingHorizontal: "1rem"}}>
+      <Text style={{fontWeight: "400", fontSize: 20, }}>{props.children}</Text>
+    </View>
+  )
+}
+
 export function GreayTextBeam(props) {
   return (
     <View style={{width: "100%", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign:"center", marginBottom: 7, paddingTop: 7, paddingBottom: 7, paddingLeft: "10%", paddingRight: "10%"}}>
