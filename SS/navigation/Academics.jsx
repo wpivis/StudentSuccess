@@ -12,6 +12,7 @@ import library from "../assets/images/library.jpg"
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
 import { lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
+import { AcademicsChecklist } from './Checklists'
 
 export default function Academics() {
   const video = React.useRef(null);
@@ -103,6 +104,8 @@ export default function Academics() {
         </View>
         <ButtonCentered>Visit the ARC</ButtonCentered>
       </ContentSection>
+
+      <AcademicsChecklist/>
 
       <Footer/>
     

@@ -10,20 +10,21 @@ import { ContentSection, Footer } from '../components/Layout'
 import wpiIcon from "../assets/adaptive-icon.png"
 import wpiSky from "../assets/images/worcesterSkyline.jpeg"
 import gompeiSunset from "../assets/images/gompeiSunset.jpg"
+import { Image } from 'react-native'
 
 export default function HomePage() {
   const imageStyles = {
     width: '50%',
     alignSelf: 'center',
-    maxWidth: '250px',
-    paddingBottom: '20px',
-    paddingTop: '20px',
+    maxWidth: 250,
+    paddingBottom: 20,
+    paddingTop: 20,
   };
   return (
     <ScrollView>
       <PageHeader>Welcome to WPI!</PageHeader>
       
-        <img src = {wpiIcon} alt="WPI" style={imageStyles}/>
+        <Image source={wpiIcon} alt="WPI" style={imageStyles}/>
         <BodyText> 
           WPI transforms lives, turns knowledge into action to confront global challenges, and revolutionizes STEM through distinctive and inclusive education, projects, and research.
         </BodyText>

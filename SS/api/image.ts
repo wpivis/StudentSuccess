@@ -5,4 +5,5 @@ export enum AppDrawerItemIcon {
   Getting_Involved = "person-outline",
   Exploring_Worcester = "person-outline",
   Tips_And_Experiences = "person-outline",
+  Checklists = "person-outline",
 }

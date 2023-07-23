@@ -4,6 +4,7 @@ import Academics from "../navigation/Academics";
 import HomePage from "../navigation/HomePage";
 import { ScrollView } from 'react-native-gesture-handler'
 import { dropShadow } from '../assets/style';
+import Checklists from '../navigation/Checklists';
 
 /**
  * A component for rendering page data for drawer items by drawer item key
@@ -14,6 +15,8 @@ export default function DrawerPage({pageKey}) {
   
   function renderPage() {
     switch(pageKey) {
+      case "Checklists":
+        return <Checklists />
       case "Academics":
         return <Academics />
       case "Welcome":

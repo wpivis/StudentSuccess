@@ -6,8 +6,8 @@ import externalLink from "../assets/images/externalLink.png"
 
 import arrowRight from "../assets/images/arrowRight.png"
 
-const rippleRed = {color: crimson, radius: 25} 
-const rippleGray = {color: textSecondary, radius: 25} 
+export const rippleRed = {color: crimson} 
+export const rippleGray = {color: textSecondary} 
 
 export function ButtonCentered(props) {
   return (
@@ -29,10 +29,12 @@ export function ButtonCentered(props) {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          border: `2px solid ${crimson}`,
+          borderWidth: 2,
+          borderColor: crimson,
           maxWidth: "80%",
           padding: 5,
         }}
+        android_ripple={rippleRed}
       >
         <View style={{paddingRight: 14}}>
           <Text style={{width: "100%", color: crimson, fontWeight: "500"}}>{props.children}</Text>

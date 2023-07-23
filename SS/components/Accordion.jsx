@@ -34,7 +34,7 @@ export function AccordionLink(props){
 const styles = StyleSheet.create({
   heading: {
     backgroundColor: WPICrimson,
-    paddingBottom: '5px',
+    paddingBottom: 5,
   },
   item: {
     backgroundColor: WPIGray,

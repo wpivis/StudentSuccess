@@ -5,4 +5,5 @@ export enum AppDrawerItemName {
   Getting_Involved = "Getting Involved",
   Exploring_Worcester = "Exploring Worcester",
   Tips_And_Experiences = "Tips and Experiences",
+  Checklists = "Missions",
 }

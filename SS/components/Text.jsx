@@ -17,17 +17,16 @@ export function HeaderRight(props) {
         marginTop: 14,
       }}
     >
-      <View style={{height: 0, width: "100%", display: "flex",  border: `2px dashed ${crimson}`}} />
+      <View style={{height: 0, width: "100%", display: "flex", borderWidth: 2, borderStyle: "dashed", borderColor: crimson}} />
       <View 
         style={{
           borderLeftColor: crimson, 
           display: "flex", 
-          //width: "fit-content", 
           paddingLeft: 14, 
           paddingRight: 14, 
           backgroundColor: "white", 
           position: "absolute", 
-          top: "50%", 
+          top: 0, 
           right: 0
         }}
       >
@@ -93,27 +92,36 @@ export function ImageHeader(props) {
       style={{
         ...dropShadowDark,
         width: "100%", 
-        //height: "50vw", 
         maxHeight: 300, 
-        minHeight: 200
+        minHeight: 200,
       }}
     >
       <Image source={props.image} style={{width: "100%", height: "100%", maxHeight: 300, minHeight: 200, objectFit: "cover"}}/>
       <View 
         style={{
-          width:"100%", 
-          backgroundColor: "rgba(12,14,15, 0.8)", 
-          height: 50, 
+          height: "100%",
+          width: "100%",
           zIndex: 2,
-          position: "absolute", 
-          textAlign: "center",
+          position: "absolute",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
+          justifyContent:"flex-end",
         }}
       >
-        <Text style={{color:"#f4f4f4", fontSize: 24}}>{props.children}</Text>
+        <View 
+          style={{
+            width:"100%", 
+            backgroundColor: "rgba(12,14,15, 0.8)", 
+            height: 50, 
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text style={{color:"#f4f4f4", fontSize: 24}}>{props.children}</Text>
+        </View>
       </View>
     </View>
   )
@@ -269,7 +277,7 @@ export function QuoteLeft(props) {
         justifyContent: "flex-start",
       }}
     >
-      <Image source={getPointImage()} style={{height: 20, width: 20, marginRight: -10, transform: "rotate(-180deg)"}}/>
+      <Image source={getPointImage()} style={{height: 20, width: 20, marginRight: -10, transform: [{rotate:"180deg"}]}}/>
       <View 
         style={{
           paddingLeft: 14, 
@@ -307,7 +315,7 @@ export function CenteredTitle(props) {
 
 export function BodyText(props){
   return (
-    <View style={{width: "100%", textAlign: "left", paddingVertical: "0.5rem", paddingHorizontal: "1rem"}}>
+    <View style={{width: "100%", textAlign: "left", paddingLeft: 14, paddingRight: 14, paddingTop: 7, paddingBottom: 7}}>
       <Text style={{fontWeight: "400", fontSize: 20, }}>{props.children}</Text>
     </View>
   )
