@@ -1,6 +1,6 @@
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { BodyText, CenteredTitle, PageHeader } from "../components/Text"
+import { BodyText, CenteredTitle, ImageHeader, PageHeader } from "../components/Text"
 import { ImageContainer } from "../components/Images"
 import { AccordionTitle, AccordionItem, AccordionLink } from "../components/Accordion"
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
@@ -31,14 +31,15 @@ export default function HomePage({navigation}) {
 
           <PageHeader>Welcome to the WPI Student Success Handbook</PageHeader>
 
-            <Image source={wpiIcon} alt="WPI" style={imageStyles}/>
-            <ImageContainer noMargin imageSource= {gompeiSunset}></ImageContainer>
+          <ContentSection>          
+            <ImageHeader image={gompeiSunset}>Our Mission</ImageHeader>
             <BodyText> 
-              WPI’s campus has a plethora of fundamental resources that encourage student success, and the goal of this application is to make them easily accessible to incoming students. Here, we emphasize strategies and available tools that promote the success of our diverse student body - there is something for everyone at WPI if you know where to look!
+             The Student Success Handbook at WPI is specifically designed to ensure that all students, including those from diverse backgrounds, can access and benefit from the abundance of fundamental resources on campus that foster student success. We emphasize a range of strategies and tools tailored to support the diverse student body, making it easier for incoming students to find the right resources for their unique needs at WPI. Here, we emphasize strategies and available tools that promote the success of our diverse student body - there is something for everyone at WPI if you know where to look!
             </BodyText>
             <BodyText> 
-              Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
+             Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
             </BodyText>
+          </ContentSection>
 
           {/* Resources */}
           <ContentSection>

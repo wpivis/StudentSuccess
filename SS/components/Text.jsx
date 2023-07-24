@@ -135,7 +135,7 @@ export function ImageHeader(props) {
 
 export function PageHeader(props) {
   return (
-    <View style={{width: "100%", height: 100, marginTop: 14, display: "flex", flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start"}}>
+    <View style={{width: "100%", height: 100, marginTop: 14, marginBottom: 14, display: "flex", flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start"}}>
       <View style={{width: "80%", backgroundColor: crimson, paddingTop: 20, paddingBottom: 20, paddingLeft: 7, paddingRight: 7, }}>      
         <Text style={{color:"#f4f4f4", fontSize: 24}}>{props.children}</Text>
       </View>

@@ -65,7 +65,7 @@ function App() {
                 borderBottomLeftRadius: 0,
                 borderBottomRightRadius: 0,
               },
-              drawerLabel: AppDrawerItemName.Welcome,
+              drawerLabel: "Welcome: Student Success Handbook",
             }}
           />
           <AppDrawer.Screen
