@@ -1,5 +1,5 @@
-import { Image, View } from "react-native";
-
+import { View } from "react-native";
+import {Image} from "expo-image"
 
 export function ImageContainer(props) {
   return (

@@ -2,16 +2,23 @@ import { View, Text, Pressable } from 'react-native'
 import {Component, useContext} from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import CheckBox from "expo-checkbox"
-import { crimson } from '../assets/style'
+import { crimson, dropShadow } from '../assets/style'
 import { ChecklistsContext } from '../Context'
 import { rippleRed } from '../components/Buttons'
+import { Navbar } from '../App'
 
-export default function Checklists() {
+export default function Checklists({navigation}) {
   return (
     <ScrollView>
-      <AcademicsChecklist missionsPage/>
-      <WorcesterChecklist missionsPage/>
-      <CampusInvolvementChecklist missionsPage/>
+      <Navbar n={navigation} />
+      <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
+        <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+          <AcademicsChecklist missionsPage/>
+          <WorcesterChecklist missionsPage/>
+          <CampusInvolvementChecklist missionsPage/>
+        </View>
+      </View>
+
     </ScrollView>
   )
 }

@@ -1,9 +1,7 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { DefaultTheme, } from "@react-navigation/native";
 import Icon from 'react-native-vector-icons/Ionicons';
 import { AppDrawerItemName } from '../api/navigation';
 import { AppDrawerItemIcon } from '../api/image';
-import DrawerPage from './DrawerPage';
 import { Text } from 'react-native';
 
 /** 
@@ -11,18 +9,6 @@ import { Text } from 'react-native';
  * @constant
  */
 export const AppDrawer = createDrawerNavigator();
-
-/** 
- * AppDrawer navigation theme inherits from the {@link DefaultTheme} and sets the navigation's background color to transparent 
- * @constant
- * */
-export const navTheme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    background: 'transparent',
-  },
-};
 
 /**
  * AppDrawer navigation screens rendered from {@link AppDrawerItemName} enum values
@@ -38,7 +24,7 @@ export function renderAppDrawerScreens() {
     return (
       <AppDrawer.Screen
         key={key} // Important to note that "key" and "pageKey" are different. "key" is a React prop for differentiating elements rendered in a map()
-        children={() => <DrawerPage pageKey={key} />} // pageKey tells DrawerPage which page we want to render.
+        children={<DrawerPage pageKey={key} />} // pageKey tells DrawerPage which page we want to render.
         name={label}
         options={{
           headerStyle: {

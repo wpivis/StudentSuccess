@@ -1,10 +1,12 @@
-import { Text, View, Image } from "react-native";
+import { Text, View } from "react-native";
+
+import {Image} from "expo-image";
 import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow } from "../assets/style";
 import { Component } from "react";
 
-import bubblePointRed from "../assets/bubblePointRed.png";
-import bubblePointWhite from "../assets/bubblePointWhite.png";
-import bubblePointGray from "../assets/bubblePointGray.png";
+const bubblePointRed = require("../assets/bubblePointRed.png");
+const bubblePointWhite = require("../assets/bubblePointWhite.png");
+const bubblePointGray = require("../assets/bubblePointGray.png");
 
 export function HeaderRight(props) {
   return (

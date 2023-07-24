@@ -1,7 +1,9 @@
-import { Image, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
-import tower from "../assets/tower.png";
+import {Image} from "expo-image";
+
 import { crimson, dropShadow, textSecondary } from "../assets/style";
+const tower = require("../assets/tower.png");
 
 export function TransparentPlatform(props) {
   return (
