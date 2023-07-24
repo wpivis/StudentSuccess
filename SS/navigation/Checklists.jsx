@@ -210,7 +210,7 @@ export class Checklist extends Component {
     return (
       <Pressable android_ripple={rippleRed} onPress={updateChecklistState} style={{marginBottom:7, paddingLeft: 20, paddingRight: 20, display: "flex", flexDirection: "row", alignItems: "center"}}>
         <StyledCheckbox checked={checklistsState[itemProps.checklistKey][itemProps.itemKey]} onChange={updateChecklistState}/>
-        <View style={{display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start"}}>
+        <View style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start"}}>
           <Text style={{marginBottom: 2, marginLeft: 14, borderBottomColor: crimson, borderBottomWidth: 1}}>{itemProps.children}</Text>
           <Text style={{marginLeft: 14, fontSize: 10}}>{itemProps.description}</Text>
         </View>

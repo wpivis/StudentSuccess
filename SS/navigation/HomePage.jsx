@@ -16,11 +16,12 @@ const gompeiSunset = require("../assets/gompeiSunset.jpg")
 
 export default function HomePage({navigation}) {
   const imageStyles = {
-    width: '50%',
     alignSelf: 'center',
-    maxWidth: 250,
-    paddingBottom: 20,
-    paddingTop: 20,
+    width: 250,
+    objectFit: "contain",
+    height: 250,
+    marginBottom: 20,
+    marginTop: 20,
   };
   return (
     <ScrollView>
@@ -28,18 +29,17 @@ export default function HomePage({navigation}) {
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
 
-          <PageHeader>Welcome to WPI!</PageHeader>
+          <PageHeader>Welcome to the WPI Student Success Handbook</PageHeader>
 
             <Image source={wpiIcon} alt="WPI" style={imageStyles}/>
+            <ImageContainer noMargin imageSource= {gompeiSunset}></ImageContainer>
             <BodyText> 
-              WPI transforms lives, turns knowledge into action to confront global challenges, and revolutionizes STEM through distinctive and inclusive education, projects, and research.
+              WPI’s campus has a plethora of fundamental resources that encourage student success, and the goal of this application is to make them easily accessible to incoming students. Here, we emphasize strategies and available tools that promote the success of our diverse student body - there is something for everyone at WPI if you know where to look!
             </BodyText>
             <BodyText> 
               Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
             </BodyText>
 
-            <ImageContainer imageSource= {gompeiSunset}></ImageContainer>
-            <BodyText>{lorem}</BodyText>
           {/* Resources */}
           <ContentSection>
             <CenteredTitle>WPI Emergency Resources</CenteredTitle>
