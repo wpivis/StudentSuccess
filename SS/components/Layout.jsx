@@ -1,6 +1,6 @@
 import { Image, Text, View } from "react-native";
 
-import tower from "../assets/images/tower.png";
+import tower from "../assets/tower.png";
 import { crimson, dropShadow, textSecondary } from "../assets/style";
 
 export function TransparentPlatform(props) {

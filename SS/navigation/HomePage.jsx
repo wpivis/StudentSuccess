@@ -8,8 +8,8 @@ import { lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ContentSection, Footer } from '../components/Layout'
 // images
 import wpiIcon from "../assets/adaptive-icon.png"
-import wpiSky from "../assets/images/worcesterSkyline.jpeg"
-import gompeiSunset from "../assets/images/gompeiSunset.jpg"
+import wpiSky from "../assets/worcesterSkyline.jpeg"
+import gompeiSunset from "../assets/gompeiSunset.jpg"
 import { Image } from 'react-native'
 
 export default function HomePage() {

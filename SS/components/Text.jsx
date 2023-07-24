@@ -2,6 +2,9 @@ import { Text, View, Image } from "react-native";
 import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow } from "../assets/style";
 import { Component } from "react";
 
+import bubblePointRed from "../assets/bubblePointRed.png";
+import bubblePointWhite from "../assets/bubblePointWhite.png";
+import bubblePointGray from "../assets/bubblePointGray.png";
 
 export function HeaderRight(props) {
   return (
@@ -175,11 +178,11 @@ export function QuoteRight(props) {
   function getPointImage() {
     switch(props.color) {
       case "red":
-        return require("../assets/images/bubblePointRed.png");
+        return <Image source={bubblePointRed} style={{height: 20, width: 20, marginLeft: -10}}/>
       case "white":
-        return require("../assets/images/bubblePointWhite.png");
+        return <Image source={bubblePointWhite} style={{height: 20, width: 20, marginLeft: -10}}/>
       case "gray":
-        return require("../assets/images/bubblePointGray.png");
+        return <Image source={bubblePointGray} style={{height: 20, width: 20, marginLeft: -10}}/>
     }
   }
 
@@ -232,7 +235,7 @@ export function QuoteRight(props) {
           {props.children}
         </Text>
       </View>
-      <Image source={getPointImage()} style={{height: 20, width: 20, marginLeft: -10}}/>
+      {getPointImage()}
     </View>
   )
 }
@@ -243,11 +246,11 @@ export function QuoteLeft(props) {
   function getPointImage() {
     switch(props.color) {
       case "red":
-        return require("../assets/images/bubblePointRed.png");
+        return <Image source={bubblePointRed} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
       case "white":
-        return require("../assets/images/bubblePointWhite.png");
+        return <Image source={bubblePointWhite} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
       case "gray":
-        return require("../assets/images/bubblePointGray.png");
+        return <Image source={bubblePointGray} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
     }
   }
 
@@ -277,7 +280,7 @@ export function QuoteLeft(props) {
         justifyContent: "flex-start",
       }}
     >
-      <Image source={getPointImage()} style={{height: 20, width: 20, marginRight: -10, transform: [{rotate:"180deg"}]}}/>
+      {getPointImage()}
       <View 
         style={{
           paddingLeft: 14, 

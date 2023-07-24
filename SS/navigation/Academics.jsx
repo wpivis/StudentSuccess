@@ -4,11 +4,11 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
-import makerSpace from "../assets/images/makerspace.jpg"
-import turtle from "../assets/images/turtle.jpg"
-import gps from "../assets/images/gps.jpg"
-import gompeiStatue from "../assets/images/gompeiStatue.jpg"
-import library from "../assets/images/library.jpg"
+import makerSpace from "../assets/makerspace.jpg"
+import turtle from "../assets/turtle.jpg"
+import gps from "../assets/gps.jpg"
+import gompeiStatue from "../assets/gompeiStatue.jpg"
+import library from "../assets/library.jpg"
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
 import { lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'

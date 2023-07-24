@@ -2,9 +2,9 @@ import { View, Text, Pressable, Image } from 'react-native'
 import React, {Component} from 'react'
 import { crimson, dropShadow, textSecondary } from '../assets/style'
 
-import externalLink from "../assets/images/externalLink.png"
+import externalLink from "../assets/externalLink.png"
 
-import arrowRight from "../assets/images/arrowRight.png"
+import arrowRight from "../assets/arrowRight.png"
 
 export const rippleRed = {color: crimson} 
 export const rippleGray = {color: textSecondary} 
