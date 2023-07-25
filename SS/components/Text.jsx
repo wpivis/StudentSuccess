@@ -225,13 +225,14 @@ export function QuoteRight(props) {
           display: "flex",
           flexDirection: "row",
           justifyContent: "flex-end",
-          width: "100%",
-          maxWidth: 700,   
+          width: "96%",
+          maxWidth: 700,
         }}
       >
         <Text 
           style={{
-            color: getTextColor()
+            color: getTextColor(),
+            // maxWidth: "90%",
           }}
         >
           {props.children}
@@ -241,6 +242,7 @@ export function QuoteRight(props) {
     </View>
   )
 }
+
 
 export function QuoteLeft(props) {
 
