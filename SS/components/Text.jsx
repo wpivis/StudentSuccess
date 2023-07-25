@@ -7,6 +7,9 @@ import { Component } from "react";
 const bubblePointRed = require("../assets/bubblePointRed.png");
 const bubblePointWhite = require("../assets/bubblePointWhite.png");
 const bubblePointGray = require("../assets/bubblePointGray.png");
+const bubblePointRedLeft = require("../assets/bubblePointRedLeft.png");
+const bubblePointWhiteLeft = require("../assets/bubblePointWhiteLeft.png");
+const bubblePointGrayLeft = require("../assets/bubblePointGrayLeft.png");
 
 export function HeaderRight(props) {
   return (
@@ -249,11 +252,11 @@ export function QuoteLeft(props) {
   function getPointImage() {
     switch(props.color) {
       case "red":
-        return <Image source={bubblePointRed} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
+        return <Image source={bubblePointRedLeft} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
       case "white":
-        return <Image source={bubblePointWhite} style={{height: 20, width: 20, marginLeft: -10, transform: [{ rotate: '45deg' }]}}/>
+        return <Image source={bubblePointWhiteLeft} style={{height: 20, width: 20, marginLeft: -10, transform: [{ rotate: '45deg' }]}}/>
       case "gray":
-        return <Image source={bubblePointGray} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
+        return <Image source={bubblePointGrayLeft} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
     }
   }
 
@@ -321,8 +324,8 @@ export function CenteredTitle(props) {
 
 export function BodyText(props){
   return (
-    <View style={{width: "100%", textAlign: "left", paddingLeft: 14, paddingRight: 14, paddingTop: 7, paddingBottom: 7}}>
-      <Text style={{fontWeight: "400", fontSize: 20,fontFamily: "MyriadProSemibold" }}>{props.children}</Text>
+    <View style={{textIndent: 28, width: "100%", textAlign: "left", paddingLeft: 14, paddingRight: 14, paddingTop: 7, paddingBottom: 7}}>
+      <Text style={{fontWeight: "400", fontSize: 20}}>{props.children}</Text>
     </View>
   )
 }

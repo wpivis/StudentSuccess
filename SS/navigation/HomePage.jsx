@@ -5,7 +5,7 @@ import { ImageContainer } from "../components/Images"
 import { AccordionTitle, AccordionItem, AccordionLink } from "../components/Accordion"
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 
-import { ContentSection, Footer, LightGrayPlatform } from '../components/Layout'
+import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform } from '../components/Layout'
 import { Image } from 'expo-image'
 import { Navbar } from '../App'
 import { View } from 'react-native'
@@ -33,18 +33,20 @@ export default function HomePage({navigation}) {
 
           <ContentSection>          
             <ImageHeader image={gompeiSunset}>Our Mission</ImageHeader>
+            <TransparentPlatform>
             <BodyText> 
-             The Student Success Handbook at WPI is specifically designed to ensure that all students,
+              The Student Success Handbook at WPI is specifically designed to ensure that all students,
               including those from diverse backgrounds, can access and benefit from the abundance of fundamental 
               resources on campus that foster student success. We emphasize a range of strategies and tools tailored 
               to support the diverse student body, making it easier for incoming students to find the right resources 
               for their unique needs at WPI. Here, we emphasize strategies and available tools that promote the success 
               of our diverse student body - there is something for everyone at WPI if you know where to look! For more general 
-              student information check out <a href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf" target='_blank'>gompei's guide</a>
+              student information check out <a href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf" target='_blank'>gompei's guide</a>.
             </BodyText>
             <BodyText> 
              Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
             </BodyText>
+            </TransparentPlatform>
           </ContentSection>
           <ContentSection>
               <QuoteRight color="red">“I define success as doing what you enjoy, but also like feeling secure in what you're doing. So just finding that balance between having pieces that you can enjoy while still making sure that you're doing everything that you need to do.”</QuoteRight>
