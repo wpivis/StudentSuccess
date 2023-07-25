@@ -47,11 +47,9 @@ export default function HomePage({navigation}) {
             </BodyText>
           </ContentSection>
           <ContentSection>
-              
               <QuoteRight color="red">“I define success as doing what you enjoy, but also like feeling secure in what you're doing. So just finding that balance between having pieces that you can enjoy while still making sure that you're doing everything that you need to do.”</QuoteRight>
               <QuoteRight color="gray">“Success is to me failing over and over until you find a satisfactory point. So like the continuation of just learning from your failures, and instead of just giving up, you keep going until you get to your end goal, that’s success to me.” </QuoteRight>
           </ContentSection>
-
 
           {/* Resources */}
           <ContentSection>

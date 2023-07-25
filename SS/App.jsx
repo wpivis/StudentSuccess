@@ -4,7 +4,8 @@ import 'react-native-gesture-handler';
 import { createContext, useEffect, useState, } from "react";
 import { Pressable, StatusBar, View, } from "react-native";
 import { NavigationContainer, } from "@react-navigation/native";
-
+// Rest of the import statements
+import { useFonts } from 'expo-font';
 
 // Component Imports
 import { AppDrawer, renderAppDrawerScreens } from "./components/Navigation";
@@ -28,7 +29,9 @@ import HomePage from './navigation/HomePage';
 function App() {
 
   const [checklistsState, setChecklistsState] = useState(defaultChecklistdata);
-  
+  const [fontsLoaded] = useFonts({
+    'MyriadProSemibold': require('./assets/fonts/MyriadProSemibold.ttf'),
+  });
   // Currently no Context / State to configure
 
   return (

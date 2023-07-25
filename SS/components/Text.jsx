@@ -322,7 +322,7 @@ export function CenteredTitle(props) {
 export function BodyText(props){
   return (
     <View style={{width: "100%", textAlign: "left", paddingLeft: 14, paddingRight: 14, paddingTop: 7, paddingBottom: 7}}>
-      <Text style={{fontWeight: "400", fontSize: 20, }}>{props.children}</Text>
+      <Text style={{fontWeight: "400", fontSize: 20,fontFamily: "MyriadProSemibold" }}>{props.children}</Text>
     </View>
   )
 }
