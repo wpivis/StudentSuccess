@@ -58,7 +58,7 @@ export function BracketedText(props) {
         width: "100%", 
         paddingLeft: 14, 
         paddingRight: 14, 
-        marginTop: 14,
+        marginTop: props.noMargin ? null : 14,
       }}
     >
       <View 

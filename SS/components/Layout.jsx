@@ -33,6 +33,10 @@ export function LightGrayPlatform(props) {
   return <TransparentPlatform maxWidth={props.maxWidth} backgroundColor={"#E4E4E4"} noPadding={props.noPadding}>{props.children}</TransparentPlatform>
 }
 
+export function RedPlatform(props) {
+  return <TransparentPlatform maxWidth={props.maxWidth} backgroundColor={crimson} noPadding={props.noPadding}>{props.children}</TransparentPlatform>
+}
+
 export function ContentSection(props) {
   return (
     <View style={{paddingTop: 28, paddingBottom: 28}}>
