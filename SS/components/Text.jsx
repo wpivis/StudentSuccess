@@ -242,7 +242,6 @@ export function QuoteRight(props) {
   )
 }
 
-
 export function QuoteLeft(props) {
 
   function getPointImage() {
@@ -250,7 +249,7 @@ export function QuoteLeft(props) {
       case "red":
         return <Image source={bubblePointRed} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
       case "white":
-        return <Image source={bubblePointWhite} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
+        return <Image source={bubblePointWhite} style={{height: 20, width: 20, marginLeft: -10, transform: [{ rotate: '45deg' }]}}/>
       case "gray":
         return <Image source={bubblePointGray} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
     }
