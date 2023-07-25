@@ -252,11 +252,11 @@ export function QuoteLeft(props) {
   function getPointImage() {
     switch(props.color) {
       case "red":
-        return <Image source={bubblePointRedLeft} style={{height: 20, width: 20, marginLeft: 10}}/>
+        return <Image source={bubblePointRedLeft} style={{height: 20, width: 20}}/>
       case "white":
-        return <Image source={bubblePointWhiteLeft} style={{height: 20, width: 20, marginLeft: 10}}/>
+        return <Image source={bubblePointWhiteLeft} style={{height: 20, width: 20}}/>
       case "gray":
-        return <Image source={bubblePointGrayLeft} style={{height: 20, width: 20, marginLeft: 10}}/>
+        return <Image source={bubblePointGrayLeft} style={{height: 20, width: 20}}/>
     }
   }
 
@@ -300,6 +300,7 @@ export function QuoteLeft(props) {
           justifyContent: "flex-end",
           width: "100%",
           maxWidth: 700,   
+          marginLeft: -10
         }}
       >
         <Text 
