@@ -23,6 +23,7 @@ export default function HomePage({navigation}) {
  
   const width = Dimensions.get('window').width;
   const carouselWidth = width > 800 ? 800 : width;
+  const carouselHeight = carouselWidth < 800 ? 800 : carouselWidth;
 
   const imageStyles = {
     alignSelf: 'center',
@@ -64,12 +65,12 @@ export default function HomePage({navigation}) {
                 <Text style={{color: "white", textIndent: 28}}>We interviewed diverse students such as BIPOC, LGBTQIA+, women, people with disabilities, and others at WPI to ask them about how they define success. From their responses, we developed some key takeaways and quotes in their own words.</Text>
               </RedPlatform>
 
-              <View style={{ flex: 1, backgroundColor: "#f4f4f4"}}>
+              <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel
                   loop
                   width={carouselWidth}
-                  height={carouselWidth}
                   data={quotesData}
+                  height={carouselHeight}
                   scrollAnimationDuration={1000}
                   renderItem={({ index }) => (
                     <View
@@ -144,7 +145,7 @@ const quotesData = [
     header: "Resilience and Perseverance",
     subtitle: "The conventional notion of such as grades or financial wealth are important, but it's crucial to consider other aspects like intellectual growth, personal joy, and overall contentment. For these diverse student communities, success is also assessed by the sense of forward momentum, whether that's in their educational journey, personal interests (like playing the piano), or individual life paths. The process of growth, self-improvement, and forward movement is a meaningful aspect to success.",
     quotes: [
-      `“That's what a successful run at WPI looks like, because obviously WPI is not a cake walk, you know it's work intensive. There's expectations out the roof like not only from the teachers and stuff like that, but the people around you like this competition as well like it's cut throat out here. So you know what I mean. As long as I feel like as long as you keep going, and kind of through the noise through all the mud persevere that's huge.”“That's what a successful run at WPI looks like, because obviously WPI is not a cake walk, you know it's work intensive. There's expectations out the roof like not only from the teachers and stuff like that, but the people around you like this competition as well like it's cut throat out here. So you know what I mean. As long as I feel like as long as you keep going, and kind of through the noise through all the mud persevere that's huge.”`,
+      //`“That's what a successful run at WPI looks like, because obviously WPI is not a cake walk, you know it's work intensive. There's expectations out the roof like not only from the teachers and stuff like that, but the people around you like this competition as well like it's cut throat out here. So you know what I mean. As long as I feel like as long as you keep going, and kind of through the noise through all the mud persevere that's huge.”“That's what a successful run at WPI looks like, because obviously WPI is not a cake walk, you know it's work intensive. There's expectations out the roof like not only from the teachers and stuff like that, but the people around you like this competition as well like it's cut throat out here. So you know what I mean. As long as I feel like as long as you keep going, and kind of through the noise through all the mud persevere that's huge.”`,
       `“I would define success as, like, still being able to keep going. So I think as long as I, like, didn't give up that I'm still successful.”`,
       `“I feel like I'm successful when I'm on top of my work. You know, I feel, I feel like I don't have to like, rush everything at the end.”`,
     ]
@@ -163,7 +164,7 @@ const quotesData = [
     subtitle: "Having satisfying relationships or having a support network is an important part of success for diverse students at WPI. The transition to university life can be challenging, and this is often exacerbated for students with diverse backgrounds who may face various barriers related to their racial/ethnic background, gender, sexuality, religious background, or disability. Having a solid network of friends can provide social and emotional support.",
     quotes: [
       `“If you have status, if you're satisfied with your interpersonal relationships, and then also if you can meet, like your hierarchy of needs like at the baseline.”`,
-      `“I feel like social success is like being with friends that are like genuine and like, cause I feel like at WPI I meet, I feel like, I know, I, I feel like I know a lot of people at this school because it's so small but like the percentage of people that I consider, like people I'm friendly with versus people that I feel like if I was really struggling, I could go talk to them. I feel like that would be social success, having people that I'm actually close with and I'm not just friendly with.”`,
+      //`“I feel like social success is like being with friends that are like genuine and like, cause I feel like at WPI I meet, I feel like, I know, I, I feel like I know a lot of people at this school because it's so small but like the percentage of people that I consider, like people I'm friendly with versus people that I feel like if I was really struggling, I could go talk to them. I feel like that would be social success, having people that I'm actually close with and I'm not just friendly with.”`,
       `“So, like, when I'm stressed and I feel like, you know, I have someone to talk to about it. I'm not like, oh, I feel so alone woe is me? you know, that comes up for everyone but like having like a support network, having like a circle. It's not just like I rely on this one person. It's like I rely on multiple people.”`,
     ]
   },
