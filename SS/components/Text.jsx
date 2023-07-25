@@ -252,11 +252,11 @@ export function QuoteLeft(props) {
   function getPointImage() {
     switch(props.color) {
       case "red":
-        return <Image source={bubblePointRedLeft} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
+        return <Image source={bubblePointRedLeft} style={{height: 20, width: 20, marginLeft: 10}}/>
       case "white":
-        return <Image source={bubblePointWhiteLeft} style={{height: 20, width: 20, marginLeft: -10, transform: [{ rotate: '45deg' }]}}/>
+        return <Image source={bubblePointWhiteLeft} style={{height: 20, width: 20, marginLeft: 10}}/>
       case "gray":
-        return <Image source={bubblePointGrayLeft} style={{height: 20, width: 20, marginLeft: -10, transform: [{rotate:"180deg"}]}}/>
+        return <Image source={bubblePointGrayLeft} style={{height: 20, width: 20, marginLeft: 10}}/>
     }
   }
 
