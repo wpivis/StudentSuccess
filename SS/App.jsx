@@ -29,10 +29,7 @@ import Letters from './navigation/Letters';
 import FAQ from './navigation/FAQ';
 import Development from './navigation/Development';
 import Diversity from './navigation/Diversity';
-
-function ComingSoon() {
-  return <Text>Coming Soon</Text>
-}
+import Social from './navigation/Social';
 
 /**
  * The entire StudentSuccessProject App component
@@ -146,7 +143,7 @@ function App() {
             }}
           />
           <AppDrawer.Screen
-            component={ComingSoon}
+            component={Social}
             name={AppDrawerItemName.Social}
             options={{
               headerStyle: {
