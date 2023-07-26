@@ -1,9 +1,14 @@
 export enum AppDrawerItemName {
   Welcome = "Welcome to WPI!",
-  Technology_And_Resources =  "Technology & Library Resources",
+  Wellness =  "Wellness Resources",
   Academics = "Academics",
-  Getting_Involved = "Getting Involved",
-  Exploring_Worcester = "Exploring Worcester",
-  Tips_And_Experiences = "Tips and Experiences",
+  Diversity = "Cultural and Diversity Resources",
+  Social = "Social Life",
+  Financial = "Financial Resources",
+  Facilities = "Campus Facilities and Amenities",
+  Development = "Academic and Career Development",
+  Services = "Campus Services",
+  FAQ = "FAQs",
+  Letters = "Welcome Letters",
   Checklists = "Missions",
 }

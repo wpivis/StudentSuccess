@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 
 // Library Imports
 import { createContext, useEffect, useState, } from "react";
-import { Pressable, StatusBar, View, } from "react-native";
+import { Pressable, StatusBar, Text, View, } from "react-native";
 import { NavigationContainer, } from "@react-navigation/native";
 // Rest of the import statements
 import { useFonts } from 'expo-font';
@@ -22,6 +22,17 @@ import { Image } from 'expo-image';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import HomePage from './navigation/HomePage';
+import Wellness from './navigation/Wellness';
+import Services from './navigation/Services';
+import Financial from './navigation/Financial';
+import Letters from './navigation/Letters';
+import FAQ from './navigation/FAQ';
+import Development from './navigation/Development';
+import Diversity from './navigation/Diversity';
+
+function ComingSoon() {
+  return <Text>Coming Soon</Text>
+}
 
 /**
  * The entire StudentSuccessProject App component
@@ -72,6 +83,27 @@ function App() {
             }}
           />
           <AppDrawer.Screen
+            component={Diversity}
+            name={AppDrawerItemName.Diversity}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Diversity,
+            }}
+          />
+          <AppDrawer.Screen
             component={Academics}
             name={AppDrawerItemName.Academics}
             options={{
@@ -90,6 +122,153 @@ function App() {
                 borderBottomRightRadius: 0,
               },
               drawerLabel: AppDrawerItemName.Academics,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Wellness}
+            name={AppDrawerItemName.Wellness}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Wellness,
+            }}
+          />
+          <AppDrawer.Screen
+            component={ComingSoon}
+            name={AppDrawerItemName.Social}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Social,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Financial}
+            name={AppDrawerItemName.Financial}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Financial,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Development}
+            name={AppDrawerItemName.Development}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Development,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Services}
+            name={AppDrawerItemName.Services}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Services,
+            }}
+          />
+          <AppDrawer.Screen
+            component={FAQ}
+            name={AppDrawerItemName.FAQ}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.FAQ,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Letters}
+            name={AppDrawerItemName.Letters}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Letters,
             }}
           />
           <AppDrawer.Screen
