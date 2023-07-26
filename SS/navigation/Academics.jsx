@@ -11,6 +11,7 @@ import { AcademicsChecklist } from './Checklists'
 import { Navbar } from '../App'
 
 const makerSpace = require("../assets/makerspace.jpg")
+const staff = require("../assets/staff.jpg")
 const turtle = require("../assets/turtle.jpg")
 const gps = require("../assets/gps.jpg")
 const gompeiStatue = require("../assets/gompeiStatue.jpg")
@@ -28,6 +29,10 @@ export default function Academics({navigation}) {
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
           <PageHeader>Academic Information at WPI</PageHeader>
 
+          <ContentSection>
+            <ImageHeader image={staff}>Welcome Letters</ImageHeader>
+          </ContentSection>
+          
           <ContentSection>
           <ImageHeader image={makerSpace}>Project Based Learning</ImageHeader>
             <BracketedText>WPI Specializes in project-based learning. Get real experience in the subjects you love; learning by doing is the way to go!</BracketedText>

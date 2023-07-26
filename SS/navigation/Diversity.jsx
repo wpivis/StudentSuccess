@@ -1,7 +1,7 @@
 import { View, Text, Button } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam } from "../components/Text"
+import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
@@ -27,35 +27,55 @@ export default function Diversity({navigation}) {
           <PageHeader>Cultural and Diversity Resources</PageHeader>
           
           <ContentSection>
+            <BodyText>
+              WPI offers a plethora of affinity groups and identity-specific support organizations and programs. These include student run groups, official campus offices, and academic programs. We suggest that you look into these organizations to find your community and tribe at WPI!
+            </BodyText>
+          </ContentSection>
+
+          <ContentSection>
+            <ImageHeader>Accessibility Services</ImageHeader>
+            <ButtonCentered href="https://www.wpi.edu/student-experience/resources/accessibility-services">Visit Accessibility Services</ButtonCentered>
+            <HeaderRight>Exam Proctoring</HeaderRight>
+            <HeaderRight>Orientation</HeaderRight>
+            <HeaderRight>Interactive Map</HeaderRight>
+          </ContentSection>
+
+          <ContentSection>
             <ImageHeader image={odime}>ODIME</ImageHeader>
             <ButtonCentered href="https://www.wpi.edu/offices/diversity">Visit ODIME</ButtonCentered>
+            <ImageHeader>Diversity Programming</ImageHeader>
+            <HeaderRight>ODIME Resources</HeaderRight>
           </ContentSection>
           
           <ContentSection>
-            <ImageHeader>Cultural Events</ImageHeader>
+            <ImageHeader>Collegiate Religious Center</ImageHeader>
+            <HeaderRight>Campus Organizations</HeaderRight>
+            <HeaderRight>Common Room</HeaderRight>
+            <HeaderRight>Vegan Kitchen</HeaderRight>
+            <HeaderRight>Multifaith Mindfulness Space</HeaderRight>
+            <HeaderRight>Islamic Prayer Room</HeaderRight>
+          </ContentSection>
+
+          <ContentSection>
+            <ImageHeader>International House</ImageHeader>
+            <ButtonCentered href="https://www.wpi.edu/alumni/community/alumni-groups/womens-groups">Visit the International House</ButtonCentered>
+            <HeaderRight>Appointments</HeaderRight>
+            <HeaderRight>Immigration Assistance</HeaderRight>
           </ContentSection>
           
           <ContentSection>
-            <ImageHeader>Student-Led Affinity Groups</ImageHeader>
-          </ContentSection>
-          
-          <ContentSection>
-            <ImageHeader>Workshops and Programs</ImageHeader>
+            <ImageHeader image={womensgroups}>Gender, Sexuality, and Women's Studies</ImageHeader>
+            <ButtonCentered href="https://www.wpi.edu/alumni/community/alumni-groups/womens-groups">Visit Women's Groups</ButtonCentered>
+            <HeaderRight>Courses</HeaderRight>
+            <HeaderRight>Programming</HeaderRight>
           </ContentSection>
           
           <ContentSection>
             <ImageHeader image={lgbtqia}>LGBTQIA+</ImageHeader>
             <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">Visit LGBTQIA+ Support</ButtonCentered>
-          </ContentSection>
-          
-          <ContentSection>
-            <ImageHeader image={womensgroups}>Women's Groups</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/alumni/community/alumni-groups/womens-groups">Visit Women's Groups</ButtonCentered>
-          </ContentSection>
-          
-          <ContentSection>
-            <ImageHeader>Accessibility Services</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/student-experience/resources/accessibility-services">Visit Accessibility Services</ButtonCentered>
+            <HeaderRight>Gender Inclusive Housing</HeaderRight>
+            <HeaderRight>Identity Resources</HeaderRight>
+            <HeaderRight>WPI Alliance Chapter</HeaderRight>
           </ContentSection>
           
           <ContentSection>
