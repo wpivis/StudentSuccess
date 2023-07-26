@@ -43,7 +43,7 @@ export default function Diversity({navigation}) {
           <ContentSection>
             <ImageHeader image={odime}>ODIME</ImageHeader>
             <ButtonCentered href="https://www.wpi.edu/offices/diversity">Visit ODIME</ButtonCentered>
-            <ImageHeader>Diversity Programming</ImageHeader>
+            <HeaderRight>Diversity Programming</HeaderRight>
             <HeaderRight>ODIME Resources</HeaderRight>
           </ContentSection>
           
