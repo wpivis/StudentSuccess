@@ -117,22 +117,44 @@ export function ImageHeader(props) {
         }}
       >
         <View 
-          style={{
-            width:"100%", 
-            backgroundColor: "rgba(12,14,15, 0.8)", 
-            height: 50, 
-            textAlign: "center",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          style={isText(props.children)}
         >
           <Text style={{color:"#f4f4f4", fontSize: 24}}>{props.children}</Text>
         </View>
       </View>
     </View>
   )
+}
+
+function isText(string){
+  if (string === ""){
+    return (
+      {
+        width:"100%", 
+        backgroundColor: "rgba(12,14,15, 0)", 
+        height: 50, 
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }
+    )
+  }
+  else{
+    return (
+      {
+        width:"100%", 
+        backgroundColor: "rgba(12,14,15, 0.8)", 
+        height: 50, 
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }
+    )
+  }
 }
 
 
