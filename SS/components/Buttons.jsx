@@ -1,5 +1,5 @@
-import { View, Text, Pressable } from 'react-native'
-import React, {Component} from 'react'
+import { View, Text, Pressable, Linking, Alert } from 'react-native'
+import React, {Component, useCallback} from 'react'
 import { crimson, dropShadow, textSecondary } from '../assets/style'
 
 import { Image } from "expo-image"
@@ -12,6 +12,21 @@ export const rippleRed = {color: crimson}
 export const rippleGray = {color: textSecondary} 
 
 export function ButtonCentered(props) {
+
+  const href = props.href ? props.href : null;
+  
+  const handleClick = useCallback(async () => {
+    if (href) {
+      const supported = await Linking.canOpenURL(href);
+      if (supported) {
+        await Linking.openURL(href);
+      } else {
+        Alert.alert(`Don't know how to open this URL: ${href}`);
+      }
+    }
+  }, [href]);
+
+  
   return (
     <View 
       style={{
@@ -24,7 +39,7 @@ export function ButtonCentered(props) {
       }}
     >
       <Pressable 
-        onPress={props.onClick} 
+        onPress={props.href ? handleClick : props.onClick} 
         style={{
           display: "flex", 
           width: "100%", 
