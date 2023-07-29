@@ -274,7 +274,7 @@ export function QuoteLeft(props) {
   function getPointImage() {
     switch(props.color) {
       case "red":
-        return <Image source={bubblePointRedLeft} style={{height: 20, width: 20}}/>
+        return <Image source={bubblePointRedLeft} style={{height: 20, width: 20, }}/>
       case "white":
         return <Image source={bubblePointWhiteLeft} style={{height: 20, width: 20}}/>
       case "gray":
@@ -319,8 +319,8 @@ export function QuoteLeft(props) {
           borderRadius: 14,
           display: "flex",
           flexDirection: "row",
-          justifyContent: "flex-end",
-          width: "100%",
+          justifyContent: "flex-start",
+          width: "96%",
           maxWidth: 700,   
           marginLeft: -10
         }}
@@ -340,7 +340,7 @@ export function QuoteLeft(props) {
 export function CenteredTitle(props) {
   return (
     <View style={{width: "100%", textAlign: "center", paddingTop: 14, paddingBottom: 14}}>
-      <Text style={{fontWeight: "bold", fontSize: 24}}>{props.children}</Text>
+      <Text style={{fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24)}}>{props.children}</Text>
     </View>
   )
 }
