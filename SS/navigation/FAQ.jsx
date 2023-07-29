@@ -9,13 +9,14 @@ import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/styl
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { Navbar } from '../App'
+import { AppDrawerItemName } from '../api/navigation'
 
 export default function FAQ({navigation}) {
 
   return (
     <ScrollView>
 
-      <Navbar n={navigation}/>
+      <Navbar n={navigation} title={AppDrawerItemName.FAQ}/>
 
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>

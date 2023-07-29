@@ -6,11 +6,12 @@ import { crimson, dropShadow } from '../assets/style'
 import { ChecklistsContext } from '../Context'
 import { rippleRed } from '../components/Buttons'
 import { Navbar } from '../App'
+import { AppDrawerItemName } from '../api/navigation'
 
 export default function Checklists({navigation}) {
   return (
     <ScrollView>
-      <Navbar n={navigation} />
+      <Navbar n={navigation} title={AppDrawerItemName.Checklists} />
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
           <AcademicsChecklist missionsPage/>

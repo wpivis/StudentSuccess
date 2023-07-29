@@ -9,6 +9,7 @@ import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/styl
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { Navbar } from '../App'
+import { AppDrawerItemName } from '../api/navigation'
 
 const sdcc = require("../assets/sdcc.jpg")
 const wellbeing = require("../assets/wellbeing.jpg")
@@ -19,7 +20,7 @@ export default function Wellness({navigation}) {
   return (
     <ScrollView>
 
-      <Navbar n={navigation}/>
+      <Navbar n={navigation} title={AppDrawerItemName.Wellness}/>
 
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>

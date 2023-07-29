@@ -11,6 +11,7 @@ import { Navbar } from '../App'
 import { View, Text, Dimensions } from 'react-native'
 
 import Carousel from 'react-native-reanimated-carousel';
+import { AppDrawerItemName } from '../api/navigation'
 
 // images
 const wpiIcon = require("../assets/adaptive-icon.png")
@@ -35,7 +36,7 @@ export default function HomePage({navigation}) {
   };
   return (
     <ScrollView>
-      <Navbar n={navigation} />
+      <Navbar n={navigation} title={AppDrawerItemName.Welcome} />
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
 

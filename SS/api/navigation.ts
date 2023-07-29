@@ -1,5 +1,5 @@
 export enum AppDrawerItemName {
-  Welcome = "Welcome to WPI!",
+  Welcome = "Welcome: Student Success Handbook",
   Wellness =  "Wellness Resources",
   Academics = "Academics",
   Diversity = "Cultural and Diversity Resources",

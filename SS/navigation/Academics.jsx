@@ -9,6 +9,7 @@ import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/styl
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { Navbar } from '../App'
+import { AppDrawerItemName } from '../api/navigation'
 
 const makerSpace = require("../assets/makerspace.jpg")
 const staff = require("../assets/staff.jpg")
@@ -18,12 +19,11 @@ const gompeiStatue = require("../assets/gompeiStatue.jpg")
 const library = require("../assets/library.jpg")
 
 export default function Academics({navigation}) {
-  const video = React.useRef(null);
-  const [status, setStatus] = React.useState({});
+  
   return (
     <ScrollView>
 
-      <Navbar n={navigation}/>
+      <Navbar n={navigation} title={AppDrawerItemName.Academics}/>
 
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
