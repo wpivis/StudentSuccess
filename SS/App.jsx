@@ -19,7 +19,7 @@ import Checklists, { defaultChecklistdata } from "./navigation/Checklists";
 import Academics from './navigation/Academics';
 import { Image } from 'expo-image';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+import Directory from './navigation/Directory';
 import HomePage from './navigation/HomePage';
 import Wellness from './navigation/Wellness';
 import Services from './navigation/Services';
@@ -245,6 +245,27 @@ function App() {
               drawerLabel: AppDrawerItemName.FAQ,
             }}
           />
+          { /** <AppDrawer.Screen
+            component={Directory}
+            name={AppDrawerItemName.Directory}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Directory,
+            }}
+          /> */}
           <AppDrawer.Screen
             component={Checklists}
             name={AppDrawerItemName.Checklists}
@@ -273,17 +294,6 @@ function App() {
      </PaperProvider>
 
   );
-}
-
-export function Navbar({n, title}) {
-  return (
-    <View style={{zIndex: 2, height: 80, width: '100%', backgroundColor: "#1f2327", display: 'flex', flexDirection: 'row', alignItems: "center", justifyContent: 'flex-start', position: "sticky", top: 0, left: 0}}>
-      <Pressable style={{marginLeft: 20}} onPress={() => n.toggleDrawer()}>
-        <Image source={require("./assets/menuIcon.png")} alt="menu-icon" style={{width: 40, height: 40}} />
-      </Pressable>
-      <Text style={{marginLeft: 14, fontSize: 20, color: "white"}}>{title}</Text>
-    </View>
-  )
 }
 
 export default App;

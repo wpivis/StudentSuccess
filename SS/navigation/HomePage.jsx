@@ -6,12 +6,11 @@ import { AccordionTitle, AccordionItem, AccordionLink } from "../components/Acco
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 
 import { ContentSection, Footer, LightGrayPlatform, RedBeam, RedPlatform, TransparentPlatform } from '../components/Layout'
-import { Image } from 'expo-image'
-import { Navbar } from '../App'
 import { View, Text, Dimensions } from 'react-native'
 
 import Carousel from 'react-native-reanimated-carousel';
-import { AppDrawerItemName } from '../api/navigation'
+import { AppDrawerItemName, } from '../api/navigation'
+import { Navbar, } from '../components/Navigation'
 
 // images
 const wpiIcon = require("../assets/adaptive-icon.png")

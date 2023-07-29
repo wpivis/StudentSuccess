@@ -2,7 +2,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { AppDrawerItemName } from '../api/navigation';
 import { AppDrawerItemIcon } from '../api/image';
-import { Text } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
+import { Image } from 'expo-image';
 
 /** 
  * The main App Stack navigator, allowing the user to visit pages not contained within the mainPage bottom tab navigation 
@@ -49,4 +50,15 @@ export function renderAppDrawerScreens() {
       />
     )
   });
+}
+
+export function Navbar({n, title}) {
+  return (
+    <View style={{zIndex: 2, height: 80, width: '100%', backgroundColor: "#1f2327", display: 'flex', flexDirection: 'row', alignItems: "center", justifyContent: 'flex-start', position: "sticky", top: 0, left: 0}}>
+      <Pressable style={{marginLeft: 20}} onPress={() => n.toggleDrawer()}>
+        <Image source={require("../assets/menuIcon.png")} alt="menu-icon" style={{width: 40, height: 40}} />
+      </Pressable>
+      <Text style={{marginLeft: 14, fontSize: 20, color: "white"}}>{title}</Text>
+    </View>
+  )
 }

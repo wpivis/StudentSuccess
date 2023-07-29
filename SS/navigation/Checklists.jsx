@@ -5,8 +5,9 @@ import CheckBox from "expo-checkbox"
 import { crimson, dropShadow } from '../assets/style'
 import { ChecklistsContext } from '../Context'
 import { rippleRed } from '../components/Buttons'
-import { Navbar } from '../App'
-import { AppDrawerItemName } from '../api/navigation'
+import { AppDrawerItemName, } from '../api/navigation'
+import { Navbar, } from '../components/Navigation'
+import { Image } from 'expo-image'
 
 export default function Checklists({navigation}) {
   return (
@@ -179,13 +180,9 @@ export const defaultChecklistdata = {
 }
 
 export function StyledCheckbox(props) {
-  return (
-    <CheckBox 
-      value={props.checked} 
-      color={props.checked ? crimson : "#1f2327"}
-      onValueChange={props.onChange}
-    />
-  )
+  const checkedImage = require("../assets/checkboxChecked.png");
+  const uncheckedImage = require("../assets/checkboxUnchecked.png");
+  return <Image source={props.checked ? checkedImage : uncheckedImage} style={{width: 20, height: 20}} />
 }
 
 export class Checklist extends Component {
@@ -210,7 +207,9 @@ export class Checklist extends Component {
 
     return (
       <Pressable android_ripple={rippleRed} onPress={updateChecklistState} style={{marginBottom:7, paddingLeft: 20, paddingRight: 20, display: "flex", flexDirection: "row", alignItems: "center"}}>
-        <StyledCheckbox checked={checklistsState[itemProps.checklistKey][itemProps.itemKey]} onChange={updateChecklistState}/>
+        <View style={{flex: 1, marginRight: 20}}>
+          <StyledCheckbox checked={checklistsState[itemProps.checklistKey][itemProps.itemKey]}/>
+        </View>
         <View style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start"}}>
           <Text style={{marginBottom: 2, marginLeft: 14, borderBottomColor: crimson, borderBottomWidth: 1}}>{itemProps.children}</Text>
           <Text style={{marginLeft: 14, fontSize: 10}}>{itemProps.description}</Text>

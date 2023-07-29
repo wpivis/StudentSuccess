@@ -8,8 +8,8 @@ import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
-import { Navbar } from '../App'
-import { AppDrawerItemName } from '../api/navigation'
+import { AppDrawerItemName, } from '../api/navigation'
+import { Navbar, } from '../components/Navigation'
 
 const res = require("../assets/res.jpg")
 const financialaid = require("../assets/financialaid.jpg")

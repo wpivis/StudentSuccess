@@ -8,14 +8,15 @@ import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
-import { Navbar } from '../App'
+import { AppDrawerItemName, } from '../api/navigation'
+import { Navbar, } from '../components/Navigation'
 
 export default function Directory({navigation}) {
 
   return (
     <ScrollView>
 
-      <Navbar n={navigation}/>
+      <Navbar n={navigation} title={AppDrawerItemName.Directory}/>
 
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
