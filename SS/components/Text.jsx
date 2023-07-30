@@ -173,7 +173,7 @@ export function PageHeader(props) {
 export class SectionContentHeader extends Component {
 
   static Title(props) {
-    return <Text style={{fontSize: 24, fontWeight: "500"}}>{props.children}</Text>
+    return <Text style={{fontSize: 24, fontWeight: 500}}>{props.children}</Text>
   }
 
   static Subtitle(props) {
@@ -182,7 +182,7 @@ export class SectionContentHeader extends Component {
   
   render() {
     return (
-      <View style={{paddingLeft: 7, paddingTop: 7, paddingBottom: 7}}>
+      <View style={{paddingLeft: 14, paddingTop: 14, paddingBottom: 14, maxWidth: 700}}>
         {this.props.children}
       </View>
     )
@@ -353,7 +353,7 @@ export function BodyText(props){
   )
 }
 
-export function GreayTextBeam(props) {
+export function GrayTextBeam(props) {
   return (
     <View style={{width: "100%", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign:"center", marginBottom: 7, paddingTop: 7, paddingBottom: 7, paddingLeft: "10%", paddingRight: "10%"}}>
       <Text>{props.children}</Text>

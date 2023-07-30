@@ -1,7 +1,7 @@
 import { View, Text, Button } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam } from "../components/Text"
+import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
@@ -106,12 +106,12 @@ export default function Academics({navigation}) {
             <BracketedText>Some of your classes will be very difficult. Here’s what other students have said helped them through the toughest that WPI has to offer:</BracketedText>
             <ButtonCentered>See Your Resources</ButtonCentered>
             <View style={{marginTop: 14}}>
-              <GreayTextBeam>"{loremShort}" -Author</GreayTextBeam>
-              <GreayTextBeam>"{loremShort}" -Author</GreayTextBeam>
-              <GreayTextBeam>"{loremShort}" -Author</GreayTextBeam>
-              <GreayTextBeam>"{loremShort}" -Author</GreayTextBeam>
-              <GreayTextBeam>"{loremShort}" -Author</GreayTextBeam>
-              <GreayTextBeam>"{loremShort}" -Author</GreayTextBeam>
+              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
+              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
+              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
+              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
+              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
+              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
             </View>
             <ButtonCentered>Visit the ARC</ButtonCentered>
           </ContentSection>
