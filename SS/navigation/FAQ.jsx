@@ -104,7 +104,7 @@ export default function FAQ({navigation}) {
               </QuoteLeft>
               <QuoteRight color="white">
                 "Don't be afraid to reach out to people. It's so overwhelming at first but once you talk to people you realize they're 
-                just people. Your professor is just a human being and they’re actually super helpful."
+                just people. Your professor is just a human being and they're actually super helpful."
               </QuoteRight>
           
               <HeaderRight>Self Reflection & Growth:</HeaderRight>
@@ -115,7 +115,7 @@ export default function FAQ({navigation}) {
                 "Just do it, take the plunge . . . even if you're rejected from something you probably gain something from that rejection anyway"
               </QuoteRight>
               <QuoteLeft color="white">
-                "Don’t be afraid of reinventing yourself, you get to be whoever you want."
+                "Don't be afraid of reinventing yourself, you get to be whoever you want."
               </QuoteLeft>
           
               <HeaderRight>Balance & Self-Care:</HeaderRight>

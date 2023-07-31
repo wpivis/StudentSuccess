@@ -13,9 +13,7 @@ import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
 // images
-const wpiIcon = require("../assets/adaptive-icon.png")
 const brickWall = require("../assets/brickWall.png")
-const wpiSky = require("../assets/worcesterSkyline.jpeg")
 const gompeiSunset = require("../assets/gompeiSunset.jpg")
 
 export default function HomePage({navigation}) {
@@ -41,7 +39,7 @@ export default function HomePage({navigation}) {
 
           <PageHeader>Welcome to the WPI Student Success Handbook</PageHeader>
 
-          <ContentSection>          
+          <ContentSection>
             <ImageHeader image={gompeiSunset}>Our Mission</ImageHeader>
             <TransparentPlatform>
             <BodyText> 
