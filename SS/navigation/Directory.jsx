@@ -41,6 +41,7 @@ export default function Directory({navigation}) {
             <DirectoryEntry DirectoryTitle="Bursar's Office" Phone="508-831-5203" Address="Boynton Hall" href="https://www.wpi.edu/offices/bursar"/>
             <DirectoryEntry DirectoryTitle="Career Development Center" Phone="508-831-5260" Address="Unity Hall" href="https://www.wpi.edu/offices/career-development-center"/>
             <DirectoryEntry DirectoryTitle="Campus Shuttles" Phone="" Address="" href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation"/>
+            <DirectoryEntry DirectoryTitle="Center for Wellbeing" Phone="508-831-6494" Address="Daniels Hall" href="https://www.wpi.edu/student-experience/health-wellness/center-for-well-being"/>
             <DirectoryEntry DirectoryTitle="Dean of Students Office" Phone="508-831-5201" Address="Rubin Campus Center" href="https://www.wpi.edu/offices/dean-students"/>
             <DirectoryEntry DirectoryTitle="Financial Aid" Phone="508-831-5469" Address="" href="https://www.wpi.edu/admissions/tuition-aid"/>
             <DirectoryEntry DirectoryTitle="Health Services" Phone="508-831-5520" Address="Daniels Hall" href="https://www.wpi.edu/student-experience/health-counseling/health-services"/>
@@ -50,11 +51,10 @@ export default function Directory({navigation}) {
             <DirectoryEntry DirectoryTitle="Office of Diversity, Inclusion, and Multicultural Education" Phone="508-831-5796" Address="OASIS Multicultural Center" href="https://www.wpi.edu/offices/diversity/resources"/>
             <DirectoryEntry DirectoryTitle="Office of Equal Opportunity and Outreach (Title IX)" Phone="508-831-6514" Address="Rubin Campus Center" href="https://www.wpi.edu/offices/equal-opportunity-outreach"/>
             <DirectoryEntry DirectoryTitle="Residential Services" Phone="508-831-5645" Address="East Hall" href="https://www.wpi.edu/offices/residential-services-office"/>
-            <DirectoryEntry DirectoryTitle="Student Development and Counseling Center" Phone="508-831-5540" Address="16 Einhorn Road" href="https://www.wpi.edu/offices/student-development-counseling-center"/>
-            
+            <DirectoryEntry DirectoryTitle="Student Development and Counseling Center" Phone="508-831-5540" Address="16 Einhorn Road" href="https://www.wpi.edu/offices/student-development-counseling-center"/>            
           </AccordionTitle>
           <AccordionTitle isExpanded="true" title="Campus Life">
-            <DirectoryEntry DirectoryTitle="Center for Wellbeing" Phone="508-831-6494" Address="Daniels Hall" href="https://www.wpi.edu/student-experience/health-wellness/center-for-well-being"/>
+            
             <DirectoryEntry DirectoryTitle="Collegiate Religious Center" Phone="508-831-4174" Address="19 Schussler Road" href="https://www.wpi.edu/student-experience/resources/collegiate-religious-center"/>
             <DirectoryEntry DirectoryTitle="First Year Experience" Phone="" Address="" href="https://fye.wpi.edu/"/>
             <DirectoryEntry DirectoryTitle="Gender, Sexuality, and Women’s Studies" Phone="" Address="" href="https://www.wpi.edu/c/gendersexualitywomensstudies"/>
