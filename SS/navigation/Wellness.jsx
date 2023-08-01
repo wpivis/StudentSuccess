@@ -64,6 +64,8 @@ export default function Wellness({navigation}) {
                   width={carouselWidth}
                   data={sdccCarouselData}
                   height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
                   scrollAnimationDuration={1000}
                   renderItem={({ index }) => (
                     <View
@@ -101,6 +103,8 @@ export default function Wellness({navigation}) {
                   width={carouselWidth}
                   data={healthServicesCarouselData}
                   height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
                   scrollAnimationDuration={1000}
                   renderItem={({ index }) => (
                     <View
@@ -140,6 +144,8 @@ export default function Wellness({navigation}) {
                   width={carouselWidth}
                   data={wellbeingCarouselData}
                   height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
                   scrollAnimationDuration={1000}
                   renderItem={({ index }) => (
                     <View
@@ -171,6 +177,8 @@ export default function Wellness({navigation}) {
                   width={carouselWidth}
                   data={EOOCarouselData}
                   height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
                   scrollAnimationDuration={1000}
                   renderItem={({ index }) => (
                     <View
