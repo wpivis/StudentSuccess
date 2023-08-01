@@ -80,7 +80,7 @@ export default function Services({navigation}) {
               <Text>Accommodated housing through the Office of Accessibility</Text>
             </GrayTextBeam>
             <GrayTextBeam>
-              <Text>Accommodations also available over breaks for students who need or want to stay: Grocery purchasing assistance provided, housing with kitchens, etc.</Text>
+              <Text>Accommodations available over breaks for students: Grocery purchasing assistance, housing with kitchens, etc.</Text>
             </GrayTextBeam>
             <ButtonCentered href="https://www.wpi.edu/offices/id-services">ID Services</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/offices/residential-services-office">Residential Services</ButtonCentered>
