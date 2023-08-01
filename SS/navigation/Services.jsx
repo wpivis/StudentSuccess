@@ -1,10 +1,10 @@
 import { View, Text, Button, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam } from "../components/Text"
+import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
+import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
@@ -52,6 +52,8 @@ export default function Services({navigation}) {
                   width={carouselWidth}
                   data={HousingCarouselData}
                   height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
                   scrollAnimationDuration={1000}
                   renderItem={({ index }) => (
                     <View
@@ -65,9 +67,22 @@ export default function Services({navigation}) {
                   )}
                 />
               </View>
-            <BodyText>
-            WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments. They are committed to gender-inclusive housing and have two affinity-based spaces, namely Black Excellence and Lavender Lane, which students can apply for. Additionally, the Office of Accessibility ensures suitable accommodations for students who need them. Over breaks, they offer accommodations for students who choose to stay, and some may be moved to spaces with kitchen facilities. If needed, they also provide grocery purchasing assistance. <a href="https://www.wpi.edu/offices/id-services">ID Services</a> are available to assist you with any WPI ID card issues. Rest assured, you'll find all the support you need for your housing journey at WPI Residential Services.
-            </BodyText>
+              <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
+            <View style={{ paddingTop: 10 }}>
+            <GrayTextBeam >
+              Gender-inclusive housing available
+            </GrayTextBeam>
+            </View>
+            <GrayTextBeam>
+              <Text>Offers 2 affinity-based spaces upon application: Black Excellence and Lavender Lane</Text>
+            </GrayTextBeam>
+            <GrayTextBeam>
+              <Text>Accommodated housing through the Office of Accessibility</Text>
+            </GrayTextBeam>
+            <GrayTextBeam>
+              <Text>Accommodations also available over breaks for students who need or want to stay: Grocery purchasing assistance provided, housing with kitchens, etc.</Text>
+            </GrayTextBeam>
+            <ButtonCentered href="https://www.wpi.edu/offices/id-services">ID Services</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/offices/residential-services-office">Residential Services</ButtonCentered>
           </ContentSection>
           
@@ -78,6 +93,8 @@ export default function Services({navigation}) {
                   width={carouselWidth}
                   data={DiningCarouselData}
                   height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
                   scrollAnimationDuration={1000}
                   renderItem={({ index }) => (
                     <View
@@ -91,19 +108,18 @@ export default function Services({navigation}) {
                   )}
                 />
               </View>
-            <BodyText>
-            WPI Dining provides a wide array of meal plan options to cater to various preferences. You can visit their <a href="https://www.wpi.edu/offices/dining-services">website</a>  to find detailed information about their operating hours, locations, and their menu. If you have specific dietary needs, don't worry—Dining Services also offers vegetarian and allergen-friendly options to accommodate everyone. For those looking to explore diverse culinary experiences in Worcester, be sure to refer to the <a href="https://www.wpi.edu/sites/default/files/inline-image/Body%20of%20International%20Student%20Handbook%202022-2023.pdf">International Student Handbook</a> for some fantastic recommendations.
-            </BodyText>
+              <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
+              <View style={{paddingTop: 10}}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
+              <GrayTextBeam>Vegetarian and allergy friendly options are available</GrayTextBeam>    
+            <ButtonCentered href="https://www.wpi.edu/sites/default/files/inline-image/Body%20of%20International%20Student%20Handbook%202022-2023.pdf">International Student Handbook</ButtonCentered>
+            <ButtonCentered href="https://www.wpi.edu/offices/dining-services">Dining Services</ButtonCentered>
           </ContentSection>
 
           <ContentSection>
             <ImageHeader image={shuttle}>Transportation</ImageHeader>
-            <BodyText>
-              WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle. These services ensure convenient travel for our students, making it easier to get where you need to go. Enjoy the benefits of hassle-free transportation at WPI!
-            </BodyText>
-            <BodyText>
-              Click <a href="http://bustracker.therta.com/bustime/home.jsp">here</a> for transportation info off campus in Worcester.
-            </BodyText>
+            <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>                       
+            <ButtonCentered href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation">VPA Bus</ButtonCentered>
+            <ButtonCentered href="http://bustracker.therta.com/bustime/home.jsp">WRTA Bus</ButtonCentered>
           </ContentSection>
           <Footer/>
         </View>
