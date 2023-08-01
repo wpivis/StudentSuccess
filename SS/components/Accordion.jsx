@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { List } from 'react-native-paper';
 import { DirectoryEntry } from './Directory';
+import { crimson } from '../assets/style';
 
 const WPICrimson = "#AC2B37";
 const WPIGray = '#A9B0B7';
@@ -23,14 +24,14 @@ export function AccordionTitle ({title, isExpanded, children}) {
 
 export function AccordionItem(props){
   return (
-    <List.Item style={styles.item} title= {props.title} titleStyle={{ color: 'black' }} />
+    <List.Item style={styles.item} title= {props.title} titleStyle={{ color: 'black' }} description={props.description}/>
   )
 }
 
 export function AccordionLink(props){
   return (
     <a href={props.href} target="_blank" rel="noopener noreferrer">
-      <List.Item style={styles.item} title={props.title} titleStyle={{ color: 'blue' }} />
+      <List.Item style={styles.item} title={props.title} titleStyle={{ color: 'blue' }} description={props.description}/>
     </a>
   )
 }
@@ -41,6 +42,8 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   item: {
-    backgroundColor: WPIGray,
+    borderBottomWidth: 1,
+    borderBottomColor: crimson,
+    borderBottomStyle: "solid",
   },
 });
