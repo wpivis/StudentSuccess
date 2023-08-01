@@ -73,3 +73,7 @@ export function RedBeam({title, text}) {
     </View>
   )
 }
+
+export function HeaderSubtitle(props) {
+  return <RedPlatform><Text style={{color: "white", textAlign: "center"}}>{props.children}</Text></RedPlatform>
+}

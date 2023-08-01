@@ -1,11 +1,11 @@
 import { View, Text, Button, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam } from "../components/Text"
+import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 import { AccordionTitle, AccordionLink } from "../components/Accordion"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
+import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
@@ -52,12 +52,11 @@ export default function Wellness({navigation}) {
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
           <PageHeader>Wellness Resources at WPI</PageHeader>
-          <BodyText>
-          WPI offers various health and wellness resources to its students. Finding and asking for help
-does not have to be difficult. Finding the balance between academics and personal wellbeing
-is our goal.
-
-          </BodyText>
+          <BracketedText>
+            WPI offers various health and wellness resources to its students. Finding and asking for help
+            does not have to be difficult. Finding the balance between academics and personal wellbeing
+            is our goal.
+          </BracketedText>
           <ContentSection>
           <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel
@@ -78,20 +77,21 @@ is our goal.
                   )}
                 />
               </View>
-            <BodyText>
-              The Student Development and Counseling Center offers free and confidential help, 24/7. Students and staff alike stress that it is there not just for if you have a problem, go before things get overwhelming.
-            </BodyText>
+              <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>
+            <BracketedText>
+              The Student Development and Counseling Center offers free and confidential help, 24/7. Students and staff 
+              alike stress that it is there not just for if you have a problem, go before things get overwhelming.
+            </BracketedText>
             
-            <BodyText>
-              <a href="https://forms.office.com/pages/responsepage.aspx?id=9XacWBXK-UGIS1XsFaBnKoK6q-y0N7BHuoBOlDglFLpUOFo1WkRQWDU4MElJQU1LWVI2UTNEUlJXRC4u&utm_source=marketing_cloud_email&utm_medium=January_12_2022&utm_campaign=UMC_3005745&utm_mc_suscriber_id=8468850">Schedule an appointment</a>
-            </BodyText>
-            <BodyText>
-            <a href="https://fs28.formsite.com/webteamwpiedu/concerned-about-student/index.html?_gl=1*1qw7e0w*_ga*MTk5NjIyODU2LjE2ODQ3ODA0NTY.*_ga_RE35PKQB7J*MTY4NzIwMDY1Ni4xMTMuMS4xNjg3MjAwOTQyLjU1LjAuMA..">Concerned about a student?</a>
-            </BodyText>
-            <BodyText>
-            Suicide and crisis hotline: 988
-            </BodyText>
-            <ButtonCentered href="https://www.wpi.edu/offices/student-development-counseling-center">Visit the SDCC</ButtonCentered>
+            <ButtonCentered href="https://forms.office.com/pages/responsepage.aspx?id=9XacWBXK-UGIS1XsFaBnKoK6q-y0N7BHuoBOlDglFLpUOFo1WkRQWDU4MElJQU1LWVI2UTNEUlJXRC4u&utm_source=marketing_cloud_email&utm_medium=January_12_2022&utm_campaign=UMC_3005745&utm_mc_suscriber_id=8468850">
+              Schedule an Appointment
+            </ButtonCentered>
+            <ButtonCentered href="https://fs28.formsite.com/webteamwpiedu/concerned-about-student/index.html?_gl=1*1qw7e0w*_ga*MTk5NjIyODU2LjE2ODQ3ODA0NTY.*_ga_RE35PKQB7J*MTY4NzIwMDY1Ni4xMTMuMS4xNjg3MjAwOTQyLjU1LjAuMA..">
+              Concerned About a Student?
+            </ButtonCentered>
+            <ButtonCentered href="https://www.wpi.edu/offices/student-development-counseling-center">
+              Visit the SDCC
+            </ButtonCentered>
           </ContentSection>
 
           <ContentSection>
@@ -114,14 +114,23 @@ is our goal.
                   )}
                 />
               </View>
-            <BodyText>
-              <a href="https://wpi.medicatconnect.com/home.aspx">WPI Health Services</a> offers inclusive healthcare to all students, without billing insurance or charging a copay for office visits and services. Offered services include but are not limited to sexual health services, evaluation and treatment of illness and injury, immunization assistance, referral services, and prescription management
-            </BodyText>
-            <BodyText>
-              Additional LGBTQIA+ inclusive healthcare services can be found <a href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">here.</a>
-            </BodyText>
-            <BodyText>A list of new student health forms can be found <a href="https://www.wpi.edu/student-experience/health-wellness/health-services/policies-forms/student-health-forms">here.</a></BodyText>
-            <ButtonCentered href="https://www.wpi.edu/student-experience/health-counseling/health-services">Visit Health Services</ButtonCentered>
+            <HeaderSubtitle>
+              WPI Health Services provides comprehensive, cost-free healthcare.
+            </HeaderSubtitle>
+            <BracketedText>
+              WPI Health Services offers inclusive healthcare to all students, without billing insurance or charging a copay for 
+              office visits and services. Offered services include but are not limited to sexual health services, evaluation and 
+              treatment of illness and injury, immunization assistance, referral services, and prescription management
+            </BracketedText>
+            <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">
+              LGBTQIA+ Inclusive Healthcare Services
+            </ButtonCentered>
+            <ButtonCentered href="https://www.wpi.edu/student-experience/health-wellness/health-services/policies-forms/student-health-forms">
+              New Student Health Forms
+            </ButtonCentered>
+            <ButtonCentered href="https://www.wpi.edu/student-experience/health-counseling/health-services">
+              Visit Health Services
+            </ButtonCentered>
           </ContentSection>
           
           <ContentSection>
@@ -143,11 +152,15 @@ is our goal.
                     </View>
                   )}
                 />
-              </View>
-            <BodyText>
-            The Center for Wellbeing provides students with both a physical space to relax, as well as in-office, trained students whom they can ask for directions to resources. There are sponsored programs and activities on wellness days where you can take some time off from classes and spend time doing the things that make you feel fulfilled.
-
-            </BodyText>
+              </View>  
+            <HeaderSubtitle>
+              The Center for Wellbeing at WPI is a sanctuary for students.
+            </HeaderSubtitle>
+            <BracketedText>
+              The Center for Wellbeing provides students with both a physical space to relax, as well as in-office, trained students 
+              whom they can ask for directions to resources. There are sponsored programs and activities on wellness days where you 
+              can take some time off from classes and spend time doing the things that make you feel fulfilled.
+            </BracketedText>
             <ButtonCentered href="https://www.wpi.edu/student-experience/health-wellness/center-for-well-being">Visit the Wellness Center</ButtonCentered>
           </ContentSection>
 
@@ -171,15 +184,20 @@ is our goal.
                   )}
                 />
               </View>
-            <BodyText>
-              WPI has resources available to support you through all situations, including sexual misconduct. The Office of Equal Opportunity and Outreach is there to provide you the pathways needed to report these cases.
-            </BodyText>
-            <AccordionTitle title="Off campus resources">
-              <AccordionLink title ="Pathways for change" href="https://pathwaysforchange.help/"/>
-              <AccordionLink title ="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/"/>
-            </AccordionTitle>
+              <HeaderSubtitle>
+                The Office of Equal Opportunity and Outreach is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
+              </HeaderSubtitle>
+            <BracketedText>
+              WPI has resources available to support you through all situations, including sexual misconduct. The Office of 
+              Equal Opportunity and Outreach is there to provide you the pathways needed to report these cases.
+            </BracketedText>
             <ButtonCentered href="https://www.wpi.edu/offices/equal-opportunity-outreach">Visit the EEO office</ButtonCentered>
           </ContentSection>
+
+          <AccordionTitle title="Off campus resources">
+            <AccordionLink title ="Pathways for change" href="https://pathwaysforchange.help/"/>
+            <AccordionLink title ="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/"/>
+          </AccordionTitle>
 
           <Footer/>
         </View>

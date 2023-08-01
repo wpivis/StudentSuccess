@@ -5,7 +5,7 @@ import { ImageContainer } from "../components/Images"
 import { AccordionTitle, AccordionItem, AccordionLink } from "../components/Accordion"
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 
-import { ContentSection, Footer, LightGrayPlatform, RedBeam, RedPlatform, TransparentPlatform } from '../components/Layout'
+import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, RedBeam, RedPlatform, TransparentPlatform } from '../components/Layout'
 import { View, Text, Dimensions } from 'react-native'
 
 import Carousel from 'react-native-reanimated-carousel';
@@ -41,7 +41,9 @@ export default function HomePage({navigation}) {
 
           <ContentSection>
             <ImageHeader image={gompeiSunset}>Our Mission</ImageHeader>
-            <TransparentPlatform>
+            <HeaderSubtitle>
+              Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
+            </HeaderSubtitle>
             <BodyText> 
               The Student Success Handbook at WPI is specifically designed to ensure that all students,
               including those from diverse backgrounds, can access and benefit from the abundance of fundamental 
@@ -51,17 +53,14 @@ export default function HomePage({navigation}) {
               of our diverse student body - there is something for everyone at WPI if you know where to look! For more general 
               student information check out <a href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf" target='_blank'>gompei's guide</a>.
             </BodyText>
-            <BodyText> 
-             Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
-            </BodyText>
-            </TransparentPlatform>
           </ContentSection>
           
           <ContentSection>
               <ImageHeader image={brickWall}>Different Definitions of Success</ImageHeader>
-              <RedPlatform>
-                <Text style={{color: "white", textIndent: 28}}>We interviewed diverse students such as BIPOC, LGBTQIA+, women, people with disabilities, and others at WPI to ask them about how they define success. From their responses, we developed some key takeaways and quotes in their own words.</Text>
-              </RedPlatform>
+              <HeaderSubtitle>
+                We interviewed diverse students such as BIPOC, LGBTQIA+, women, people with disabilities, and others at WPI to ask them about how they define success. 
+                From their responses, we developed some key takeaways and quotes in their own words.
+              </HeaderSubtitle>
 
               <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel

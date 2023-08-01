@@ -1,8 +1,9 @@
 import { Text, View } from "react-native";
 
 import {Image} from "expo-image";
-import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow } from "../assets/style";
+import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow, textBlockMaxWidth } from "../assets/style";
 import { Component } from "react";
+import { LightGrayPlatform, RedPlatform, TransparentPlatform } from "./Layout";
 
 const bubblePointRed = require("../assets/bubblePointRed.png");
 const bubblePointWhite = require("../assets/bubblePointWhite.png");
@@ -48,11 +49,15 @@ export function HeaderRight(props) {
 
 
 export function BracketedText(props) {
+  
+  const textAlign =  props.left ? "left" : "center";
+  const alignItems =  props.left ? "flex-start" : "center";
+
   return (
     <View 
       style={{
         display: "flex", 
-        alignItems: "center",
+        alignItems: alignItems,
         flexDirection: "row", 
         justifyContent: "space-between",
         width: "100%", 
@@ -74,7 +79,7 @@ export function BracketedText(props) {
           borderLeftColor: crimson,
         }}
       />
-      <View style={{height: "100%", paddingTop: 28, paddingBottom: 28, flex: 10, textAlign:"center"}}>
+      <View style={{height: "100%", paddingTop: 28, paddingBottom: 28, flex: 10, textAlign: textAlign}}>
         <Text>{props.children}</Text>
       </View>
       <View 
@@ -345,10 +350,24 @@ export function CenteredTitle(props) {
   )
 }
 
+/**
+ * Margined and styled body text with an optional background platform
+ * @param {boolean} gray - whether to place body text on gray platform 
+ * @param {boolean} red - whether to place body text on red platform 
+ * @returns 
+ */
 export function BodyText(props){
+
+  // Get the right playform from props
+  let Platform = TransparentPlatform;
+  if (props.gray) { Platform = LightGrayPlatform; }
+  if (props.red)  { Platform = RedPlatform;       }
+
   return (
-    <View style={{ width: "100%", textAlign: "left", paddingLeft: 14, paddingRight: 14, paddingTop: 7, paddingBottom: 7}}>
-      <Text style={{fontWeight: "400", fontSize: 20}}>{props.children}</Text>
+    <View style={{marginTop: 14, marginBottom: 14}}>
+      <Platform maxWidth={textBlockMaxWidth}>
+        <Text style={{textIndent: 28}}>{props.children}</Text>
+      </Platform>
     </View>
   )
 }
