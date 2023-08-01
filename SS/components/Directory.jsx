@@ -17,7 +17,7 @@ export function DirectoryEntry(props){
 
 function DirectoryTitle(props){
   return(
-    <Text>{props.children}</Text>
+    <Text style={{fontWeight: 450}}>{props.children}</Text>
   )
 }
 
