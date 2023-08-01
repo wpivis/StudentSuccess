@@ -35,29 +35,28 @@ export default function Directory({navigation}) {
             <DirectoryEntry DirectoryTitle="UMass Memorial Medical Center" Phone="508-334-1000" Address="119 Belmont Street Worcester" href="https://www.ummhealth.org/umass-memorial-medical-center"/>
             <DirectoryEntry DirectoryTitle="St. Vincent Hospital" Phone="508-363-5000" Address="123 Summer Street, Worcester" href="https://www.stvincenthospital.com/locations/detail/saint-vincent-hospital"/>
           </AccordionTitle>   
-          <AccordionTitle isExpanded="true" title="Academic Support">
-            <DirectoryEntry DirectoryTitle="Academic Advising" Phone="508-831-5381" Address="Unity Hall" href="https://www.wpi.edu/offices/academic-advising"/>
-            <DirectoryEntry DirectoryTitle="Career Development Center" Phone="508-831-5260" Address="Unity Hall" href="https://www.wpi.edu/offices/career-development-center"/>
-            <DirectoryEntry DirectoryTitle="First Year Experience" Phone="" Address="" href="https://fye.wpi.edu/"/>
-            <DirectoryEntry DirectoryTitle="Office of Diversity, Inclusion, and Multicultural Education" Phone="508-831-5796" Address="OASIS Multicultural Center" href="https://www.wpi.edu/offices/diversity/resources"/>
-            <DirectoryEntry DirectoryTitle="Student Development and Counseling Center" Phone="508-831-5540" Address="16 Einhorn Road" href="https://www.wpi.edu/offices/student-development-counseling-center"/>
-          </AccordionTitle>
           <AccordionTitle isExpanded="true" title="Student Services">
+            <DirectoryEntry DirectoryTitle="Academic Advising" Phone="508-831-5381" Address="Unity Hall" href="https://www.wpi.edu/offices/academic-advising"/>
             <DirectoryEntry DirectoryTitle="Accessibility Services" Phone="508-831-4908" Address="Unity Hall" href="https://www.wpi.edu/offices/office-accessibility-services"/>
             <DirectoryEntry DirectoryTitle="Bursar's Office" Phone="508-831-5203" Address="Boynton Hall" href="https://www.wpi.edu/offices/bursar"/>
+            <DirectoryEntry DirectoryTitle="Career Development Center" Phone="508-831-5260" Address="Unity Hall" href="https://www.wpi.edu/offices/career-development-center"/>
+            <DirectoryEntry DirectoryTitle="Campus Shuttles" Phone="" Address="" href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation"/>
             <DirectoryEntry DirectoryTitle="Dean of Students Office" Phone="508-831-5201" Address="Rubin Campus Center" href="https://www.wpi.edu/offices/dean-students"/>
             <DirectoryEntry DirectoryTitle="Financial Aid" Phone="508-831-5469" Address="" href="https://www.wpi.edu/admissions/tuition-aid"/>
             <DirectoryEntry DirectoryTitle="Health Services" Phone="508-831-5520" Address="Daniels Hall" href="https://www.wpi.edu/student-experience/health-counseling/health-services"/>
             <DirectoryEntry DirectoryTitle="Housing and Dining" Phone="508-831-5645" Address="East Hall" href="https://www.wpi.edu/student-experience/housing-dining"/>
             <DirectoryEntry DirectoryTitle="ID Services" Phone="508-831-5645" Address="East Hall" href="https://www.wpi.edu/offices/id-services"/>
             <DirectoryEntry DirectoryTitle="Office of Accessibility Services" Phone="508-831-4908" Address="Unity Hall" href="https://www.wpi.edu/offices/office-accessibility-services"/>
+            <DirectoryEntry DirectoryTitle="Office of Diversity, Inclusion, and Multicultural Education" Phone="508-831-5796" Address="OASIS Multicultural Center" href="https://www.wpi.edu/offices/diversity/resources"/>
             <DirectoryEntry DirectoryTitle="Office of Equal Opportunity and Outreach (Title IX)" Phone="508-831-6514" Address="Rubin Campus Center" href="https://www.wpi.edu/offices/equal-opportunity-outreach"/>
             <DirectoryEntry DirectoryTitle="Residential Services" Phone="508-831-5645" Address="East Hall" href="https://www.wpi.edu/offices/residential-services-office"/>
-            <DirectoryEntry DirectoryTitle="Campus Shuttles" Phone="" Address="" href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation"/>
+            <DirectoryEntry DirectoryTitle="Student Development and Counseling Center" Phone="508-831-5540" Address="16 Einhorn Road" href="https://www.wpi.edu/offices/student-development-counseling-center"/>
+            
           </AccordionTitle>
           <AccordionTitle isExpanded="true" title="Campus Life">
             <DirectoryEntry DirectoryTitle="Center for Wellbeing" Phone="508-831-6494" Address="Daniels Hall" href="https://www.wpi.edu/student-experience/health-wellness/center-for-well-being"/>
             <DirectoryEntry DirectoryTitle="Collegiate Religious Center" Phone="508-831-4174" Address="19 Schussler Road" href="https://www.wpi.edu/student-experience/resources/collegiate-religious-center"/>
+            <DirectoryEntry DirectoryTitle="First Year Experience" Phone="" Address="" href="https://fye.wpi.edu/"/>
             <DirectoryEntry DirectoryTitle="Gender, Sexuality, and Women’s Studies" Phone="" Address="" href="https://www.wpi.edu/c/gendersexualitywomensstudies"/>
             <DirectoryEntry DirectoryTitle="International House" Phone="508-831-6030" Address="100 Institute Road" href="https://www.wpi.edu/offices/international-house"/>
             <DirectoryEntry DirectoryTitle="WPI Student Experience" Phone="" Address="" href="https://www.wpi.edu/student-experience"/>
