@@ -19,7 +19,6 @@ import Checklists, { defaultChecklistdata } from "./navigation/Checklists";
 import Academics from './navigation/Academics';
 import { Image } from 'expo-image';
 
-import Directory from './navigation/Directory';
 import HomePage from './navigation/HomePage';
 import Wellness from './navigation/Wellness';
 import Services from './navigation/Services';
@@ -28,6 +27,7 @@ import FAQ from './navigation/FAQ';
 import Development from './navigation/Development';
 import Diversity from './navigation/Diversity';
 import Social from './navigation/Social';
+import Directory from './navigation/Directory';
 
 /**
  * The entire StudentSuccessProject App component
@@ -47,7 +47,7 @@ function App() {
         <StatusBar />
         <NavigationContainer>
           <AppDrawer.Navigator
-            initialRouteName={AppDrawerItemName.Welcome}
+            initialRouteName={AppDrawerItemName.HomePage}
             screenOptions={{
               headerTintColor: "#FFFFFF",
               drawerStyle: {
@@ -285,6 +285,27 @@ function App() {
                 borderBottomRightRadius: 0,
               },
               drawerLabel: AppDrawerItemName.Checklists,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Directory}
+            name={AppDrawerItemName.Directory}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Directory,
             }}
           />
           </AppDrawer.Navigator>
