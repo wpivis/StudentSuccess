@@ -79,12 +79,16 @@ export default function Wellness({navigation}) {
                   )}
                 />
               </View>
-              <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>
-            <BracketedText>
-              The Student Development and Counseling Center offers free and confidential help, 24/7. Students and staff 
-              alike stress that it is there not just for if you have a problem, go before things get overwhelming.
-            </BracketedText>
-            
+              <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>          
+            <QuoteRight color="red">
+              <Text>“[My counselor] really listened to my concerns, related to my problems, and validated my feelings.”</Text>            
+            </QuoteRight>
+            <QuoteLeft color="gray">
+              <Text>“[It’s great] having someone to vent to . . . it’s free, and it’s super accessible.”</Text>            
+            </QuoteLeft>
+            <QuoteRight color="red">
+              <Text>“The SDCC is the biggest contributor to me finding my own happiness”</Text>            
+            </QuoteRight>
             <ButtonCentered href="https://forms.office.com/pages/responsepage.aspx?id=9XacWBXK-UGIS1XsFaBnKoK6q-y0N7BHuoBOlDglFLpUOFo1WkRQWDU4MElJQU1LWVI2UTNEUlJXRC4u&utm_source=marketing_cloud_email&utm_medium=January_12_2022&utm_campaign=UMC_3005745&utm_mc_suscriber_id=8468850">
               Schedule an Appointment
             </ButtonCentered>
@@ -126,6 +130,9 @@ export default function Wellness({navigation}) {
               office visits and services. Offered services include but are not limited to sexual health services, evaluation and 
               treatment of illness and injury, immunization assistance, referral services, and prescription management
             </BracketedText>
+            <QuoteRight color="red">
+              <Text>“Health services is very underrated, they do a lot of stuff for free, but nobody knows about it. You can literally get plan B for free at health services.”</Text>            
+            </QuoteRight>
             <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">
               LGBTQIA+ Inclusive Healthcare Services
             </ButtonCentered>
@@ -167,6 +174,9 @@ export default function Wellness({navigation}) {
               whom they can ask for directions to resources. There are sponsored programs and activities on wellness days where you 
               can take some time off from classes and spend time doing the things that make you feel fulfilled.
             </BracketedText>
+            <QuoteLeft color="gray">
+              <Text>“This year has been so much better than last year because of wellness days and the Center for Wellbeing.”</Text>            
+            </QuoteLeft>
             <ButtonCentered href="https://www.wpi.edu/student-experience/health-wellness/center-for-well-being">Visit the Wellness Center</ButtonCentered>
           </ContentSection>
 

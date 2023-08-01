@@ -6,7 +6,7 @@ import { Component } from "react";
 
 export function DirectoryEntry(props){
   return (
-    <View style={{borderBottomWidth: 2,borderBottomColor:"black",paddingVertical:10, paddingHorizontal:20}}>
+    <View style={{borderBottomWidth: 1,borderBottomColor:crimson,paddingVertical:10, paddingHorizontal:20}}>
       <a href={props.href}><DirectoryTitle>{props.DirectoryTitle}</DirectoryTitle></a> 
       <View style={{display: "flex",flexDirection:"row"}}>
       <DisplayDescription Address={props.Address} Phone={props.Phone}/>
