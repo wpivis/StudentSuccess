@@ -158,30 +158,10 @@ export default function Diversity({navigation}) {
               />
 
             </AccordionTitle>
-            <AccordionTitle title="People with disabilities and neurodivergent people">
-              <AccordionItem 
-                title='"Thinking in Pictures: My Life with Autism"'
-                description="by Temple Grandin"
-              />
-              <AccordionItem 
-                title='"The Reason I Jump: The Inner Voice of a Thirteen-Year-Old Boy with Autism"'
-                description="by Naoki Higashida"
-              />
-              <AccordionItem 
-                title={`"Look Me in the Eye: My Life with Asperger's"`}
-                description="by John Elder Robison"
-              />
-              <AccordionItem 
-                title='"The Curious Incident of the Dog in the Night-Time"'
-                description="by Mark Haddon"
-              />
+            <AccordionTitle title="People with Disabilities">
               <AccordionItem 
                 title='"Being Heumann: An Unrepentant Memoir of a Disability Rights Activist"'
                 description="by Judith Heumann and Kristen Joiner"
-              />
-              <AccordionItem 
-                title='"NeuroTribes: The Legacy of Autism and the Future of Neurodiversity"'
-                description="by Steve Silberman"
               />
               <AccordionItem 
                 title='"El Deafo"'
@@ -193,7 +173,29 @@ export default function Diversity({navigation}) {
               />
 
             </AccordionTitle>
-            <AccordionTitle title="Books for International Students (Cross-Cultural Exchanges)">
+            <AccordionTitle title="Neurodivergent People">
+              <AccordionItem 
+                title='"Thinking in Pictures: My Life with Autism"'
+                description="by Temple Grandin"
+              />
+              <AccordionItem 
+                title='"The Curious Incident of the Dog in the Night-Time"'
+                description="by Mark Haddon"
+              />
+              <AccordionItem 
+                title='"The Reason I Jump: The Inner Voice of a Thirteen-Year-Old Boy with Autism"'
+                description="by Naoki Higashida"
+              />
+              <AccordionItem 
+                title={`"Look Me in the Eye: My Life with Asperger's"`}
+                description="by John Elder Robison"
+              />
+              <AccordionItem 
+                title='"NeuroTribes: The Legacy of Autism and the Future of Neurodiversity"'
+                description="by Steve Silberman"
+              />
+            </AccordionTitle>
+            <AccordionTitle title="Books for International Students">
               <AccordionItem 
                 title='"American Ways: A Guide for Foreigners in the United States"'
                 description="by Gary Althen and Janet Bennett"

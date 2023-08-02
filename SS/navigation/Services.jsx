@@ -23,7 +23,7 @@ const founders = require("../assets/FoundersHall.jpg")
 const institute = require("../assets/InstituteHall.jpg")
 const messenger = require("../assets/Messenger.jpg")
 const morgan = require("../assets/Morgan.jpg")
-const sanford = require("../assets/SanfordRiley Hall.jpg")
+const sanford = require("../assets/SanfordRileyHall.jpg")
 const stodd = require("../assets/Stodd.jpg")
 const trowbridge = require("../assets/TrowbridgeHouse.jpg")
 const wachusett = require("../assets/Wachusett.jpg")
@@ -96,7 +96,6 @@ export default function Services({navigation}) {
           </ContentSection>
           
           <ContentSection>
-          <HeaderRight>Dining Services</HeaderRight>
           <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel
                   loop
@@ -125,9 +124,8 @@ export default function Services({navigation}) {
             <ButtonCentered href="https://www.wpi.edu/offices/dining-services">Dining Services</ButtonCentered>
           </ContentSection>
 
-          <ContentSection>
-          <HeaderRight>Transportation</HeaderRight>           
-      <Image source={shuttle} style={{width: "100%",height: 200, maxHeight: 300, minHeight: 200, objectFit: "cover"}}/>
+          <ContentSection>       
+            <ImageHeader image={shuttle}>Transportation</ImageHeader>
             <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>                       
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation">VPA Bus</ButtonCentered>
             <ButtonCentered href="http://bustracker.therta.com/bustime/home.jsp">WRTA Bus</ButtonCentered>
@@ -144,7 +142,7 @@ export default function Services({navigation}) {
 const HousingCarouselData = [
   {
     image: housing,
-    text: ""
+    text: "Housing"
   },
   {
     image: daniels,
@@ -187,22 +185,22 @@ const HousingCarouselData = [
 const DiningCarouselData = [
   {
     image: diningHall,
-    text: ""
+    text: "Dining Services"
   },
   {
     image: halal,
-    text: ""
+    text: "Dining: Halal Shack"
   },
   {
     image: starbucks,
-    text: ""
+    text: "Dining: Starbucks"
   },
   {
     image: loveFood,
-    text: ""
+    text: "Dining: Made With Love"
   },
   {
     image: veggies,
-    text: ""
+    text: "Dining Services"
   },
 ]
