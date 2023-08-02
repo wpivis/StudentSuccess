@@ -19,13 +19,21 @@ import Carousel from 'react-native-reanimated-carousel';
 const dorm = require("../assets/res.jpg")
 const housing = require("../assets/housing.jpg")
 const daniels = require("../assets/Daniels.jpg")
+const founders = require("../assets/FoundersHall.jpg")
+const institute = require("../assets/InstituteHall.jpg")
+const messenger = require("../assets/Messenger.jpg")
 const morgan = require("../assets/Morgan.jpg")
-const schussler = require("../assets/Schussler.jpg")
+const sanford = require("../assets/SanfordRiley Hall.jpg")
+const stodd = require("../assets/Stodd.jpg")
+const trowbridge = require("../assets/TrowbridgeHouse.jpg")
+const wachusett = require("../assets/Wachusett.jpg")
 
 //Dining
 const diningHall = require("../assets/DiningHall.jpg")
 const loveFood = require("../assets/LoveFood.jpg")
 const veggies = require("../assets/Veggies.jpg")
+const halal = require("../assets/halal.jpg")
+const starbucks = require("../assets/starbucks.jpg")
 
 //Tranportation
 const shuttle = require("../assets/Shuttle.jpg")
@@ -140,16 +148,36 @@ const HousingCarouselData = [
     text: "Daniels Hall"
   },
   {
+    image: founders,
+    text: "Founders Hall"
+  },
+  {
+    image: institute,
+    text: "Institute Hall"
+  },
+  {
+    image: messenger,
+    text: "Messenger Hall"
+  },
+  {
     image: morgan,
     text: "Morgan Hall"
   },
   {
-    image: schussler,
-    text: "Schussler House"
+    image: sanford,
+    text: "Sanford Riley Hall"
   },
   {
-    image: dorm,
-    text: ""
+    image: stodd,
+    text: "Stoddard Complex"
+  },
+  {
+    image: trowbridge,
+    text: "Trowbridge House"
+  },
+  {
+    image: wachusett,
+    text: "Wachusett House"
   },
 ]
 
@@ -157,6 +185,14 @@ const DiningCarouselData = [
   {
     image: diningHall,
     text: "Dining"
+  },
+  {
+    image: halal,
+    text: ""
+  },
+  {
+    image: starbucks,
+    text: ""
   },
   {
     image: loveFood,

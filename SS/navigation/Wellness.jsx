@@ -242,11 +242,11 @@ const sdccCarouselData = [
   },
   {
     image: sdccTraining,
-    text: "Peer Support and training"
+    text: "Peer Support and Training"
   },
   {
     image: sdccRoomOne,
-    text: "Self Help & online Resources"
+    text: "Self Help & Online Resources"
   },
 ]
 
@@ -284,11 +284,11 @@ const wellbeingCarouselData = [
   },
   {
     image: CWBZen,
-    text: "Games & tools for relaxation"
+    text: "Relaxation Games & Activities"
   },
   {
     image: cwbCoffee,
-    text: "Snacks & Tea available"
+    text: "Snacks & Tea Available"
   },
 ]
 

@@ -35,7 +35,7 @@ export default function Directory({navigation}) {
             <DirectoryEntry DirectoryTitle="UMass Memorial Medical Center" Phone="508-334-1000" Address="119 Belmont Street Worcester" href="https://www.ummhealth.org/umass-memorial-medical-center"/>
             <DirectoryEntry DirectoryTitle="St. Vincent Hospital" Phone="508-363-5000" Address="123 Summer Street, Worcester" href="https://www.stvincenthospital.com/locations/detail/saint-vincent-hospital"/>
           </AccordionTitle>   
-          <AccordionTitle isExpanded="true" title="Student Services">
+          <AccordionTitle isExpanded="true" title="Student Resources">
             <DirectoryEntry DirectoryTitle="Academic Advising" Phone="508-831-5381" Address="Unity Hall" href="https://www.wpi.edu/offices/academic-advising"/>
             <DirectoryEntry DirectoryTitle="Accessibility Services" Phone="508-831-4908" Address="Unity Hall" href="https://www.wpi.edu/offices/office-accessibility-services"/>
             <DirectoryEntry DirectoryTitle="Bursar's Office" Phone="508-831-5203" Address="Boynton Hall" href="https://www.wpi.edu/offices/bursar"/>
