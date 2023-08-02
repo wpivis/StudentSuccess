@@ -1,4 +1,4 @@
-import { View, Text, Button, Dimensions } from 'react-native'
+import { View, Text, Button, Dimensions, Image } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
@@ -54,6 +54,7 @@ export default function Services({navigation}) {
           <PageHeader>Campus Services at WPI</PageHeader>
           
           <ContentSection>
+          <HeaderRight>Housing & Residential</HeaderRight>
           <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel
                   loop
@@ -95,6 +96,7 @@ export default function Services({navigation}) {
           </ContentSection>
           
           <ContentSection>
+          <HeaderRight>Dining Services</HeaderRight>
           <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel
                   loop
@@ -124,7 +126,8 @@ export default function Services({navigation}) {
           </ContentSection>
 
           <ContentSection>
-            <ImageHeader image={shuttle}>Transportation</ImageHeader>
+          <HeaderRight>Transportation</HeaderRight>           
+      <Image source={shuttle} style={{width: "100%",height: 200, maxHeight: 300, minHeight: 200, objectFit: "cover"}}/>
             <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>                       
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation">VPA Bus</ButtonCentered>
             <ButtonCentered href="http://bustracker.therta.com/bustime/home.jsp">WRTA Bus</ButtonCentered>
@@ -141,7 +144,7 @@ export default function Services({navigation}) {
 const HousingCarouselData = [
   {
     image: housing,
-    text: "Housing & Residential Services"
+    text: ""
   },
   {
     image: daniels,
@@ -184,7 +187,7 @@ const HousingCarouselData = [
 const DiningCarouselData = [
   {
     image: diningHall,
-    text: "Dining"
+    text: ""
   },
   {
     image: halal,

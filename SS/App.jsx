@@ -244,28 +244,7 @@ function App() {
               },
               drawerLabel: AppDrawerItemName.FAQ,
             }}
-          />
-          { /** <AppDrawer.Screen
-            component={Directory}
-            name={AppDrawerItemName.Directory}
-            options={{
-              headerStyle: {
-                backgroundColor: "#1F2327",
-              },
-              headerTitleStyle: {
-                color: "#FFFFFF"
-              },
-              drawerActiveTintColor: "#FFFFFF",
-              drawerInactiveTintColor: "#FFFFFF",
-              drawerItemStyle: {
-                borderBottomColor: "#FFFFFF",
-                borderBottomWidth: 1,
-                borderBottomLeftRadius: 0,
-                borderBottomRightRadius: 0,
-              },
-              drawerLabel: AppDrawerItemName.Directory,
-            }}
-          /> */}
+          />          
           <AppDrawer.Screen
             component={Checklists}
             name={AppDrawerItemName.Checklists}

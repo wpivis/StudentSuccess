@@ -58,6 +58,7 @@ export default function Wellness({navigation}) {
             is our goal.
           </BracketedText>
           <ContentSection>
+          <HeaderRight>SDCC</HeaderRight>
           <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel
                   loop
@@ -101,6 +102,7 @@ export default function Wellness({navigation}) {
           </ContentSection>
 
           <ContentSection>
+          <HeaderRight>Health Services</HeaderRight>
             <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel
                   loop
@@ -145,6 +147,7 @@ export default function Wellness({navigation}) {
           </ContentSection>
           
           <ContentSection>
+          <HeaderRight>Center for Well-being</HeaderRight>
             <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel
                   loop
@@ -230,7 +233,7 @@ export default function Wellness({navigation}) {
 const sdccCarouselData = [
   {
     image: sdcc,
-    text: "SDCC"
+    text: ""
   },
   {
     image: sdccBuilding,
@@ -253,7 +256,7 @@ const sdccCarouselData = [
 const healthServicesCarouselData = [ 
   {
     image: healthLobby,
-    text: "Health Services"
+    text: ""
   },
   {
     image: healthRoomOne,
@@ -272,7 +275,7 @@ const healthServicesCarouselData = [
 const wellbeingCarouselData = [ 
   {
     image: cwb,
-    text: "Center for Well-being"
+    text: ""
   },
   {
     image: cwbLobby,
