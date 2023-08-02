@@ -23,7 +23,7 @@ const founders = require("../assets/FoundersHall.jpg")
 const institute = require("../assets/InstituteHall.jpg")
 const messenger = require("../assets/Messenger.jpg")
 const morgan = require("../assets/Morgan.jpg")
-const sanford = require("../assets/SanfordRiley Hall.jpg")
+const sanford = require("../assets/SanfordRileyHall.jpg")
 const stodd = require("../assets/Stodd.jpg")
 const trowbridge = require("../assets/TrowbridgeHouse.jpg")
 const wachusett = require("../assets/Wachusett.jpg")
@@ -39,7 +39,7 @@ const starbucks = require("../assets/starbucks.jpg")
 const shuttle = require("../assets/Shuttle.jpg")
 
 
-export default function Services({navigation}) {
+export default function Services({ navigation }) {
   const width = Dimensions.get('window').width;
   const carouselWidth = width > 800 ? 800 : width;
   const carouselHeight = 200;
@@ -47,39 +47,39 @@ export default function Services({navigation}) {
   return (
     <ScrollView>
 
-      <Navbar n={navigation} title={AppDrawerItemName.Services}/>
+      <Navbar n={navigation} title={AppDrawerItemName.Services} />
 
-      <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+      <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
           <PageHeader>Campus Services at WPI</PageHeader>
-          
+
           <ContentSection>
-          <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
-                <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={HousingCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                    <View
-                      style={{
-                        flex: 1,
-                        justifyContent: 'flex-start',
-                      }}
-                    >
-                      <ImageHeader image={HousingCarouselData[index].image}>{HousingCarouselData[index].text}</ImageHeader>
-                    </View>
-                  )}
-                />
-              </View>
-              <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
+            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
+              <Carousel
+                loop
+                width={carouselWidth}
+                data={HousingCarouselData}
+                height={carouselHeight}
+                autoPlay
+                autoPlayInterval={4000}
+                scrollAnimationDuration={1000}
+                renderItem={({ index }) => (
+                  <View
+                    style={{
+                      flex: 1,
+                      justifyContent: 'flex-start',
+                    }}
+                  >
+                    <ImageHeader image={HousingCarouselData[index].image}>{HousingCarouselData[index].text}</ImageHeader>
+                  </View>
+                )}
+              />
+            </View>
+            <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
             <View style={{ paddingTop: 10 }}>
-            <GrayTextBeam >
-              Gender-inclusive housing available
-            </GrayTextBeam>
+              <GrayTextBeam >
+                Gender-inclusive housing available
+              </GrayTextBeam>
             </View>
             <GrayTextBeam>
               <Text>Offers 2 affinity-based spaces upon application: Black Excellence and Lavender Lane</Text>
@@ -93,47 +93,47 @@ export default function Services({navigation}) {
             <ButtonCentered href="https://www.wpi.edu/offices/id-services">ID Services</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/offices/residential-services-office">Residential Services</ButtonCentered>
           </ContentSection>
-          
+
           <ContentSection>
-          <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
-                <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={DiningCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                    <View
-                      style={{
-                        flex: 1,
-                        justifyContent: 'flex-start',
-                      }}
-                    >
-                      <ImageHeader image={DiningCarouselData[index].image}>{DiningCarouselData[index].text}</ImageHeader>
-                    </View>
-                  )}
-                />
-              </View>
-              <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
-              <View style={{paddingTop: 10}}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
-              <GrayTextBeam>Vegetarian and allergy friendly options are available</GrayTextBeam>    
+            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
+              <Carousel
+                loop
+                width={carouselWidth}
+                data={DiningCarouselData}
+                height={carouselHeight}
+                autoPlay
+                autoPlayInterval={4000}
+                scrollAnimationDuration={1000}
+                renderItem={({ index }) => (
+                  <View
+                    style={{
+                      flex: 1,
+                      justifyContent: 'flex-start',
+                    }}
+                  >
+                    <ImageHeader image={DiningCarouselData[index].image}>{DiningCarouselData[index].text}</ImageHeader>
+                  </View>
+                )}
+              />
+            </View>
+            <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
+            <View style={{ paddingTop: 10 }}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
+            <GrayTextBeam>Vegetarian and allergy friendly options are available</GrayTextBeam>
             <ButtonCentered href="https://www.wpi.edu/sites/default/files/inline-image/Body%20of%20International%20Student%20Handbook%202022-2023.pdf">International Student Handbook</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/offices/dining-services">Dining Services</ButtonCentered>
           </ContentSection>
 
           <ContentSection>
             <ImageHeader image={shuttle}>Transportation</ImageHeader>
-            <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>                       
+            <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation">VPA Bus</ButtonCentered>
             <ButtonCentered href="http://bustracker.therta.com/bustime/home.jsp">WRTA Bus</ButtonCentered>
           </ContentSection>
-          <Footer/>
+          <Footer />
         </View>
       </View>
-      
-    
+
+
     </ScrollView>
   )
 }
