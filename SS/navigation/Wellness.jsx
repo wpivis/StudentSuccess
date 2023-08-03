@@ -184,6 +184,7 @@ export default function Wellness({navigation}) {
           </ContentSection>
 
           <ContentSection>
+          <HeaderRight>Equal Opportnity & Outreach</HeaderRight>
             <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
                 <Carousel
                   loop
@@ -298,7 +299,7 @@ const wellbeingCarouselData = [
 const EOOCarouselData = [ 
   {
     image: cc,
-    text: "Equal Opportunity & Outreach"
+    text: ""
   },
   {
     image: eeoDesk,
