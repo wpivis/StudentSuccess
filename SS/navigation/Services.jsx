@@ -16,27 +16,26 @@ import Carousel from 'react-native-reanimated-carousel';
 
 //images
 //housing
-const dorm = require("../assets/res.jpg")
-const housing = require("../assets/housing.jpg")
-const daniels = require("../assets/Daniels.jpg")
-const founders = require("../assets/FoundersHall.jpg")
-const institute = require("../assets/InstituteHall.jpg")
-const messenger = require("../assets/Messenger.jpg")
-const morgan = require("../assets/Morgan.jpg")
-const sanford = require("../assets/SanfordRileyHall.jpg")
-const stodd = require("../assets/Stodd.jpg")
-const trowbridge = require("../assets/TrowbridgeHouse.jpg")
-const wachusett = require("../assets/Wachusett.jpg")
+const housing = require("../assets/Services/housing.jpg")
+const daniels = require("../assets/Services/Daniels.jpg")
+const founders = require("../assets/Services/FoundersHall.jpg")
+const institute = require("../assets/Services/InstituteHall.jpg")
+const messenger = require("../assets/Services/Messenger.jpg")
+const morgan = require("../assets/Services/Morgan.jpg")
+const sanford = require("../assets/Services/SanfordRileyHall.jpg")
+const stodd = require("../assets/Services/Stodd.jpg")
+const trowbridge = require("../assets/Services/TrowbridgeHouse.jpg")
+const wachusett = require("../assets/Services/Wachusett.jpg")
 
 //Dining
-const diningHall = require("../assets/DiningHall.jpg")
-const loveFood = require("../assets/LoveFood.jpg")
-const veggies = require("../assets/Veggies.jpg")
-const halal = require("../assets/halal.jpg")
-const starbucks = require("../assets/starbucks.jpg")
+const diningHall = require("../assets/Services/DiningHall.jpg")
+const loveFood = require("../assets/Services/LoveFood.jpg")
+const veggies = require("../assets/Services/Veggies.jpg")
+const halal = require("../assets/Services/halal.jpg")
+const starbucks = require("../assets/Services/starbucks.jpg")
 
 //Tranportation
-const shuttle = require("../assets/Shuttle.jpg")
+const shuttle = require("../assets/Services/Shuttle.jpg")
 
 
 export default function Services({navigation}) {

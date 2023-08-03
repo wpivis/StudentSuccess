@@ -16,28 +16,28 @@ import Carousel from 'react-native-reanimated-carousel';
 
 // Images
 //SDCC
-const sdcc = require("../assets/sdcc.jpg")
-const sdccBuilding = require("../assets/SDCCBuilding.jpg")
-const sdccRoomOne = require("../assets/SDCCRoom1.jpg")
-const sdccSession = require("../assets/SDCCSession.jpg")
-const sdccTraining = require("../assets/SDCCTraining.jpg")
+const sdcc = require("../assets/Wellness/sdcc.jpg")
+const sdccBuilding = require("../assets/Wellness/SDCCBuilding.jpg")
+const sdccRoomOne = require("../assets/Wellness/SDCCRoom1.jpg")
+const sdccSession = require("../assets/Wellness/SDCCSession.jpg")
+const sdccTraining = require("../assets/Wellness/SDCCTraining.jpg")
 
 //Health Services
-const healthLobby = require("../assets/HealthServicesLobby.jpg")
-const healthRoomOne = require("../assets/HealthServicesRoom1.jpg")
-const healthSeat = require("../assets/HealthServicesSeat.jpg")
-const healthTools = require("../assets/HealthServicesTools.jpg")
+const healthLobby = require("../assets/Wellness/HealthServicesLobby.jpg")
+const healthRoomOne = require("../assets/Wellness/HealthServicesRoom1.jpg")
+const healthSeat = require("../assets/Wellness/HealthServicesSeat.jpg")
+const healthTools = require("../assets/Wellness/HealthServicesTools.jpg")
 
 //Center for Wellbeing
-const cwb = require("../assets/CWB.jpg")
-const cwbCoffee = require("../assets/CWBCoffee.jpg")
-const cwbLobby = require("../assets/CWBLobby.jpg")
-const cwbSeat = require("../assets/CWBSeat.jpg")
-const CWBZen = require("../assets/CWBZen.jpg")
+const cwb = require("../assets/Wellness/CWB.jpg")
+const cwbCoffee = require("../assets/Wellness/CWBCoffee.jpg")
+const cwbLobby = require("../assets/Wellness/CWBLobby.jpg")
+const cwbSeat = require("../assets/Wellness/CWBSeat.jpg")
+const CWBZen = require("../assets/Wellness/CWBZen.jpg")
 
 //Title IX
-const cc = require("../assets/CC.jpg")
-const eeoDesk = require("../assets/EEODesk.jpg")
+const cc = require("../assets/Wellness/CC.jpg")
+const eeoDesk = require("../assets/Wellness/EEODesk.jpg")
 
 export default function Wellness({navigation}) {
   const width = Dimensions.get('window').width;
