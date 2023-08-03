@@ -11,6 +11,7 @@ import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
+import { ImageCarousel } from '../components/Images'
 import Carousel from 'react-native-reanimated-carousel';
 
 
@@ -54,27 +55,7 @@ export default function Services({navigation}) {
           
           <ContentSection>
           <HeaderRight>Housing & Residential</HeaderRight>
-          <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
-                <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={HousingCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                    <View
-                      style={{
-                        flex: 1,
-                        justifyContent: 'flex-start',
-                      }}
-                    >
-                      <ImageHeader image={HousingCarouselData[index].image}>{HousingCarouselData[index].text}</ImageHeader>
-                    </View>
-                  )}
-                />
-              </View>
+          <ImageCarousel data={HousingCarouselData}></ImageCarousel>          
               <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
             <View style={{ paddingTop: 10 }}>
             <GrayTextBeam >
@@ -95,27 +76,7 @@ export default function Services({navigation}) {
           </ContentSection>
           
           <ContentSection>
-          <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
-                <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={DiningCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                    <View
-                      style={{
-                        flex: 1,
-                        justifyContent: 'flex-start',
-                      }}
-                    >
-                      <ImageHeader image={DiningCarouselData[index].image}>{DiningCarouselData[index].text}</ImageHeader>
-                    </View>
-                  )}
-                />
-              </View>
+            <ImageCarousel data={DiningCarouselData}></ImageCarousel>         
               <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
               <View style={{paddingTop: 10}}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
               <GrayTextBeam>Vegetarian and allergy friendly options are available</GrayTextBeam>    
