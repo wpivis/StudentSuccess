@@ -93,8 +93,13 @@ export default function Services({ navigation }) {
                                     </View>
                                 )}
                             />
+
                         </View>
                         <HeaderSubtitle>The Rec Center at WPI provides a number of fitness resources to help students stay active.</HeaderSubtitle>
+                        <HeaderRight>Advice from a WPI Student:</HeaderRight>
+                        <QuoteLeft color="white">
+                            “Definitely use the gym, exercising is helpful for your mental health.”
+                        </QuoteLeft>
                     </ContentSection>
 
                     <ContentSection>
@@ -120,13 +125,13 @@ export default function Services({ navigation }) {
                     </ContentSection>
 
                     <ContentSection>
-                        <ImageHeader image={lib1}>Gender Inclusive Restrooms</ImageHeader>
+                        <HeaderRight>Gender Inclusive Restrooms</HeaderRight>
                         <HeaderSubtitle>WPI offers several gender inclusive restrooms around campus. </HeaderSubtitle>
                         <ButtonCentered href="https://maps.wpi.edu/?id=609&_gl=1*176mf9c*_ga*MTk5NjIyODU2LjE2ODQ3ODA0NTY.*_ga_RE35PKQB7J*MTY5MDQ3MTY1Mi4xNDMuMS4xNjkwNDcxOTc2LjQxLjAuMA..#!s/">Map to Gender Inclusive Restrooms</ButtonCentered>
                     </ContentSection>
 
                     <ContentSection>
-                        <ImageHeader image={lib1}>Free Menstrual Hygiene Product Locations</ImageHeader>
+                        <HeaderRight>Free Menstrual Hygiene Product Locations</HeaderRight>
                         <HeaderSubtitle>The Period Agenda (TPA) is a student organization dedicated to period poverty, menstrual equity, and educating the campus on menstrual-related subjects. WPI offers free menstrual hygiene products at various locations on campus. </HeaderSubtitle>
                         <ButtonCentered href="https://www.wpi.edu/news/announcements/tpa-and-odime-offer-free-menstrual-hygiene-products-wpi-community">Learn more about TPA and product locations</ButtonCentered>
                     </ContentSection>
