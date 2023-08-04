@@ -13,7 +13,7 @@ import { AppDrawer } from "./components/Navigation";
 
 // API Imports
 import { AppDrawerItemName, } from "./api/navigation";
-import {PaperProvider} from 'react-native-paper';
+import { PaperProvider } from 'react-native-paper';
 import { ChecklistsContext } from "./Context";
 import Checklists, { defaultChecklistdata } from "./navigation/Checklists";
 import Academics from './navigation/Academics';
@@ -24,6 +24,7 @@ import Wellness from './navigation/Wellness';
 import Services from './navigation/Services';
 import Financial from './navigation/Financial';
 import FAQ from './navigation/FAQ';
+import Facilities from './navigation/Facilities';
 import Development from './navigation/Development';
 import Diversity from './navigation/Diversity';
 import Social from './navigation/Social';
@@ -224,6 +225,27 @@ function App() {
               drawerLabel: AppDrawerItemName.Services,
             }}
           />
+                        <AppDrawer.Screen
+                component={Facilities}
+                name={AppDrawerItemName.Facilities}
+                options={{
+                  headerStyle: {
+                    backgroundColor: "#1F2327",
+                  },
+                  headerTitleStyle: {
+                    color: "#FFFFFF"
+                  },
+                  drawerActiveTintColor: "#FFFFFF",
+                  drawerInactiveTintColor: "#FFFFFF",
+                  drawerItemStyle: {
+                    borderBottomColor: "#FFFFFF",
+                    borderBottomWidth: 1,
+                    borderBottomLeftRadius: 0,
+                    borderBottomRightRadius: 0,
+                  },
+                  drawerLabel: AppDrawerItemName.Facilities,
+                }}
+              />
           <AppDrawer.Screen
             component={FAQ}
             name={AppDrawerItemName.FAQ}
@@ -291,7 +313,7 @@ function App() {
         </NavigationContainer>
       </View>
       </ChecklistsContext.Provider>
-     </PaperProvider>
+    </PaperProvider>
 
   );
 }

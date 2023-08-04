@@ -17,6 +17,7 @@ import Carousel from 'react-native-reanimated-carousel';
 
 //images
 //housing
+
 const housing = require("../assets/Services/housing.jpg")
 const daniels = require("../assets/Services/Daniels.jpg")
 const founders = require("../assets/Services/FoundersHall.jpg")
@@ -39,26 +40,26 @@ const starbucks = require("../assets/Services/starbucks.jpg")
 const shuttle = require("../assets/Services/Shuttle.jpg")
 
 
-export default function Services({navigation}) {
+export default function Services({ navigation }) {
   const width = Dimensions.get('window').width;
 
   return (
     <ScrollView>
 
-      <Navbar n={navigation} title={AppDrawerItemName.Services}/>
+      <Navbar n={navigation} title={AppDrawerItemName.Services} />
 
-      <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+      <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
           <PageHeader>Campus Services at WPI</PageHeader>
-          
+
           <ContentSection>
           <HeaderRight>Housing & Residential</HeaderRight>
           <ImageCarousel data={HousingCarouselData}></ImageCarousel>          
               <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
             <View style={{ paddingTop: 10 }}>
-            <GrayTextBeam >
-              Gender-inclusive housing available
-            </GrayTextBeam>
+              <GrayTextBeam >
+                Gender-inclusive housing available
+              </GrayTextBeam>
             </View>
             <GrayTextBeam>
               <Text>Offers 2 affinity-based spaces upon application: Black Excellence and Lavender Lane</Text>
@@ -72,7 +73,7 @@ export default function Services({navigation}) {
             <ButtonCentered href="https://www.wpi.edu/offices/id-services">ID Services</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/offices/residential-services-office">Residential Services</ButtonCentered>
           </ContentSection>
-          
+
           <ContentSection>
             <ImageCarousel data={DiningCarouselData}></ImageCarousel>         
               <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
@@ -84,15 +85,15 @@ export default function Services({navigation}) {
 
           <ContentSection>       
             <ImageHeader image={shuttle}>Transportation</ImageHeader>
-            <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>                       
+            <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation">VPA Bus</ButtonCentered>
             <ButtonCentered href="http://bustracker.therta.com/bustime/home.jsp">WRTA Bus</ButtonCentered>
           </ContentSection>
-          <Footer/>
+          <Footer />
         </View>
       </View>
-      
-    
+
+
     </ScrollView>
   )
 }
