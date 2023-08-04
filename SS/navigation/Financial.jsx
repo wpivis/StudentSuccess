@@ -14,22 +14,22 @@ import { Navbar, } from '../components/Navigation'
 const financialaid = require("../assets/financialaid.jpg")
 const bursar = require("../assets/bursar.jpg")
 
-export default function Financial({navigation}) {
+export default function Financial({ navigation }) {
 
   return (
     <ScrollView>
 
-      <Navbar n={navigation} title={AppDrawerItemName.Financial}/>
+      <Navbar n={navigation} title={AppDrawerItemName.Financial} />
 
-      <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+      <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
           <PageHeader>Financial Resources at WPI</PageHeader>
-          
+
           <ContentSection>
             <ImageHeader>Scholarships</ImageHeader>
             <ButtonCentered href="https://www.wpi.edu/admissions/tuition-aid/types-of-aid/scholarships-grants/wpi-merit">Visit Merit-Based Scholarhips</ButtonCentered>
           </ContentSection>
-          
+
           <ContentSection>
             <ImageHeader>Grants</ImageHeader>
             <ButtonCentered href="https://www.wpi.edu/admissions/tuition-aid/types-of-aid/scholarships-grants">Visit Scholarships and Grants</ButtonCentered>
@@ -44,12 +44,12 @@ export default function Financial({navigation}) {
             <ImageHeader image={bursar}>Bursar</ImageHeader>
             <ButtonCentered href="https://www.wpi.edu/offices/bursar">Visit Housing</ButtonCentered>
           </ContentSection>
-          
-          <Footer/>
+
+          <Footer />
         </View>
       </View>
-      
-    
+
+
     </ScrollView>
   )
 }

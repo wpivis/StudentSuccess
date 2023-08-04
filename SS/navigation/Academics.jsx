@@ -47,7 +47,7 @@ export default function Academics({ navigation }) {
             <GrayTextBeam>Double majors and minors</GrayTextBeam> */}
 
             <QuoteRight color="red">“My advisors were very supportive. They would mostly just reach out during times that they would kind of expect us to need support, like during registration. It's more like. I can really only get the benefits I need if I reach out to them first. But they are very welcoming.”</QuoteRight>
-            <QuoteLeft color="white">“Before taking one of your harder classes, you could see on Workday what you need before the class, I'll ask my advisor anything about it as well. Or if I knew a friend took the class I just asked them about it as well before it.”</QuoteLeft>
+            <QuoteLeft color="gray">“Before taking one of your harder classes, you could see on Workday what you need before the class, I'll ask my advisor anything about it as well. Or if I knew a friend took the class I just asked them about it as well before it.”</QuoteLeft>
 
             <ButtonCentered href="https://www.wpi.edu/offices/academic-advising">Visit Academic Advising</ButtonCentered>
             <HeaderRight>Academic Resource Center</HeaderRight>

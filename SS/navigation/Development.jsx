@@ -15,22 +15,22 @@ const internships = require("../assets/internships.jpg")
 const coops = require("../assets/coops.jpg")
 const cdc = require("../assets/cdc.png")
 
-export default function Development({navigation}) {
+export default function Development({ navigation }) {
 
   return (
     <ScrollView>
 
-      <Navbar n={navigation} title={AppDrawerItemName.Development}/>
+      <Navbar n={navigation} title={AppDrawerItemName.Development} />
 
-      <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+      <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
           <PageHeader>Academic and Career Development at WPI</PageHeader>
-          
+
           <ContentSection>
             <ImageHeader image={internships}>Internships</ImageHeader>
             <ButtonCentered href="https://www.wpi.edu/student-experience/career-development/internships">Visit Internships</ButtonCentered>
           </ContentSection>
-          
+
           <ContentSection>
             <ImageHeader image={coops}>Co-ops</ImageHeader>
             <ButtonCentered href="https://www.wpi.edu/student-experience/career-development/co-ops">Visit Co-ops</ButtonCentered>
@@ -40,12 +40,12 @@ export default function Development({navigation}) {
             <ImageHeader image={cdc}>Career Development Resources</ImageHeader>
             <ButtonCentered href="https://www.wpi.edu/offices/career-development-center">Visit the CDC</ButtonCentered>
           </ContentSection>
-          
-          <Footer/>
+
+          <Footer />
         </View>
       </View>
-      
-    
+
+
     </ScrollView>
   )
 }

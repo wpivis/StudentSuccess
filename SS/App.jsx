@@ -23,8 +23,8 @@ import HomePage from './navigation/HomePage';
 import Wellness from './navigation/Wellness';
 import Services from './navigation/Services';
 import Financial from './navigation/Financial';
-import FAQ from './navigation/FAQ';
 import Facilities from './navigation/Facilities';
+import FAQ from './navigation/FAQ';
 import Development from './navigation/Development';
 import Diversity from './navigation/Diversity';
 import Social from './navigation/Social';
@@ -97,6 +97,27 @@ function App() {
                     borderBottomRightRadius: 0,
                   },
                   drawerLabel: AppDrawerItemName.Diversity,
+                }}
+              />
+              <AppDrawer.Screen
+                component={Facilities}
+                name={AppDrawerItemName.Facilities}
+                options={{
+                  headerStyle: {
+                    backgroundColor: "#1F2327",
+                  },
+                  headerTitleStyle: {
+                    color: "#FFFFFF"
+                  },
+                  drawerActiveTintColor: "#FFFFFF",
+                  drawerInactiveTintColor: "#FFFFFF",
+                  drawerItemStyle: {
+                    borderBottomColor: "#FFFFFF",
+                    borderBottomWidth: 1,
+                    borderBottomLeftRadius: 0,
+                    borderBottomRightRadius: 0,
+                  },
+                  drawerLabel: AppDrawerItemName.Facilities,
                 }}
               />
               <AppDrawer.Screen
@@ -223,27 +244,6 @@ function App() {
                     borderBottomRightRadius: 0,
                   },
                   drawerLabel: AppDrawerItemName.Services,
-                }}
-              />
-              <AppDrawer.Screen
-                component={Facilities}
-                name={AppDrawerItemName.Facilities}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Facilities,
                 }}
               />
               <AppDrawer.Screen

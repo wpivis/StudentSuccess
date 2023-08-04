@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, BracketedText, CenteredTitle, ImageHeader, PageHeader, QuoteLeft, QuoteRight, SectionContentHeader } from "../components/Text"
 import { ImageContainer } from "../components/Images"
@@ -16,9 +16,9 @@ import { Navbar, } from '../components/Navigation'
 const brickWall = require("../assets/brickWall.png")
 const gompeiSunset = require("../assets/gompeiSunset.jpg")
 
-export default function HomePage({navigation}) {
- 
- 
+export default function HomePage({ navigation }) {
+
+
   const width = Dimensions.get('window').width;
   const carouselWidth = width > 800 ? 800 : width;
   const carouselHeight = 550;
@@ -34,8 +34,8 @@ export default function HomePage({navigation}) {
   return (
     <ScrollView>
       <Navbar n={navigation} title={AppDrawerItemName.Welcome} />
-      <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+      <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
 
           <PageHeader>Welcome to the WPI Student Success Handbook</PageHeader>
 
@@ -44,61 +44,61 @@ export default function HomePage({navigation}) {
             <HeaderSubtitle>
               Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
             </HeaderSubtitle>
-            <BodyText> 
+            <BodyText>
               The Student Success Handbook at WPI is specifically designed to ensure that all students,
-              including those from diverse backgrounds, can access and benefit from the abundance of fundamental 
-              resources on campus that foster student success. We emphasize a range of strategies and tools tailored 
-              to support the diverse student body, making it easier for incoming students to find the right resources 
-              for their unique needs at WPI. Here, we emphasize strategies and available tools that promote the success 
-              of our diverse student body - there is something for everyone at WPI if you know where to look! For more general 
+              including those from diverse backgrounds, can access and benefit from the abundance of fundamental
+              resources on campus that foster student success. We emphasize a range of strategies and tools tailored
+              to support the diverse student body, making it easier for incoming students to find the right resources
+              for their unique needs at WPI. Here, we emphasize strategies and available tools that promote the success
+              of our diverse student body - there is something for everyone at WPI if you know where to look! For more general
               student information check out <a href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf" target='_blank'>gompei's guide</a>.
             </BodyText>
           </ContentSection>
-          
-          <ContentSection>
-              <ImageHeader image={brickWall}>Different Definitions of Success</ImageHeader>
-              <HeaderSubtitle>
-                We interviewed diverse students such as BIPOC, LGBTQIA+, women, people with disabilities, and others at WPI to ask them about how they define success. 
-                From their responses, we developed some key takeaways and quotes in their own words.
-              </HeaderSubtitle>
 
-              <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
-                <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={carouselItems}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={5000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (carouselItems[index])}
-                />
-              </View>
+          <ContentSection>
+            <ImageHeader image={brickWall}>Different Definitions of Success</ImageHeader>
+            <HeaderSubtitle>
+              We interviewed diverse students such as BIPOC, LGBTQIA+, women, people with disabilities, and others at WPI to ask them about how they define success.
+              From their responses, we developed some key takeaways and quotes in their own words.
+            </HeaderSubtitle>
+
+            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
+              <Carousel
+                loop
+                width={carouselWidth}
+                data={carouselItems}
+                height={carouselHeight}
+                autoPlay
+                autoPlayInterval={5000}
+                scrollAnimationDuration={1000}
+                renderItem={({ index }) => (carouselItems[index])}
+              />
+            </View>
           </ContentSection>
 
           {/* Resources */}
           <ContentSection>
             <AccordionTitle title="WPI Emergency Resources">
-              <AccordionLink title ="WPI Police" href="https://www.wpi.edu/offices/police"/>
-              <AccordionLink title ="Student Development & Counseling Center" href="https://www.wpi.edu/offices/student-development-counseling-center"/>
-              <AccordionLink title ="Campus Shuttles" href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation"/>
-              <AccordionLink title ="Health Services" href="https://www.wpi.edu/student-experience/health-counseling/health-services"/>
-              <AccordionLink title ="Title IX" href="https://www.wpi.edu/offices/title-ix/how-to-report-sexual-misconduct"/>
+              <AccordionLink title="WPI Police" href="https://www.wpi.edu/offices/police" />
+              <AccordionLink title="Student Development & Counseling Center" href="https://www.wpi.edu/offices/student-development-counseling-center" />
+              <AccordionLink title="Campus Shuttles" href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation" />
+              <AccordionLink title="Health Services" href="https://www.wpi.edu/student-experience/health-counseling/health-services" />
+              <AccordionLink title="Title IX" href="https://www.wpi.edu/offices/title-ix/how-to-report-sexual-misconduct" />
             </AccordionTitle>
             <AccordionTitle title="Additional Emergency Resources">
-              <AccordionItem title ="State Police: 508-829-8326"/>
-              <AccordionItem title ="UMass Medical Center: 508-334-1000"/>
-              <AccordionItem title ="St. Vincent Hospital: 508-334-5000"/>
-              <AccordionLink title ="Pathways for change" href="https://pathwaysforchange.help/"/>
-              <AccordionLink title ="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/"/>
-              <AccordionLink title ="Suicide and Crisis Hotline" href="https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox"/>
+              <AccordionItem title="State Police: 508-829-8326" />
+              <AccordionItem title="UMass Medical Center: 508-334-1000" />
+              <AccordionItem title="St. Vincent Hospital: 508-334-5000" />
+              <AccordionLink title="Pathways for change" href="https://pathwaysforchange.help/" />
+              <AccordionLink title="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/" />
+              <AccordionLink title="Suicide and Crisis Hotline" href="https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox" />
             </AccordionTitle>
           </ContentSection>
 
-          <Footer/>
+          <Footer />
         </View>
       </View>
-    
+
     </ScrollView>
   )
 }
@@ -111,7 +111,7 @@ class CarouselQuoteCard extends Component {
 
   static Quote(props) {
     return (
-      <View style={{width:"100%"}}>
+      <View style={{ width: "100%" }}>
         {props.left ? <QuoteLeft color={props.color}>{props.children}</QuoteLeft> : <QuoteRight color={props.color}>{props.children}</QuoteRight>}
       </View>
     )
@@ -140,7 +140,7 @@ class CarouselTitleCard extends Component {
 
   static Body(props) {
     return (
-      <View style={{marginTop: 7, width: "80%"}}>
+      <View style={{ marginTop: 7, width: "80%" }}>
         <BracketedText noMargin>{props.children}</BracketedText>
       </View>
     )
@@ -177,13 +177,13 @@ const carouselItems = [
       <CarouselQuoteCard.Title>
         Contentment, Happiness, and Balance
       </CarouselQuoteCard.Title>
-      <CarouselQuoteCard.Quote color="white">
+      <CarouselQuoteCard.Quote color="gray">
         “I would personally define success as being able to get to a comfortable spot where you are excited to wake up in the morning, and you don't have anything throughout the day that you genuinely dread to do.”
       </CarouselQuoteCard.Quote>
       <CarouselQuoteCard.Quote left color="red">
         “Being happy and being able to support yourself.”
       </CarouselQuoteCard.Quote>
-      <CarouselQuoteCard.Quote color="white">
+      <CarouselQuoteCard.Quote color="gray">
         “And socially it's just like at the end of the day, I feel like I’m good, I don't feel isolated or anything like that. It's like, I went to bed satisfied, not even happy, just content.”
       </CarouselQuoteCard.Quote>
     </CarouselQuoteCard>
@@ -206,7 +206,7 @@ const carouselItems = [
       <CarouselQuoteCard.Quote left color="red">
         “That is my definition of success and I will stick by it. I work damn hard to go from a failing student to now getting A's and B's. That's success. Success has changed over the years. And to me, being happy, even as a failing student and as a high achieving student, both of them are fine as long as I'm happy, I'm just like, this is success.”
       </CarouselQuoteCard.Quote>
-      <CarouselQuoteCard.Quote color="white">
+      <CarouselQuoteCard.Quote color="gray">
         “Success is to me failing over and over until you find a satisfactory point. So like the continuation of just learning from your failures, and instead of just giving up, you keep going until you get to your end goal, that’s success to me.”
       </CarouselQuoteCard.Quote>
     </CarouselQuoteCard>
@@ -226,13 +226,13 @@ const carouselItems = [
       <CarouselQuoteCard.Title>
         Resiliance and Perseverance
       </CarouselQuoteCard.Title>
-      <CarouselQuoteCard.Quote color="white">
+      <CarouselQuoteCard.Quote color="gray">
         “That's what a successful run at WPI looks like, because obviously WPI is not a cake walk, you know it's work intensive. There's expectations out the roof like not only from the teachers and stuff like that, but the people around you like this competition as well like it's cut throat out here. So you know what I mean. As long as I feel like as long as you keep going, and kind of through the noise through all the mud persevere that's huge.”
       </CarouselQuoteCard.Quote>
       <CarouselQuoteCard.Quote left color="red">
         “I would define success as, like, still being able to keep going. So I think as long as I, like, didn't give up that I'm still successful.”
       </CarouselQuoteCard.Quote>
-      <CarouselQuoteCard.Quote color="white">
+      <CarouselQuoteCard.Quote color="gray">
         “I feel like I'm successful when I'm on top of my work. You know, I feel, I feel like I don't have to like, rush everything at the end.”
       </CarouselQuoteCard.Quote>
     </CarouselQuoteCard>
@@ -255,7 +255,7 @@ const carouselItems = [
       <CarouselQuoteCard.Quote left color="red">
         “I define success as doing what you enjoy, but also like feeling secure in what you're doing. So just finding that balance between having pieces that you can enjoy while still making sure that you're doing everything that you need to do.”
       </CarouselQuoteCard.Quote>
-      <CarouselQuoteCard.Quote color="white">
+      <CarouselQuoteCard.Quote color="gray">
         “Personally, I think success has to be a mix of personal satisfaction with your day to day life, and you know that part of it. I think it also does have to do with - Actually, I guess satisfaction is a good way to put it, because I think financial success is very intertwined.”
       </CarouselQuoteCard.Quote>
       <CarouselQuoteCard.Quote left color="red">
@@ -278,13 +278,13 @@ const carouselItems = [
       <CarouselQuoteCard.Title>
         Social and Personal Relations
       </CarouselQuoteCard.Title>
-      <CarouselQuoteCard.Quote color="white">
+      <CarouselQuoteCard.Quote color="gray">
         “If you have status, if you're satisfied with your interpersonal relationships, and then also if you can meet, like your hierarchy of needs like at the baseline.”
       </CarouselQuoteCard.Quote>
       <CarouselQuoteCard.Quote left color="red">
         “I feel like social success is like being with friends that are like genuine and like, cause I feel like at WPI I meet, I feel like, I know, I, I feel like I know a lot of people at this school because it's so small but like the percentage of people that I consider, like people I'm friendly with versus people that I feel like if I was really struggling, I could go talk to them. I feel like that would be social success, having people that I'm actually close with and I'm not just friendly with.”
       </CarouselQuoteCard.Quote>
-      <CarouselQuoteCard.Quote color="white">
+      <CarouselQuoteCard.Quote color="gray">
         “So, like, when I'm stressed and I feel like, you know, I have someone to talk to about it. I'm not like, oh, I feel so alone woe is me? you know, that comes up for everyone but like having like a support network, having like a circle. It's not just like I rely on this one person. It's like I rely on multiple people.”
       </CarouselQuoteCard.Quote>
     </CarouselQuoteCard>

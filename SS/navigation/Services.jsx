@@ -53,9 +53,9 @@ export default function Services({ navigation }) {
           <PageHeader>Campus Services at WPI</PageHeader>
 
           <ContentSection>
-          <HeaderRight>Housing & Residential</HeaderRight>
-          <ImageCarousel data={HousingCarouselData}></ImageCarousel>          
-              <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
+            <HeaderRight>Housing & Residential</HeaderRight>
+            <ImageCarousel data={HousingCarouselData}></ImageCarousel>
+            <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
             <View style={{ paddingTop: 10 }}>
               <GrayTextBeam >
                 Gender-inclusive housing available
@@ -75,15 +75,15 @@ export default function Services({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <ImageCarousel data={DiningCarouselData}></ImageCarousel>         
-              <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
-              <View style={{paddingTop: 10}}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
-              <GrayTextBeam>Vegetarian and allergy friendly options are available</GrayTextBeam>    
+            <ImageCarousel data={DiningCarouselData}></ImageCarousel>
+            <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
+            <View style={{ paddingTop: 10 }}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
+            <GrayTextBeam>Vegetarian and allergy friendly options are available</GrayTextBeam>
             <ButtonCentered href="https://www.wpi.edu/sites/default/files/inline-image/Body%20of%20International%20Student%20Handbook%202022-2023.pdf">International Student Handbook</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/offices/dining-services">Dining Services</ButtonCentered>
           </ContentSection>
 
-          <ContentSection>       
+          <ContentSection>
             <ImageHeader image={shuttle}>Transportation</ImageHeader>
             <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation">VPA Bus</ButtonCentered>

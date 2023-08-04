@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 
-import {Image} from "expo-image";
+import { Image } from "expo-image";
 import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow, textBlockMaxWidth } from "../assets/style";
 import { Component } from "react";
 import { LightGrayPlatform, RedPlatform, TransparentPlatform } from "./Layout";
@@ -14,32 +14,32 @@ const bubblePointGrayLeft = require("../assets/bubblePointGrayLeft.png");
 
 export function HeaderRight(props) {
   return (
-    <View 
+    <View
       style={{
-        display: "flex", 
+        display: "flex",
         alignItems: "center",
-        flexDirection: "row", 
-        width: "100%", 
+        flexDirection: "row",
+        width: "100%",
         justifyContent: "center",
-        paddingRight: 28, 
+        paddingRight: 28,
         height: 32,
         marginTop: 14,
       }}
     >
-      <View style={{height: 0, width: "100%", display: "flex", borderWidth: 2, borderStyle: "dashed", borderColor: crimson}} />
-      <View 
+      <View style={{ height: 0, width: "100%", display: "flex", borderWidth: 2, borderStyle: "dashed", borderColor: crimson }} />
+      <View
         style={{
-          borderLeftColor: crimson, 
-          display: "flex", 
-          paddingLeft: 14, 
-          paddingRight: 14, 
-          backgroundColor: "white", 
-          position: "absolute", 
-          top: 0, 
+          borderLeftColor: crimson,
+          display: "flex",
+          paddingLeft: 14,
+          paddingRight: 14,
+          backgroundColor: "white",
+          position: "absolute",
+          top: 0,
           right: 0
         }}
       >
-        <Text style={{color: crimson, fontSize: 24, fontWeight: "bold"}}>
+        <Text style={{ color: crimson, fontSize: 24, fontWeight: "bold" }}>
           {props.children}
         </Text>
       </View>
@@ -49,29 +49,29 @@ export function HeaderRight(props) {
 
 
 export function BracketedText(props) {
-  
-  const textAlign =  props.left ? "left" : "center";
-  const alignItems =  props.left ? "flex-start" : "center";
+
+  const textAlign = props.left ? "left" : "center";
+  const alignItems = props.left ? "flex-start" : "center";
 
   return (
-    <View 
+    <View
       style={{
-        display: "flex", 
+        display: "flex",
         alignItems: alignItems,
-        flexDirection: "row", 
+        flexDirection: "row",
         justifyContent: "space-between",
-        width: "100%", 
-        paddingLeft: 14, 
-        paddingRight: 14, 
+        width: "100%",
+        paddingLeft: 14,
+        paddingRight: 14,
         marginTop: props.noMargin ? null : 14,
       }}
     >
-      <View 
+      <View
         style={{
-          height: "100%",  
-          flex: 1, 
+          height: "100%",
+          flex: 1,
           maxWidth: 28,
-          borderTopWidth: 2, 
+          borderTopWidth: 2,
           borderBottomWidth: 2,
           borderLeftWidth: 2,
           borderTopColor: crimson,
@@ -79,15 +79,15 @@ export function BracketedText(props) {
           borderLeftColor: crimson,
         }}
       />
-      <View style={{height: "100%", paddingTop: 28, paddingBottom: 28, flex: 10, textAlign: textAlign}}>
+      <View style={{ height: "100%", paddingTop: 28, paddingBottom: 28, flex: 10, textAlign: textAlign }}>
         <Text>{props.children}</Text>
       </View>
-      <View 
+      <View
         style={{
-          height: "100%", 
+          height: "100%",
           flex: 1,
           maxWidth: 28,
-          borderTopWidth: 2, 
+          borderTopWidth: 2,
           borderBottomWidth: 2,
           borderRightWidth: 2,
           borderTopColor: crimson,
@@ -101,16 +101,16 @@ export function BracketedText(props) {
 
 export function ImageHeader(props) {
   return (
-    <View 
+    <View
       style={{
         ...dropShadowDark,
-        width: "100%", 
-        maxHeight: 300, 
+        width: "100%",
+        maxHeight: 300,
         minHeight: 200,
       }}
     >
-      <Image source={props.image} style={{width: "100%", height: "100%", maxHeight: 300, minHeight: 200, objectFit: "cover"}}/>
-      <View 
+      <Image source={props.image} style={{ width: "100%", height: "100%", maxHeight: 300, minHeight: 200, objectFit: "cover" }} />
+      <View
         style={{
           height: "100%",
           width: "100%",
@@ -118,26 +118,26 @@ export function ImageHeader(props) {
           position: "absolute",
           display: "flex",
           flexDirection: "column",
-          justifyContent:"flex-end",
+          justifyContent: "flex-end",
         }}
       >
-        <View 
+        <View
           style={isText(props.children)}
         >
-          <Text style={{color:"#f4f4f4", fontSize: 24}}>{props.children}</Text>
+          <Text style={{ color: "#f4f4f4", fontSize: 24 }}>{props.children}</Text>
         </View>
       </View>
     </View>
   )
 }
 
-function isText(string){
-  if (string === ""){
+function isText(string) {
+  if (string === "") {
     return (
       {
-        width:"100%", 
-        backgroundColor: "rgba(12,14,15, 0)", 
-        height: 50, 
+        width: "100%",
+        backgroundColor: "rgba(12,14,15, 0)",
+        height: 50,
         textAlign: "center",
         display: "flex",
         flexDirection: "column",
@@ -146,12 +146,12 @@ function isText(string){
       }
     )
   }
-  else{
+  else {
     return (
       {
-        width:"100%", 
-        backgroundColor: "rgba(12,14,15, 0.8)", 
-        height: 50, 
+        width: "100%",
+        backgroundColor: "rgba(12,14,15, 0.8)",
+        height: 50,
         textAlign: "center",
         display: "flex",
         flexDirection: "column",
@@ -165,12 +165,12 @@ function isText(string){
 
 export function PageHeader(props) {
   return (
-    <View style={{width: "100%", height: 100, marginTop: 14, marginBottom: 14, display: "flex", flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start"}}>
-      <View style={{width: "80%", backgroundColor: crimson, paddingTop: 20, paddingBottom: 20, paddingLeft: 7, paddingRight: 7, }}>      
-        <Text style={{color:"#f4f4f4", fontSize: 24}}>{props.children}</Text>
+    <View style={{ width: "100%", height: 100, marginTop: 14, marginBottom: 14, display: "flex", flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start" }}>
+      <View style={{ width: "80%", backgroundColor: crimson, paddingTop: 20, paddingBottom: 20, paddingLeft: 7, paddingRight: 7, }}>
+        <Text style={{ color: "#f4f4f4", fontSize: 24 }}>{props.children}</Text>
       </View>
-      <View style={{width: 20, backgroundColor: crimson, marginLeft: 4, height:"100%"}} />      
-      <View style={{width: 10, backgroundColor: crimson, marginLeft: 4, height:"100%"}} />      
+      <View style={{ width: 20, backgroundColor: crimson, marginLeft: 4, height: "100%" }} />
+      <View style={{ width: 10, backgroundColor: crimson, marginLeft: 4, height: "100%" }} />
     </View>
   )
 }
@@ -178,16 +178,16 @@ export function PageHeader(props) {
 export class SectionContentHeader extends Component {
 
   static Title(props) {
-    return <Text style={{fontSize: 24, fontWeight: 500}}>{props.children}</Text>
+    return <Text style={{ fontSize: 24, fontWeight: 500 }}>{props.children}</Text>
   }
 
   static Subtitle(props) {
-    return <Text style={{fontSize: 14, color: textSecondary}}>{props.children}</Text>
+    return <Text style={{ fontSize: 14, color: textSecondary }}>{props.children}</Text>
   }
-  
+
   render() {
     return (
-      <View style={{paddingLeft: 14, paddingTop: 14, paddingBottom: 14, maxWidth: 700}}>
+      <View style={{ paddingLeft: 14, paddingTop: 14, paddingBottom: 14, maxWidth: 700 }}>
         {this.props.children}
       </View>
     )
@@ -199,7 +199,7 @@ const quoteStyle = {
   flexDirection: "row",
   width: "100%",
   alignItems: "center",
-  paddingTop: 14, 
+  paddingTop: 14,
   paddingBottom: 14,
   paddingLeft: 7,
   paddingRight: 7,
@@ -208,22 +208,22 @@ const quoteStyle = {
 export function QuoteRight(props) {
 
   function getPointImage() {
-    switch(props.color) {
+    switch (props.color) {
       case "red":
-        return <Image source={bubblePointRed} style={{height: 20, width: 20, marginLeft: -10}}/>
-      case "white":
-        return <Image source={bubblePointWhite} style={{height: 20, width: 20, marginLeft: -10}}/>
+        return <Image source={bubblePointRed} style={{ height: 20, width: 20, marginLeft: -10 }} />
+      // case "white":
+      //   return <Image source={bubblePointWhite} style={{ height: 20, width: 20, marginLeft: -10 }} />
       case "gray":
-        return <Image source={bubblePointGray} style={{height: 20, width: 20, marginLeft: -10}}/>
+        return <Image source={bubblePointGray} style={{ height: 20, width: 20, marginLeft: -10 }} />
     }
   }
 
   function getBubbleColor() {
-    switch(props.color) {
+    switch (props.color) {
       case "red":
         return crimson;
-      case "white":
-        return "white";
+      // case "white":
+      //   return white;
       case "gray":
         return "#e4e4e4";
     }
@@ -237,20 +237,20 @@ export function QuoteRight(props) {
   }
 
   return (
-    <View 
+    <View
       style={{
         ...quoteStyle,
-        ...dropShadow,
+        //...dropShadow,
         justifyContent: "flex-end",
       }}
     >
-      <View 
+      <View
         style={{
-          paddingLeft: 14, 
-          paddingRight: 14, 
-          paddingTop: 28, 
+          paddingLeft: 14,
+          paddingRight: 14,
+          paddingTop: 28,
           paddingBottom: 28,
-          backgroundColor: getBubbleColor(), 
+          backgroundColor: getBubbleColor(),
           borderRadius: 14,
           display: "flex",
           flexDirection: "row",
@@ -259,7 +259,7 @@ export function QuoteRight(props) {
           maxWidth: 700,
         }}
       >
-        <Text 
+        <Text
           style={{
             color: getTextColor(),
             // maxWidth: "90%",
@@ -277,22 +277,22 @@ export function QuoteRight(props) {
 export function QuoteLeft(props) {
 
   function getPointImage() {
-    switch(props.color) {
+    switch (props.color) {
       case "red":
-        return <Image source={bubblePointRedLeft} style={{height: 20, width: 20, }}/>
-      case "white":
-        return <Image source={bubblePointWhiteLeft} style={{height: 20, width: 20}}/>
+        return <Image source={bubblePointRedLeft} style={{ height: 20, width: 20, }} />
+      // case "white":
+      //   return <Image source={bubblePointWhiteLeft} style={{ height: 20, width: 20 }} />
       case "gray":
-        return <Image source={bubblePointGrayLeft} style={{height: 20, width: 20}}/>
+        return <Image source={bubblePointGrayLeft} style={{ height: 20, width: 20 }} />
     }
   }
 
   function getBubbleColor() {
-    switch(props.color) {
+    switch (props.color) {
       case "red":
         return crimson;
-      case "white":
-        return "white";
+      // case "white":
+      //   return white;
       case "gray":
         return "#e4e4e4";
     }
@@ -306,31 +306,31 @@ export function QuoteLeft(props) {
   }
 
   return (
-    <View 
+    <View
       style={{
         ...quoteStyle,
-        ...dropShadowLeft,
+        //...dropShadowLeft,
         justifyContent: "flex-start",
       }}
     >
       {getPointImage()}
-      <View 
+      <View
         style={{
-          paddingLeft: 14, 
-          paddingRight: 14, 
-          paddingTop: 28, 
+          paddingLeft: 14,
+          paddingRight: 14,
+          paddingTop: 28,
           paddingBottom: 28,
-          backgroundColor: getBubbleColor(), 
+          backgroundColor: getBubbleColor(),
           borderRadius: 14,
           display: "flex",
           flexDirection: "row",
           justifyContent: "flex-start",
           width: "96%",
-          maxWidth: 700,   
+          maxWidth: 700,
           marginLeft: -10
         }}
       >
-        <Text 
+        <Text
           style={{
             color: getTextColor(),
           }}
@@ -344,8 +344,8 @@ export function QuoteLeft(props) {
 
 export function CenteredTitle(props) {
   return (
-    <View style={{width: "100%", textAlign: "center", paddingTop: 14, paddingBottom: 14}}>
-      <Text style={{fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24)}}>{props.children}</Text>
+    <View style={{ width: "100%", textAlign: "center", paddingTop: 14, paddingBottom: 14 }}>
+      <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24) }}>{props.children}</Text>
     </View>
   )
 }
@@ -356,17 +356,17 @@ export function CenteredTitle(props) {
  * @param {boolean} red - whether to place body text on red platform 
  * @returns 
  */
-export function BodyText(props){
+export function BodyText(props) {
 
   // Get the right playform from props
   let Platform = TransparentPlatform;
   if (props.gray) { Platform = LightGrayPlatform; }
-  if (props.red)  { Platform = RedPlatform;       }
+  if (props.red) { Platform = RedPlatform; }
 
   return (
-    <View style={{marginBottom: 7}}>
+    <View style={{ marginBottom: 7 }}>
       <Platform maxWidth={textBlockMaxWidth}>
-        <Text style={{textIndent: 28}}>{props.children}</Text>
+        <Text style={{ textIndent: 28 }}>{props.children}</Text>
       </Platform>
     </View>
   )
@@ -374,7 +374,7 @@ export function BodyText(props){
 
 export function GrayTextBeam(props) {
   return (
-    <View style={{width: "100%", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign:"center", marginBottom: 7, paddingTop: 7, paddingBottom: 7, paddingLeft: "10%", paddingRight: "10%"}}>
+    <View style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign: "center", marginBottom: 7, paddingTop: 7, paddingBottom: 7, paddingLeft: "10%", paddingRight: "10%" }}>
       <Text>{props.children}</Text>
     </View>
   )

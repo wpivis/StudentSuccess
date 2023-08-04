@@ -39,16 +39,16 @@ const CWBZen = require("../assets/Wellness/CWBZen.jpg")
 const cc = require("../assets/Wellness/CC.jpg")
 const eeoDesk = require("../assets/Wellness/EEODesk.jpg")
 
-export default function Wellness({navigation}) {
+export default function Wellness({ navigation }) {
   const width = Dimensions.get('window').width;
 
   return (
     <ScrollView>
 
-      <Navbar n={navigation} title={AppDrawerItemName.Wellness}/>
+      <Navbar n={navigation} title={AppDrawerItemName.Wellness} />
 
-      <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
+      <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
           <PageHeader>Wellness Resources at WPI</PageHeader>
           <BracketedText>
             WPI offers various health and wellness resources to its students. Finding and asking for help
@@ -56,17 +56,17 @@ export default function Wellness({navigation}) {
             is our goal.
           </BracketedText>
           <ContentSection>
-          <HeaderRight>SDCC</HeaderRight>
-            <ImageCarousel data = {sdccCarouselData}></ImageCarousel>
-              <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>          
+            <HeaderRight>SDCC</HeaderRight>
+            <ImageCarousel data={sdccCarouselData}></ImageCarousel>
+            <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>
             <QuoteRight color="red">
-              <Text>“[My counselor] really listened to my concerns, related to my problems, and validated my feelings.”</Text>            
+              <Text>“[My counselor] really listened to my concerns, related to my problems, and validated my feelings.”</Text>
             </QuoteRight>
             <QuoteLeft color="gray">
-              <Text>“[It’s great] having someone to vent to . . . it’s free, and it’s super accessible.”</Text>            
+              <Text>“[It’s great] having someone to vent to . . . it’s free, and it’s super accessible.”</Text>
             </QuoteLeft>
             <QuoteRight color="red">
-              <Text>“The SDCC is the biggest contributor to me finding my own happiness”</Text>            
+              <Text>“The SDCC is the biggest contributor to me finding my own happiness”</Text>
             </QuoteRight>
             <ButtonCentered href="https://forms.office.com/pages/responsepage.aspx?id=9XacWBXK-UGIS1XsFaBnKoK6q-y0N7BHuoBOlDglFLpUOFo1WkRQWDU4MElJQU1LWVI2UTNEUlJXRC4u&utm_source=marketing_cloud_email&utm_medium=January_12_2022&utm_campaign=UMC_3005745&utm_mc_suscriber_id=8468850">
               Schedule an Appointment
@@ -80,19 +80,19 @@ export default function Wellness({navigation}) {
           </ContentSection>
 
           <ContentSection>
-          <HeaderRight>Health Services</HeaderRight>
-          <ImageCarousel data={healthServicesCarouselData}></ImageCarousel>
-          
+            <HeaderRight>Health Services</HeaderRight>
+            <ImageCarousel data={healthServicesCarouselData}></ImageCarousel>
+
             <HeaderSubtitle>
               WPI Health Services provides comprehensive, cost-free healthcare.
             </HeaderSubtitle>
             <BracketedText>
-              WPI Health Services offers inclusive healthcare to all students, without billing insurance or charging a copay for 
-              office visits and services. Offered services include but are not limited to sexual health services, evaluation and 
+              WPI Health Services offers inclusive healthcare to all students, without billing insurance or charging a copay for
+              office visits and services. Offered services include but are not limited to sexual health services, evaluation and
               treatment of illness and injury, immunization assistance, referral services, and prescription management
             </BracketedText>
             <QuoteRight color="red">
-              <Text>“Health services is very underrated, they do a lot of stuff for free, but nobody knows about it. You can literally get plan B for free at health services.”</Text>            
+              <Text>“Health services is very underrated, they do a lot of stuff for free, but nobody knows about it. You can literally get plan B for free at health services.”</Text>
             </QuoteRight>
             <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">
               LGBTQIA+ Inclusive Healthcare Services
@@ -104,47 +104,47 @@ export default function Wellness({navigation}) {
               Visit Health Services
             </ButtonCentered>
           </ContentSection>
-          
+
           <ContentSection>
-          <HeaderRight>Center for Well-being</HeaderRight>
-          <ImageCarousel data = {wellbeingCarouselData}></ImageCarousel>
-             
+            <HeaderRight>Center for Well-being</HeaderRight>
+            <ImageCarousel data={wellbeingCarouselData}></ImageCarousel>
+
             <HeaderSubtitle>
               The Center for Wellbeing at WPI is a sanctuary for students.
             </HeaderSubtitle>
             <BracketedText>
-              The Center for Wellbeing provides students with both a physical space to relax, as well as in-office, trained students 
-              whom they can ask for directions to resources. There are sponsored programs and activities on wellness days where you 
+              The Center for Wellbeing provides students with both a physical space to relax, as well as in-office, trained students
+              whom they can ask for directions to resources. There are sponsored programs and activities on wellness days where you
               can take some time off from classes and spend time doing the things that make you feel fulfilled.
             </BracketedText>
             <QuoteLeft color="gray">
-              <Text>“This year has been so much better than last year because of wellness days and the Center for Wellbeing.”</Text>            
+              <Text>“This year has been so much better than last year because of wellness days and the Center for Wellbeing.”</Text>
             </QuoteLeft>
             <ButtonCentered href="https://www.wpi.edu/student-experience/health-wellness/center-for-well-being">Visit the Wellness Center</ButtonCentered>
           </ContentSection>
 
           <ContentSection>
-          <HeaderRight>Equal Opportnity & Outreach</HeaderRight>
-          <ImageCarousel data={EOOCarouselData}></ImageCarousel>            
-              <HeaderSubtitle>
-                The Office of Equal Opportunity and Outreach is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
-              </HeaderSubtitle>
+            <HeaderRight>Equal Opportnity & Outreach</HeaderRight>
+            <ImageCarousel data={EOOCarouselData}></ImageCarousel>
+            <HeaderSubtitle>
+              The Office of Equal Opportunity and Outreach is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
+            </HeaderSubtitle>
             <BracketedText>
-              WPI has resources available to support you through all situations, including sexual misconduct. The Office of 
+              WPI has resources available to support you through all situations, including sexual misconduct. The Office of
               Equal Opportunity and Outreach is there to provide you the pathways needed to report these cases.
             </BracketedText>
             <ButtonCentered href="https://www.wpi.edu/offices/equal-opportunity-outreach">Visit the EEO office</ButtonCentered>
           </ContentSection>
           <AccordionTitle title="Off campus resources">
-            <AccordionLink title ="Pathways for change" href="https://pathwaysforchange.help/"/>
-            <AccordionLink title ="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/"/>
+            <AccordionLink title="Pathways for change" href="https://pathwaysforchange.help/" />
+            <AccordionLink title="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/" />
           </AccordionTitle>
 
-          <Footer/>
+          <Footer />
         </View>
       </View>
-      
-    
+
+
     </ScrollView>
 
   )
@@ -173,7 +173,7 @@ const sdccCarouselData = [
   },
 ]
 
-const healthServicesCarouselData = [ 
+const healthServicesCarouselData = [
   {
     image: healthLobby,
     text: ""
@@ -192,7 +192,7 @@ const healthServicesCarouselData = [
   },
 ]
 
-const wellbeingCarouselData = [ 
+const wellbeingCarouselData = [
   {
     image: cwb,
     text: ""
@@ -215,7 +215,7 @@ const wellbeingCarouselData = [
   },
 ]
 
-const EOOCarouselData = [ 
+const EOOCarouselData = [
   {
     image: cc,
     text: ""

@@ -98,7 +98,7 @@ export default function Services({ navigation }) {
                         </View>
                         <HeaderSubtitle>The Rec Center at WPI provides a number of fitness resources to help students stay active.</HeaderSubtitle>
                         <HeaderRight>Advice from a WPI Student:</HeaderRight>
-                        <QuoteLeft color="white">
+                        <QuoteLeft color="gray">
                             “Definitely use the gym, exercising is helpful for your mental health.”
                         </QuoteLeft>
                     </ContentSection>
@@ -121,9 +121,11 @@ export default function Services({ navigation }) {
                     <ContentSection>
                         <ImageHeader image={arc}>Academic and Resource Computing</ImageHeader>
                         <HeaderSubtitle>Academic and Resource Computing (the other ARC) consists of laboratory and computing facilities, providing students with research resources and workshops.</HeaderSubtitle>
-                        <GrayTextBeam>
-                            <Text>Contact them at 508-831-5136 or archelp@wpi.edu</Text>
-                        </GrayTextBeam>
+                        <View style={{ paddingTop: 10 }}>
+                            <GrayTextBeam >
+                                Contact them at 508-831-5136 or archelp@wpi.edu
+                            </GrayTextBeam>
+                        </View>
                     </ContentSection>
 
                     <ContentSection>
