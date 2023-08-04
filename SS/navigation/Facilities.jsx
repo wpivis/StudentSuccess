@@ -28,7 +28,8 @@ const gym4 = require("../assets/Gym4.jpg")
 const gym5 = require("../assets/Gym5.jpg")
 const gym6 = require("../assets/Gym6.jpg")
 //Placeholder
-const shuttle = require("../assets/placeholder.png")
+const atc = require("../assets/ATC.jpg")
+const arc = require("../assets/ARC.jpg")
 
 
 export default function Services({ navigation }) {
@@ -103,7 +104,7 @@ export default function Services({ navigation }) {
                     </ContentSection>
 
                     <ContentSection>
-                        <ImageHeader image={lib1}>Academic Technology Center</ImageHeader>
+                        <ImageHeader image={atc}>Academic Technology Center</ImageHeader>
                         <HeaderSubtitle>The Academic Technology Center (ATC), located in Fuller Laboratory, supports students through providing group work spaces, equipment, workshops, and other technological support on campus.</HeaderSubtitle>
                         <View style={{ paddingTop: 10 }}>
                             <GrayTextBeam >
@@ -118,10 +119,11 @@ export default function Services({ navigation }) {
                         </GrayTextBeam>
                     </ContentSection>
                     <ContentSection>
-                        <ImageHeader image={lib1}>Academic and Resource Computing</ImageHeader>
+                        <ImageHeader image={arc}>Academic and Resource Computing</ImageHeader>
                         <HeaderSubtitle>Academic and Resource Computing (the other ARC) consists of laboratory and computing facilities, providing students with research resources and workshops.</HeaderSubtitle>
-                        <ButtonCentered href="https://hub.wpi.edu/spread/2/student-resources">ITS Hub</ButtonCentered>
-                        <ButtonCentered href="https://www.wpi.edu/library">WPI Library Search</ButtonCentered>
+                        <GrayTextBeam>
+                            <Text>Contact them at 508-831-5136 or archelp@wpi.edu</Text>
+                        </GrayTextBeam>
                     </ContentSection>
 
                     <ContentSection>
