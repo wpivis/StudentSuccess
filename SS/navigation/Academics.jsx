@@ -1,4 +1,4 @@
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, Image } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GrayTextBeam } from "../components/Text"
@@ -11,7 +11,11 @@ import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
-const makerSpace = require("../assets/makerspace.jpg")
+//Images
+const makerSpace = require("../assets/Academics/makerspace.jpg")
+const academicAdvising = require("../assets/Academics/AcademicAdvising.JPG")
+const tutor = require("../assets/Academics/Tutor.jpeg")
+
 const staff = require("../assets/staff.jpg")
 const turtle = require("../assets/turtle.jpg")
 const gps = require("../assets/gps.jpg")
@@ -28,16 +32,37 @@ export default function Academics({navigation}) {
       <View style={{backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <View style={{...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column"}}>
           <PageHeader>Academic Information at WPI</PageHeader>
-
-          <ContentSection>
-            <ImageHeader image={staff}>Welcome Letters</ImageHeader>
-          </ContentSection>
-          
+ 
           <ContentSection>
           <ImageHeader image={makerSpace}>Project Based Learning</ImageHeader>
             <BracketedText>WPI Specializes in project-based learning. Get real experience in the subjects you love; learning by doing is the way to go!</BracketedText>
-            <ButtonCentered>Project Based Learning</ButtonCentered>
-            <HeaderRight>The IQP Program</HeaderRight>
+            <ButtonCentered href="https://www.wpi.edu/project-based-learning">Project Based Learning</ButtonCentered>
+            <HeaderRight>Academic Advising</HeaderRight>
+            <Image style={{width:"100%", height:200}} source={academicAdvising}/>
+            {/* <GrayTextBeam>Located in Unity Hall</GrayTextBeam>
+            <GrayTextBeam>How to register for courses</GrayTextBeam>
+            <GrayTextBeam>Tracking sheets</GrayTextBeam>
+            <GrayTextBeam>Double counting courses</GrayTextBeam>
+            <GrayTextBeam>Transfer credits</GrayTextBeam>
+            <GrayTextBeam>Double majors and minors</GrayTextBeam> */}
+                   
+              <QuoteRight color="red">“My advisors were very supportive. They would mostly just reach out during times that they would kind of expect us to need support, like during registration. It's more like. I can really only get the benefits I need if I reach out to them first. But they are very welcoming.”</QuoteRight>
+              <QuoteLeft color="white">“Before taking one of your harder classes, you could see on Workday what you need before the class, I'll ask my advisor anything about it as well. Or if I knew a friend took the class I just asked them about it as well before it.”</QuoteLeft>
+            
+            <ButtonCentered href="https://www.wpi.edu/offices/academic-advising">Visit Academic Advising</ButtonCentered>
+            <HeaderRight>Academic Resource Center</HeaderRight>
+            <Image style={{width:"100%", height:200}} source={tutor}/>
+              <QuoteRight color="red">“The advice I heard was to reach out to professors. Advice I wish I took was to go to TAs, I frankly find them more helpful than professors a lot of the time except for one class I’m taking at the moment. But for the majority of classes I find them more helpful than just professors”</QuoteRight>
+            
+            <ButtonCentered href="https://www.wpi.edu/student-experience/resources/academic-resources-center">Visit Academic Resource Center</ButtonCentered>
+            <ButtonCentered href="https://www.wpi.edu/academics/departments/mathematical-sciences/math-tutoring-center-mtc">MASH tutoring help</ButtonCentered>
+
+            <LightGrayPlatform>        
+              <QuoteRight color="red">“One advice would be to put everything in your outlook calendar. Don't be afraid, put your homeworks, put your meetings, put every single thing in your outlook calendar and then have your outlook calendar on your lock screen. I will put my homeworks. I will put my assignments. I will put when I need to meet my friends on outlook because if not, it will not happen or I'll forget about it. I forgot to go to the fun night yesterday because it wasn't on my outlook. I put everything on my outlook. Obviously, that is one advice I will give everyone is like, put your homeworks on outlook because it will bother you until you finish your homework. That is nice.”</QuoteRight>
+            </LightGrayPlatform>
+
+            <HeaderRight>Writing Center</HeaderRight>
+            <HeaderRight>SWEET Center</HeaderRight>
             <SectionContentHeader>
               <SectionContentHeader.Title>Doing Good Across the Globe</SectionContentHeader.Title>
               <SectionContentHeader.Subtitle>A Degree Requirement that Changes Students, and the World</SectionContentHeader.Subtitle>
@@ -49,7 +74,7 @@ export default function Academics({navigation}) {
             </View>
             <ButtonCentered>Explore IQP Options</ButtonCentered>
             <ButtonCentered>See What Students are Saying</ButtonCentered>
-            <HeaderRight>The MQP Program</HeaderRight>
+            <HeaderRight>Academic Resource Center</HeaderRight>
             <SectionContentHeader>
               <SectionContentHeader.Title>MQP Program Subtitle</SectionContentHeader.Title>
               <SectionContentHeader.Subtitle>MQP Program Subtitle Line 2</SectionContentHeader.Subtitle>
@@ -58,10 +83,7 @@ export default function Academics({navigation}) {
               <Text style={{textIndent: 28}}>{lorem}</Text>
             </TransparentPlatform>
             <ImageContainer imageSource={turtle} />
-            <LightGrayPlatform>        
-              <QuoteRight color="red">{loremShort}</QuoteRight>
-              <QuoteLeft color="white">{loremShort}</QuoteLeft>
-            </LightGrayPlatform>
+            
             <HeaderRight>First Year GPS Classes</HeaderRight>
             <SectionContentHeader>
               <SectionContentHeader.Title>GPS Classes Subtitle</SectionContentHeader.Title>

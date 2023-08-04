@@ -41,8 +41,6 @@ const shuttle = require("../assets/Services/Shuttle.jpg")
 
 export default function Services({navigation}) {
   const width = Dimensions.get('window').width;
-  const carouselWidth = width > 800 ? 800 : width;
-  const carouselHeight = 200;
 
   return (
     <ScrollView>
