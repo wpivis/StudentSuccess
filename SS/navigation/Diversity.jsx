@@ -1,10 +1,10 @@
 import { View, Text, Button } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText } from "../components/Text"
+import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
+import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
@@ -12,9 +12,9 @@ import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { AccordionItem, AccordionLink, AccordionTitle } from '../components/Accordion'
 
-const odime = require("../assets/odime.jpg")
-const lgbtqia = require("../assets/lgbtqia.jpg")
-const womensgroups = require("../assets/womensgroups.jpg")
+const imposter = require("../assets/odime.jpg")
+const bias = require("../assets/lgbtqia.jpg")
+const microaggressions = require("../assets/womensgroups.jpg")
 const cdc = require("../assets/cdc.png")
 
 export default function Diversity({navigation}) {
@@ -158,30 +158,10 @@ export default function Diversity({navigation}) {
               />
 
             </AccordionTitle>
-            <AccordionTitle title="People with disabilities and neurodivergent people">
-              <AccordionItem 
-                title='"Thinking in Pictures: My Life with Autism"'
-                description="by Temple Grandin"
-              />
-              <AccordionItem 
-                title='"The Reason I Jump: The Inner Voice of a Thirteen-Year-Old Boy with Autism"'
-                description="by Naoki Higashida"
-              />
-              <AccordionItem 
-                title={`"Look Me in the Eye: My Life with Asperger's"`}
-                description="by John Elder Robison"
-              />
-              <AccordionItem 
-                title='"The Curious Incident of the Dog in the Night-Time"'
-                description="by Mark Haddon"
-              />
+            <AccordionTitle title="People with Disabilities">
               <AccordionItem 
                 title='"Being Heumann: An Unrepentant Memoir of a Disability Rights Activist"'
                 description="by Judith Heumann and Kristen Joiner"
-              />
-              <AccordionItem 
-                title='"NeuroTribes: The Legacy of Autism and the Future of Neurodiversity"'
-                description="by Steve Silberman"
               />
               <AccordionItem 
                 title='"El Deafo"'
@@ -193,7 +173,29 @@ export default function Diversity({navigation}) {
               />
 
             </AccordionTitle>
-            <AccordionTitle title="Books for International Students (Cross-Cultural Exchanges)">
+            <AccordionTitle title="Neurodivergent People">
+              <AccordionItem 
+                title='"Thinking in Pictures: My Life with Autism"'
+                description="by Temple Grandin"
+              />
+              <AccordionItem 
+                title='"The Curious Incident of the Dog in the Night-Time"'
+                description="by Mark Haddon"
+              />
+              <AccordionItem 
+                title='"The Reason I Jump: The Inner Voice of a Thirteen-Year-Old Boy with Autism"'
+                description="by Naoki Higashida"
+              />
+              <AccordionItem 
+                title={`"Look Me in the Eye: My Life with Asperger's"`}
+                description="by John Elder Robison"
+              />
+              <AccordionItem 
+                title='"NeuroTribes: The Legacy of Autism and the Future of Neurodiversity"'
+                description="by Steve Silberman"
+              />
+            </AccordionTitle>
+            <AccordionTitle title="Books for International Students">
               <AccordionItem 
                 title='"American Ways: A Guide for Foreigners in the United States"'
                 description="by Gary Althen and Janet Bennett"
@@ -222,69 +224,151 @@ export default function Diversity({navigation}) {
           </ContentSection>
 
           <ContentSection>
+            <ImageHeader image={imposter}>Imposter Syndrome</ImageHeader>
+            <HeaderSubtitle>
+              Imposter syndrome was a term coined by Pauline Clance and Suzanne Imes in 1978 and describes the way a person feels when they doubt their skills, talents, 
+              or accomplishments and has a persistent fear of being exposed as a "fraud" even though they show external evidence of their competence. 
+            </HeaderSubtitle>
+            <BracketedText>
+              Imposter syndrome can manifest itself in many ways, and its signs are not always immediately recognizable. Some people may feel as though they are not as 
+              competent or knowledgeable as others perceive them to be, despite evidence to the contrary. They might downplay their accomplishments or attribute their 
+              success to luck rather than to their abilities. Constantly fearing exposure as a 'fraud' or 'imposter' can also be a significant sign. It's important to 
+              note that the impact of imposter syndrome varies greatly among individuals, as it intertwines with personal experiences, self-perception, and one's environment.
+            </BracketedText>
+            <GrayTextBeam>
+              Feeling like a fake or fraud and fearing that you will be found out
+            </GrayTextBeam>
+            <GrayTextBeam>
+              Attributing success to luck or chance, rather than your own ability or hard work
+            </GrayTextBeam>
+            <GrayTextBeam>
+              Downplaying your own expertise, even in areas where you are genuinely more knowledgable than others
+            </GrayTextBeam>
+            <GrayTextBeam>
+              Comparing yourself to others and feeling you're not as good as they are
+            </GrayTextBeam>
+            <GrayTextBeam>
+              Having high standards for yourself and feeling disappointed if you don't meet them
+            </GrayTextBeam>
           </ContentSection>
 
           <ContentSection>
-            <ImageHeader>Accessibility Services</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/student-experience/resources/accessibility-services">Visit Accessibility Services</ButtonCentered>
-            <HeaderRight>Exam Proctoring</HeaderRight>
-            <HeaderRight>Orientation</HeaderRight>
-            <HeaderRight>Interactive Map</HeaderRight>
-          </ContentSection>
+            <ImageHeader image={bias}>Unconscious Bias</ImageHeader>
+            <HeaderSubtitle>
+              Unconscious bias is when we have quick judgments or opinions about people without even realizing it.
+            </HeaderSubtitle>
+            <BracketedText>
+              Unconscious bias refers to automatic judgments or perceptions about individuals, formed without our awareness, based on our experiences, upbringing, and societal influences. 
+              These biases can be both positive and negative, and they often subtly affect how we interact with others. Some common types of unconscious bias include:
+            </BracketedText>
+            <GrayTextBeam>
+              Affinity Bias: This is the tendency to connect more readily with individuals who share our characteristics or backgrounds.
+            </GrayTextBeam>
+            <GrayTextBeam>
+              Halo Effect: This is the inclination to perceive everything about an individual as positive because you find them likable.
+            </GrayTextBeam>
+            <GrayTextBeam>
+              Perception Bias: This refers to forming stereotypes or assumptions about specific groups, which can hinder objective decision-making.
+            </GrayTextBeam>
+            <GrayTextBeam>
+              Confirmation Bias: This is the tendency to interpret information in a way that aligns with our preexisting beliefs.
+            </GrayTextBeam>
+            <GrayTextBeam>
+              Gender Bias: This is the tendency to favor one gender over the other.
+            </GrayTextBeam>
 
-          <ContentSection>
-            <ImageHeader image={odime}>ODIME</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/offices/diversity">Visit ODIME</ButtonCentered>
-            <HeaderRight>Diversity Programming</HeaderRight>
-            <HeaderRight>ODIME Resources</HeaderRight>
-          </ContentSection>
-          
-          <ContentSection>
-            <ImageHeader>Collegiate Religious Center</ImageHeader>
-            <HeaderRight>Campus Organizations</HeaderRight>
-            <HeaderRight>Common Room</HeaderRight>
-            <HeaderRight>Vegan Kitchen</HeaderRight>
-            <HeaderRight>Multifaith Mindfulness Space</HeaderRight>
-            <HeaderRight>Islamic Prayer Room</HeaderRight>
-          </ContentSection>
+            <HeaderRight>What to Do</HeaderRight>
+            <BracketedText>
+              Becoming aware of these biases and understanding how they influence your behavior is the first step toward minimizing their impact. Practices such 
+              as slowing down decision-making processes, examining your biases, and seeking perspectives from a diverse range of people can help in 
+              reducing the influence of unconscious biases. Experiencing bias can be deeply distressing and challenging. Here are a few steps people can take if they're the victim of bias:
+            </BracketedText>
+            <BodyText>
+              Speak Up: If you feel safe and comfortable to do so, assertively communicate your feelings and ask the person to stop their biased behavior. You can express your experience, 
+              feelings, and request change using "I" statements to avoid sounding confrontational, such as "I feel disrespected when you... Could you please stop doing that?"
+            </BodyText>
+            <BodyText>
+              Seek Support: Reach out to supportive friends, family, community groups, peers in a higher grade than you, staff in academic affairs, and your professors. 
+              Sharing your experiences can provide emotional relief and practical advice.
+            </BodyText>
+            <BodyText>
+              Document Incidents: Keep a record of incidents, including dates, times, locations, what happened, and any witnesses. This could be useful if you decide to report the behavior.
+            </BodyText>
+            <BodyText>
+              Report the Incident: Depending on the situation, you could report the incident to your, Residence Advisor, the Director of ODIME, the Assistant Vice President for Diversity, Equity, 
+              Inclusion, and Belonging, the Title IX office, Counseling Servics, Law enforcement, and really anyone you feel comfortable reporting the incident to. 
+            </BodyText>
+            <BodyText>
+              Practice Self-Care: Bias incidents can be emotionally exhausting. It's important to take care of your mental health. This might involve activities like exercise, meditation, or 
+              seeking professional help like a therapist or counselor through the SDCC at WPI.
+            </BodyText>
+            <BodyText>
+              Education: Encourage, develop and/or support educational programs related to your identity at WPI. We need more diverse representation, 
+              so getting involved and creating affinity programs are welcomed!
+            </BodyText>
 
-          <ContentSection>
-            <ImageHeader>International House</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/alumni/community/alumni-groups/womens-groups">Visit the International House</ButtonCentered>
-            <HeaderRight>Appointments</HeaderRight>
-            <HeaderRight>Immigration Assistance</HeaderRight>
-          </ContentSection>
-          
-          <ContentSection>
-            <ImageHeader image={womensgroups}>Gender, Sexuality, and Women's Studies</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/alumni/community/alumni-groups/womens-groups">Visit Women's Groups</ButtonCentered>
-            <HeaderRight>Courses</HeaderRight>
-            <HeaderRight>Programming</HeaderRight>
-          </ContentSection>
-          
-          <ContentSection>
-            <ImageHeader image={lgbtqia}>LGBTQIA+</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">Visit LGBTQIA+ Support</ButtonCentered>
-            <HeaderRight>Gender Inclusive Housing</HeaderRight>
-            <HeaderRight>Identity Resources</HeaderRight>
-            <HeaderRight>WPI Alliance Chapter</HeaderRight>
-          </ContentSection>
-          
-          <ContentSection>
-            <ImageHeader>Equal Opportunity and Outreach</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/offices/equal-opportunity-outreach">Visit Equal Opportunity and Outreach</ButtonCentered>
-          </ContentSection>
-          
-          <ContentSection>
-            <ImageHeader>Title IX</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/offices/title-ix/title-ix-and-sexual-misconduct-policy">Visit Title IX</ButtonCentered>
-          </ContentSection>
+            <HeaderRight>
+              Anti-Bias Organizations
+            </HeaderRight>
+            <GrayTextBeam>
+              Anti-Defamation League (ADL): Offers resources and programs to fight hate and bias.
+            </GrayTextBeam>
+            <GrayTextBeam>
+              Southern Poverty Law Center (SPLC): Provides educational materials on bias, tolerance, and diversity.
+            </GrayTextBeam>
+            <GrayTextBeam>
+              National Center for Cultural Competence (NCCC): Offers resources to increase cultural competence and combat bias.
+            </GrayTextBeam>
 
-          <ContentSection>
-            <ImageHeader image={cdc}>Career Development Resources</ImageHeader>
-            <ButtonCentered href="https://www.wpi.edu/offices/career-development-center">Visit the CDC</ButtonCentered>
+            <BracketedText>
+              The Implicit Association Test (IAT) created by Project Implicit is a key assessment tool for learning about one's own biases by measuring attitudes and 
+              beliefs that people may be unwilling or unable to report.
+            </BracketedText>
+            <ButtonCentered href="https://implicit.harvard.edu/implicit/takeatest.html">Take the IAT</ButtonCentered>
           </ContentSection>
           
+          <ContentSection>
+            <ImageHeader image={microaggressions}>Microaggressions</ImageHeader>
+            <HeaderSubtitle>
+              Microaggressions refer to subtle comments that convey derogatory, prejudiced, or discriminatory attitudes towards individuals or groups based on their race, gender, ethnicity, 
+              sexual orientation, disability, or other characteristics.
+            </HeaderSubtitle>
+            <BracketedText>
+              These actions may seem unintentional, but they can have a significant impact on the recipients, contributing to feelings of alienation, exclusion, and invalidation. 
+              Microaggressions can occur in everyday interactions, and their cumulative effects can be harmful and perpetuate systemic inequalities. Addressing microaggressions is
+              essential for creating an inclusive and respectful environment. Here are some strategies to address and respond to microaggressions.
+            </BracketedText>
+          </ContentSection>
+          <GrayTextBeam>
+            Use "I" Statements: Express your feelings and the impact of the microaggression on you using "I" statements, which help in communicating your personal experience.
+          </GrayTextBeam>
+          <GrayTextBeam>
+            Call It Out (With Care): If you witness a microaggression, address it with sensitivity. Explain why the comment is harmful, focusing on its effects rather than attacking the individual.
+          </GrayTextBeam>
+          <GrayTextBeam>
+            Educate Yourself: Learn about microaggressions, unconscious bias, and their impact. Understanding is key to addressing these issues effectively.
+          </GrayTextBeam>
+          <GrayTextBeam>
+            Speak Up: When you see a microaggression happening to someone else, assertively express why the behavior is hurtful and perpetuates stereotypes.
+          </GrayTextBeam>
+          <GrayTextBeam>
+            Form Supportive Networks: Participate in student-led groups focusing on diversity, equity, and inclusion to collectively address microaggressions.
+          </GrayTextBeam>
+          <GrayTextBeam>
+            Report Incidents: Inform the WPI Police department about microaggressions via the available bias report form, or confide in a trusted peer, staff member, or professor.
+          </GrayTextBeam>
+          <GrayTextBeam>
+            Collaborate with Faculty and Staff: Work with academic staff to integrate diversity and inclusion into the curriculum and campus life.
+          </GrayTextBeam>
+          <GrayTextBeam>
+            Advocate for Inclusive Policies: Lobby for policies fostering inclusivity and combating microaggressions. Cooperate with student government or similar organizations to instigate change.
+          </GrayTextBeam>
+          <GrayTextBeam>
+            Model Inclusive Behavior: Set an example by behaving inclusively, challenging stereotypes and biases, and encouraging others to follow suit.
+          </GrayTextBeam>
+          <GrayTextBeam>
+            Advocate for Diversity in Curriculum: Promote the incorporation of diverse perspectives in coursework to challenge stereotypes and reduce microaggressions. There is a desire among students for diversity in educational experiences.
+          </GrayTextBeam>
           <Footer/>
         </View>
       </View>

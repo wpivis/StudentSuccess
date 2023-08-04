@@ -43,212 +43,23 @@ function App() {
 
   return (
     <PaperProvider>
-      <ChecklistsContext.Provider value={{ checklistsState, setChecklistsState }}>
-        <View style={{ height: '100%', color: "#1F2327", }}>
-          <StatusBar />
-          <NavigationContainer>
-            <AppDrawer.Navigator
-              initialRouteName={AppDrawerItemName.Services}
-              screenOptions={{
-                headerTintColor: "#FFFFFF",
-                drawerStyle: {
-                  backgroundColor: "#1f2327",
-                },
-                headerShown: false
-              }}
-            >
-              <AppDrawer.Screen
-                component={HomePage}
-                name={AppDrawerItemName.Welcome}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Welcome,
-                }}
-              />
-              <AppDrawer.Screen
-                component={Diversity}
-                name={AppDrawerItemName.Diversity}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Diversity,
-                }}
-              />
-              <AppDrawer.Screen
-                component={Academics}
-                name={AppDrawerItemName.Academics}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Academics,
-                }}
-              />
-              <AppDrawer.Screen
-                component={Wellness}
-                name={AppDrawerItemName.Wellness}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Wellness,
-                }}
-              />
-              <AppDrawer.Screen
-                component={Social}
-                name={AppDrawerItemName.Social}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Social,
-                }}
-              />
-              <AppDrawer.Screen
-                component={Financial}
-                name={AppDrawerItemName.Financial}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Financial,
-                }}
-              />
-              <AppDrawer.Screen
-                component={Development}
-                name={AppDrawerItemName.Development}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Development,
-                }}
-              />
-              <AppDrawer.Screen
-                component={Services}
-                name={AppDrawerItemName.Services}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Services,
-                }}
-              />
-              <AppDrawer.Screen
-                component={FAQ}
-                name={AppDrawerItemName.FAQ}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.FAQ,
-                }}
-              />
-              { /** <AppDrawer.Screen
-            component={Directory}
-            name={AppDrawerItemName.Directory}
+      <ChecklistsContext.Provider value={{checklistsState, setChecklistsState}}>
+      <View style={{height: '100%', color: "#1F2327", }}>
+        <StatusBar />
+        <NavigationContainer>
+          <AppDrawer.Navigator
+            initialRouteName={AppDrawerItemName.Academics}
+            screenOptions={{
+              headerTintColor: "#FFFFFF",
+              drawerStyle: {
+                backgroundColor: "#1f2327",
+              },
+              headerShown: false
+            }}
+          >
+          <AppDrawer.Screen
+            component={HomePage}
+            name={AppDrawerItemName.Welcome}
             options={{
               headerStyle: {
                 backgroundColor: "#1F2327",
@@ -264,31 +75,157 @@ function App() {
                 borderBottomLeftRadius: 0,
                 borderBottomRightRadius: 0,
               },
-              drawerLabel: AppDrawerItemName.Directory,
+              drawerLabel: AppDrawerItemName.Welcome,
             }}
-          /> */}
-              <AppDrawer.Screen
-                component={Checklists}
-                name={AppDrawerItemName.Checklists}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Checklists,
-                }}
-              />
-              <AppDrawer.Screen
+          />
+          <AppDrawer.Screen
+            component={Diversity}
+            name={AppDrawerItemName.Diversity}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Diversity,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Academics}
+            name={AppDrawerItemName.Academics}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Academics,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Wellness}
+            name={AppDrawerItemName.Wellness}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Wellness,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Social}
+            name={AppDrawerItemName.Social}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Social,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Financial}
+            name={AppDrawerItemName.Financial}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Financial,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Development}
+            name={AppDrawerItemName.Development}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Development,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Services}
+            name={AppDrawerItemName.Services}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Services,
+            }}
+          />
+                        <AppDrawer.Screen
                 component={Facilities}
                 name={AppDrawerItemName.Facilities}
                 options={{
@@ -309,30 +246,72 @@ function App() {
                   drawerLabel: AppDrawerItemName.Facilities,
                 }}
               />
-              <AppDrawer.Screen
-                component={Directory}
-                name={AppDrawerItemName.Directory}
-                options={{
-                  headerStyle: {
-                    backgroundColor: "#1F2327",
-                  },
-                  headerTitleStyle: {
-                    color: "#FFFFFF"
-                  },
-                  drawerActiveTintColor: "#FFFFFF",
-                  drawerInactiveTintColor: "#FFFFFF",
-                  drawerItemStyle: {
-                    borderBottomColor: "#FFFFFF",
-                    borderBottomWidth: 1,
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                  },
-                  drawerLabel: AppDrawerItemName.Directory,
-                }}
-              />
-            </AppDrawer.Navigator>
-          </NavigationContainer>
-        </View>
+          <AppDrawer.Screen
+            component={FAQ}
+            name={AppDrawerItemName.FAQ}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.FAQ,
+            }}
+          />          
+          <AppDrawer.Screen
+            component={Checklists}
+            name={AppDrawerItemName.Checklists}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Checklists,
+            }}
+          />
+          <AppDrawer.Screen
+            component={Directory}
+            name={AppDrawerItemName.Directory}
+            options={{
+              headerStyle: {
+                backgroundColor: "#1F2327",
+              },
+              headerTitleStyle: {
+                color: "#FFFFFF"
+              },
+              drawerActiveTintColor: "#FFFFFF",
+              drawerInactiveTintColor: "#FFFFFF",
+              drawerItemStyle: {
+                borderBottomColor: "#FFFFFF",
+                borderBottomWidth: 1,
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+              },
+              drawerLabel: AppDrawerItemName.Directory,
+            }}
+          />
+          </AppDrawer.Navigator>
+        </NavigationContainer>
+      </View>
       </ChecklistsContext.Provider>
     </PaperProvider>
 

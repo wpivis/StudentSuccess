@@ -12,37 +12,35 @@ import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
-import Carousel from 'react-native-reanimated-carousel';
+import { ImageCarousel } from '../components/Images'
 
 // Images
 //SDCC
-const sdcc = require("../assets/sdcc.jpg")
-const sdccBuilding = require("../assets/SDCCBuilding.jpg")
-const sdccRoomOne = require("../assets/SDCCRoom1.jpg")
-const sdccSession = require("../assets/SDCCSession.jpg")
-const sdccTraining = require("../assets/SDCCTraining.jpg")
+const sdcc = require("../assets/Wellness/sdcc.jpg")
+const sdccBuilding = require("../assets/Wellness/SDCCBuilding.jpg")
+const sdccRoomOne = require("../assets/Wellness/SDCCRoom1.jpg")
+const sdccSession = require("../assets/Wellness/SDCCSession.jpg")
+const sdccTraining = require("../assets/Wellness/SDCCTraining.jpg")
 
 //Health Services
-const healthLobby = require("../assets/HealthServicesLobby.jpg")
-const healthRoomOne = require("../assets/HealthServicesRoom1.jpg")
-const healthSeat = require("../assets/HealthServicesSeat.jpg")
-const healthTools = require("../assets/HealthServicesTools.jpg")
+const healthLobby = require("../assets/Wellness/HealthServicesLobby.jpg")
+const healthRoomOne = require("../assets/Wellness/HealthServicesRoom1.jpg")
+const healthSeat = require("../assets/Wellness/HealthServicesSeat.jpg")
+const healthTools = require("../assets/Wellness/HealthServicesTools.jpg")
 
 //Center for Wellbeing
-const cwb = require("../assets/CWB.jpg")
-const cwbCoffee = require("../assets/CWBCoffee.jpg")
-const cwbLobby = require("../assets/CWBLobby.jpg")
-const cwbSeat = require("../assets/CWBSeat.jpg")
-const CWBZen = require("../assets/CWBZen.jpg")
+const cwb = require("../assets/Wellness/CWB.jpg")
+const cwbCoffee = require("../assets/Wellness/CWBCoffee.jpg")
+const cwbLobby = require("../assets/Wellness/CWBLobby.jpg")
+const cwbSeat = require("../assets/Wellness/CWBSeat.jpg")
+const CWBZen = require("../assets/Wellness/CWBZen.jpg")
 
 //Title IX
-const cc = require("../assets/CC.jpg")
-const eeoDesk = require("../assets/EEODesk.jpg")
+const cc = require("../assets/Wellness/CC.jpg")
+const eeoDesk = require("../assets/Wellness/EEODesk.jpg")
 
 export default function Wellness({navigation}) {
   const width = Dimensions.get('window').width;
-  const carouselWidth = width > 800 ? 800 : width;
-  const carouselHeight = 200;
 
   return (
     <ScrollView>
@@ -58,27 +56,8 @@ export default function Wellness({navigation}) {
             is our goal.
           </BracketedText>
           <ContentSection>
-          <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
-                <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={sdccCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                    <View
-                      style={{
-                        flex: 1,
-                        justifyContent: 'flex-start',
-                      }}
-                    >
-                      <ImageHeader image={sdccCarouselData[index].image}>{sdccCarouselData[index].text}</ImageHeader>
-                    </View>
-                  )}
-                />
-              </View>
+          <HeaderRight>SDCC</HeaderRight>
+            <ImageCarousel data = {sdccCarouselData}></ImageCarousel>
               <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>          
             <QuoteRight color="red">
               <Text>“[My counselor] really listened to my concerns, related to my problems, and validated my feelings.”</Text>            
@@ -101,27 +80,9 @@ export default function Wellness({navigation}) {
           </ContentSection>
 
           <ContentSection>
-            <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
-                <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={healthServicesCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                    <View
-                      style={{
-                        flex: 1,
-                        justifyContent: 'flex-start',
-                      }}
-                    >
-                      <ImageHeader image={healthServicesCarouselData[index].image}>{healthServicesCarouselData[index].text}</ImageHeader>
-                    </View>
-                  )}
-                />
-              </View>
+          <HeaderRight>Health Services</HeaderRight>
+          <ImageCarousel data={healthServicesCarouselData}></ImageCarousel>
+          
             <HeaderSubtitle>
               WPI Health Services provides comprehensive, cost-free healthcare.
             </HeaderSubtitle>
@@ -145,27 +106,9 @@ export default function Wellness({navigation}) {
           </ContentSection>
           
           <ContentSection>
-            <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
-                <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={wellbeingCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                    <View
-                      style={{
-                        flex: 1,
-                        justifyContent: 'flex-start',
-                      }}
-                    >
-                      <ImageHeader image={wellbeingCarouselData[index].image}>{wellbeingCarouselData[index].text}</ImageHeader>
-                    </View>
-                  )}
-                />
-              </View>  
+          <HeaderRight>Center for Well-being</HeaderRight>
+          <ImageCarousel data = {wellbeingCarouselData}></ImageCarousel>
+             
             <HeaderSubtitle>
               The Center for Wellbeing at WPI is a sanctuary for students.
             </HeaderSubtitle>
@@ -181,27 +124,8 @@ export default function Wellness({navigation}) {
           </ContentSection>
 
           <ContentSection>
-            <View style={{ flex: 1, backgroundColor: "#f4f4f4",}}>
-                <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={EOOCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                    <View
-                      style={{
-                        flex: 1,
-                        justifyContent: 'flex-start',
-                      }}
-                    >
-                      <ImageHeader image={EOOCarouselData[index].image}>{EOOCarouselData[index].text}</ImageHeader>
-                    </View>
-                  )}
-                />
-              </View>
+          <HeaderRight>Equal Opportnity & Outreach</HeaderRight>
+          <ImageCarousel data={EOOCarouselData}></ImageCarousel>            
               <HeaderSubtitle>
                 The Office of Equal Opportunity and Outreach is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
               </HeaderSubtitle>
@@ -211,7 +135,6 @@ export default function Wellness({navigation}) {
             </BracketedText>
             <ButtonCentered href="https://www.wpi.edu/offices/equal-opportunity-outreach">Visit the EEO office</ButtonCentered>
           </ContentSection>
-
           <AccordionTitle title="Off campus resources">
             <AccordionLink title ="Pathways for change" href="https://pathwaysforchange.help/"/>
             <AccordionLink title ="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/"/>
@@ -230,7 +153,7 @@ export default function Wellness({navigation}) {
 const sdccCarouselData = [
   {
     image: sdcc,
-    text: "SDCC"
+    text: ""
   },
   {
     image: sdccBuilding,
@@ -253,7 +176,7 @@ const sdccCarouselData = [
 const healthServicesCarouselData = [ 
   {
     image: healthLobby,
-    text: "Health Services"
+    text: ""
   },
   {
     image: healthRoomOne,
@@ -272,7 +195,7 @@ const healthServicesCarouselData = [
 const wellbeingCarouselData = [ 
   {
     image: cwb,
-    text: "Center for Well-being"
+    text: ""
   },
   {
     image: cwbLobby,
@@ -295,7 +218,7 @@ const wellbeingCarouselData = [
 const EOOCarouselData = [ 
   {
     image: cc,
-    text: "Equal Opportunity & Outreach"
+    text: ""
   },
   {
     image: eeoDesk,

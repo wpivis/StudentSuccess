@@ -1,4 +1,4 @@
-import { View, Text, Button, Dimensions } from 'react-native'
+import { View, Text, Button, Dimensions, Image } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
@@ -11,38 +11,37 @@ import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
+import { ImageCarousel } from '../components/Images'
 import Carousel from 'react-native-reanimated-carousel';
 
 
 //images
 //housing
-const dorm = require("../assets/res.jpg")
-const housing = require("../assets/housing.jpg")
-const daniels = require("../assets/Daniels.jpg")
-const founders = require("../assets/FoundersHall.jpg")
-const institute = require("../assets/InstituteHall.jpg")
-const messenger = require("../assets/Messenger.jpg")
-const morgan = require("../assets/Morgan.jpg")
-const sanford = require("../assets/SanfordRileyHall.jpg")
-const stodd = require("../assets/Stodd.jpg")
-const trowbridge = require("../assets/TrowbridgeHouse.jpg")
-const wachusett = require("../assets/Wachusett.jpg")
+
+const housing = require("../assets/Services/housing.jpg")
+const daniels = require("../assets/Services/Daniels.jpg")
+const founders = require("../assets/Services/FoundersHall.jpg")
+const institute = require("../assets/Services/InstituteHall.jpg")
+const messenger = require("../assets/Services/Messenger.jpg")
+const morgan = require("../assets/Services/Morgan.jpg")
+const sanford = require("../assets/Services/SanfordRileyHall.jpg")
+const stodd = require("../assets/Services/Stodd.jpg")
+const trowbridge = require("../assets/Services/TrowbridgeHouse.jpg")
+const wachusett = require("../assets/Services/Wachusett.jpg")
 
 //Dining
-const diningHall = require("../assets/DiningHall.jpg")
-const loveFood = require("../assets/LoveFood.jpg")
-const veggies = require("../assets/Veggies.jpg")
-const halal = require("../assets/halal.jpg")
-const starbucks = require("../assets/starbucks.jpg")
+const diningHall = require("../assets/Services/DiningHall.jpg")
+const loveFood = require("../assets/Services/LoveFood.jpg")
+const veggies = require("../assets/Services/Veggies.jpg")
+const halal = require("../assets/Services/halal.jpg")
+const starbucks = require("../assets/Services/starbucks.jpg")
 
 //Tranportation
-const shuttle = require("../assets/Shuttle.jpg")
+const shuttle = require("../assets/Services/Shuttle.jpg")
 
 
 export default function Services({ navigation }) {
   const width = Dimensions.get('window').width;
-  const carouselWidth = width > 800 ? 800 : width;
-  const carouselHeight = 200;
 
   return (
     <ScrollView>
@@ -54,28 +53,9 @@ export default function Services({ navigation }) {
           <PageHeader>Campus Services at WPI</PageHeader>
 
           <ContentSection>
-            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
-              <Carousel
-                loop
-                width={carouselWidth}
-                data={HousingCarouselData}
-                height={carouselHeight}
-                autoPlay
-                autoPlayInterval={4000}
-                scrollAnimationDuration={1000}
-                renderItem={({ index }) => (
-                  <View
-                    style={{
-                      flex: 1,
-                      justifyContent: 'flex-start',
-                    }}
-                  >
-                    <ImageHeader image={HousingCarouselData[index].image}>{HousingCarouselData[index].text}</ImageHeader>
-                  </View>
-                )}
-              />
-            </View>
-            <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
+          <HeaderRight>Housing & Residential</HeaderRight>
+          <ImageCarousel data={HousingCarouselData}></ImageCarousel>          
+              <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
             <View style={{ paddingTop: 10 }}>
               <GrayTextBeam >
                 Gender-inclusive housing available
@@ -95,35 +75,15 @@ export default function Services({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
-              <Carousel
-                loop
-                width={carouselWidth}
-                data={DiningCarouselData}
-                height={carouselHeight}
-                autoPlay
-                autoPlayInterval={4000}
-                scrollAnimationDuration={1000}
-                renderItem={({ index }) => (
-                  <View
-                    style={{
-                      flex: 1,
-                      justifyContent: 'flex-start',
-                    }}
-                  >
-                    <ImageHeader image={DiningCarouselData[index].image}>{DiningCarouselData[index].text}</ImageHeader>
-                  </View>
-                )}
-              />
-            </View>
-            <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
-            <View style={{ paddingTop: 10 }}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
-            <GrayTextBeam>Vegetarian and allergy friendly options are available</GrayTextBeam>
+            <ImageCarousel data={DiningCarouselData}></ImageCarousel>         
+              <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
+              <View style={{paddingTop: 10}}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
+              <GrayTextBeam>Vegetarian and allergy friendly options are available</GrayTextBeam>    
             <ButtonCentered href="https://www.wpi.edu/sites/default/files/inline-image/Body%20of%20International%20Student%20Handbook%202022-2023.pdf">International Student Handbook</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/offices/dining-services">Dining Services</ButtonCentered>
           </ContentSection>
 
-          <ContentSection>
+          <ContentSection>       
             <ImageHeader image={shuttle}>Transportation</ImageHeader>
             <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation">VPA Bus</ButtonCentered>
@@ -141,7 +101,7 @@ export default function Services({ navigation }) {
 const HousingCarouselData = [
   {
     image: housing,
-    text: "Housing & Residential Services"
+    text: "Housing"
   },
   {
     image: daniels,
@@ -184,22 +144,22 @@ const HousingCarouselData = [
 const DiningCarouselData = [
   {
     image: diningHall,
-    text: "Dining"
+    text: "Dining Services"
   },
   {
     image: halal,
-    text: ""
+    text: "Dining: Halal Shack"
   },
   {
     image: starbucks,
-    text: ""
+    text: "Dining: Starbucks"
   },
   {
     image: loveFood,
-    text: ""
+    text: "Dining: Made With Love"
   },
   {
     image: veggies,
-    text: ""
+    text: "Dining Services"
   },
 ]
