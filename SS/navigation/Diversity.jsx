@@ -59,7 +59,7 @@ export default function Diversity({ navigation }) {
                 title="Courses and Webinars"
                 description="Websites like Coursera, edX, or Khan Academy offer free courses on subjects such as diversity, cultural competency, feminism, 
                             sexuality, and race relations. Similarly, WPI offers courses in the Social Science and Policy Studies (SSPS) Department through 
-                            the Africana Studies Program and Art and Humanities (HUA) Department through the Women, Gender, and Sexuality Studies Program 
+                            the Africana Studies Program and Humanities and Arts (HUA) Department through the Women, Gender, and Sexuality Studies Program 
                             related to these issues. Consider taking courses in those departments to learn more about DEIJ and Gender, Sexuality and Women’s Studies."
               />
               <AccordionItem
@@ -72,7 +72,7 @@ export default function Diversity({ navigation }) {
                 title="Podcasts"
                 description='Podcasts such as "Code Switch" from NPR, "The Diversity Gap", and "1619" from The New York Times explore racial and ethnic identities and experiences, systemic 
                             racism, and history from diverse perspectives. "Escape From Plan A": A podcast that tackles issues related to Asian American identity, politics, and culture 
-                            might also be of interest. There are so many Podcasts and social media outlets available to you.'
+                            might also be of interest. There are so many podcasts and social media outlets available to you.'
               />
               <AccordionItem
                 title="Read Books"
@@ -106,8 +106,8 @@ export default function Diversity({ navigation }) {
                 description="by Sylvia Plath"
               />
               <AccordionItem
-                title={`"Lean Out"`}
-                desciption="Elissa Shevinsky on why 'leaning in' isn't enough"
+                title='"Lean Out"'
+                description="by Elissa Shevinsky"
               />
               <AccordionItem
                 title='"Everyday Sexism"'
@@ -296,7 +296,7 @@ export default function Diversity({ navigation }) {
             </BodyText>
             <BodyText>
               Report the Incident: Depending on the situation, you could report the incident to your, Residence Advisor, the Director of ODIME, the Assistant Vice President for Diversity, Equity,
-              Inclusion, and Belonging, the Title IX office, Counseling Servics, Law enforcement, and really anyone you feel comfortable reporting the incident to.
+              Inclusion, and Belonging, the Title IX office, Counseling Services, law enforcement, and really anyone you feel comfortable reporting the incident to.
             </BodyText>
             <BodyText>
               Practice Self-Care: Bias incidents can be emotionally exhausting. It's important to take care of your mental health. This might involve activities like exercise, meditation, or

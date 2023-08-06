@@ -88,8 +88,8 @@ export default function Wellness({ navigation }) {
             </HeaderSubtitle>
             <BracketedText>
               WPI Health Services offers inclusive healthcare to all students, without billing insurance or charging a copay for
-              office visits and services. Offered services include but are not limited to sexual health services, evaluation and
-              treatment of illness and injury, immunization assistance, referral services, and prescription management
+              office visits and services. Offered services include but are not limited to evaluation and
+              treatment of illness and injury, immunization assistance, referral services, sexual health services, and prescription management.
             </BracketedText>
             <QuoteRight color="red">
               <Text>“Health services is very underrated, they do a lot of stuff for free, but nobody knows about it. You can literally get plan B for free at health services.”</Text>
@@ -106,25 +106,25 @@ export default function Wellness({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <HeaderRight>Center for Well-being</HeaderRight>
+            <HeaderRight>Center for Well-Being</HeaderRight>
             <ImageCarousel data={wellbeingCarouselData}></ImageCarousel>
 
             <HeaderSubtitle>
-              The Center for Wellbeing at WPI is a sanctuary for students.
+              The Center for Well-Being at WPI is a sanctuary for students.
             </HeaderSubtitle>
             <BracketedText>
-              The Center for Wellbeing provides students with both a physical space to relax, as well as in-office, trained students
+              The Center for Well-Being provides students with both a physical space to relax, as well as in-office, trained students
               whom they can ask for directions to resources. There are sponsored programs and activities on wellness days where you
               can take some time off from classes and spend time doing the things that make you feel fulfilled.
             </BracketedText>
             <QuoteLeft color="gray">
-              <Text>“This year has been so much better than last year because of wellness days and the Center for Wellbeing.”</Text>
+              <Text>“This year has been so much better than last year because of wellness days and the Center for Well-Being.”</Text>
             </QuoteLeft>
             <ButtonCentered href="https://www.wpi.edu/student-experience/health-wellness/center-for-well-being">Visit the Wellness Center</ButtonCentered>
           </ContentSection>
 
           <ContentSection>
-            <HeaderRight>Equal Opportnity & Outreach</HeaderRight>
+            <HeaderRight>Equal Opportunity & Outreach</HeaderRight>
             <ImageCarousel data={EOOCarouselData}></ImageCarousel>
             <HeaderSubtitle>
               The Office of Equal Opportunity and Outreach is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
@@ -135,8 +135,8 @@ export default function Wellness({ navigation }) {
             </BracketedText>
             <ButtonCentered href="https://www.wpi.edu/offices/equal-opportunity-outreach">Visit the EEO office</ButtonCentered>
           </ContentSection>
-          <AccordionTitle title="Off campus resources">
-            <AccordionLink title="Pathways for change" href="https://pathwaysforchange.help/" />
+          <AccordionTitle title="Off-Campus Resources">
+            <AccordionLink title="Pathways for Change" href="https://pathwaysforchange.help/" />
             <AccordionLink title="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/" />
           </AccordionTitle>
 

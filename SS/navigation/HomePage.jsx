@@ -51,7 +51,7 @@ export default function HomePage({ navigation }) {
               to support the diverse student body, making it easier for incoming students to find the right resources
               for their unique needs at WPI. Here, we emphasize strategies and available tools that promote the success
               of our diverse student body - there is something for everyone at WPI if you know where to look! For more general
-              student information check out <a href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf" target='_blank'>gompei's guide</a>.
+              student information check out <a href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf" target='_blank'>Gompei's Guide</a>.
             </BodyText>
           </ContentSection>
 
@@ -89,7 +89,7 @@ export default function HomePage({ navigation }) {
               <AccordionItem title="State Police: 508-829-8326" />
               <AccordionItem title="UMass Medical Center: 508-334-1000" />
               <AccordionItem title="St. Vincent Hospital: 508-334-5000" />
-              <AccordionLink title="Pathways for change" href="https://pathwaysforchange.help/" />
+              <AccordionLink title="Pathways for Change" href="https://pathwaysforchange.help/" />
               <AccordionLink title="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/" />
               <AccordionLink title="Suicide and Crisis Hotline" href="https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox" />
             </AccordionTitle>
