@@ -119,8 +119,8 @@ export default function Services({ navigation }) {
                         </GrayTextBeam>
                     </ContentSection>
                     <ContentSection>
-                        <ImageHeader image={arc}>Academic and Resource Computing</ImageHeader>
-                        <HeaderSubtitle>Academic and Resource Computing (the other ARC) consists of laboratory and computing facilities, providing students with research resources and workshops.</HeaderSubtitle>
+                        <ImageHeader image={arc}>Academic and Research Computing</ImageHeader>
+                        <HeaderSubtitle>Academic and Research Computing (the other ARC) consists of laboratory and computing facilities, providing students with research resources and workshops.</HeaderSubtitle>
                         <View style={{ paddingTop: 10 }}>
                             <GrayTextBeam >
                                 Contact them at 508-831-5136 or archelp@wpi.edu
