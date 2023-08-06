@@ -123,6 +123,7 @@ export default function Social({ navigation }) {
 
           <ContentSection>
             <ImageHeader image={hockey}>Club Spotlights</ImageHeader>
+            <HeaderSubtitle>We asked the FiGSA and SASE Exec teams to tell us a little bit about their student-led organizations.</HeaderSubtitle>
 
             <HeaderRight>First Generation Student Association (FiGSA)</HeaderRight>
             <SectionContentHeader>

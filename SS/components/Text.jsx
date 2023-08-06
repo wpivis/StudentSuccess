@@ -50,7 +50,7 @@ export function HeaderRight(props) {
 
 export function BracketedText(props) {
 
-  const textAlign = props.left ? "left" : "center";
+  const textAlign = "center";
   const alignItems = props.left ? "flex-start" : "center";
 
   return (
@@ -79,8 +79,8 @@ export function BracketedText(props) {
           borderLeftColor: crimson,
         }}
       />
-      <View style={{ height: "100%", paddingTop: 28, paddingBottom: 28, flex: 10, textAlign: textAlign }}>
-        <Text>{props.children}</Text>
+      <View style={{ height: "100%", paddingTop: 28, paddingBottom: 28, flex: 10 }}>
+        <Text style={{fontSize: 16}}>{props.children}</Text>
       </View>
       <View
         style={{

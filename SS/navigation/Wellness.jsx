@@ -60,10 +60,10 @@ export default function Wellness({ navigation }) {
             <ImageCarousel data={sdccCarouselData}></ImageCarousel>
             <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>
             <QuoteRight color="red">
-              <Text>“[My counselor] really listened to my concerns, related to my problems, and validated my feelings.”</Text>
+              <Text>“My counselor really listened to my concerns, related to my problems, and validated my feelings.”</Text>
             </QuoteRight>
             <QuoteLeft color="gray">
-              <Text>“[It’s great] having someone to vent to . . . it’s free, and it’s super accessible.”</Text>
+              <Text>“It's great having someone to vent to... it's free, and super accessible.”</Text>
             </QuoteLeft>
             <QuoteRight color="red">
               <Text>“The SDCC is the biggest contributor to me finding my own happiness”</Text>

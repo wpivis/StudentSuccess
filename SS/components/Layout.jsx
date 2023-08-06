@@ -48,13 +48,9 @@ export function ContentSection(props) {
 export function Footer() {
   return (
     <View style={{height: 110, width: "100%", backgroundColor: "#1F2327", marginTop: 14, display: "flex", flexDirection: "row", alignItems: "flex-end"}}>
-      <View style={{paddingLeft: 7, paddingRight: 7, paddingTop: 14, paddingBottom: 14, height: "100%", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start"}}>
+      <View style={{paddingLeft: 7, paddingRight: 7, paddingTop: 14, paddingBottom: 14, height: "100%", flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "flex-start"}}>
         <View>
           <Text style={{fontSize: 16, color: "white"}}>WPI Student Success Handbook</Text>
-          <Text style={{color: "white"}}>Subtitle / mission statement</Text>
-        </View>
-        <View>
-          <Text style={{color: "#8C8C8C"}}>Bottom - maybe something legal?</Text>
         </View>
       </View>
       <Image source={tower} style={{width: 100, height: 100}}/>
@@ -75,5 +71,5 @@ export function RedBeam({title, text}) {
 }
 
 export function HeaderSubtitle(props) {
-  return <RedPlatform><Text style={{color: "white", textAlign: "center"}}>{props.children}</Text></RedPlatform>
+  return <RedPlatform><Text style={{color: "white", fontSize: 16}}>{props.children}</Text></RedPlatform>
 }

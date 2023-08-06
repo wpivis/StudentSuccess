@@ -11,6 +11,7 @@ import { View, Text, Dimensions } from 'react-native'
 import Carousel from 'react-native-reanimated-carousel';
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
+import { ButtonCentered } from '../components/Buttons'
 
 // images
 const brickWall = require("../assets/brickWall.png")
@@ -21,7 +22,7 @@ export default function HomePage({ navigation }) {
 
   const width = Dimensions.get('window').width;
   const carouselWidth = width > 800 ? 800 : width;
-  const carouselHeight = 550;
+  const carouselHeight = 450;
 
   const imageStyles = {
     alignSelf: 'center',
@@ -45,14 +46,12 @@ export default function HomePage({ navigation }) {
               Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
             </HeaderSubtitle>
             <BodyText>
-              The Student Success Handbook at WPI is specifically designed to ensure that all students,
-              including those from diverse backgrounds, can access and benefit from the abundance of fundamental
-              resources on campus that foster student success. We emphasize a range of strategies and tools tailored
-              to support the diverse student body, making it easier for incoming students to find the right resources
-              for their unique needs at WPI. Here, we emphasize strategies and available tools that promote the success
-              of our diverse student body - there is something for everyone at WPI if you know where to look! For more general
-              student information check out <a href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf" target='_blank'>Gompei's Guide</a>.
+              The Student Success Handbook is designed to ensure that all students, including those from diverse backgrounds, can access and benefit from the abundance 
+              of fundamental resources on campus that foster student success. We emphasize various strategies and tools tailored to support the diverse student body, 
+              making it easier for incoming students to find the right resources for their unique needs at WPI. Here, we suggest strategies and available tools that 
+              promote the success of our diverse student body - there is something for everyone at WPI if you know where to look!
             </BodyText>
+            <ButtonCentered href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf">Visit Gompei's Guide</ButtonCentered>
           </ContentSection>
 
           <ContentSection>
@@ -168,7 +167,8 @@ const carouselItems = [
         Contentment, Happiness, and Balance
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        Individual happiness and contentment rather than external validation are important for success. Finding balance in life is also important. This could involve balancing academics and social life, and balancing work and leisure time.
+        Individual happiness and contentment rather than external validation are important for success. Finding balance in 
+        life is also important. This could involve balancing academics and social life, and balancing work and leisure time.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
@@ -178,13 +178,11 @@ const carouselItems = [
         Contentment, Happiness, and Balance
       </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote color="gray">
-        “I would personally define success as being able to get to a comfortable spot where you are excited to wake up in the morning, and you don't have anything throughout the day that you genuinely dread to do.”
+        “I would personally define success as reaching a comfortable spot where you are excited to wake up in the morning, and you 
+        don't have anything throughout the day that you genuinely dread doing.”
       </CarouselQuoteCard.Quote>
       <CarouselQuoteCard.Quote left color="red">
-        “Being happy and being able to support yourself.”
-      </CarouselQuoteCard.Quote>
-      <CarouselQuoteCard.Quote color="gray">
-        “And socially it's just like at the end of the day, I feel like I’m good, I don't feel isolated or anything like that. It's like, I went to bed satisfied, not even happy, just content.”
+        “And socially, at the end of the day, I feel I'm good. I don't feel isolated or anything like that. I went to bed satisfied, not even happy, just content.”
       </CarouselQuoteCard.Quote>
     </CarouselQuoteCard>
   ),
@@ -194,7 +192,9 @@ const carouselItems = [
         Learning and Growth
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        Success is about not giving up, learning from failures, and continuing to strive towards your goals. Success for some is linked to personal growth and development. This could be in the form of developing communication skills, becoming more social, or learning about things that are useful and interesting to you.
+        Success is about not giving up, learning from failures, and continuing to strive towards your goals. Success for some is 
+        linked to personal growth and development. This could be in the form of developing communication skills, becoming more 
+        social, or learning about things that are useful and interesting to you.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
@@ -204,10 +204,13 @@ const carouselItems = [
         Learning and Growth
       </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote left color="red">
-        “That is my definition of success and I will stick by it. I work damn hard to go from a failing student to now getting A's and B's. That's success. Success has changed over the years. And to me, being happy, even as a failing student and as a high achieving student, both of them are fine as long as I'm happy, I'm just like, this is success.”
+        "That is my definition of success, and I will stick by it. I work damn hard to go from being a failing student to now 
+        getting A's and B's. That's success. Success has changed over the years. And to me, being happy, even as a failing 
+        student and as a high-achieving student, both are fine. As long as I'm happy, I consider this success."
       </CarouselQuoteCard.Quote>
       <CarouselQuoteCard.Quote color="gray">
-        “Success is to me failing over and over until you find a satisfactory point. So like the continuation of just learning from your failures, and instead of just giving up, you keep going until you get to your end goal, that’s success to me.”
+        “Success to me is failing over and over until you find a satisfactory point. It's the continuation of learning from your 
+        failures, and instead of giving up, you keep going until you reach your end goal. That's success to me.”
       </CarouselQuoteCard.Quote>
     </CarouselQuoteCard>
   ),
@@ -217,7 +220,10 @@ const carouselItems = [
         Resilience and Perseverance
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        The conventional notion of such as grades or financial wealth are important, but it's crucial to consider other aspects like intellectual growth, personal joy, and overall contentment. For these diverse student communities, success is also assessed by the sense of forward momentum, whether that's in their educational journey, personal interests (like playing the piano), or individual life paths. The process of growth, self-improvement, and forward movement is a meaningful aspect to success.
+        The conventional notion of such as grades or financial wealth are important, but it's crucial to consider other aspects 
+        like intellectual growth, personal joy, and overall contentment. For these diverse student communities, success is also 
+        assessed by the sense of forward momentum, whether that's in their educational journey, personal interests (like playing the piano), 
+        or individual life paths. The process of growth, self-improvement, and forward movement is a meaningful aspect to success.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
@@ -227,13 +233,12 @@ const carouselItems = [
         Resiliance and Perseverance
       </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote color="gray">
-        “That's what a successful run at WPI looks like, because obviously WPI is not a cake walk, you know it's work intensive. There's expectations out the roof like not only from the teachers and stuff like that, but the people around you like this competition as well like it's cut throat out here. So you know what I mean. As long as I feel like as long as you keep going, and kind of through the noise through all the mud persevere that's huge.”
+        “That's what a successful run at WPI looks like, because obviously, WPI is not a cakewalk; it's work-intensive. There are 
+        expectations through the roof, not only from the teachers but also from the people around you. There's competition, and 
+        it's cutthroat out here. So you know what I mean. As long as you keep going and persevere through all the noise and the mud, that's huge.”
       </CarouselQuoteCard.Quote>
       <CarouselQuoteCard.Quote left color="red">
-        “I would define success as, like, still being able to keep going. So I think as long as I, like, didn't give up that I'm still successful.”
-      </CarouselQuoteCard.Quote>
-      <CarouselQuoteCard.Quote color="gray">
-        “I feel like I'm successful when I'm on top of my work. You know, I feel, I feel like I don't have to like, rush everything at the end.”
+        “I would define success as still being able to keep going. So I think as long as I didn't give up, I'm still successful.”
       </CarouselQuoteCard.Quote>
     </CarouselQuoteCard>
   ),
@@ -243,7 +248,9 @@ const carouselItems = [
         Financial Stability and Career Satisfaction
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        Although money is not the end all be all, the ability to support oneself and their family is a key aspect of success for underrepresented students at WPI. This could involve achieving a certain level of financial stability or being able to sustain oneself in terms of knowledge and skills learned in the classroom so that they can provide it to the future of work.
+        Although money is not the end all be all, the ability to support oneself and their family is a key aspect of success for underrepresented 
+        students at WPI. This could involve achieving a certain level of financial stability or being able to sustain oneself in terms of knowledge 
+        and skills learned in the classroom so that they can provide it to the future of work.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
@@ -253,13 +260,12 @@ const carouselItems = [
         Financial Stability and Career Satisfaction
       </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote left color="red">
-        “I define success as doing what you enjoy, but also like feeling secure in what you're doing. So just finding that balance between having pieces that you can enjoy while still making sure that you're doing everything that you need to do.”
+        “I define success as doing what you enjoy, but also feeling secure in what you're doing. So it's about finding that balance between having 
+        pieces that you can enjoy while still making sure that you're doing everything you need to do.”
       </CarouselQuoteCard.Quote>
       <CarouselQuoteCard.Quote color="gray">
-        “Personally, I think success has to be a mix of personal satisfaction with your day to day life, and you know that part of it. I think it also does have to do with - Actually, I guess satisfaction is a good way to put it, because I think financial success is very intertwined.”
-      </CarouselQuoteCard.Quote>
-      <CarouselQuoteCard.Quote left color="red">
-        “For one thing, the easiest way to define success is money, but right now in college I can't really. You know I don't have a job as of right now and I kind of have to wait until I graduate to find a stable job.”
+        "Personally, I think success has to be a mix of personal satisfaction with your day-to-day life, and you know, that part of it. I think 
+        it also has to do with satisfaction. Actually, I guess satisfaction is a good way to put it, because I think financial success is very intertwined."
       </CarouselQuoteCard.Quote>
     </CarouselQuoteCard>
   ),
@@ -269,7 +275,10 @@ const carouselItems = [
         Social and Personal Relations
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        Having satisfying relationships or having a support network is an important part of success for diverse students at WPI. The transition to university life can be challenging, and this is often exacerbated for students with diverse backgrounds who may face various barriers related to their racial/ethnic background, gender, sexuality, religious background, or disability. Having a solid network of friends can provide social and emotional support.
+        Having satisfying relationships or having a support network is an important part of success for diverse students at WPI. The transition to 
+        university life can be challenging, and this is often exacerbated for students with diverse backgrounds who may face various barriers 
+        related to their racial/ethnic background, gender, sexuality, religious background, or disability. Having a solid network of friends can 
+        provide social and emotional support.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
@@ -279,13 +288,13 @@ const carouselItems = [
         Social and Personal Relations
       </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote color="gray">
-        “If you have status, if you're satisfied with your interpersonal relationships, and then also if you can meet, like your hierarchy of needs like at the baseline.”
+        "I feel that social success is being with friends who are genuine. Because at WPI, I meet many people, and though I know a lot of them since 
+        it's a small school, the percentage of people that I consider more than just acquaintances is small. To me, social success is having people 
+        that I'm actually close with, not just friendly with. If I were really struggling, I could go talk to them."
       </CarouselQuoteCard.Quote>
       <CarouselQuoteCard.Quote left color="red">
-        “I feel like social success is like being with friends that are like genuine and like, cause I feel like at WPI I meet, I feel like, I know, I, I feel like I know a lot of people at this school because it's so small but like the percentage of people that I consider, like people I'm friendly with versus people that I feel like if I was really struggling, I could go talk to them. I feel like that would be social success, having people that I'm actually close with and I'm not just friendly with.”
-      </CarouselQuoteCard.Quote>
-      <CarouselQuoteCard.Quote color="gray">
-        “So, like, when I'm stressed and I feel like, you know, I have someone to talk to about it. I'm not like, oh, I feel so alone woe is me? you know, that comes up for everyone but like having like a support network, having like a circle. It's not just like I rely on this one person. It's like I rely on multiple people.”
+        "So, when I'm stressed and I feel I have someone to talk to about it, I'm not thinking, 'Oh, I feel so alone, woe is me?' You know, that 
+        feeling comes up for everyone, but having a support network is important. It's not just that I rely on this one person; I rely on multiple people."
       </CarouselQuoteCard.Quote>
     </CarouselQuoteCard>
   ),
