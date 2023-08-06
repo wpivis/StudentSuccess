@@ -67,7 +67,7 @@ export default function Social({ navigation }) {
             <ImageHeader image={clubs}>Student Organizations at WPI</ImageHeader>
             <HeaderSubtitle>WPI has over 235 student clubs and organizations; rest assured, there is something for everyone!</HeaderSubtitle>
             <ContentSection>
-              <GrayTextBeam>Make sure to theck out the activities fair to see what clubs WPI has to offer.</GrayTextBeam>
+              <GrayTextBeam>Make sure to check out the activities fair to see what clubs WPI has to offer.</GrayTextBeam>
               <GrayTextBeam>ODIME offers a number of different identity-based affinity groups.</GrayTextBeam>
               <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources">Visit ODIME Affinity Groups</ButtonCentered>
               <QuoteLeft color="gray">
@@ -78,7 +78,7 @@ export default function Social({ navigation }) {
 
           <ContentSection>
             <ImageHeader image={greek}>Greek Life at WPI</ImageHeader>
-            <HeaderSubtitle>WPI has 20 active chapters at WPI: 13 fraternities, and 7 sororities.</HeaderSubtitle>
+            <HeaderSubtitle>WPI has 20 active chapters at WPI: 13 fraternities and 7 sororities.</HeaderSubtitle>
 
             <HeaderRight>Zeta Phi Beta</HeaderRight>
             <SectionContentHeader>
@@ -133,7 +133,7 @@ export default function Social({ navigation }) {
             <BracketedText noMargin left>
               "We will be attending the activity fairs to sign up for our alias and advertise the club. Our contact information is also linked
               in the weekly ODIME alias and those at ODIME can contact our exec easily for any questions from students. For events, we always
-              post on Instagram and often print flyers to put in the CC, Unity Hall, the Innovation Studio, and residence halls."
+              post on Instagram and often print flyers to put in the CC, Unity Hall, the Innovation Studio, and residence halls." - FiGSA Exec Member
             </BracketedText>
             <SectionContentHeader>
               <SectionContentHeader.Title>
@@ -144,7 +144,7 @@ export default function Social({ navigation }) {
               "We host many social events, usually around 3-4 per term, to try to get to know students and have people socialize... We accept anyone
               who comes, and encourage people to bring their friends. Some of our meetings each term also revolve around resources at the school. For
               example, in October, we always host a FAFSA and financial aid info session with the financial aid office. We also have a newsletter where
-              we highlight campus resources, advertise our events, and provide links to scholarships and internships."
+              we highlight campus resources, advertise our events, and provide links to scholarships and internships." - FiGSA Exec Member
             </BracketedText>
 
             <HeaderRight>Society of Asian Scientists and Engineers (SASE)</HeaderRight>
@@ -157,7 +157,7 @@ export default function Social({ navigation }) {
               "SASE helps integrate new members into our organization mainly through our chapter's mentor mentee program. This program is run during the A
               term, with final mentor-mentee pairings made at the beginning of B term. This program helps introduce incoming freshmen to upperclassmen both in
               and outside of their major, as well as to other incoming freshmen they may or may not have had the chance to meet outside of our organization.
-              Through our mentor-mentee program, all participant members are able to make new connections to form a close-knit community on campus."
+              Through our mentor-mentee program, all participant members are able to make new connections to form a close-knit community on campus." - SASE Exec Member
             </BracketedText>
             <SectionContentHeader>
               <SectionContentHeader.Title>
@@ -168,7 +168,7 @@ export default function Social({ navigation }) {
               "As a professional society on campus, we are able to provide both new and returning members of our organization with help and resources in
               professional development. We offer events focusing on resume reviews, LinkedIn workshops, company information sessions, and visits, etc. In
               addition to events on campus, our WPI SASE chapter provides our members the opportunity to attend both National and Regional Conferences during the
-              school year. These conferences offer new opportunities to network outside of campus, as well as provide exposure to company recruiters."
+              school year. These conferences offer new opportunities to network outside of campus, as well as provide exposure to company recruiters." - SASE Exec Member
             </BracketedText>
 
           </ContentSection>

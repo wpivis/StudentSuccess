@@ -127,7 +127,7 @@ export default function Wellness({ navigation }) {
             <HeaderRight>Equal Opportunity & Outreach</HeaderRight>
             <ImageCarousel data={EOOCarouselData}></ImageCarousel>
             <HeaderSubtitle>
-              The Office of Equal Opportunity and Outreach is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
+              The Office of Equal Opportunity and Outreach (Title IX) is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
             </HeaderSubtitle>
             <BracketedText>
               WPI has resources available to support you through all situations, including sexual misconduct. The Office of

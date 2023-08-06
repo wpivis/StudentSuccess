@@ -41,7 +41,7 @@ export default function FAQ({ navigation }) {
                 How do I start making friends on campus as a freshman?
               </SectionContentHeader.Title>
               <SectionContentHeader.Subtitle>
-                It can be daunting to make new friends in Your first year, but rest assured, WPI has numberous resources and groups to help you connect with others.
+                It can be daunting to make new friends in your first year, but rest assured, WPI has numerous resources and groups to help you connect with others.
               </SectionContentHeader.Subtitle>
             </SectionContentHeader>
             <GrayTextBeam>Attend NSO</GrayTextBeam>
@@ -76,7 +76,7 @@ export default function FAQ({ navigation }) {
             </SectionContentHeader>
             <GrayTextBeam>Go to the activities fair</GrayTextBeam>
             <GrayTextBeam>Stay up to date via newsletters and other communications from ODIME and campus as a whole</GrayTextBeam>
-            <GrayTextBeam>Sttend campus sponsored events by SAO, SAS, etc.</GrayTextBeam>
+            <GrayTextBeam>Attend campus sponsored events by SAO, SAS, etc.</GrayTextBeam>
             <GrayTextBeam>Check out the various tables in the CC to interact with new clubs and organizations</GrayTextBeam>
 
           </ContentSection>
@@ -94,7 +94,7 @@ export default function FAQ({ navigation }) {
               </Text>
             </RedPlatform>
 
-            <HeaderRight>Engagament & Relationships:</HeaderRight>
+            <HeaderRight>Engagement & Relationships:</HeaderRight>
             <QuoteRight color="gray">
               "Reach out to your professors. In my experience, all of the professors here have a genuine interest in seeing where their students go, and wanting to know
               that their class had an impact on your life."

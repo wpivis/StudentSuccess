@@ -62,13 +62,13 @@ export default function Services({ navigation }) {
               </GrayTextBeam>
             </View>
             <GrayTextBeam>
-              <Text>Offers 2 affinity-based spaces upon application: Black Excellence and Lavender Lane</Text>
+              <Text>Offers 2 affinity-based spaces upon application: Center for Black Excellence and Lavender Lounge</Text>
             </GrayTextBeam>
             <GrayTextBeam>
               <Text>Accommodated housing through the Office of Accessibility</Text>
             </GrayTextBeam>
             <GrayTextBeam>
-              <Text>Accommodations available over breaks for students: Grocery purchasing assistance, housing with kitchens, etc.</Text>
+              <Text>Accommodations available over breaks for students: grocery purchasing assistance, housing with kitchens, etc.</Text>
             </GrayTextBeam>
             <ButtonCentered href="https://www.wpi.edu/offices/id-services">ID Services</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/offices/residential-services-office">Residential Services</ButtonCentered>
