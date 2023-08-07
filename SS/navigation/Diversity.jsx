@@ -369,11 +369,13 @@ export default function Diversity({ navigation }) {
           <GrayTextBeam>
             Advocate for Diversity in Curriculum: Promote the incorporation of diverse perspectives in coursework to challenge stereotypes and reduce microaggressions. There is a desire among students for diversity in educational experiences.
           </GrayTextBeam>
-          <HeaderRight>
-            WPI Diversity in Numbers
-          </HeaderRight>
-          <RedTextBoxes number={3} text={stats}>
-          </RedTextBoxes>
+          <ContentSection>
+            <HeaderRight>
+              WPI Diversity in Numbers
+            </HeaderRight>
+            <RedTextBoxes text={stats}>
+            </RedTextBoxes>
+          </ContentSection>
           <Footer />
         </View>
       </View>

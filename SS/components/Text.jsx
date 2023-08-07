@@ -167,11 +167,11 @@ function isText(string) {
 export function PageHeader(props) {
   return (
     <View style={{ width: "100%", height: 100, marginTop: 14, marginBottom: 14, display: "flex", flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "flex-start" }}>
-      <View style={{ width: "80%", backgroundColor: crimson, paddingTop: 20, paddingBottom: 20, paddingLeft: 7, paddingRight: 7, }}>
+      <View style={{ width: "80%", backgroundColor: crimson, paddingTop: 20, paddingBottom: 20, paddingLeft: 7, paddingRight: 7, justifyContent: "space-around" }}>
         <Text style={{ color: "#f4f4f4", fontSize: 24 }}>{props.children}</Text>
       </View>
-      <View style={{ width: 20, backgroundColor: crimson, marginLeft: 4, height: "100%" }} />
-      <View style={{ width: 10, backgroundColor: crimson, marginLeft: 4, height: "100%" }} />
+      <View style={{ width: 20, backgroundColor: crimson, paddingTop: 20, paddingBottom: 20, paddingLeft: 7, paddingRight: 7, marginLeft: 4, height: "100%", justifyContent: "space-around" }} />
+      <View style={{ width: 10, backgroundColor: crimson, paddingTop: 20, paddingBottom: 20, paddingLeft: 7, paddingRight: 7, marginLeft: 4, height: "100%", justifyContent: "space-around" }} />
     </View>
   )
 }
@@ -382,6 +382,7 @@ export function GrayTextBeam(props) {
 }
 
 export function RedTextBoxes(props) {
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -402,16 +403,19 @@ export function RedTextBoxes(props) {
           // Try setting `flexDirection` to `"row"`.
           flexDirection: 'row',
           gap: 10,
+          justifyContent: "space-around",
+          //marginBottom: 80,
+          paddingBottom: 10,
         },
       ]}>
 
-      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "center", backgroundColor: crimson, textAlign: "center", marginBottom: 150, paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "space-around", backgroundColor: crimson, textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
         <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#ffffff" }}>{props.text[0]}</Text>
       </View>
-      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign: "center", marginBottom: 150, paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "space-around", backgroundColor: "#e4e4e4", textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
         <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#dc143c" }}>{props.text[1]}</Text>
       </View>
-      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "center", backgroundColor: crimson, textAlign: "center", marginBottom: 150, paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "space-around", backgroundColor: crimson, textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
         <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#ffffff" }}>{props.text[2]}</Text>
       </View>
     </View>
