@@ -1,7 +1,8 @@
 import { View, Text, Button, Image } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam, SubHeader, TextBold } from "../components/Text"
+
+import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam, RedTextBoxes, SubHeader, TextBold } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
@@ -158,6 +159,14 @@ export default function Diversity({ navigation }) {
             <AccordionTitle title="Neurodivergent People "> </AccordionTitle>
             {/* International */}
             <AccordionTitle title="Books fon International Students"> </AccordionTitle>
+
+          <ContentSection>
+            <HeaderRight>
+              WPI Diversity in Numbers
+             </HeaderRight>
+            <RedTextBoxes text={stats}>
+            </RedTextBoxes>
+          </ContentSection>
               
           </ContentSection>
 
@@ -169,3 +178,5 @@ export default function Diversity({ navigation }) {
     </ScrollView>
   )
 }
+
+const stats = ["40% women", "2.8% black students", "7% international students"]
