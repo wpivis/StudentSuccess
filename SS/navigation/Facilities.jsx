@@ -106,10 +106,10 @@ export default function Services({ navigation }) {
                     <ContentSection>
                         <ImageHeader image={atc}>Academic Technology Center</ImageHeader>
                         <HeaderSubtitle>The Academic Technology Center (ATC), located in Fuller Laboratory, supports students through providing group work spaces, equipment, workshops, and other technological support on campus.</HeaderSubtitle>
-                        <View style={{ paddingTop: 10 }}>
-                            <GrayTextBeam >
-                                Renting Equipment
-                            </GrayTextBeam>
+                        <View style={{ paddingTop: 10 }}>                                               
+                        <GrayTextBeam>
+                            Renting Equipment
+                        </GrayTextBeam>
                         </View>
                         <GrayTextBeam>
                             <Text>Printing Posters</Text>
