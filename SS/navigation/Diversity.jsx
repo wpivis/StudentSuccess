@@ -10,7 +10,7 @@ import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
-import { AccordionItem, AccordionLink, AccordionTitle } from '../components/Accordion'
+import { AccordionItem, AccordionLink, AccordionTitle, ListSectionAccordion, SectionTitleAccordion, ListAccordion, LinkListAccordion } from '../components/Accordion'
 
 const imposter = require("../assets/Diversity/imposter-syndrome.jpeg")
 const bias = require("../assets/Diversity/bias.jpeg")
@@ -41,8 +41,7 @@ export default function Diversity({ navigation }) {
               </BracketedText>
               <ButtonCentered href="https://implicit.harvard.edu/implicit/takeatest.html">Take the IAT</ButtonCentered>
 {/* Psychosocial Challenges */}
-            <HeaderRight>Psychosocial Challenges</HeaderRight>
-              
+            <HeaderRight>Psychosocial Challenges</HeaderRight>              
                 <SubHeader>Imposter Syndrome</SubHeader>
                   <Image style={{width:"100%", height:200}} source={imposter}></Image>
                     <HeaderSubtitle>Imposter syndrome was a term coined by Pauline Clance and Suzanne Imes in 1978 and describes the way a person feels when they doubt their skills, talents, or accomplishments and has a persistent fear of being exposed as a "fraud" even though they show external evidence of their competence. </HeaderSubtitle>
@@ -71,21 +70,93 @@ export default function Diversity({ navigation }) {
                 <GrayTextBeam><TextBold>Document:</TextBold> Record incidents, including dates, times, locations, what happened, and any witnesses. This could be useful if you decide to report the behavior.</GrayTextBeam>
                 <GrayTextBeam><TextBold>Report:</TextBold> Report the incident to appropriate authorities, including Residence Advisor, ODIME Director, Assistant VP for Diversity, Title IX office, Counseling Services, or law enforcement, as you feel comfortable.</GrayTextBeam>
                 <GrayTextBeam><TextBold>Self-Care:</TextBold> Bias incidents can be emotionally draining. Prioritize your mental health by engaging in activities like exercise, meditation, or seeking support from a therapist or counselor.</GrayTextBeam>
-                <GrayTextBeam><TextBold>Education:</TextBold> Encourage, develop and/or support educational programs related to your identity. We need more diverse representation, so joining and creating affinity programs are welcomed!  </GrayTextBeam>
-                
+                <GrayTextBeam><TextBold>Education:</TextBold> Encourage, develop and/or support educational programs related to your identity. We need more diverse representation, so joining and creating affinity programs are welcomed!  </GrayTextBeam>                
           </ContentSection>
-
+{/* Resources */}
+          <HeaderRight>Resources</HeaderRight>
           <BracketedText>
             There are several online resources and activities that can help you learn about diversity, as well as strategies for coping with these experiences. Here are a few ideas:
           </BracketedText>
-
           <ContentSection>
-            <AccordionTitle title="On Campus Resources"> </AccordionTitle>
-            <AccordionTitle title="Off Campus Resources"> </AccordionTitle>
+            {/* On campus */}
+            <AccordionTitle title="On Campus Resources">
+              <ListSectionAccordion>
+                <SectionTitleAccordion href="https://www.wpi.edu/offices/office-accessibility-services">Office of Accessibility Services</SectionTitleAccordion>
+                <ListAccordion data={[
+                  {key: 'Exam Proctoring Center (EPC)'},
+                  {key: 'Programming during Connections and International Student Orientation'},
+                  {key: 'Interactive map with accessibility locations/information'},                  
+                  ]}/>
+              </ListSectionAccordion>
+              <ListSectionAccordion>
+                <SectionTitleAccordion href="https://www.wpi.edu/offices/diversity">ODIME</SectionTitleAccordion>
+                  <ListAccordion data={[
+                    {key: 'Oversees diversity programming on campus'},
+                    {key: 'Various resources, clubs, and affinity scholarships are accessible here.'},
+                    ]}/>
+              </ListSectionAccordion>
+
+              <ListSectionAccordion>
+                <SectionTitleAccordion href="https://www.wpi.edu/student-experience/resources/collegiate-religious-center">Collegiate Religious Center</SectionTitleAccordion>
+                  <ListAccordion data={[
+                    {key: 'Various organizations on campus'},
+                    {key: 'Common room and meeting space'},
+                    {key: 'Vegan kitchen well-stocked with appliances and utensils'},
+                    {key: 'Multifaith Mindfulness Space'},
+                    {key: 'Islamic Prayer Room'},                   
+                    ]}/>
+              </ListSectionAccordion>
+
+              <ListSectionAccordion>
+                <SectionTitleAccordion href="https://www.wpi.edu/offices/international-house">International House</SectionTitleAccordion>
+                  <ListAccordion data={[
+                    {key: 'Virtual and in-person appointments'},
+                    {key: 'Assistance with immigration and visa paperwork'},
+                    {key: '2022-2023 International Student Handbook (PDF) with information about social customs, American culture, campus information, government regulations, and more.'},
+                    ]}/>
+              </ListSectionAccordion>
+
+
+              <ListSectionAccordion>
+                <SectionTitleAccordion href="https://www.wpi.edu/c/gendersexualitywomensstudies">Gender, Sexuality, and Women’s Studies Academic program</SectionTitleAccordion>
+                  <ListAccordion data={[
+                    {key: 'Offers a plethora of courses, can fulfill HUA requirements or a minor'},
+                    {key: 'Programming with various affinity groups on campus, such as the LGBTQIA+ Advocacy Board, Queer & Trans Connections'},
+                    ]}/>
+              </ListSectionAccordion>
+
+              <ListSectionAccordion>
+                <SectionTitleAccordion href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">LGBTQIA+ Support</SectionTitleAccordion>
+                  <ListAccordion data={[
+                    {key: 'Gender inclusive housing and restrooms'},
+                    {key: 'Resources to change name and gender in campus records'},
+                    {key: 'WPI Alliance chapter'},
+                    {key: 'Off campus resources; see here for information on off campus events, inclusive salons/barbers, and healthcare'},
+                    ]}/>
+              </ListSectionAccordion>
+            </AccordionTitle>
+            {/* Off Campus */}
+            <AccordionTitle title="Off Campus Resources">
+              <ListSectionAccordion>
+                <SectionTitleAccordion>TED Talks</SectionTitleAccordion>
+                <LinkListAccordion data={[
+                    {key: '“The danger of a single story” by Chimamanda Ngozi Adichie', href: ''},
+                    {key: '“How to overcome our biases? Walk boldly toward them” by Verna Myers', href: ''},
+                    {key: "“Let's get to the root of racial injustice” by Megan Ming Francis.", href: ''},                    
+                    ]} />
+              </ListSectionAccordion>
+            </AccordionTitle>
+                            
+            
+            {/* Women & Feminism */}
             <AccordionTitle title="Books on Women and Feminism"> </AccordionTitle>
+            {/* LGBTIQA */}
             <AccordionTitle title="LGBTIQA+ Books"> </AccordionTitle>
+            {/* Disabilities */}
             <AccordionTitle title="People With Disabilities "> </AccordionTitle>
+            {/* Neurodivergent */}
             <AccordionTitle title="Neurodivergent People "> </AccordionTitle>
+            {/* International */}
             <AccordionTitle title="Books fon International Students"> </AccordionTitle>
               
           </ContentSection>
