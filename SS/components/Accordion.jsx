@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text, FlatList } from 'react-native';
 import { List } from 'react-native-paper';
 import { DirectoryEntry } from './Directory';
 import { crimson } from '../assets/style';
@@ -21,6 +21,55 @@ export function AccordionTitle ({title, isExpanded, children}) {
 </View>
   )
 };
+
+export function ListSectionAccordion({children}){
+  
+  const childElements = React.Children.map(children, child => {
+    return <React.Fragment>{child}</React.Fragment>;
+  });
+
+  return(
+    <View style={{borderBottomWidth: 1,borderBottomColor:crimson,paddingVertical:10, paddingHorizontal:20}}>
+      {childElements}
+    </View>
+  )
+} 
+export function SectionTitleAccordion(props){
+  if(props.href === undefined){
+    return(
+      <a style={{fontSize:18, paddingBottom:6}} href={props.href}>{props.children}</a>
+      )
+  }
+  else{
+    return(
+      <a style={{color:crimson,fontSize:18,paddingBottom:6}} href={props.href}>{props.children}</a>
+      )
+  }
+  
+}
+
+export function ListAccordion(props){
+  return (
+    <View>
+      <FlatList
+        data={props.data}
+        renderItem={({item}) => <Text style={{fontSize:16, paddingLeft:10}}>• {item.key}</Text>}
+      />
+    </View>
+  );
+};
+
+export function LinkListAccordion(props){
+  return (
+    <View>
+      <FlatList
+        data={props.data}
+        renderItem={({item}) => <Text style={{fontSize:16, paddingLeft:10, paddingBottom:10}}>• <a style={{color:crimson}} href={item.href}>{item.key}</a></Text>}
+      />
+    </View>
+  );
+};
+
 
 export function AccordionItem(props){
   return (
