@@ -39,11 +39,17 @@ export function HeaderRight(props) {
           right: 0
         }}
       >
-        <Text style={{ color: crimson, fontSize: 24, fontWeight: "bold" }}>
+        <Text style={{ color: crimson, fontSize: 22, fontWeight: "bold" }}>
           {props.children}
         </Text>
       </View>
     </View>
+  )
+}
+
+export function SubHeader(props){
+  return (
+      <Text style={{ fontWeight: "bold", fontSize: 20, color:crimson, paddingBottom:10}}>{props.children}</Text>
   )
 }
 
@@ -366,7 +372,7 @@ export function BodyText(props) {
   return (
     <View style={{ marginBottom: 7 }}>
       <Platform maxWidth={textBlockMaxWidth}>
-        <Text style={{ textIndent: 28 }}>{props.children}</Text>
+        <Text>{props.children}</Text>
       </Platform>
     </View>
   )
@@ -378,4 +384,11 @@ export function GrayTextBeam(props) {
       <Text>{props.children}</Text>
     </View>
   )
+}
+
+export function TextBold(props){
+  return(
+    <Text style={{fontWeight:600}}>{props.children}</Text>
+  )
+  
 }
