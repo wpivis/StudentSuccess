@@ -1,9 +1,10 @@
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 
 import { Image } from "expo-image";
 import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow, textBlockMaxWidth } from "../assets/style";
 import { Component } from "react";
 import { LightGrayPlatform, RedPlatform, TransparentPlatform } from "./Layout";
+
 
 const bubblePointRed = require("../assets/bubblePointRed.png");
 const bubblePointWhite = require("../assets/bubblePointWhite.png");
@@ -80,7 +81,7 @@ export function BracketedText(props) {
         }}
       />
       <View style={{ height: "100%", paddingTop: 28, paddingBottom: 28, flex: 10 }}>
-        <Text style={{fontSize: 16}}>{props.children}</Text>
+        <Text style={{ fontSize: 16 }}>{props.children}</Text>
       </View>
       <View
         style={{
@@ -374,8 +375,46 @@ export function BodyText(props) {
 
 export function GrayTextBeam(props) {
   return (
-    <View style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign: "center", marginBottom: 7, paddingTop: 7, paddingBottom: 7, paddingLeft: "10%", paddingRight: "10%" }}>
+    <View style={{ width: "100%", display: "flex", alignItems: "flex-start", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign: "left", marginBottom: 7, paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }}>
       <Text>{props.children}</Text>
     </View>
   )
 }
+
+export function RedTextBoxes(props) {
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      padding: 20,
+    },
+    box: {
+      width: 250,
+      height: 250,
+      padding: 200,
+    },
+  });
+
+  return (
+    <View
+      style={[
+        styles.container,
+        {
+          // Try setting `flexDirection` to `"row"`.
+          flexDirection: 'row',
+          gap: 10,
+        },
+      ]}>
+
+      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "center", backgroundColor: crimson, textAlign: "center", marginBottom: 150, paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#ffffff" }}>{props.text[0]}</Text>
+      </View>
+      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "center", backgroundColor: "#e4e4e4", textAlign: "center", marginBottom: 150, paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#dc143c" }}>{props.text[1]}</Text>
+      </View>
+      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "center", backgroundColor: crimson, textAlign: "center", marginBottom: 150, paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#ffffff" }}>{props.text[2]}</Text>
+      </View>
+    </View>
+  );
+
+};

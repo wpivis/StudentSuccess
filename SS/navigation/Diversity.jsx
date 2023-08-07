@@ -1,7 +1,7 @@
 import { View, Text, Button } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam } from "../components/Text"
+import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam, RedTextBoxes } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
@@ -369,6 +369,11 @@ export default function Diversity({ navigation }) {
           <GrayTextBeam>
             Advocate for Diversity in Curriculum: Promote the incorporation of diverse perspectives in coursework to challenge stereotypes and reduce microaggressions. There is a desire among students for diversity in educational experiences.
           </GrayTextBeam>
+          <HeaderRight>
+            WPI Diversity in Numbers
+          </HeaderRight>
+          <RedTextBoxes number={3} text={stats}>
+          </RedTextBoxes>
           <Footer />
         </View>
       </View>
@@ -377,3 +382,4 @@ export default function Diversity({ navigation }) {
     </ScrollView>
   )
 }
+const stats = ["40% women", "2.8% black students", "7% international students"]
