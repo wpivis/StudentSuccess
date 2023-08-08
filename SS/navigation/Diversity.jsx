@@ -1,5 +1,6 @@
-import { View, Text, Button, Image } from 'react-native'
+import { View, Text, Button } from 'react-native'
 import React from 'react'
+import { Image } from "expo-image"
 import { ScrollView } from 'react-native-gesture-handler'
 
 import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam, RedTextBoxes, SubHeader, TextBold } from "../components/Text"
