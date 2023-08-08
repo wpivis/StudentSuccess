@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, FlatList } from 'react-native';
+import { View, StyleSheet, Text, FlatList, TouchableOpacity, Linking } from 'react-native';
+import { Image } from "expo-image"
 import { List } from 'react-native-paper';
 import { DirectoryEntry } from './Directory';
 import { crimson } from '../assets/style';
 
 const WPICrimson = "#AC2B37";
 const WPIGray = '#A9B0B7';
+const externalLink = require("../assets/externalLink.png")
 
 export function AccordionTitle ({title, isExpanded, children}) {
   const [expanded, setExpanded] = React.useState(isExpanded);
@@ -42,13 +44,16 @@ export function SectionTitleAccordion(props){
   }
   else{
     return(
-      <a style={{color:crimson,fontSize:18,paddingBottom:6}} href={props.href}>{props.children}</a>
+      <a style={{color:'black',fontSize:18,paddingBottom:6}} href={props.href}>{props.children}</a>
       )
   }
   
 }
 
 export function ListAccordion(props){
+  const handleLinkPress = (url) => {
+    Linking.openURL(url);
+  };
   if(props.notBulleted){
     return (
       <View>
@@ -64,12 +69,23 @@ export function ListAccordion(props){
       <View>
         <FlatList
           data={props.data}
-          renderItem={({item}) => <Text style={{fontSize:16, paddingLeft:10,paddingBottom:6}}>• {item.key}</Text>}
+          // renderItem={({item}) => <Text style={{fontSize:16, paddingLeft:10,paddingBottom:6}}>• {item.key}</Text>}
+          renderItem={({ item }) => (
+              <TouchableOpacity onPress={() => item.href ? handleLinkPress(item.href): null}>
+            <View style={{paddingTop:4,marginVertical:0, borderWidth: item.href ? 2:0, borderColor:crimson, borderRadius:6, flexDirection: 'row', alignItems: 'center', justifyContent:"space-between", maxWidth:500}}>
+              <Text style={{ flex:1, color: crimson, fontSize: 16, paddingLeft:10, paddingRight:0, paddingBottom: 6 }}>{item.key}</Text>
+              {item.href && (
+                  <Image source={externalLink} style={{ width: 14, height: 14, marginRight:6}} />
+                  )}
+            </View>
+             </TouchableOpacity>
+          )}
         />
       </View>
     );
   }
 };
+
 
 export function LinkListAccordion(props){
   
