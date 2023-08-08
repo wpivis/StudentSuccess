@@ -96,7 +96,6 @@ export default function Diversity({ navigation }) {
                     {key: 'Various resources, clubs, and affinity scholarships are accessible here.'},
                     ]}/>
               </ListSectionAccordion>
-
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/student-experience/resources/collegiate-religious-center">Collegiate Religious Center</SectionTitleAccordion>
                   <ListAccordion data={[
@@ -107,7 +106,6 @@ export default function Diversity({ navigation }) {
                     {key: 'Islamic Prayer Room'},                   
                     ]}/>
               </ListSectionAccordion>
-
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/offices/international-house">International House</SectionTitleAccordion>
                   <ListAccordion data={[
@@ -116,8 +114,6 @@ export default function Diversity({ navigation }) {
                     {key: '2022-2023 International Student Handbook (PDF) with information about social customs, American culture, campus information, government regulations, and more.'},
                     ]}/>
               </ListSectionAccordion>
-
-
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/c/gendersexualitywomensstudies">Gender, Sexuality, and Women’s Studies Academic program</SectionTitleAccordion>
                   <ListAccordion data={[
@@ -125,7 +121,6 @@ export default function Diversity({ navigation }) {
                     {key: 'Programming with various affinity groups on campus, such as the LGBTQIA+ Advocacy Board, Queer & Trans Connections'},
                     ]}/>
               </ListSectionAccordion>
-
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">LGBTQIA+ Support</SectionTitleAccordion>
                   <ListAccordion data={[
@@ -136,8 +131,8 @@ export default function Diversity({ navigation }) {
                     ]}/>
               </ListSectionAccordion>
             </AccordionTitle>
-            {/* Off Campus */}
-            <AccordionTitle title="Off Campus Resources">
+            {/* Online */}
+            <AccordionTitle title="Online Resources">
               <ListSectionAccordion>
                 <SectionTitleAccordion>TED Talks</SectionTitleAccordion>
                 <LinkListAccordion data={[
@@ -146,19 +141,94 @@ export default function Diversity({ navigation }) {
                     {key: "“Let's get to the root of racial injustice” by Megan Ming Francis.", href: ''},                    
                     ]} />
               </ListSectionAccordion>
+              <ListSectionAccordion>
+                <SectionTitleAccordion>Podcasts</SectionTitleAccordion>
+                  <LinkListAccordion data={[
+                      {key: '"Code Switch" from NPR', href: 'https://www.npr.org/podcasts/510312/codeswitch'},
+                      {key: 'The Diversity Gap', href: 'https://www.thediversitygap.com/'},
+                      {key: "Escape From Plan A", href: 'https://podcastaddict.com/podcast/escape-from-plan-a/3025180'},                    
+                      ]} />
+              </ListSectionAccordion>
             </AccordionTitle>
-                            
-            
+            {/* Diversity, Racism, and microaggressions */}
+            <AccordionTitle title="Diversity, Racism, and Microaggressions">
+            <ListSectionAccordion>
+                  <LinkListAccordion data={[
+                      {key: 'So You Want to Talk About Race by Ijeoma Oluo', href: 'https://www.goodreads.com/book/show/45301927-so-you-want-to-talk-about-race'},
+                      {key: 'Between the World and Me by Ta-Nehisi Coates', href: 'https://www.goodreads.com/book/show/26058141-between-the-world-and-me?from_search=true&from_srp=true&qid=BKkHgjbRie&rank=1'},
+                      {key: 'The New Jim Crow by Michelle Alexander', href: 'https://newjimcrow.com/'}, 
+                      {key: 'American Born Confused Desi by Tanuja Desai Hidier', href: 'http://thisistanuja.com/'},
+                      {key: 'Unaccustomed Earth by Jhumpa Lahiri', href: 'https://www.goodreads.com/book/show/85301.Unaccustomed_Earth'},
+                      {key: 'American Born Chinese by Gene Luen Yang', href: 'https://www.goodreads.com/book/show/118944.American_Born_Chinese'}, 
+                      {key: 'The Woman Warrior: Memoirs of a Girlhood Among Ghosts by Maxine Hong Kingston', href: 'https://www.goodreads.com/book/show/30852.The_Woman_Warrior'},
+                      {key: 'Caramelo by Sandra Cisneros', href: 'https://www.goodreads.com/book/show/32957.Caramelo'},
+                      {key: 'Latino Americans: The 500-Year Legacy That Shaped a Nation by Ray Suarez', href: 'https://shop.pbs.org/WD6822.html'}, 
+                      {key: 'Borderlands/La Frontera: The New Mestiza by Gloria Anzaldúa', href: 'https://www.goodreads.com/en/book/show/43436408'},
+                      {key: 'When I Was Puerto Rican by Esmeralda Santiago', href: 'https://www.goodreads.com/work/editions/3314905-when-i-was-puerto-rican'},                    
+                      ]} />
+              </ListSectionAccordion>
+            </AccordionTitle>
             {/* Women & Feminism */}
-            <AccordionTitle title="Books on Women and Feminism"> </AccordionTitle>
+            <AccordionTitle title="Books on Women and Feminism">
+            <ListSectionAccordion>
+                  <ListAccordion data={[
+                      {key: '"The Second Sex" by Simone de Beauvoir'},
+                      {key: '"Men Explain Things to Me" by Rebecca Solnit'},
+                      {key: '"Bad Feminist" by Roxane Gay'},
+                      {key: '"We Should All Be Feminists" by Chimamanda Ngozi Adichie.'},
+                      {key: '"Invisible Women: Data Bias in a World Designed for Men" by Caroline Criado Perez'},
+                      {key: '"The Bell Jar" by Sylvia Plath'},
+                      {key: '\"Lean Out: Elissa Shevinsky on why \'leaning in\' isn\'t enough\"'},
+                      {key: '"Everyday Sexism" by Laura Bates'},                                                               
+                      ]} />
+              </ListSectionAccordion>
+            </AccordionTitle>
             {/* LGBTIQA */}
-            <AccordionTitle title="LGBTIQA+ Books"> </AccordionTitle>
+            <AccordionTitle title="LGBTQIA+">
+            <ListSectionAccordion>
+                    <ListAccordion data={[
+                        {key:' "Giovanni\'s Room" by James Baldwin'},
+                        {key:'"Gender Outlaw: On Men, Women, and the Rest of Us" by Kate Bornstein'},
+                        {key:'"Stone Butch Blues" by Leslie Feinberg'},
+                        {key:'"Fun Home: A Family Tragicomic" by Alison Bechdel'},
+                        {key:'"Nevada" by Imogen Binnie: This novel offers a raw and insightful look at the life of a trans woman living in New York City.'},
+                        {key:'"Less" by Andrew Sean Greer'},
+                        {key:'"Juliet Takes a Breath" by Gabby Rivera'},
+                        {key:'"Paul Takes the Form of a Mortal Girl" by Andrea Lawlor'},
+                        {key:'"Sissy: A Coming-of-Gender Story" by Jacob Tobia'},
+                        {key:'"Real Queer America: LGBT Stories from Red States" by Samantha Allen'},
+                        ]} />
+                </ListSectionAccordion>
+            </AccordionTitle>
+              
             {/* Disabilities */}
-            <AccordionTitle title="People With Disabilities "> </AccordionTitle>
-            {/* Neurodivergent */}
-            <AccordionTitle title="Neurodivergent People "> </AccordionTitle>
+            <AccordionTitle title="Disabilities & Neurodivergent People">
+            <ListSectionAccordion>
+                    <ListAccordion data={[
+                        {key:'"Thinking in Pictures: My Life with Autism" by Temple Grandin'},
+                        {key:'"The Reason I Jump: The Inner Voice of a Thirteen-Year-Old Boy with Autism" by Naoki Higashida'},
+                        {key:'"Look Me in the Eye: My Life with Asperger\'s" by John Elder Robison'},
+                        {key:'"The Curious Incident of the Dog in the Night-Time" by Mark Haddon'},
+                        {key:'"Being Heumann: An Unrepentant Memoir of a Disability Rights Activist" by Judith Heumann and Kristen Joiner'},
+                        {key:'"NeuroTribes: The Legacy of Autism and the Future of Neurodiversity" by Steve Silberman'},
+                        {key:'"El Deafo" by Cece Bell.'},
+                        {key:'"Haben: The Deafblind Woman Who Conquered Harvard Law" by Haben Girma'},                                                              
+                        ]} />
+                </ListSectionAccordion>
+            </AccordionTitle>
             {/* International */}
-            <AccordionTitle title="Books fon International Students"> </AccordionTitle>
+            <AccordionTitle title="International Students">
+            <ListSectionAccordion>
+                    <ListAccordion data={[
+                        {key:'"American Ways: A Guide for Foreigners in the United States" by Gary Althen and Janet Bennett'},
+                        {key:'"Cross-Cultural Dialogues: 74 Brief Encounters with Cultural Difference" by Craig Storti'},
+                        {key:'"The Culture Shock! USA: A Guide to Customs and Etiquette" by Esther Wanning'},
+                        {key:'"Educating about Social Issues in the 20th and 21st Centuries Vol 4" by Samuel Totten and Jon E. Pedersen'},
+                        {key:'"Adjusting to Life in the United States: Bridging Cultures" by Charles Hirschman'},
+                        {key:'"Coming to America: A Muslim Family\'s Story" by Bernard Wolf'},                                                              
+                        ]} />
+                </ListSectionAccordion>
+            </AccordionTitle>
 
           <ContentSection>
             <HeaderRight>
