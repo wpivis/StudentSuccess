@@ -17,7 +17,6 @@ import { AccordionItem, AccordionLink, AccordionTitle, ListSectionAccordion, Sec
 const imposter = require("../assets/Diversity/imposter-syndrome.jpeg")
 const bias = require("../assets/Diversity/bias.jpeg")
 const microaggressions = require("../assets/Diversity/microaggression.jpeg")
-const cdc = require("../assets/cdc.png")
 
 export default function Diversity({ navigation }) {
 
