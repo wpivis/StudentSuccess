@@ -48,7 +48,7 @@ function App() {
           <StatusBar />
           <NavigationContainer>
             <AppDrawer.Navigator
-              initialRouteName={AppDrawerItemName.Diversity}
+              initialRouteName={AppDrawerItemName.Welcome}
               screenOptions={{
                 headerTintColor: "#FFFFFF",
                 drawerStyle: {

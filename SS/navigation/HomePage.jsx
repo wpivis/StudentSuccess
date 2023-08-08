@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { BodyText, BracketedText, CenteredTitle, ImageHeader, PageHeader, QuoteLeft, QuoteRight, SectionContentHeader } from "../components/Text"
+import { BodyText, BracketedText, CenteredTitle, HeaderRight, ImageHeader, PageHeader, QuoteLeft, QuoteRight, SectionContentHeader } from "../components/Text"
 import { ImageContainer } from "../components/Images"
 import { AccordionTitle, AccordionItem, AccordionLink } from "../components/Accordion"
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
@@ -61,20 +61,25 @@ export default function HomePage({ navigation }) {
               From their responses, we developed some key takeaways and quotes in their own words.
             </HeaderSubtitle>
 
-            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
-              <Carousel
-                loop
-                width={carouselWidth}
-                data={carouselItems}
-                height={carouselHeight}
-                autoPlay
-                autoPlayInterval={5000}
-                scrollAnimationDuration={1000}
-                renderItem={({ index }) => (carouselItems[index])}
-              />
-            </View>
-          </ContentSection>
+            { carouselItems }
 
+            { /** 
+              <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
+                <Carousel
+                  loop
+                  width={carouselWidth}
+                  data={carouselItems}
+                  height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={5000}
+                  scrollAnimationDuration={1000}
+                  renderItem={({ index }) => (carouselItems[index])}
+                  />
+              </View>
+            */ }
+
+              </ContentSection>
+              
           {/* Resources */}
           <ContentSection>
             <AccordionTitle title="WPI Emergency Resources">
@@ -118,13 +123,7 @@ class CarouselQuoteCard extends Component {
 
   render() {
     return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: 'start',
-          alignItems: "center",
-        }}
-      >
+      <View>
         {this.props.children}
       </View>
     )
@@ -134,7 +133,7 @@ class CarouselQuoteCard extends Component {
 class CarouselTitleCard extends Component {
 
   static Title(props) {
-    return <CenteredTitle>{props.children}</CenteredTitle>;
+    return <HeaderRight>{props.children}</HeaderRight>;
   }
 
   static Body(props) {
@@ -174,9 +173,6 @@ const carouselItems = [
   ),
   (
     <CarouselQuoteCard>
-      <CarouselQuoteCard.Title>
-        Contentment, Happiness, and Balance
-      </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote color="gray">
         “I would personally define success as reaching a comfortable spot where you are excited to wake up in the morning, and you 
         don't have anything throughout the day that you genuinely dread doing.”
@@ -200,9 +196,6 @@ const carouselItems = [
   ),
   (
     <CarouselQuoteCard>
-      <CarouselQuoteCard.Title>
-        Learning and Growth
-      </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote left color="red">
         "That is my definition of success, and I will stick by it. I work damn hard to go from being a failing student to now 
         getting A's and B's. That's success. Success has changed over the years. And to me, being happy, even as a failing 
@@ -229,9 +222,6 @@ const carouselItems = [
   ),
   (
     <CarouselQuoteCard>
-      <CarouselQuoteCard.Title>
-        Resiliance and Perseverance
-      </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote color="gray">
         “That's what a successful run at WPI looks like, because obviously, WPI is not a cakewalk; it's work-intensive. There are 
         expectations through the roof, not only from the teachers but also from the people around you. There's competition, and 
@@ -256,9 +246,6 @@ const carouselItems = [
   ),
   (
     <CarouselQuoteCard>
-      <CarouselQuoteCard.Title>
-        Financial Stability and Career Satisfaction
-      </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote left color="red">
         “I define success as doing what you enjoy, but also feeling secure in what you're doing. So it's about finding that balance between having 
         pieces that you can enjoy while still making sure that you're doing everything you need to do.”
@@ -284,9 +271,6 @@ const carouselItems = [
   ),
   (
     <CarouselQuoteCard>
-      <CarouselQuoteCard.Title>
-        Social and Personal Relations
-      </CarouselQuoteCard.Title>
       <CarouselQuoteCard.Quote color="gray">
         "I feel that social success is being with friends who are genuine. Because at WPI, I meet many people, and though I know a lot of them since 
         it's a small school, the percentage of people that I consider more than just acquaintances is small. To me, social success is having people 
