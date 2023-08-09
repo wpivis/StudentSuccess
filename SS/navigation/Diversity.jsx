@@ -86,14 +86,13 @@ export default function Diversity({ navigation }) {
                 <ListAccordion data={[
                   {key: 'Exam Proctoring Center (EPC)'},
                   {key: 'Programming during Connections and International Student Orientation'},
-                  {key: 'Interactive map with accessibility locations/information', href:'https://maps.wpi.edu/?id=609&_gl=1*1f8ooik*_ga*MTk5NjIyODU2LjE2ODQ3ODA0NTY.*_ga_RE35PKQB7J*MTY4ODM5NDE4OS4xMjMuMS4xNjg4Mzk3MjI2LjQxLjAuMA..#!ce/7351?ct/21914,36740,36797,7478,7405,7479,7481,7483,7484,7491,7492,7493,7494,7495,7496,7497,7498,7499,7509,7513,7514,7572,7573,7575,7576?s/'},                  
+                  {key: 'Interactive map', href:'https://maps.wpi.edu/?id=609&_gl=1*1f8ooik*_ga*MTk5NjIyODU2LjE2ODQ3ODA0NTY.*_ga_RE35PKQB7J*MTY4ODM5NDE4OS4xMjMuMS4xNjg4Mzk3MjI2LjQxLjAuMA..#!ce/7351?ct/21914,36740,36797,7478,7405,7479,7481,7483,7484,7491,7492,7493,7494,7495,7496,7497,7498,7499,7509,7513,7514,7572,7573,7575,7576?s/'},                  
                   ]}/>
               </ListSectionAccordion>
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/offices/diversity">ODIME</SectionTitleAccordion>
                   <ListAccordion data={[
                     {key: 'Oversees diversity programming on campus'},
-                    {key: 'Various resources, clubs, and affinity scholarships', href: 'https://www.wpi.edu/offices/diversity/resources'},
                     ]}/>
               </ListSectionAccordion>
               <ListSectionAccordion>
@@ -111,7 +110,7 @@ export default function Diversity({ navigation }) {
                   <ListAccordion data={[
                     {key: 'Virtual and in-person appointments'},
                     {key: 'Assistance with immigration and visa paperwork'},
-                    {key: '2022-2023 International Student Handbook (PDF) with information about social customs, American culture, campus information, government regulations, and more.', href:'https://www.wpi.edu/sites/default/files/inline-image/Body%20of%20International%20Student%20Handbook%202022-2023.pdf'},
+                    {key: 'International Student Handbook', href:'https://www.wpi.edu/sites/default/files/inline-image/Body%20of%20International%20Student%20Handbook%202022-2023.pdf'},
                     ]}/>
               </ListSectionAccordion>
               <ListSectionAccordion>
@@ -125,7 +124,7 @@ export default function Diversity({ navigation }) {
                 <SectionTitleAccordion href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">LGBTQIA+ Support</SectionTitleAccordion>
                   <ListAccordion data={[
                     {key: 'Gender inclusive housing and restrooms'},
-                    {key: 'Resources to change name and gender in campus records',href:'https://www.wpi.edu/sites/default/files/2023-01/Name%20Gender%20Change%20Fillable%20PDF%20Form1_0.pdf'},
+                    {key: 'Change name & gender in campus records'},
                     {key: 'WPI Alliance chapter'},
                     {key: 'Off campus resources; see here for information on off campus events, inclusive salons/barbers, and healthcare'},
                     ]}/>
