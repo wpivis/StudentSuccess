@@ -2,10 +2,10 @@ import { View, Text, Button } from 'react-native'
 import React from 'react'
 import { Image } from "expo-image" 
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GrayTextBeam } from "../components/Text"
+import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GrayTextBeam, BodyText, SubHeader } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
+import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
@@ -22,6 +22,8 @@ const turtle = require("../assets/turtle.jpg")
 const gps = require("../assets/gps.jpg")
 const gompeiStatue = require("../assets/gompeiStatue.jpg")
 const library = require("../assets/library.jpg")
+const writingCenter = require("../assets/Academics/writingCenter.jpeg")
+const mtc = require("../assets/Academics/MTC.jpeg")
 
 export default function Academics({ navigation }) {
 
@@ -32,113 +34,66 @@ export default function Academics({ navigation }) {
 
       <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
-          <PageHeader>Academic Information at WPI</PageHeader>
+          <PageHeader>Academic Support</PageHeader>
 
           <ContentSection>
-            <ImageHeader image={makerSpace}>Project Based Learning</ImageHeader>
-            <BracketedText>WPI Specializes in project-based learning. Get real experience in the subjects you love; learning by doing is the way to go!</BracketedText>
-            <ButtonCentered href="https://www.wpi.edu/project-based-learning">Project Based Learning</ButtonCentered>
+            <BracketedText>At WPI, there is no absence of support if you want to find it. In your academic endeavors, our campus has many resources ranging from formal advising to free tutoring centers with peer support. We have a couple tips and tricks to help your academics go more smoothly. </BracketedText>
+            <ButtonCentered href="https://www.wpi.edu/sites/default/files/2023-06/UG_2023-24Finalapproved5.23.23.pdf">2023-2024 Academic Calendar</ButtonCentered>
+            
+            <ContentSection>
+            <LightGrayPlatform>
+            <BodyText>Advice from Mathematical Sciences Faculty</BodyText>
+            <BodyText>Be open to learning new mathematical and statistical concepts! To maximize your student experience, make sure to attend classes, get to know your professors, ask for help in office hours, and utilize resources such as the math tutoring center. If you are planning on majoring/minoring in Mathematical Sciences, make sure to sign up to be paired with a mentor! Our Math Club and Association for Women in Mathematics are open to all students on campus that are interested in math!</BodyText>
+            <BodyText>We wish you success in all of your courses at WPI!</BodyText>
+            </LightGrayPlatform>
+            </ContentSection>
+            
             <HeaderRight>Academic Advising</HeaderRight>
             <Image style={{ width: "100%", height: 200 }} source={academicAdvising} />
-            {/* <GrayTextBeam>Located in Unity Hall</GrayTextBeam>
-            <GrayTextBeam>How to register for courses</GrayTextBeam>
-            <GrayTextBeam>Tracking sheets</GrayTextBeam>
-            <GrayTextBeam>Double counting courses</GrayTextBeam>
-            <GrayTextBeam>Transfer credits</GrayTextBeam>
-            <GrayTextBeam>Double majors and minors</GrayTextBeam> */}
+            <HeaderSubtitle>Located in Unity Hall, the Office of Academic Advising is there to help you develop a meaningful educational plan. Utilize their website to learn how to register for courses, double count classes, transfer credits, and plan for double majors and minors, amongst other resources.</HeaderSubtitle>
+            <GrayTextBeam>All WPI students are assigned one academic advisor as well as a faculty advisor within their major’s department</GrayTextBeam>
+            
+            <BracketedText>Major tracking sheets are a valuable tool that many students have stressed the importance of having access to early on. </BracketedText>
+            <ButtonCentered href="https://www.wpi.edu/student-experience/resources/academic-advising/program-tracking-sheets">Program Tracking Sheets</ButtonCentered>
+            <ButtonCentered href="https://www.wpi.edu/academics/undergraduate/bachelors-masters-degree">Bachelor’s/Master’s Degree Options</ButtonCentered>
+            <ButtonCentered href="https://www.wpi.edu/offices/academic-advising">Visit Academic Advising</ButtonCentered>
 
             <QuoteRight color="red">“My advisors were very supportive. They would mostly just reach out during times that they would kind of expect us to need support, like during registration. It's more like. I can really only get the benefits I need if I reach out to them first. But they are very welcoming.”</QuoteRight>
             <QuoteLeft color="gray">“Before taking one of your harder classes, you could see on Workday what you need before the class, I'll ask my advisor anything about it as well. Or if I knew a friend took the class I just asked them about it as well before it.”</QuoteLeft>
 
-            <ButtonCentered href="https://www.wpi.edu/offices/academic-advising">Visit Academic Advising</ButtonCentered>
             <HeaderRight>Academic Resource Center</HeaderRight>
             <Image style={{ width: "100%", height: 200 }} source={tutor} />
-            <QuoteRight color="red">“The advice I heard was to reach out to professors. Advice I wish I took was to go to TAs, I frankly find them more helpful than professors a lot of the time except for one class I’m taking at the moment. But for the majority of classes I find them more helpful than just professors”</QuoteRight>
-
+            <HeaderSubtitle>The Academic Resource Center (ARC), located in Unity Hall, offers peer-led individual and group-style tutoring. Schedule an appointment one-on-one with a tutor, or drop in for Math and Science Help (MASH).</HeaderSubtitle>
+            <GrayTextBeam>Informal resources like the Physics lounge (Located in Olin Hall) are also available to help with coursework</GrayTextBeam>
+            <QuoteRight color="gray">“The advice I heard was to reach out to professors. Advice I wish I took was to go to TAs, I frankly find them more helpful than professors a lot of the time except for one class I’m taking at the moment. But for the majority of classes I find them more helpful than just professors”</QuoteRight>
+            <ButtonCentered href="https://www.wpi.edu/news/announcements/find-study-spaces-wpi-app">Study spaces on campus</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/academic-resources-center">Visit Academic Resource Center</ButtonCentered>
-            <ButtonCentered href="https://www.wpi.edu/academics/departments/mathematical-sciences/math-tutoring-center-mtc">MASH tutoring help</ButtonCentered>
 
-            <LightGrayPlatform>
+            {/* <LightGrayPlatform>
               <QuoteRight color="red">“One advice would be to put everything in your outlook calendar. Don't be afraid, put your homeworks, put your meetings, put every single thing in your outlook calendar and then have your outlook calendar on your lock screen. I will put my homeworks. I will put my assignments. I will put when I need to meet my friends on outlook because if not, it will not happen or I'll forget about it. I forgot to go to the fun night yesterday because it wasn't on my outlook. I put everything on my outlook. Obviously, that is one advice I will give everyone is like, put your homeworks on outlook because it will bother you until you finish your homework. That is nice.”</QuoteRight>
-            </LightGrayPlatform>
+            </LightGrayPlatform> */}
 
             <HeaderRight>Writing Center</HeaderRight>
+              <Image style={{width:'100%', height:200}} source={writingCenter}/>
+              <HeaderSubtitle>Located in Salisbury Labs 233, the writing center is staffed with 20 peer tutors to help you at any stage of your writing/composing process</HeaderSubtitle>
+              <ButtonCentered href='https://www.wpi.edu/student-experience/resources/writing-center'>Visit Writing Center</ButtonCentered>
+              <HeaderRight>Math Tutoring Center</HeaderRight>
+              <Image style={{width:'100%', height:200}} source={mtc}/>
+              <HeaderSubtitle>Located in room 302 in Gordon Library, the drop-in style Math Tutoring Center is staffed with math TAs, PLAs, and master’s students to help with all math-related questions and coursework.</HeaderSubtitle>
+              <ButtonCentered href='https://www.wpi.edu/academics/departments/mathematical-sciences/math-tutoring-center-mtc'>Visit MTC</ButtonCentered>
             <HeaderRight>SWEET Center</HeaderRight>
-            <SectionContentHeader>
-              <SectionContentHeader.Title>Doing Good Across the Globe</SectionContentHeader.Title>
-              <SectionContentHeader.Subtitle>A Degree Requirement that Changes Students, and the World</SectionContentHeader.Subtitle>
-            </SectionContentHeader>
-            <View style={{ marginTop: 14, marginBottom: 14 }}>
-              <LightGrayPlatform maxWidth={textBlockMaxWidth}>
-                <Text style={{ textIndent: 28 }}>{lorem}</Text>
-              </LightGrayPlatform>
-            </View>
-            <ButtonCentered>Explore IQP Options</ButtonCentered>
-            <ButtonCentered>See What Students are Saying</ButtonCentered>
-            <HeaderRight>Academic Resource Center</HeaderRight>
-            <SectionContentHeader>
-              <SectionContentHeader.Title>MQP Program Subtitle</SectionContentHeader.Title>
-              <SectionContentHeader.Subtitle>MQP Program Subtitle Line 2</SectionContentHeader.Subtitle>
-            </SectionContentHeader>
-            <TransparentPlatform maxWidth={textBlockMaxWidth}>
-              <Text style={{ textIndent: 28 }}>{lorem}</Text>
-            </TransparentPlatform>
-            <ImageContainer imageSource={turtle} />
-
-            <HeaderRight>First Year GPS Classes</HeaderRight>
-            <SectionContentHeader>
-              <SectionContentHeader.Title>GPS Classes Subtitle</SectionContentHeader.Title>
-              <SectionContentHeader.Subtitle>GPS Classes Subtitle Line 2</SectionContentHeader.Subtitle>
-            </SectionContentHeader>
-            <View style={{ marginBottom: 14 }}>
-              <TransparentPlatform maxWidth={textBlockMaxWidth}>
-                <Text style={{ textIndent: 28 }}>{lorem}</Text>
-              </TransparentPlatform>
-            </View>
-            <ImageContainer noMargin imageSource={gps} />
-            <RedBeam
-              title="Tackling the World's Problems"
-              text='The Great Problems Seminar (GPS) is a two-term course that immerses first-year students into university-level research and introduces them to the project-based curriculum at WPI. As part of The Global School at WPI, the course gives students and faculty the opportunity to step outside their disciplines to solve problems focused on themes of global importance. This culminates in annual Poster Presentation Days that celebrate students’ innovative research on a wide range of solutions to some of the world’s most critical challenges.'
-            />
-            <TransparentPlatform maxWidth={textBlockMaxWidth}>
-              <Text style={{ textIndent: 28 }}>These first-year students tackled the issue of divided cities—and their analysis won the Undergraduate Humanities Diversity Award at the Humanities Education and Research Association Conference for the "best undergraduate conference paper that addresses race, ethnicity, gender, or sexuality."</Text>
-            </TransparentPlatform>
-          </ContentSection>
-
-          <ContentSection>
-            <ImageHeader image={gompeiStatue}>Course Registration</ImageHeader>
-            <BracketedText>It’s important to make sure you’re registered for the right courses. WPI has plenty of resources to help you choose those that will best suit your goals.</BracketedText>
-            <ButtonCentered>Register on Workday</ButtonCentered>
-            <CenteredTitle>Get Excited About Your Classes</CenteredTitle>
-            <TransparentPlatform noPadding>
-              <QuoteRight color="red">{loremShort}</QuoteRight>
-              <QuoteLeft color="gray">{loremShort}</QuoteLeft>
-            </TransparentPlatform>
-            <ButtonBlock
-              header="Office of Academic Advising"
-              text="Planning your academic journey can be challenging. Your academic advisor is here to help you navigate through the course selection, understand program requirements, and develop effective study strategies. They can also assist in exploring potential career paths and internships that align with your major. Schedule an appointment to achieve your academic goals!"
-            />
-            <ButtonBlock
-              header="Registrar"
-              text="Your one-stop shop for all matters related to academic records. The registrar's office handles course registration, transcript requests, enrollment verification, and graduation processes. We ensure the accuracy, confidentiality, and integrity of your academic records while upholding our policies and procedures. Get in touch for any academic administration needs."
-            />
-          </ContentSection>
-
-          <ContentSection>
-            <ImageHeader image={library}>Study Tips and Tricks</ImageHeader>
-            <BracketedText>Some of your classes will be very difficult. Here’s what other students have said helped them through the toughest that WPI has to offer:</BracketedText>
-            <ButtonCentered>See Your Resources</ButtonCentered>
-            <View style={{ marginTop: 14 }}>
-              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
-              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
-              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
-              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
-              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
-              <GrayTextBeam>"{loremShort}" -Author</GrayTextBeam>
-            </View>
-            <ButtonCentered>Visit the ARC</ButtonCentered>
-          </ContentSection>
-
+            <Image style={{width:'100%', height:200}} source={makerSpace}/>
+              <HeaderSubtitle>Individual and Team Consultations are offered by SWEET fellows who are WPI students, staff, faculty, and alumni with lots of project and teamwork experience, and additional training from WPI experts on effective and equitable teamwork. All Teamwork Support SWEET Center offerings are available for free to WPI undergraduate and graduate students.</HeaderSubtitle>
+              <ButtonCentered href='https://www.wpi.edu/academics/global-school/departments-programs-offices/sweet-center'>Visit SWEET Center</ButtonCentered>
+            </ContentSection>
+            <ContentSection>
+              <HeaderRight>Diversity Academic Programs</HeaderRight>
+              <SubHeader>Africana Studies Program</SubHeader>
+              <BracketedText>Housed in the Social Science and Policy Studies department, the Africana Studies Minor examines the experiences of people of African descent whether they live in Africa, the US, the Caribbean, Latin America, Europe, or Asia. The minor requirements offer an interdisciplinary approach for examining the rich cultures, arts, institutions, sciences, technologies, histories, political economies, and philosophies developed and practiced by people of African descent.	To learn more, contact Trent Masiki at tmasiki@wpi.edu. 	</BracketedText>
+              <SubHeader>Gender, Sexuality, and Women’s Studies (GSWS)</SubHeader>
+              <BracketedText>Housed in the School of Arts & Sciences, the Gender, Sexuality & Women's Studies program (GSWS) facilitates critical campus-wide curricular and co-curricular examinations of gender and sexuality. Our motivating goal is to encourage students, faculty and staff to interrogate interlocking systems of oppression, including racism, sexism, homophobia, transphobia, classism, ethnocentrism and colonialism, to learn about their impact on campus and around the world and to practice resisting them.</BracketedText>
+              <ButtonCentered href='https://www.wpi.edu/c/gendersexualitywomensstudies'>Visit their website</ButtonCentered> 
+            </ContentSection>
           <AcademicsChecklist />
 
           <Footer />

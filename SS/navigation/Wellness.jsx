@@ -3,7 +3,7 @@ import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
-import { AccordionTitle, AccordionLink } from "../components/Accordion"
+import { AccordionTitle, AccordionLink, ListSectionAccordion } from "../components/Accordion"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
@@ -50,11 +50,17 @@ export default function Wellness({ navigation }) {
       <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
           <PageHeader>Wellness Resources at WPI</PageHeader>
+          <ContentSection>
           <BracketedText>
             WPI offers various health and wellness resources to its students. Finding and asking for help
             does not have to be difficult. Finding the balance between academics and personal wellbeing
             is our goal.
           </BracketedText>
+          </ContentSection>
+          <LightGrayPlatform>
+             <BodyText>Welcome to the WPI Community. I expect your time here at WPI to be rich and rewarding and at times challenging, both intellectually and personally. You will weather all of life’s challenges more successfully from a firm foundation of well-being. I encourage you to take ownership of strengthening this foundation in the many choices you’ll make. Healthy choices include establishing and enhancing relationships with others, getting enough sleep each night, maintaining a steady and healthy diet, regular exercise, making time for rest, reflection, and rejuvenation. Also important is asking for help when needed from the many wonderful support resources WPI provides. Sometimes it’s hard to know where to turn for help, a great place to start is WPI’s Center for Well-Being located right next to Morgan dining hall. Come and let us help you build that solid well-being foundation! </BodyText>             
+             <BodyText>Charlie Morse <br />Dean of Student Wellness <br />WPI</BodyText>
+            </LightGrayPlatform>
           <ContentSection>
             <HeaderRight>SDCC</HeaderRight>
             <ImageCarousel data={sdccCarouselData}></ImageCarousel>
@@ -135,6 +141,8 @@ export default function Wellness({ navigation }) {
             </BracketedText>
             <ButtonCentered href="https://www.wpi.edu/offices/equal-opportunity-outreach">Visit the EEO office</ButtonCentered>
           </ContentSection>
+            
+          
           <AccordionTitle title="Off-Campus Resources">
             <AccordionLink title="Pathways for Change" href="https://pathwaysforchange.help/" />
             <AccordionLink title="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/" />

@@ -12,7 +12,7 @@ import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
-import { AccordionItem, AccordionLink, AccordionTitle, ListSectionAccordion, SectionTitleAccordion, ListAccordion, LinkListAccordion } from '../components/Accordion'
+import { AccordionItem, AccordionLink, AccordionTitle, ListSectionAccordion, SectionTitleAccordion, ListPressableAccordion, LinkListAccordion } from '../components/Accordion'
 
 const imposter = require("../assets/Diversity/imposter-syndrome.jpeg")
 const bias = require("../assets/Diversity/bias.jpeg")
@@ -83,7 +83,7 @@ export default function Diversity({ navigation }) {
             <AccordionTitle title="On Campus Resources">
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/offices/office-accessibility-services">Office of Accessibility Services</SectionTitleAccordion>
-                <ListAccordion data={[
+                <ListPressableAccordion data={[
                   {key: 'Exam Proctoring Center (EPC)'},
                   {key: 'Programming during Connections and International Student Orientation'},
                   {key: 'Interactive map', href:'https://maps.wpi.edu/?id=609&_gl=1*1f8ooik*_ga*MTk5NjIyODU2LjE2ODQ3ODA0NTY.*_ga_RE35PKQB7J*MTY4ODM5NDE4OS4xMjMuMS4xNjg4Mzk3MjI2LjQxLjAuMA..#!ce/7351?ct/21914,36740,36797,7478,7405,7479,7481,7483,7484,7491,7492,7493,7494,7495,7496,7497,7498,7499,7509,7513,7514,7572,7573,7575,7576?s/'},                  
@@ -91,13 +91,13 @@ export default function Diversity({ navigation }) {
               </ListSectionAccordion>
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/offices/diversity">ODIME</SectionTitleAccordion>
-                  <ListAccordion data={[
+                  <ListPressableAccordion data={[
                     {key: 'Oversees diversity programming on campus'},
                     ]}/>
               </ListSectionAccordion>
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/student-experience/resources/collegiate-religious-center">Collegiate Religious Center</SectionTitleAccordion>
-                  <ListAccordion data={[
+                  <ListPressableAccordion data={[
                     {key: 'Various organizations on campus'},
                     {key: 'Common room and meeting space'},
                     {key: 'Vegan kitchen well-stocked with appliances and utensils'},
@@ -107,7 +107,7 @@ export default function Diversity({ navigation }) {
               </ListSectionAccordion>
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/offices/international-house">International House</SectionTitleAccordion>
-                  <ListAccordion data={[
+                  <ListPressableAccordion data={[
                     {key: 'Virtual and in-person appointments'},
                     {key: 'Assistance with immigration and visa paperwork'},
                     {key: 'International Student Handbook', href:'https://www.wpi.edu/sites/default/files/inline-image/Body%20of%20International%20Student%20Handbook%202022-2023.pdf'},
@@ -115,18 +115,18 @@ export default function Diversity({ navigation }) {
               </ListSectionAccordion>
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/c/gendersexualitywomensstudies">Gender, Sexuality, and Women’s Studies Academic program</SectionTitleAccordion>
-                  <ListAccordion data={[
+                  <ListPressableAccordion data={[
                     {key: 'Offers a plethora of courses, can fulfill HUA requirements or a minor'},
                     {key: 'Programming with various affinity groups on campus, such as the LGBTQIA+ Advocacy Board, Queer & Trans Connections'},
                     ]}/>
               </ListSectionAccordion>
               <ListSectionAccordion>
                 <SectionTitleAccordion href="https://www.wpi.edu/offices/diversity/resources/lgbtq-support">LGBTQIA+ Support</SectionTitleAccordion>
-                  <ListAccordion data={[
+                  <ListPressableAccordion data={[
                     {key: 'Gender inclusive housing and restrooms'},
                     {key: 'Change name & gender in campus records'},
                     {key: 'WPI Alliance chapter'},
-                    {key: 'Off campus resources; see here for information on off campus events, inclusive salons/barbers, and healthcare'},
+                    {key: 'Information on off campus events, inclusive salons/barbers, and healthcare'},
                     ]}/>
               </ListSectionAccordion>
             </AccordionTitle>
@@ -170,7 +170,7 @@ export default function Diversity({ navigation }) {
             {/* Women & Feminism */}
             <AccordionTitle title="Books on Women and Feminism">
             <ListSectionAccordion>
-                  <ListAccordion data={[
+                  <ListPressableAccordion data={[
                       {key: '"The Second Sex" by Simone de Beauvoir'},
                       {key: '"Men Explain Things to Me" by Rebecca Solnit'},
                       {key: '"Bad Feminist" by Roxane Gay'},
@@ -185,7 +185,7 @@ export default function Diversity({ navigation }) {
             {/* LGBTIQA */}
             <AccordionTitle title="LGBTQIA+">
             <ListSectionAccordion>
-                    <ListAccordion data={[
+                    <ListPressableAccordion data={[
                         {key:' "Giovanni\'s Room" by James Baldwin'},
                         {key:'"Gender Outlaw: On Men, Women, and the Rest of Us" by Kate Bornstein'},
                         {key:'"Stone Butch Blues" by Leslie Feinberg'},
@@ -203,7 +203,7 @@ export default function Diversity({ navigation }) {
             {/* Disabilities */}
             <AccordionTitle title="Disabilities & Neurodivergent People">
             <ListSectionAccordion>
-                    <ListAccordion data={[
+                    <ListPressableAccordion data={[
                         {key:'"Thinking in Pictures: My Life with Autism" by Temple Grandin'},
                         {key:'"The Reason I Jump: The Inner Voice of a Thirteen-Year-Old Boy with Autism" by Naoki Higashida'},
                         {key:'"Look Me in the Eye: My Life with Asperger\'s" by John Elder Robison'},
@@ -218,7 +218,7 @@ export default function Diversity({ navigation }) {
             {/* International */}
             <AccordionTitle title="International Students">
             <ListSectionAccordion>
-                    <ListAccordion data={[
+                    <ListPressableAccordion data={[
                         {key:'"American Ways: A Guide for Foreigners in the United States" by Gary Althen and Janet Bennett'},
                         {key:'"Cross-Cultural Dialogues: 74 Brief Encounters with Cultural Difference" by Craig Storti'},
                         {key:'"The Culture Shock! USA: A Guide to Customs and Etiquette" by Esther Wanning'},

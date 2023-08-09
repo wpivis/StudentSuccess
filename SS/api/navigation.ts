@@ -1,7 +1,7 @@
 export enum AppDrawerItemName {
-  Welcome = "Welcome: Student Success Handbook",
+  Welcome = "Welcome Page",
   Wellness = "Wellness Resources",
-  Academics = "Academics",
+  Academics = "Academic Support",
   Diversity = "Cultural and Diversity Resources",
   Social = "Social Life: On Campus",
   Financial = "Financial Resources",

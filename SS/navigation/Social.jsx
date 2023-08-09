@@ -1,7 +1,7 @@
 import { View, Text, Button, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
+import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam, BodyText } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, RedPlatform, HeaderSubtitle } from '../components/Layout'
@@ -36,6 +36,18 @@ export default function Social({ navigation }) {
 
 
 
+          <ContentSection>
+          <LightGrayPlatform>
+            <BodyText>On behalf of the Dean of Students Office staff, welcome to WPI! </BodyText>
+            <BodyText>Staff are here to help you succeed, and while we can assist you in this process, we also want to enable and empower you to support and advocate for yourself. You’ll find the journey through your first year to progress quickly, with campus life full of adventures, new opportunities and experiences (and the start of your academic and professional career).</BodyText>
+            <BodyText>Yet….don’t get too pre-occupied with what your graduation will look like, or what will happen 4 years down the road. Instead, take advantage of this great opportunity to meet your fellow students from around the world, to try new things, and to get involved in clubs and organizations that are brand new to you! This is all part of the adventure that you’re embarking upon. </BodyText>
+            <BodyText>We count on you taking personal responsibility for your academic and social success, yet we have many support services to assist you. Leverage them. Take advantage of them. You control how you balance and manage your time. Lastly, one of the long-term adages at WPI is this saying: </BodyText>
+            <BodyText>Go to class <br />Do the work <br />Ask for help</BodyText>
+            <BodyText>If you do these things (and also get involved in campus life), you’ll find your pathway to success. That’s our hope for your happiness while at WPI.</BodyText>
+            <BodyText>Best wishes for an exciting and successful arrival and first-year. </BodyText>
+            <BodyText>Gregory Snoddy <br />Dean of Students</BodyText>
+            </LightGrayPlatform>
+          </ContentSection>
           <ContentSection>
             <ImageHeader image={connections}>Connections</ImageHeader>
             <HeaderSubtitle>
