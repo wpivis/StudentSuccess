@@ -53,6 +53,11 @@ export default function Services({ navigation }) {
           <PageHeader>Campus Services at WPI</PageHeader>
 
           <ContentSection>
+          <LightGrayPlatform>
+            <BodyText>Hello new WPI community members!</BodyText>
+            <BodyText>My name is Matt Foster, he/him/his, and I am the Director of Residential Services. I have been at WPI for over a decade and love the community that is WPI. My few pieces of advice are included here to help you in your success. Always be open to asking any questions you have of any staff or faculty member because everyone is willing to help in any way they can. Take the time to talk with your roommates/project team members/ group members/etc. about anything going on or if you have a conflict before it gets too far and your experience suffers because you feel like you can’t handle it. Lastly, get involved and join something on campus that you are passionate about!</BodyText>
+            <BodyText>Feel free to say hi to me if you see me on campus and reach out to our office anytime you have a question!</BodyText>
+            </LightGrayPlatform>
             <HeaderRight>Housing & Residential</HeaderRight>
             <ImageCarousel data={HousingCarouselData}></ImageCarousel>
             <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>

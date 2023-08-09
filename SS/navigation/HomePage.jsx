@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, BracketedText, CenteredTitle, HeaderRight, ImageHeader, PageHeader, QuoteLeft, QuoteRight, SectionContentHeader } from "../components/Text"
 import { ImageContainer } from "../components/Images"
-import { AccordionTitle, AccordionItem, AccordionLink } from "../components/Accordion"
+import { AccordionTitle, AccordionItem, AccordionLink, LinkListAccordion, ListSectionAccordion, ListAccordion } from "../components/Accordion"
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 
 import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, RedBeam, RedPlatform, TransparentPlatform } from '../components/Layout'
@@ -41,6 +41,7 @@ export default function HomePage({ navigation }) {
           <PageHeader>Welcome to the WPI Student Success Handbook</PageHeader>
 
           <ContentSection>
+            
             <ImageHeader image={gompeiSunset}>Our Mission</ImageHeader>
             <HeaderSubtitle>
               Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
@@ -52,6 +53,74 @@ export default function HomePage({ navigation }) {
               promote the success of our diverse student body - there is something for everyone at WPI if you know where to look!
             </BodyText>
             <ButtonCentered href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf">Visit Gompei's Guide</ButtonCentered>
+            <ButtonCentered href="https://www.wpi.edu/student-experience/resources">Student Resources</ButtonCentered>
+          
+          <ContentSection>
+
+          </ContentSection>
+          <CenteredTitle>Welcome Letters</CenteredTitle>
+            <AccordionTitle title="Assistant VP, DEIB">
+            <BodyText>Dear WPI Students,</BodyText>
+              <BodyText>As we approach the upcoming academic year, I'm thrilled to introduce the Student Success app, designed to support your success and well-being on campus. This app complements Gompei's Guide and provides essential information to enhance your experience during your time at WPI.</BodyText>
+              <BodyText>To help you make the most of your journey as a student, here are some valuable tips:</BodyText>
+              <ListAccordion data={[
+                      {key: 'Navigating the Academic Landscape: Choosing classes, seeking academic support, and exploring research opportunities can be overwhelming. Seek advice from professors, staff, your family, and peers to make informed decisions. '},
+                      {key: 'Building a Strong Support Network: Your success matters to us, and we want to ensure you have the necessary support. Connect with mentors, faculty, staff, student organizations, and off-campus organizations to foster a strong and supportive community. '},
+                      {key: 'Self-Care and Well-being: College life can be fast-paced. Prioritize your well-being by managing stress, maintaining mental health, and finding balance in your academics and personal life. '},
+                      {key: 'Getting Involved on Campus: WPI has a vibrant campus life. Explore opportunities to get involved and contribute to initiatives that promote inclusivity and diversity.'},
+                      ]} />
+                <BodyText>Wishing you a smooth transition or return to WPI this fall. Let's make this academic year one of growth, learning, and empowerment. </BodyText>
+                <BodyText>Tony Laing <br />Assistant VP, Diversity, Equity, Inclusion, and Belonging <br />Division of Talent and Inclusion </BodyText>
+            </AccordionTitle>
+          <AccordionTitle title="Dean of Undergraduates">
+             <ListSectionAccordion>
+             <BodyText>On behalf of all my colleagues in Undergraduate Studies, I extend a heartfelt welcome to each and every one of you. We are genuinely enthusiastic about assisting you in charting your unique path towards success. Please know that our dedicated advising staff is always ready and available to offer guidance and support whenever you need it. </BodyText>
+             <BodyText>As you prepare to embark on this exhilarating journey at WPI, you are about to encounter a wealth of knowledge and experiences. You will undoubtedly face challenges that will foster your personal and intellectual growth. The opportunity to participate in projects at our centers around the world awaits you, allowing you to broaden your horizons and forge lasting connections with friends from diverse backgrounds. </BodyText>
+             <BodyText>Attend your class in person! One valuable lesson we have all learned during the challenges of the pandemic is that online learning cannot fully replace the benefits of in-person classes. While lecture recordings serve as helpful resources for review, they should not be your primary method of attending class – even if your session starts early in the morning at 8:00 am!</BodyText>
+             <BodyText>By becoming a part of our vibrant community of learners, scholars, researchers, designers, and thinkers, you are joining a collective pursuit of exploring new frontiers and pushing boundaries. WPI is an institution that presents a plethora of opportunities, but it is essential for you to take the initiative and seize these opportunities.</BodyText>
+             <BodyText>In your question for personal fulfillment and professional development, I dare you to try new things and be open for novel experiences. Even if you believe you have a clear sense of your passions and aspirations, being receptive to fresh perspectives can lead to unexpected and fulfilling discoveries. Embrace the transformative power of exploration and curiosity, and you will unlock your true potential at WPI.</BodyText>
+             <BodyText>Welcome aboard! <br />Arne Gericke <br />Dean of Undergraduate Studies. </BodyText>
+             </ListSectionAccordion>
+          </AccordionTitle>
+          <AccordionTitle title="Dean of Engineerning">
+             <ListSectionAccordion>
+             <BodyText>From all of us in the School of Engineering, welcome to WPI!  Whatever your major, please know that all of us at WPI are glad you’re here. </BodyText>
+             <BodyText>One of the core values in our DNA is “balance” -- it’s in our motto Lehr und Kunst, balancing Theory and Practice.  And another balance we work at is the balance between challenge and support.</BodyText>
+             <BodyText>Challenging yourself -- to find how and where you need to learn -- is a part of the growth process you will experience in college.  If there is ever a time when you feel like you are struggling, like maybe the challenge is too much, know that EVERYONE around you (including Deans!) has felt that way sometime, and that it’s OK to ask for help. </BodyText>
+             <BodyText>You belong to a supportive community here, and we want you to feel comfortable using all the resources available to you.  Whether it’s your fellow students, faculty, staff, administrators -- we like being asked for help, and we are happy to connect with you to share your experience of growth and learning.</BodyText>
+             <BodyText>We wish you all the best in your time here!</BodyText>
+             <BodyText>John McNeill <br />Bernard M. Gordon Dean of Engineering</BodyText>
+             </ListSectionAccordion>
+          </AccordionTitle>
+          <AccordionTitle title="Dean of Arts and Sciences">
+             <ListSectionAccordion>
+             <BodyText>Warmest welcome to WPI!  The School of Arts & Sciences is the largest school on campus and we have the privilege and the pleasure of working with every student who graduates from WPI, regardless of your major.  </BodyText>
+             <BodyText>We hope that during your time here you will explore not only your academic goals but also take time to indulge your passions and creativity which are essential to a healthy, fulfilling, well-balanced experience.  Whether you are passionate about music, theatre, or fine arts, you will find resources to support you here at WPI.  We believe a holistic education is a combination of your purpose and your passion.</BodyText>
+             <BodyText>The values of the School of Arts & Sciences are inclusion, collaboration, curiosity, courage, innovation, and respect.  We work to inspire members of the WPI community to be creators, scholars, inventors, and responsible, ethical global citizens.</BodyText>
+             <BodyText>We strive to create a community where diverse voices and opinions are explored in a respectful and inclusive environment.  We recognize the importance of creating a collective sense of belonging in order to form a solid foundation for learning and working together.  We hope you will add your voice to the mix and look forward to you becoming part of the beautiful tapestry that is the Arts & Sciences at WPI.</BodyText>
+             <BodyText>Jean King <br />Peterson Family Dean of Arts & Sciences</BodyText>
+             </ListSectionAccordion>
+          </AccordionTitle>
+          <AccordionTitle title="Dean of the Business School">
+             <ListSectionAccordion>
+             <BodyText>To the Class of 2027</BodyText>
+             <BodyText>Welcome to WPI! We, the faculty, staff, and students of the Business School want you to know that we are glad you are here and part of the herd!</BodyText>
+             <BodyText>We want WPI to feel like home to you. We want you to feel respected, welcomed, and included. We want you to thrive. For us, that means that we will do all that we can to support you because your well-being is most important. And please know that our offer of support is open to you regardless of major or discipline. We are here for you.</BodyText>
+             <BodyText>But just as we want you to depend on us, we are dependent on you to make your needs known. If you have questions or if you run into problems, please let us know. It could be as simple as asking, “Where is Washburn Shops?” or more complex like, “I’m struggling with a class, what should I do?” Just ask for what you need, and we will be there for you. Being in a community means that we are interdependent. Your success is our success, and our success is yours. </BodyText>
+             <BodyText>One phrase in the WPI Alma Mater says, “Long have we felt thy guiding hand, thy teachings broad and free…” That guiding hand comes from this collective community that is dedicated to the success of everyone. At times, you will benefit from that guiding hand and at others, you will extend that hand to someone else. That’s what it means to be part of the herd. You are now part of the herd, and we are so excited. Again, welcome to WPI!</BodyText>
+             <BodyText>Blessings,</BodyText>             
+             <BodyText>Rev. Debora Jackson, DMin <br />Dean, The WPI Business School <br />Harry G. Stoddard Endowed Professor of Management</BodyText>
+             </ListSectionAccordion>
+          </AccordionTitle>
+          <AccordionTitle title="Dean of the Global School">
+             <ListSectionAccordion>
+             <BodyText>The Global School is delighted to welcome you to WPI as a new member of our community. This next chapter will be one of the most exciting, challenging, and transformative in your lives. We want you to know that we are here for you and will be with you every step of the way.</BodyText>
+             <BodyText>We value the unique experiences that every single one of you brings to our campus. Everyone has their own pathway getting here, their own story to tell, and their own direction to follow on their journey at WPI – and together we are all part of the shared community that always surrounds us. We encourage you to forge your own path AND to lean on others for support. You can reach out to your friends, to your professors, to your advisors, to WPI staff members and to any of the deans if you have any questions or concerns. We will help you find what you need to make WPI your home.</BodyText>
+             <BodyText>We encourage you to try new things, get uncomfortable in order to grow, listen to your heart, find a mentor and take care of yourself.  The Global School is here to help you discover the world, to explore our own special city of Worcester and to experience more of the campus and all that WPI has to offer. We will be at your side wherever you want to go on your local and global journeys. </BodyText>
+             <BodyText>We are so thrilled that you are here!</BodyText>
+             <BodyText>Mimi Sheller <br />Dean of The Global School</BodyText>
+             </ListSectionAccordion>
+          </AccordionTitle>
           </ContentSection>
 
           <ContentSection>
@@ -83,22 +152,32 @@ export default function HomePage({ navigation }) {
           {/* Resources */}
           <ContentSection>
             <AccordionTitle title="WPI Emergency Resources">
-              <AccordionLink title="WPI Police" href="https://www.wpi.edu/offices/police" />
-              <AccordionLink title="Student Development & Counseling Center" href="https://www.wpi.edu/offices/student-development-counseling-center" />
-              <AccordionLink title="Campus Shuttles" href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation" />
-              <AccordionLink title="Health Services" href="https://www.wpi.edu/student-experience/health-counseling/health-services" />
-              <AccordionLink title="Title IX" href="https://www.wpi.edu/offices/title-ix/how-to-report-sexual-misconduct" />
+              <ListSectionAccordion>
+              <LinkListAccordion data={[
+                      {key: 'WPI Police', href: 'https://www.wpi.edu/offices/police'},
+                      {key: 'Student Development & Counseling Center', href: 'https://www.wpi.edu/offices/student-development-counseling-center'},
+                      {key: 'Campus Shuttles', href: 'https://www.wpi.edu/student-experience/resources/safety/campus-transportation'},
+                      {key: 'Health Services', href: 'https://www.wpi.edu/student-experience/health-counseling/health-services'},
+                      {key: 'Title IX', href: 'https://www.wpi.edu/offices/title-ix/how-to-report-sexual-misconduct'},
+                      ]} />
+              </ListSectionAccordion>
             </AccordionTitle>
             <AccordionTitle title="Additional Emergency Resources">
-              <AccordionItem title="State Police: 508-829-8326" />
-              <AccordionItem title="UMass Medical Center: 508-334-1000" />
-              <AccordionItem title="St. Vincent Hospital: 508-334-5000" />
-              <AccordionLink title="Pathways for Change" href="https://pathwaysforchange.help/" />
-              <AccordionLink title="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/" />
-              <AccordionLink title="Suicide and Crisis Hotline" href="https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox" />
+             <ListSectionAccordion>
+              <LinkListAccordion data={[
+                      {key: 'State Police',href:'https://www.mass.gov/orgs/massachusetts-state-police'},
+                      {key: 'UMass Medical Center',href:'https://www.ummhealth.org/umass-memorial-medical-center'},
+                      {key: 'St. Vincent Hospital',href:'https://www.stvincenthospital.com/locations/detail/saint-vincent-hospital'},
+                      {key: 'Pathways for Change', href: 'https://pathwaysforchange.help/'},
+                      {key: 'YWCA Daybreak', href: 'https://ywcacm.org/domestic-violence/'},
+                      {key: 'Suicide and Crisis Hotline', href: 'https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox'},
+                      ]} />
+             </ListSectionAccordion>
             </AccordionTitle>
           </ContentSection>
-
+          <ContentSection>
+            
+          </ContentSection>
           <Footer />
         </View>
       </View>
