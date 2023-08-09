@@ -24,7 +24,7 @@ export default function Development({ navigation }) {
 
       <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
-          <PageHeader>Academic and Career Development at WPI</PageHeader>
+          <PageHeader>Career Development at WPI</PageHeader>
 
           <ContentSection>
             <ImageHeader image={internships}>Internships</ImageHeader>

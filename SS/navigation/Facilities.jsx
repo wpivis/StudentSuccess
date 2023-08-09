@@ -44,7 +44,7 @@ export default function Services({ navigation }) {
 
             <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
                 <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
-                    <PageHeader>Facilities and Ameneties at WPI</PageHeader>
+                    <PageHeader>Facilities and Amenities at WPI</PageHeader>
 
                     <ContentSection>
                         <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
@@ -106,10 +106,10 @@ export default function Services({ navigation }) {
                     <ContentSection>
                         <ImageHeader image={atc}>Academic Technology Center</ImageHeader>
                         <HeaderSubtitle>The Academic Technology Center (ATC), located in Fuller Laboratory, supports students through providing group work spaces, equipment, workshops, and other technological support on campus.</HeaderSubtitle>
-                        <View style={{ paddingTop: 10 }}>                                               
-                        <GrayTextBeam>
-                            Renting Equipment
-                        </GrayTextBeam>
+                        <View style={{ paddingTop: 10 }}>
+                            <GrayTextBeam>
+                                Renting Equipment
+                            </GrayTextBeam>
                         </View>
                         <GrayTextBeam>
                             <Text>Printing Posters</Text>

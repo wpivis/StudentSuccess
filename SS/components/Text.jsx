@@ -48,9 +48,9 @@ export function HeaderRight(props) {
   )
 }
 
-export function SubHeader(props){
+export function SubHeader(props) {
   return (
-      <Text style={{ fontWeight: "bold", fontSize: 20, color:crimson, paddingBottom:10}}>{props.children}</Text>
+    <Text style={{ fontWeight: "bold", fontSize: 20, color: crimson, paddingBottom: 10 }}>{props.children}</Text>
   )
 }
 
@@ -388,11 +388,11 @@ export function GrayTextBeam(props) {
 }
 
 
-export function TextBold(props){
-  return(
-    <Text style={{fontWeight:600}}>{props.children}</Text>
+export function TextBold(props) {
+  return (
+    <Text style={{ fontWeight: 600 }}>{props.children}</Text>
   )
-  
+
 }
 
 export function RedTextBoxes(props) {
@@ -406,7 +406,9 @@ export function RedTextBoxes(props) {
     box: {
       width: document.documentElement.clientWidth * 0.25,
       //height: window.screen.width * 0.3,
+      maxWidth: 800 * 0.3,
       height: document.documentElement.clientWidth * 0.25,
+      maxHeight: 800 * 0.3,
       padding: 200,
     },
   });
@@ -424,6 +426,8 @@ export function RedTextBoxes(props) {
     }
   }
 
+  const fontSize = Math.min(styles.box.width * 0.16, 800 * 0.3 * 0.16)
+
   return (
     <View
       style={[
@@ -439,13 +443,13 @@ export function RedTextBoxes(props) {
       ]}>
 
       <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
-        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : styles.box.width * 0.16), color: getColors()[txt1] }}>{props.text[0]}</Text>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : fontSize), color: getColors()[txt1] }}>{props.text[0]}</Text>
       </View>
       <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg2], textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
-        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : styles.box.width * 0.16), color: getColors()[txt2] }}>{props.text[1]}</Text>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : fontSize), color: getColors()[txt2] }}>{props.text[1]}</Text>
       </View>
       <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
-        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : styles.box.width * 0.16), color: getColors()[txt1] }}>{props.text[2]}</Text>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : fontSize), color: getColors()[txt1] }}>{props.text[2]}</Text>
       </View>
     </View >
   );
