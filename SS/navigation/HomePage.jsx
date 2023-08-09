@@ -242,7 +242,7 @@ const carouselItems = [
   (
     <CarouselTitleCard>
       <CarouselTitleCard.Title>
-        Contentment, Happiness, and Balance
+        Contentment, Happiness, & Balance
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
         Individual happiness and contentment rather than external validation are important for success. Finding balance in 
