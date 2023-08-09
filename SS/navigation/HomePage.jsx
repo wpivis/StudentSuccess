@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, BracketedText, CenteredTitle, HeaderRight, ImageHeader, PageHeader, QuoteLeft, QuoteRight, SectionContentHeader } from "../components/Text"
 import { ImageContainer } from "../components/Images"
-import { AccordionTitle, AccordionItem, AccordionLink } from "../components/Accordion"
+import { AccordionTitle, AccordionItem, AccordionLink, LinkListAccordion, ListSectionAccordion } from "../components/Accordion"
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 
 import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, RedBeam, RedPlatform, TransparentPlatform } from '../components/Layout'
@@ -83,20 +83,29 @@ export default function HomePage({ navigation }) {
           {/* Resources */}
           <ContentSection>
             <AccordionTitle title="WPI Emergency Resources">
-              <AccordionLink title="WPI Police" href="https://www.wpi.edu/offices/police" />
-              <AccordionLink title="Student Development & Counseling Center" href="https://www.wpi.edu/offices/student-development-counseling-center" />
-              <AccordionLink title="Campus Shuttles" href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation" />
-              <AccordionLink title="Health Services" href="https://www.wpi.edu/student-experience/health-counseling/health-services" />
-              <AccordionLink title="Title IX" href="https://www.wpi.edu/offices/title-ix/how-to-report-sexual-misconduct" />
+              <ListSectionAccordion>
+              <LinkListAccordion data={[
+                      {key: 'WPI Police', href: 'https://www.wpi.edu/offices/police'},
+                      {key: 'Student Development & Counseling Center', href: 'https://www.wpi.edu/offices/student-development-counseling-center'},
+                      {key: 'Campus Shuttles', href: 'https://www.wpi.edu/student-experience/resources/safety/campus-transportation'},
+                      {key: 'Health Services', href: 'https://www.wpi.edu/student-experience/health-counseling/health-services'},
+                      {key: 'Title IX', href: 'https://www.wpi.edu/offices/title-ix/how-to-report-sexual-misconduct'},
+                      ]} />
+              </ListSectionAccordion>
             </AccordionTitle>
             <AccordionTitle title="Additional Emergency Resources">
-              <AccordionItem title="State Police: 508-829-8326" />
-              <AccordionItem title="UMass Medical Center: 508-334-1000" />
-              <AccordionItem title="St. Vincent Hospital: 508-334-5000" />
-              <AccordionLink title="Pathways for Change" href="https://pathwaysforchange.help/" />
-              <AccordionLink title="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/" />
-              <AccordionLink title="Suicide and Crisis Hotline" href="https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox" />
+             <ListSectionAccordion>
+              <LinkListAccordion data={[
+                      {key: 'State Police',href:'https://www.mass.gov/orgs/massachusetts-state-police'},
+                      {key: 'UMass Medical Center',href:'https://www.ummhealth.org/umass-memorial-medical-center'},
+                      {key: 'St. Vincent Hospital',href:'https://www.stvincenthospital.com/locations/detail/saint-vincent-hospital'},
+                      {key: 'Pathways for Change', href: 'https://pathwaysforchange.help/'},
+                      {key: 'YWCA Daybreak', href: 'https://ywcacm.org/domestic-violence/'},
+                      {key: 'Suicide and Crisis Hotline', href: 'https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox'},
+                      ]} />
+             </ListSectionAccordion>
             </AccordionTitle>
+             
           </ContentSection>
 
           <Footer />
