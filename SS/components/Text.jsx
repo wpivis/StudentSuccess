@@ -383,25 +383,40 @@ export function GrayTextBeam(props) {
 
 export function RedTextBoxes(props) {
 
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 20,
     },
     box: {
-      width: 250,
-      height: 250,
+      width: document.documentElement.clientWidth * 0.25,
+      //height: window.screen.width * 0.3,
+      height: document.documentElement.clientWidth * 0.25,
       padding: 200,
     },
   });
+
+  const bg1 = 0;
+  const txt1 = 1;
+  const bg2 = 2;
+  const txt2 = 3;
+
+  function getColors() {
+    if (props.type == 1) {
+      return ["#dc143c", "#ffffff", "#e4e4e4", "#dc143c"]
+    } else if (props.type == 2) {
+      return ["#e4e4e4", "#dc143c", "#dc143c", "#ffffff"]
+    }
+  }
 
   return (
     <View
       style={[
         styles.container,
         {
-          // Try setting `flexDirection` to `"row"`.
           flexDirection: 'row',
+          width: "100%",
           gap: 10,
           justifyContent: "space-around",
           //marginBottom: 80,
@@ -409,16 +424,16 @@ export function RedTextBoxes(props) {
         },
       ]}>
 
-      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "space-around", backgroundColor: crimson, textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
-        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#ffffff" }}>{props.text[0]}</Text>
+      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : styles.box.width * 0.16), color: getColors()[txt1] }}>{props.text[0]}</Text>
       </View>
-      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "space-around", backgroundColor: "#e4e4e4", textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
-        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#dc143c" }}>{props.text[1]}</Text>
+      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg2], textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : styles.box.width * 0.16), color: getColors()[txt2] }}>{props.text[1]}</Text>
       </View>
-      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "space-around", backgroundColor: crimson, textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
-        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#ffffff" }}>{props.text[2]}</Text>
+      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : styles.box.width * 0.16), color: getColors()[txt1] }}>{props.text[2]}</Text>
       </View>
-    </View>
+    </View >
   );
 
 };

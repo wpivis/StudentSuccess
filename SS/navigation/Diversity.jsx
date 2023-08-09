@@ -371,9 +371,11 @@ export default function Diversity({ navigation }) {
           </GrayTextBeam>
           <ContentSection>
             <HeaderRight>
-              WPI Diversity in Numbers
+              Undergraduate Diversity
             </HeaderRight>
-            <RedTextBoxes text={stats}>
+            <RedTextBoxes text={stats1} type={1}>
+            </RedTextBoxes>
+            <RedTextBoxes text={stats2} type={2}>
             </RedTextBoxes>
           </ContentSection>
           <Footer />
@@ -384,4 +386,5 @@ export default function Diversity({ navigation }) {
     </ScrollView>
   )
 }
-const stats = ["40% women", "2.8% black students", "7% international students"]
+const stats1 = ["40% Women", "32% BIPOC", "7% International"]
+const stats2 = ["9% Hispanic / Latinx", "10% Asian", "--"]
