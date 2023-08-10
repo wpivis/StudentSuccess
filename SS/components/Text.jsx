@@ -40,7 +40,7 @@ export function HeaderRight(props) {
           right: 0
         }}
       >
-        <Text style={{ color: crimson, fontSize: 22, fontWeight: "bold" }}>
+        <Text style={{ color: crimson, fontSize: 20, fontWeight: "bold" }}>
           {props.children}
         </Text>
       </View>
@@ -421,9 +421,9 @@ export function RedTextBoxes(props) {
 
   function getColors() {
     if (props.type == 1) {
-      return ["#dc143c", "#ffffff", "#e4e4e4", "#dc143c"]
+      return [crimson, "#ffffff", "#e4e4e4", crimson]
     } else if (props.type == 2) {
-      return ["#e4e4e4", "#dc143c", "#dc143c", "#ffffff"]
+      return ["#e4e4e4", crimson, crimson, "#ffffff"]
     }
   }
 

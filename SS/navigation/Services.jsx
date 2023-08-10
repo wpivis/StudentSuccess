@@ -1,8 +1,9 @@
-import { View, Text, Button, Dimensions, Image } from 'react-native'
+import { View, Text, Button, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
+import { Image } from "expo-image"
 
 import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
@@ -80,6 +81,7 @@ export default function Services({ navigation }) {
           </ContentSection>
 
           <ContentSection>
+            <HeaderRight>Dining Services</HeaderRight>
             <ImageCarousel data={DiningCarouselData}></ImageCarousel>
             <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
             <View style={{ paddingTop: 10 }}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
@@ -89,7 +91,8 @@ export default function Services({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <ImageHeader image={shuttle}>Transportation</ImageHeader>
+            <HeaderRight>Transportation</HeaderRight>
+            <Image style={{width:'100%', height:200}} source={shuttle}/>
             <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation">VPA Bus</ButtonCentered>
             <ButtonCentered href="http://bustracker.therta.com/bustime/home.jsp">WRTA Bus</ButtonCentered>
@@ -149,22 +152,22 @@ const HousingCarouselData = [
 const DiningCarouselData = [
   {
     image: diningHall,
-    text: "Dining Services"
+    text: ""
   },
   {
     image: halal,
-    text: "Dining: Halal Shack"
+    text: ""
   },
   {
     image: starbucks,
-    text: "Dining: Starbucks"
+    text: ""
   },
   {
     image: loveFood,
-    text: "Dining: Made With Love"
+    text: ""
   },
   {
     image: veggies,
-    text: "Dining Services"
+    text: ""
   },
 ]

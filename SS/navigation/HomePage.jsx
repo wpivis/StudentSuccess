@@ -202,7 +202,7 @@ class CarouselQuoteCard extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{paddingBottom:20}}>
         {this.props.children}
       </View>
     )
@@ -314,7 +314,7 @@ const carouselItems = [
   (
     <CarouselTitleCard>
       <CarouselTitleCard.Title>
-        Financial Stability and Career Satisfaction
+        Career & Financial well-being
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
         Although money is not the end all be all, the ability to support oneself and their family is a key aspect of success for underrepresented 

@@ -3,7 +3,7 @@ import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
-import { AccordionTitle, AccordionLink, ListSectionAccordion } from "../components/Accordion"
+import { AccordionTitle, AccordionLink, ListSectionAccordion, LinkListAccordion } from "../components/Accordion"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
@@ -144,8 +144,12 @@ export default function Wellness({ navigation }) {
             
           
           <AccordionTitle title="Off-Campus Resources">
-            <AccordionLink title="Pathways for Change" href="https://pathwaysforchange.help/" />
-            <AccordionLink title="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/" />
+            <ListSectionAccordion>
+          <LinkListAccordion data={[
+            {key: 'Pathways for Change', href: 'https://pathwaysforchange.help/'},
+            {key: 'YWCA Daybreak', href: 'https://ywcacm.org/domestic-violence/'},
+          ]} />
+          </ListSectionAccordion>
           </AccordionTitle>
 
           <Footer />

@@ -81,10 +81,10 @@ export default function Social({ navigation }) {
             <ContentSection>
               <GrayTextBeam>Make sure to check out the activities fair to see what clubs WPI has to offer.</GrayTextBeam>
               <GrayTextBeam>ODIME offers a number of different identity-based affinity groups.</GrayTextBeam>
-              <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources">Visit ODIME Affinity Groups</ButtonCentered>
-              <QuoteLeft color="gray">
+              <QuoteLeft color="red">
                 "Definitely try out other clubs, not even just the big ones... don't be afraid to try the smaller clubs. That's where I met my favorite people ever."
               </QuoteLeft>
+              <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources">Visit ODIME Affinity Groups</ButtonCentered>
             </ContentSection>
           </ContentSection>
 
