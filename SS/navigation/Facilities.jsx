@@ -47,6 +47,7 @@ export default function Services({ navigation }) {
                     <PageHeader>Facilities and Amenities at WPI</PageHeader>
 
                     <ContentSection>
+                        <HeaderRight>Gordan Library</HeaderRight>
                         <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
                             <Carousel
                                 loop
@@ -74,6 +75,7 @@ export default function Services({ navigation }) {
                     </ContentSection>
 
                     <ContentSection>
+                        <HeaderRight>Sports and Recreation Center</HeaderRight>
                         <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
                             <Carousel
                                 loop
@@ -97,10 +99,14 @@ export default function Services({ navigation }) {
 
                         </View>
                         <HeaderSubtitle>The Rec Center at WPI provides a number of fitness resources to help students stay active.</HeaderSubtitle>
-                        <HeaderRight>Advice from a WPI Student:</HeaderRight>
-                        <QuoteLeft color="gray">
+                        <GrayTextBeam>Indoor Track</GrayTextBeam>
+                        <GrayTextBeam>Swimming Pool</GrayTextBeam>
+                        <GrayTextBeam>Racketball and Squash courts in basement</GrayTextBeam>
+                        <GrayTextBeam>Intramural and Club Sports Available</GrayTextBeam>
+                        <QuoteLeft color="red">
                             “Definitely use the gym, exercising is helpful for your mental health.”
                         </QuoteLeft>
+                        <ButtonCentered href='https://www.wpi.edu/student-experience/sports-recreation/sports-recreation-center'>Rec Center Hours</ButtonCentered>
                     </ContentSection>
 
                     <ContentSection>
@@ -122,22 +128,20 @@ export default function Services({ navigation }) {
                         <ImageHeader image={arc}>Academic and Research Computing</ImageHeader>
                         <HeaderSubtitle>Academic and Research Computing (the other ARC) consists of laboratory and computing facilities, providing students with research resources and workshops.</HeaderSubtitle>
                         <View style={{ paddingTop: 10 }}>
-                            <GrayTextBeam >
-                                Contact them at 508-831-5136 or archelp@wpi.edu
-                            </GrayTextBeam>
+                            <ButtonCentered href='https://www.wpi.edu/offices/vice-provost-research/academic-research-computing'>Visit the ARC</ButtonCentered>
                         </View>
                     </ContentSection>
 
                     <ContentSection>
                         <HeaderRight>Gender Inclusive Restrooms</HeaderRight>
-                        <HeaderSubtitle>WPI offers several gender inclusive restrooms around campus. </HeaderSubtitle>
+                        <BracketedText>WPI offers several gender inclusive restrooms around campus. </BracketedText>
                         <ButtonCentered href="https://maps.wpi.edu/?id=609&_gl=1*176mf9c*_ga*MTk5NjIyODU2LjE2ODQ3ODA0NTY.*_ga_RE35PKQB7J*MTY5MDQ3MTY1Mi4xNDMuMS4xNjkwNDcxOTc2LjQxLjAuMA..#!s/">Map to Gender Inclusive Restrooms</ButtonCentered>
                     </ContentSection>
 
                     <ContentSection>
-                        <HeaderRight>Free Menstrual Hygiene Product Locations</HeaderRight>
-                        <HeaderSubtitle>The Period Agenda (TPA) is a student organization dedicated to period poverty, menstrual equity, and educating the campus on menstrual-related subjects. WPI offers free menstrual hygiene products at various locations on campus. </HeaderSubtitle>
-                        <ButtonCentered href="https://www.wpi.edu/news/announcements/tpa-and-odime-offer-free-menstrual-hygiene-products-wpi-community">Learn more about TPA and product locations</ButtonCentered>
+                        <HeaderRight>Free Menstrual Hygiene Products</HeaderRight>
+                        <BracketedText>The Period Agenda (TPA) is a student organization dedicated to period poverty, menstrual equity, and educating the campus on menstrual-related subjects. WPI offers free menstrual hygiene products at various locations on campus. </BracketedText>
+                        <ButtonCentered href="https://www.wpi.edu/news/announcements/tpa-and-odime-offer-free-menstrual-hygiene-products-wpi-community">TPA and product locations</ButtonCentered>
                     </ContentSection>
 
                     <Footer />
@@ -152,7 +156,7 @@ export default function Services({ navigation }) {
 const LibraryCarouselData = [
     {
         image: lib1,
-        text: "Gordon Library"
+        text: ""
     },
     {
         image: lib2,
@@ -171,7 +175,7 @@ const LibraryCarouselData = [
 const GymCarouselData = [
     {
         image: gym1,
-        text: "Sports and Recreation Center"
+        text: ""
     },
     {
         image: gym2,
