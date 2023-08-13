@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, FlatList, TouchableOpacity, Linking } from 'react-native';
+import { View, StyleSheet, Text, FlatList, TouchableOpacity, Linking, useState } from 'react-native';
 import { Image } from "expo-image"
 import { List } from 'react-native-paper';
 import { DirectoryEntry } from './Directory';
 import { crimson, textBlockMaxWidth } from '../assets/style';
 import { BodyText } from './Text';
+import { Pressable } from 'react-native';
 
 const WPICrimson = "#AC2B37";
 const WPIGray = '#A9B0B7';
@@ -17,13 +18,35 @@ export function AccordionTitle ({title, isExpanded, children}) {
   const childElements = React.Children.map(children, child => {
     return <React.Fragment>{child}</React.Fragment>;
   });
-  return ( <View>
-  <List.Accordion titleStyle={{ color: 'white' }} style = {styles.heading} title= {title} expanded={expanded} onPress={handlePress}>
-    {childElements}
-  </List.Accordion>
-</View>
+  return ( 
+    <>
+  <Pressable onPress={handlePress}>
+      <View style = {{height:44, flexDirection:'row', alignItems:'center', justifyContent:'space-between', backgroundColor:crimson}} title= {title}>
+      <Text style={styles.heading}>{title}</Text>
+      <Image style={{height:14, width:14}} source={externalLink}/>
+      </View>
+  </Pressable>
+    <View>
+      {expanded && childElements}
+        {/* {expanded && <Text>test</Text>} */}
+    </View>
+    </>
   )
 };
+// export function AccordionTitleOld ({title, isExpanded, children}) {
+//   const [expanded, setExpanded] = React.useState(isExpanded);
+//   const handlePress = () => setExpanded(!expanded);
+
+//   const childElements = React.Children.map(children, child => {
+//     return <React.Fragment>{child}</React.Fragment>;
+//   });
+//   return ( <View>
+//   <List.Accordion titleStyle={{ color: 'white' }} style = {styles.heading} title= {title} expanded={expanded} onPress={handlePress}>
+//     {childElements}
+//   </List.Accordion>
+// </View>
+//   )
+// };
 
 export function ListSectionAccordion({children}){
   
@@ -159,6 +182,8 @@ const styles = StyleSheet.create({
   heading: {
     backgroundColor: WPICrimson,
     paddingBottom: 5,
+    color: "white",
+    fontSize:16
   },
   item: {
     borderBottomWidth: 1,

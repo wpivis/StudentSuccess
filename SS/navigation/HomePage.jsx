@@ -59,7 +59,7 @@ export default function HomePage({ navigation }) {
 
           </ContentSection>
           <CenteredTitle>Welcome Letters</CenteredTitle>
-            <AccordionTitle title="Assistant VP, DEIB">
+            <AccordionTitle isExpanded={false} title="Assistant VP, DEIB">
             <BodyText>Dear WPI Students,</BodyText>
               <BodyText>As we approach the upcoming academic year, I'm thrilled to introduce the Student Success app, designed to support your success and well-being on campus. This app complements Gompei's Guide and provides essential information to enhance your experience during your time at WPI.</BodyText>
               <BodyText>To help you make the most of your journey as a student, here are some valuable tips:</BodyText>

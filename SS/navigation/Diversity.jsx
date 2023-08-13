@@ -14,9 +14,9 @@ import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { AccordionItem, AccordionLink, AccordionTitle, ListSectionAccordion, SectionTitleAccordion, ListPressableAccordion, LinkListAccordion } from '../components/Accordion'
 
-const imposter = require("../assets/Diversity/imposter-syndrome.jpeg")
-const bias = require("../assets/Diversity/bias.jpeg")
-const microaggressions = require("../assets/Diversity/microaggression.jpeg")
+const imposter = require("../assets/Diversity/imposter.jpg")
+const bias = require("../assets/Diversity/bias.jpg")
+const microaggressions = require("../assets/Diversity/microaggression.jpg")
 
 export default function Diversity({ navigation }) {
 
@@ -44,7 +44,9 @@ export default function Diversity({ navigation }) {
             {/* Psychosocial Challenges */}
             <HeaderRight>Psychosocial Challenges</HeaderRight>
             <SubHeader>Imposter Syndrome</SubHeader>
-            <Image style={{ width: "100%", height: 200 }} source={imposter}></Image>
+            <a href="https://www.freepik.com/free-vector/sad-woman-hiding-emotions-mask-flat-illustration_12699833.htm#query=imposter%20syndrome&position=15&from_view=search&track=ais">
+            <Image style={{ width: "100%", height: 200 }} href='www.google.com' source={imposter}></Image>
+            </a>
             <HeaderSubtitle>Imposter syndrome was a term coined by Pauline Clance and Suzanne Imes in 1978 and describes the way a person feels when they doubt their skills, talents, or accomplishments and has a persistent fear of being exposed as a "fraud" even though they show external evidence of their competence. </HeaderSubtitle>
             <GrayTextBeam>Feeling like a fake or fraud and fearing you will be discovered.</GrayTextBeam>
             <GrayTextBeam>Attributing success to luck or chance rather than your own ability or hard work.</GrayTextBeam>
@@ -53,7 +55,9 @@ export default function Diversity({ navigation }) {
             <GrayTextBeam>Having high standards for yourself and feeling disappointed if you don't meet them.</GrayTextBeam>
             <ContentSection>
               <SubHeader>Unconscious Bias</SubHeader>
+              <a href="https://www.freepik.com/free-photo/still-life-business-roles-with-various-pawns_24749593.htm#page=2&query=unconcoius%20bias&position=0&from_view=search&track=ais">
               <Image style={{ width: "100%", height: 200 }} source={bias}></Image>
+              </a>
               <HeaderSubtitle>Unconscious bias is when we have quick judgments or opinions about people without realizing it. These thoughts come from our background, experiences, and things we've heard or seen in society. These biases can be positive or negative and influence how we treat others. Becoming aware of these biases and understanding how they influence your behavior is the first step toward minimizing their impact. </HeaderSubtitle>
               <GrayTextBeam>Affinity bias is warming-up or being comfortable with people like ourselves.</GrayTextBeam>
               <GrayTextBeam>Halo effect is thinking everything about someone is good because you like them.</GrayTextBeam>
@@ -62,7 +66,9 @@ export default function Diversity({ navigation }) {
               <GrayTextBeam>Gender bias is preferring one gender over another.</GrayTextBeam>
             </ContentSection>
             <SubHeader>Microaggressions</SubHeader>
+            <a href="https://www.freepik.com/free-vector/cyber-bullying-concept_8967116.htm#query=aggressions&position=0&from_view=search&track=sph">
             <Image style={{ width: "100%", height: 200 }} source={microaggressions}></Image>
+            </a>
             <HeaderSubtitle>Microaggressions refer to subtle comments that convey derogatory, prejudiced, or discriminatory attitudes towards individuals or groups based on race, gender, ethnicity, sexual orientation, disability, or other characteristics. These actions may seem unintentional, but they can have a significant impact on the recipients, contributing to feelings of alienation and invalidation.</HeaderSubtitle>
             {/* Strategies for Psychosocial Challenges */}
             <HeaderRight>Strategies</HeaderRight>
