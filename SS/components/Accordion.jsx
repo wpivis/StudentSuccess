@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, FlatList, TouchableOpacity, Linking, useState } from 'react-native';
+import { View, StyleSheet, Text, FlatList, TouchableOpacity, Linking } from 'react-native';
 import { Image } from "expo-image"
 import { List } from 'react-native-paper';
 import { DirectoryEntry } from './Directory';
@@ -10,6 +10,9 @@ import { Pressable } from 'react-native';
 const WPICrimson = "#AC2B37";
 const WPIGray = '#A9B0B7';
 const externalLink = require("../assets/externalLink.png")
+const arrow = require("../assets/arrow.png")
+const arrowDown = require("../assets/arrowDown.png")
+
 
 export function AccordionTitle ({title, isExpanded, children}) {
   const [expanded, setExpanded] = React.useState(isExpanded);
@@ -21,9 +24,11 @@ export function AccordionTitle ({title, isExpanded, children}) {
   return ( 
     <>
   <Pressable onPress={handlePress}>
-      <View style = {{height:44, flexDirection:'row', alignItems:'center', justifyContent:'space-between', backgroundColor:crimson}} title= {title}>
+      <View style = {{ transform: [{rotateY: 20}],height:44, flexDirection:'row', alignItems:'center', justifyContent:'space-between', backgroundColor:crimson, paddingHorizontal:20}} title= {title}>
       <Text style={styles.heading}>{title}</Text>
-      <Image style={{height:14, width:14}} source={externalLink}/>
+      {expanded && <Image style={{ height:14, width:14}} source={arrowDown}/>}
+      {!expanded && <Image style={{ height:14, width:14}} source={arrow}/>}
+      
       </View>
   </Pressable>
     <View>
