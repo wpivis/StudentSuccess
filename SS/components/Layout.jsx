@@ -51,6 +51,7 @@ export function Footer() {
       <View style={{paddingLeft: 7, paddingRight: 7, paddingTop: 14, paddingBottom: 14, height: "100%", flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "flex-start"}}>
         <View>
           <Text style={{fontSize: 16, color: "white"}}>WPI Student Success Handbook</Text>
+          <Text style={{fontSize: 12, color: "white"}}>Submit feedback <a style={{fontSize:12, color:'white'}} href="https://forms.gle/gQTh5QA2qcN7uZkDA">here</a></Text>
         </View>
       </View>
       <Image source={tower} style={{width: 100, height: 100}}/>
