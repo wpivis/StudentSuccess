@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
+import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, TransparentPlatform, RedBeam, Spacer } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
@@ -99,6 +99,7 @@ export default function Services({ navigation }) {
 
                         </View>
                         <HeaderSubtitle>The Rec Center at WPI provides a number of fitness resources to help students stay active.</HeaderSubtitle>
+                        <Spacer />
                         <GrayTextBeam>Indoor Track</GrayTextBeam>
                         <GrayTextBeam>Swimming Pool</GrayTextBeam>
                         <GrayTextBeam>Racketball and Squash courts in basement</GrayTextBeam>
@@ -112,17 +113,10 @@ export default function Services({ navigation }) {
                     <ContentSection>
                         <ImageHeader image={atc}>Academic Technology Center</ImageHeader>
                         <HeaderSubtitle>The Academic Technology Center (ATC), located in Fuller Laboratory, supports students through providing group work spaces, equipment, workshops, and other technological support on campus.</HeaderSubtitle>
-                        <View style={{ paddingTop: 10 }}>
-                            <GrayTextBeam>
-                                Renting Equipment
-                            </GrayTextBeam>
-                        </View>
-                        <GrayTextBeam>
-                            <Text>Printing Posters</Text>
-                        </GrayTextBeam>
-                        <GrayTextBeam>
-                            <Text>Hosting Workshops</Text>
-                        </GrayTextBeam>
+                        <Spacer />
+                        <GrayTextBeam>Renting Equipment</GrayTextBeam>
+                        <GrayTextBeam>Printing Posters</GrayTextBeam>
+                        <GrayTextBeam>Hosting Workshops</GrayTextBeam>
                     </ContentSection>
                     <ContentSection>
                         <ImageHeader image={arc}>Academic and Research Computing</ImageHeader>
