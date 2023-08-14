@@ -8,7 +8,7 @@ import { AccordionTitle, AccordionLink, ListSectionAccordion, LinkListAccordion 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
-import { AcademicsChecklist } from './Checklists'
+import { AcademicsChecklist, WellnessChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
@@ -240,6 +240,7 @@ export default function Wellness({ navigation }) {
         </View>
       </View>
 
+    <WellnessChecklist />
 
     </ScrollView>
 

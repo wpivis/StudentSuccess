@@ -16,7 +16,7 @@ export default function Checklists({ navigation }) {
       <View style={{ backgroundColor: "#e4e4e4", width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <View style={{ ...dropShadow, backgroundColor: "#ffffff", width: "100%", maxWidth: 800, display: "flex", flexDirection: "column" }}>
           <AcademicsChecklist missionsPage />
-          <WorcesterChecklist missionsPage />
+          <WellnessChecklist missionsPage />
           <CampusInvolvementChecklist missionsPage />
         </View>
       </View>
@@ -32,123 +32,123 @@ export function AcademicsChecklist({ missionsPage }) {
       <Checklist.Item
         itemKey="advisor"
         checklistKey="academics"
-        description="Set up a meeting with your academic advisor as soon as you arrive on campus. They can provide guidance on course selection, discuss your academic goals, and help you understand university policies and requirements."
+        description="Set up a meeting with your academic advisor to get familiar with them and open a conversation about your academic goals. Put your mind at ease and start developing your personal trajectory."
       >
-        Meet with Your Academic Advisor
+        Meet with your academic advisor
       </Checklist.Item>
       <Checklist.Item
-        itemKey="library"
+        itemKey="outlook"
         checklistKey="academics"
-        description="Familiarize yourself with the Gordon Library's layout, resources, and services. Knowing how to locate and borrow books, utilize research databases, and access study spaces can be invaluable to your academic success."
+        description="Get familiar with your email and calendar - both are important resources for academic (and social) success at WPI!"
       >
-        Visit the Gordon Library
+        Set up your Outlook
       </Checklist.Item>
       <Checklist.Item
-        itemKey="canvas"
+        itemKey="contacts"
         checklistKey="academics"
-        description="Familiarize yourself with Canvas, where you'll often find course materials, assignments, and grades."
+        description="The people in your classes are great resources throughout the term, and you may find yourself on similar paths over the course of the next four years. Make those connections early!"
       >
-        Explore Canvas
+        Exchange contact info with the person next to you in lecture!
       </Checklist.Item>
       <Checklist.Item
-        itemKey="academicSupport"
+        itemKey="officeHours"
         checklistKey="academics"
-        description="Identify and locate various academic support services like writing centers, tutoring services, and study groups. These resources can provide additional help if you struggle with certain courses or need to improve study skills."
+        description="Reading your course syllabi is important for staying on track with assignments, due dates, and course policies. Even more important: these syllabi often contain your professors' office hours! Office hours are a great way to ask questions and foster relationships with faculty."
       >
-        Learn About Academic Support Services:
+        Locate your professors' office hours on your syllabi
       </Checklist.Item>
       <Checklist.Item
-        itemKey="calendar"
+        itemKey="tracking"
         checklistKey="academics"
-        description="Set up an academic calendar to manage your time effectively. Include your class schedule, study hours, assignment deadlines, and exam dates. Regularly updating and checking this calendar can keep you on top of your academic responsibilities."
+        description="Knowing where your major tracking sheet is located and how to use it is a great way to stay organized and make sure you're in the know about required coursework for your degree."
       >
-        Set up Your Academic Calendar
+        Download or print out your major tracking sheet
       </Checklist.Item>
     </Checklist>
   )
 }
 
-export function WorcesterChecklist() {
+export function WellnessChecklist({ missionsPage }) {
   return (
     <Checklist>
-      <Checklist.Title>Exploring Worcester</Checklist.Title>
+    <Checklist.Title>{missionsPage ? "Wellness" : "Missions"}</Checklist.Title>
       <Checklist.Item
-        itemKey="downtown"
-        checklistKey="worcester"
-        description="Take a stroll through downtown Worcester to get a feel for the city's vibrant atmosphere and diverse array of shops, restaurants, and cultural attractions."
+        itemKey="rec"
+        checklistKey="wellness"
+        description="Getting in a workout at the Rec Center is a great way to boost your seratonin levels and take a break from academia. If fitness isn't your thing, stop in and support one of WPI's clubn or varsity teams."
       >
-        Visit Downtown Worcester
+        Check out the Rec Center / Sports
       </Checklist.Item>
       <Checklist.Item
-        itemKey="museum"
-        checklistKey="worcester"
-        description="Explore the Worcester Art Museum or EcoTarium to immerse yourself in local art, history, and science exhibits."
+        itemKey="wellnessCenter"
+        checklistKey="wellness"
+        description="The Wellness Center is a great place to unwind, grab a snack, or learn more about wellness resources on campus. Go alone or bring a friend, and enjoy!"
       >
-        Visit a Museum
+        Stop by the Wellness Center
       </Checklist.Item>
       <Checklist.Item
-        itemKey="parks"
-        checklistKey="worcester"
-        description="Spend a day at one of Worcester's many beautiful parks, such as Elm Park or Green Hill Park, which offer walking trails, picnic spots, and recreational facilities."
+        itemKey="wellnessActivity"
+        checklistKey="wellness"
+        description="Wellness days happen once a term, and are a great time to relaxm reflect, and connect with campus. Slow down, attend a wellness event, or just take a nice nap!"
       >
-        Explore Worcester's Parks
+        Attend a Wellness Day activity
       </Checklist.Item>
       <Checklist.Item
-        itemKey="localCuisine"
-        checklistKey="worcester"
-        description="Try out local cuisine at one of the many unique restaurants in the city, which offer a variety of foods ranging from traditional New England fare to international cuisine."
+        itemKey="explore"
+        checklistKey="wellness"
+        description="Visit the Worcester Art Museum, try delicious local and international cuisine, or just relax in one of the various parks nearby campus."
       >
-        Try Local Cuisine
+        Explore Worcester
       </Checklist.Item>
       <Checklist.Item
-        itemKey="transport"
-        checklistKey="worcester"
-        description="Get to know the local public transport system. Understanding the bus routes, train schedules, and main transit points can help you navigate the city with ease."
+        itemKey="oasis"
+        checklistKey="wellness"
+        description="The OASIS House is a great place to unwind and socialize with other WPI students. Stop in to relax, study, or attend a program."
       >
-        Learn the Public Transport System
+        Check out the OASIS Multicultural Center
       </Checklist.Item>
     </Checklist>
   )
 }
 
-export function CampusInvolvementChecklist() {
+export function CampusInvolvementChecklist({ missionsPage }) {
   return (
     <Checklist>
-      <Checklist.Title>Getting Involved on Campus</Checklist.Title>
+    <Checklist.Title>{missionsPage ? "Getting Involved" : "Missions"}</Checklist.Title>
       <Checklist.Item
-        itemKey="clubs"
+        itemKey="fair"
         checklistKey="campusInvolvement"
-        description="Research and join student clubs and organizations that align with your interests. This is a great way to meet like-minded peers, develop new skills, and make the most of your university experience."
+        description="The activities fair is a perfect way to learn what WPI has to offer. Hear about the clubs and organizations on campus, and maybe even sign up for one."
       >
-        Join a Club or Organization
+        Attend the activities fair
       </Checklist.Item>
       <Checklist.Item
-        itemKey="events"
+        itemKey="club"
         checklistKey="campusInvolvement"
-        description="Attend campus events like concerts, lectures, and sporting events. These are not only fun but also provide opportunities to engage with the broader campus community."
+        description="Signing up for a club doesn't have to be scary— put down your email, and stay up to date with club events! WPI offers a large assortment of affinity-based organizations; there is something for everyone."
       >
-        Attend Campus Events
+        Sign up for a club
       </Checklist.Item>
       <Checklist.Item
-        itemKey="volunteer"
+        itemKey="homecoming"
         checklistKey="campusInvolvement"
-        description="Participate in volunteer opportunities or community service projects offered through the university. This can be a rewarding way to give back while strengthening your ties to the campus and local community."
+        description="Homecoming is a great way to get involved on campus and immerse yourself in school spirit. Hang out on the quad, watch the comingcoming game... maybe even wqin a Superfan t-shirt or bucket hat!"
       >
-        Participate in Volunteer Opportunities
+        Go to at least one homecoming event!
       </Checklist.Item>
       <Checklist.Item
-        itemKey="sports"
+        itemKey="raca"
         checklistKey="campusInvolvement"
-        description="If you're into athletics, consider joining an intramural sports team, or try out for a varsity sport. If you prefer watching to playing, attend games to support your university's teams."
+        description="Your resident advisor and community advisor are great people to contact with any questions: academic, social, or otherwise. As upperclassmen, they will be able to chat with you about any varietyof WPI related concerns; take advantage of this opportunity!"
       >
-        Get Involved in Sports
+        Have a chat with your RA or CA
       </Checklist.Item>
       <Checklist.Item
-        itemKey="leadership"
+        itemKey="lunch"
         checklistKey="campusInvolvement"
-        description="Seek out leadership roles in student organizations, residence halls, or student government. These positions can provide valuable experience and are often looked upon favorably by future employers."
+        description="Your roommates and insight group are all engaged with the first year experience at the same time as you are. Grab lunch with them in one of the on campus dining locations, and take some time to talk about how freshman year is going."
       >
-        Seek Leadership Roles
+        Get lunch with your roommates / neighbors
       </Checklist.Item>
     </Checklist>
   )
@@ -158,24 +158,24 @@ export function CampusInvolvementChecklist() {
 export const defaultChecklistdata = {
   academics: {
     advisor: false,
-    library: false,
-    canvas: false,
-    academicSupport: false,
-    calendar: false,
+    outlook: false,
+    contacts: false,
+    officeHours: false,
+    tracking: false,
   },
-  worcester: {
-    downtown: false,
-    museum: false,
-    parks: false,
-    localCuisine: false,
-    transport: false,
+  wellness: {
+    rec: false,
+    wellnessCenter: false,
+    wellnessActivity: false,
+    explore: false,
+    oasis: false,
   },
   campusInvolvement: {
-    clubs: false,
-    events: false,
-    volunteer: false,
-    sports: false,
-    leadership: false,
+    fair: false,
+    club: false,
+    homecoming: false,
+    raca: false,
+    lunch: false,
   },
 }
 
@@ -202,7 +202,8 @@ export class Checklist extends Component {
     function updateChecklistState() {
       const newChecklistsState = { ...checklistsState };
       newChecklistsState[itemProps.checklistKey][itemProps.itemKey] = !newChecklistsState[itemProps.checklistKey][itemProps.itemKey];
-      setChecklistsState(newChecklistsState)
+      setChecklistsState(newChecklistsState);
+      localStorage.setItem("wpi-student-success-checklists", JSON.stringify(newChecklistsState));
     }
 
     return (

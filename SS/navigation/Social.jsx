@@ -7,7 +7,7 @@ import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, RedPlatform, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
-import { AcademicsChecklist } from './Checklists'
+import { AcademicsChecklist, CampusInvolvementChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import Carousel from 'react-native-reanimated-carousel'
@@ -185,6 +185,8 @@ export default function Social({ navigation }) {
             </BracketedText>
 
           </ContentSection>
+
+          <CampusInvolvementChecklist />
 
           <Footer />
         </View>
