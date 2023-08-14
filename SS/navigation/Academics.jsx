@@ -51,11 +51,11 @@ export default function Academics({ navigation }) {
             <ImageHeader image={academicAdvising}>Academic Advising</ImageHeader>
             <HeaderSubtitle>Located in Unity Hall, the Office of Academic Advising is there to help you develop a meaningful educational plan. Utilize their website to learn how to register for courses, double count classes, transfer credits, and plan for double majors and minors, amongst other resources.</HeaderSubtitle>
             <Spacer />
-            <GrayTextBeam>All WPI students are assigned one academic advisor as well as a faculty advisor within their major’s department</GrayTextBeam>
+            <GrayTextBeam>All WPI students are assigned one academic advisor as well as a faculty advisor within their major's department</GrayTextBeam>
             
             <BracketedText>Major tracking sheets are a valuable tool that many students have stressed the importance of having access to early on. </BracketedText>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/academic-advising/program-tracking-sheets">Program Tracking Sheets</ButtonCentered>
-            <ButtonCentered href="https://www.wpi.edu/academics/undergraduate/bachelors-masters-degree">Bachelor’s/Master’s Degree Options</ButtonCentered>
+            <ButtonCentered href="https://www.wpi.edu/academics/undergraduate/bachelors-masters-degree">Bachelor's/Master's Degree Options</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/offices/academic-advising">Visit Academic Advising</ButtonCentered>
 
             <QuoteRight color="red">“My advisors were very supportive. They would mostly just reach out during times that they would kind of expect us to need support, like during registration. It's more like. I can really only get the benefits I need if I reach out to them first. But they are very welcoming.”</QuoteRight>
@@ -65,7 +65,7 @@ export default function Academics({ navigation }) {
             <HeaderSubtitle>The Academic Resource Center (ARC), located in Unity Hall, offers peer-led individual and group-style tutoring. Schedule an appointment one-on-one with a tutor, or drop in for Math and Science Help (MASH).</HeaderSubtitle>
             <Spacer />
             <GrayTextBeam>Informal resources like the Physics lounge (Located in Olin Hall) are also available to help with coursework</GrayTextBeam>
-            <QuoteRight color="gray">“The advice I heard was to reach out to professors. Advice I wish I took was to go to TAs, I frankly find them more helpful than professors a lot of the time except for one class I’m taking at the moment. But for the majority of classes I find them more helpful than just professors”</QuoteRight>
+            <QuoteRight color="gray">“The advice I heard was to reach out to professors. Advice I wish I took was to go to TAs, I frankly find them more helpful than professors a lot of the time except for one class I'm taking at the moment. But for the majority of classes I find them more helpful than just professors”</QuoteRight>
             <ButtonCentered href="https://www.wpi.edu/news/announcements/find-study-spaces-wpi-app">Study spaces on campus</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/academic-resources-center">Visit Academic Resource Center</ButtonCentered>
 
@@ -77,7 +77,7 @@ export default function Academics({ navigation }) {
               <HeaderSubtitle>Located in Salisbury Labs 233, the writing center is staffed with 20 peer tutors to help you at any stage of your writing/composing process</HeaderSubtitle>
               <ButtonCentered href='https://www.wpi.edu/student-experience/resources/writing-center'>Visit Writing Center</ButtonCentered>
               <ImageHeader image={mtc}>Math Tutoring Center</ImageHeader>
-              <HeaderSubtitle>Located in room 302 in Gordon Library, the drop-in style Math Tutoring Center is staffed with math TAs, PLAs, and master’s students to help with all math-related questions and coursework.</HeaderSubtitle>
+              <HeaderSubtitle>Located in room 302 in Gordon Library, the drop-in style Math Tutoring Center is staffed with math TAs, PLAs, and master's students to help with all math-related questions and coursework.</HeaderSubtitle>
               <ButtonCentered href='https://www.wpi.edu/academics/departments/mathematical-sciences/math-tutoring-center-mtc'>Visit MTC</ButtonCentered>
             <ImageHeader image={makerSpace}>SWEET Center</ImageHeader>
               <HeaderSubtitle>Individual and Team Consultations are offered by SWEET fellows who are WPI students, staff, faculty, and alumni with lots of project and teamwork experience, and additional training from WPI experts on effective and equitable teamwork. All Teamwork Support SWEET Center offerings are available for free to WPI undergraduate and graduate students.</HeaderSubtitle>
