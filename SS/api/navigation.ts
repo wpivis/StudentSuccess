@@ -6,7 +6,7 @@ export enum AppDrawerItemName {
   Social = "Social Life: On Campus",
   Financial = "Financial Resources",
   Facilities = "Campus Facilities",
-  Development = "Career Development",
+  Development = "Career Development Center",
   Services = "Campus Services",
   FAQ = "FAQs and Tips",
   Checklists = "Missions",
