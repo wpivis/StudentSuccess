@@ -219,8 +219,8 @@ export function QuoteRight(props) {
     switch (props.color) {
       case "red":
         return <Image source={bubblePointRed} style={{ height: 20, width: 20, marginLeft: -10 }} />
-      // case "white":
-      //   return <Image source={bubblePointWhite} style={{ height: 20, width: 20, marginLeft: -10 }} />
+      case "white":
+        return <Image source={bubblePointWhite} style={{ height: 20, width: 20, marginLeft: -10 }} />
       case "gray":
         return <Image source={bubblePointGray} style={{ height: 20, width: 20, marginLeft: -10 }} />
     }
@@ -230,8 +230,8 @@ export function QuoteRight(props) {
     switch (props.color) {
       case "red":
         return crimson;
-      // case "white":
-      //   return white;
+      case "white":
+        return "white";
       case "gray":
         return "#e4e4e4";
     }
@@ -288,8 +288,8 @@ export function QuoteLeft(props) {
     switch (props.color) {
       case "red":
         return <Image source={bubblePointRedLeft} style={{ height: 20, width: 20, }} />
-      // case "white":
-      //   return <Image source={bubblePointWhiteLeft} style={{ height: 20, width: 20 }} />
+      case "white":
+        return <Image source={bubblePointWhiteLeft} style={{ height: 20, width: 20 }} />
       case "gray":
         return <Image source={bubblePointGrayLeft} style={{ height: 20, width: 20 }} />
     }
@@ -299,8 +299,8 @@ export function QuoteLeft(props) {
     switch (props.color) {
       case "red":
         return crimson;
-      // case "white":
-      //   return white;
+       case "white":
+         return "white";
       case "gray":
         return "#e4e4e4";
     }
