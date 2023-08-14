@@ -1,4 +1,4 @@
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, Dimensions } from 'react-native'
 import React from 'react'
 import { Image } from "expo-image"
 import { ScrollView } from 'react-native-gesture-handler'
@@ -20,6 +20,9 @@ const microaggressions = require("../assets/Diversity/microaggression.jpg")
 const demographics = require("../assets/Diversity/demographics.png")
 
 export default function Diversity({ navigation }) {
+
+  const imageWidth = Dimensions.get("window").width > 800 ? 800 : Dimensions.get("window").width;
+  const imageHeight = imageWidth * .62;
 
   return (
     <ScrollView>
@@ -241,7 +244,7 @@ export default function Diversity({ navigation }) {
               <HeaderRight>
                 Undergraduate Diversity
               </HeaderRight>
-              <Image source={demographics} style={{ height: 300, width: "100%", paddingBottom: 200 }} />
+              <Image source={demographics} style={{width: imageWidth, height: imageHeight}} />
               <RedTextBoxes text={stats1} type={1}>
               </RedTextBoxes>
               <RedTextBoxes text={stats2} type={2}>
