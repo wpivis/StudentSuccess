@@ -9,6 +9,6 @@ export enum AppDrawerItemName {
   Development = "Career Development Center",
   Services = "Campus Services",
   FAQ = "FAQs and Tips",
-  Checklists = "Missions",
+  Checklists = "Goals",
   Directory = "Directory",
 }

@@ -51,10 +51,15 @@ export default function Social({ navigation }) {
           <ContentSection>
             <ImageHeader image={connections}>Connections</ImageHeader>
             <HeaderSubtitle>
-              How did other WPI students jumpstart their social lives at WPI? Many students emphasized the importance of Connections in their experiences integrating at WPI.
+              Many students emphasized the importance of Connections in their experiences integrating at WPI.
             </HeaderSubtitle>
             <ButtonCentered href="https://www.wpi.edu/offices/diversity/success-programs/connections">See more on Connections</ButtonCentered>
             <ContentSection>
+              <ContentSection>
+                <BracketedText>
+                  How did other WPI students jumpstart their social lives at WPI? 
+                </BracketedText>
+              </ContentSection>
               <LightGrayPlatform>
                 <Carousel
                   loop
@@ -198,7 +203,7 @@ export default function Social({ navigation }) {
 }
 
 function CarouselItemText(props) {
-  return <Text style={{ fontSize: 16, marginBottom: 7 }}>"{props.children}"</Text>
+  return <Text style={{ fontSize: 16, marginBottom: 7, textAlign: "center" }}>"{props.children}"</Text>
 }
 
 const carouselItems = [

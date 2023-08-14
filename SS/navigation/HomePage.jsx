@@ -46,6 +46,7 @@ export default function HomePage({ navigation }) {
             <HeaderSubtitle>
               Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
             </HeaderSubtitle>
+            <CenteredTitle>What is the Student Success Handbook?</CenteredTitle>
             <BodyText>
               The Student Success Handbook is designed to ensure that all students, including those from diverse backgrounds, can access and benefit from the abundance 
               of fundamental resources on campus that foster student success. We emphasize various strategies and tools tailored to support the diverse student body, 

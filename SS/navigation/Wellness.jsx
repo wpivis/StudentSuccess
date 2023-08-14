@@ -236,11 +236,11 @@ export default function Wellness({ navigation }) {
           </ListSectionAccordion>
           </AccordionTitle>
 
+          <WellnessChecklist />
+
           <Footer />
         </View>
       </View>
-
-    <WellnessChecklist />
 
     </ScrollView>
 
