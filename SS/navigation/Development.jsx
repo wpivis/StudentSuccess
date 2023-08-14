@@ -1,7 +1,7 @@
 import { View, Text, Button } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
+import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam, TextBold } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle, Spacer } from '../components/Layout'
@@ -32,22 +32,43 @@ export default function Development({ navigation }) {
               The CDC offers resources for life! Any alumni or current student can receive career support. This includes all events and activities hosted by the office.
             </HeaderSubtitle>
             <Spacer />
-            <GrayTextBeam>Workshops on discovering majors and careers</GrayTextBeam>
-            <GrayTextBeam>Workshops on interviewing</GrayTextBeam>
-            <GrayTextBeam>Workshops on the art of small talk</GrayTextBeam>
-            <GrayTextBeam>Workshops on how to sell your project experience</GrayTextBeam>
-            <GrayTextBeam>Workshops on how to work a virtual career fair</GrayTextBeam>
-            <GrayTextBeam>Workshops on job offer / salary negotiation</GrayTextBeam>
-            <GrayTextBeam>Help with job searches</GrayTextBeam>
-            <GrayTextBeam>Identity-specific panels and fireside chats</GrayTextBeam>
-
+            <SectionContentHeader>
+              <SectionContentHeader.Title>
+                Resource Libary for Students:
+              </SectionContentHeader.Title>
+            </SectionContentHeader>
+            <GrayTextBeam><TextBold>Workshop Wednesdays available 1x per term:</TextBold> </GrayTextBeam>
+            <GrayTextBeam>    Workshops on discovering majors and careers</GrayTextBeam>
+            <GrayTextBeam>    Workshops on interviewing</GrayTextBeam>
+            <GrayTextBeam>    Workshops on the art of small talk</GrayTextBeam>
+            <GrayTextBeam>    Workshops on how to sell your project experience</GrayTextBeam>
+            <GrayTextBeam>    Workshops on how to work a virtual career fair</GrayTextBeam>
+            <GrayTextBeam>    Workshops on job offer / salary negotiation</GrayTextBeam>
+            <GrayTextBeam>    Help with job searches</GrayTextBeam>
+            <GrayTextBeam>    Identity-specific panels and fireside chats</GrayTextBeam>
+            <GrayTextBeam><TextBold>GoinGlobal - an international job search platform</TextBold> </GrayTextBeam>
+            <GrayTextBeam>    Information available on international internship/co-op approval process</GrayTextBeam>
+            <GrayTextBeam><TextBold>Identity-specific Panels and Fireside Chats </TextBold> </GrayTextBeam>
+            <Spacer />
+            <SectionContentHeader>
+              <SectionContentHeader.Title>
+                Various In-Person and Virtual Appointments Available for:
+              </SectionContentHeader.Title>
+            </SectionContentHeader>
+            <GrayTextBeam>Application Materials</GrayTextBeam>
+            <GrayTextBeam>Discovering Majors & Careers</GrayTextBeam>
+            <GrayTextBeam>Graduate School</GrayTextBeam>
+            <GrayTextBeam>Intern/Co-op/Job Search Process</GrayTextBeam>
+            <GrayTextBeam>Interview Prep</GrayTextBeam>
+            <GrayTextBeam>Job Offers</GrayTextBeam>
+            <GrayTextBeam>Networking & Career Fair</GrayTextBeam>
             <BracketedText>
-              The CDC also offers various in-person and virtual appointments. For example, you can schedule a meeting to discuss application materials, doscivering majors and careers, graduate school,
+              The CDC offers various in-person and virtual appointments. For example, you can schedule a meeting to discuss application materials, doscivering majors and careers, graduate school,
               internships / Co-op / job searches, interview prep, job offers, networking / career fairs, and more.
             </BracketedText>
 
             <ButtonCentered href="https://www.wpi.edu/offices/career-development-center">Visit the CDC</ButtonCentered>
-          
+
             <QuoteRight color="gray">
               "I think the resources for doing well definitely helped me with networking. The Career Fair was a big one that really helped. I got opportunities through that."
             </QuoteRight>
