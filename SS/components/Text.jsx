@@ -372,7 +372,7 @@ export function BodyText(props) {
   if (props.red) { Platform = RedPlatform; }
 
   return (
-    <View style={{ marginBottom: 7 }}>
+    <View style={{ marginBottom: 7, marginTop: 7 }}>
       <Platform maxWidth={textBlockMaxWidth}>
         <Text>{props.children}</Text>
       </Platform>

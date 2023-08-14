@@ -202,7 +202,7 @@ class CarouselQuoteCard extends Component {
 
   render() {
     return (
-      <View style={{paddingBottom:20}}>
+      <View style={{marginBottom: 7}}>
         {this.props.children}
       </View>
     )
@@ -217,7 +217,7 @@ class CarouselTitleCard extends Component {
 
   static Body(props) {
     return (
-      <View style={{ marginTop: 7, width: "80%" }}>
+      <View style={{ marginTop: 7, marginBottom: 7, width: "80%" }}>
         <BracketedText noMargin>{props.children}</BracketedText>
       </View>
     )
@@ -226,8 +226,7 @@ class CarouselTitleCard extends Component {
   render() {
     return (
       <View
-        style={{
-          flex: 1,
+      style={{
           justifyContent: 'center',
           alignItems: "center"
         }}
