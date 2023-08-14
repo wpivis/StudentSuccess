@@ -6,7 +6,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam, RedTextBoxes, SubHeader, TextBold } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
+import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle, Spacer } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
@@ -48,6 +48,7 @@ export default function Diversity({ navigation }) {
             <Image style={{ width: "100%", height: 200 }} href='www.google.com' source={imposter}></Image>
             </a>
             <HeaderSubtitle>Imposter syndrome was a term coined by Pauline Clance and Suzanne Imes in 1978 and describes the way a person feels when they doubt their skills, talents, or accomplishments and has a persistent fear of being exposed as a "fraud" even though they show external evidence of their competence. </HeaderSubtitle>
+            <Spacer />
             <GrayTextBeam>Feeling like a fake or fraud and fearing you will be discovered.</GrayTextBeam>
             <GrayTextBeam>Attributing success to luck or chance rather than your own ability or hard work.</GrayTextBeam>
             <GrayTextBeam>Downplaying your own expertise, even in areas where you are very knowledgeable.</GrayTextBeam>
@@ -59,6 +60,7 @@ export default function Diversity({ navigation }) {
               <Image style={{ width: "100%", height: 200 }} source={bias}></Image>
               </a>
               <HeaderSubtitle>Unconscious bias is when we have quick judgments or opinions about people without realizing it. These thoughts come from our background, experiences, and things we've heard or seen in society. These biases can be positive or negative and influence how we treat others. Becoming aware of these biases and understanding how they influence your behavior is the first step toward minimizing their impact. </HeaderSubtitle>
+            <Spacer />
               <GrayTextBeam>Affinity bias is warming-up or being comfortable with people like ourselves.</GrayTextBeam>
               <GrayTextBeam>Halo effect is thinking everything about someone is good because you like them.</GrayTextBeam>
               <GrayTextBeam>Perception bias is forming assumptions about certain groups that make objective decisions impossible.</GrayTextBeam>
@@ -72,6 +74,7 @@ export default function Diversity({ navigation }) {
             <HeaderSubtitle>Microaggressions refer to subtle comments that convey derogatory, prejudiced, or discriminatory attitudes towards individuals or groups based on race, gender, ethnicity, sexual orientation, disability, or other characteristics. These actions may seem unintentional, but they can have a significant impact on the recipients, contributing to feelings of alienation and invalidation.</HeaderSubtitle>
             {/* Strategies for Psychosocial Challenges */}
             <HeaderRight>Strategies</HeaderRight>
+            <Spacer />
             <GrayTextBeam><TextBold>Speak up:</TextBold> Communicate your feelings and ask the person to stop biased behavior using "I" statements. For instance, say, "I feel disrespected when you... Could you please stop doing that?"</GrayTextBeam>
             <GrayTextBeam><TextBold>Find Support:</TextBold> Reach out to supportive friends, family, community groups, peers further along in their studies, staff in academic affairs, and your professors. Sharing your experiences can provide emotional relief and practical advice.</GrayTextBeam>
             <GrayTextBeam><TextBold>Document:</TextBold> Record incidents, including dates, times, locations, what happened, and any witnesses. This could be useful if you decide to report the behavior.</GrayTextBeam>

@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Dimensions } from "react-native";
 
 import { Image } from "expo-image";
 import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow, textBlockMaxWidth } from "../assets/style";
@@ -398,6 +398,7 @@ export function TextBold(props) {
 
 export function RedTextBoxes(props) {
 
+  const width = Dimensions.get('window').width;
 
   const styles = StyleSheet.create({
     container: {
@@ -405,10 +406,10 @@ export function RedTextBoxes(props) {
       padding: 20,
     },
     box: {
-      width: document.documentElement.clientWidth * 0.25,
+      width: width * 0.25,
       //height: window.screen.width * 0.3,
       maxWidth: 800 * 0.3,
-      height: document.documentElement.clientWidth * 0.25,
+      height: width * 0.25,
       maxHeight: 800 * 0.3,
       padding: 200,
     },

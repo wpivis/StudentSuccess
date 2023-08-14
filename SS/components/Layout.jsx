@@ -73,3 +73,7 @@ export function RedBeam({title, text}) {
 export function HeaderSubtitle(props) {
   return <RedPlatform><Text style={{color: "white", fontSize: 16}}>{props.children}</Text></RedPlatform>
 }
+
+export function Spacer() {
+  return <View style={{marginBottom: 7}}/>
+}
