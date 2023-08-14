@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GrayTextBeam, BodyText, SubHeader } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
+import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle, Spacer } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
@@ -51,6 +51,7 @@ export default function Academics({ navigation }) {
             <HeaderRight>Academic Advising</HeaderRight>
             <Image style={{ width: "100%", height: 200 }} source={academicAdvising} />
             <HeaderSubtitle>Located in Unity Hall, the Office of Academic Advising is there to help you develop a meaningful educational plan. Utilize their website to learn how to register for courses, double count classes, transfer credits, and plan for double majors and minors, amongst other resources.</HeaderSubtitle>
+            <Spacer />
             <GrayTextBeam>All WPI students are assigned one academic advisor as well as a faculty advisor within their major’s department</GrayTextBeam>
             
             <BracketedText>Major tracking sheets are a valuable tool that many students have stressed the importance of having access to early on. </BracketedText>
@@ -64,6 +65,7 @@ export default function Academics({ navigation }) {
             <HeaderRight>Academic Resource Center</HeaderRight>
             <Image style={{ width: "100%", height: 200 }} source={tutor} />
             <HeaderSubtitle>The Academic Resource Center (ARC), located in Unity Hall, offers peer-led individual and group-style tutoring. Schedule an appointment one-on-one with a tutor, or drop in for Math and Science Help (MASH).</HeaderSubtitle>
+            <Spacer />
             <GrayTextBeam>Informal resources like the Physics lounge (Located in Olin Hall) are also available to help with coursework</GrayTextBeam>
             <QuoteRight color="gray">“The advice I heard was to reach out to professors. Advice I wish I took was to go to TAs, I frankly find them more helpful than professors a lot of the time except for one class I’m taking at the moment. But for the majority of classes I find them more helpful than just professors”</QuoteRight>
             <ButtonCentered href="https://www.wpi.edu/news/announcements/find-study-spaces-wpi-app">Study spaces on campus</ButtonCentered>
