@@ -118,7 +118,7 @@ export default function Financial({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <Image source={grants} style={{width:'100%', height:200}}/>
+            <ImageHeader image={grants}>Grants</ImageHeader>
             <HeaderSubtitle>
               WPI assists students with financial constraints by offering grants, typically need-based awards provided by governments or other institutions.
             </HeaderSubtitle>

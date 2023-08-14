@@ -59,7 +59,6 @@ export default function Services({ navigation }) {
             <BodyText>My name is Matt Foster, he/him/his, and I am the Director of Residential Services. I have been at WPI for over a decade and love the community that is WPI. My few pieces of advice are included here to help you in your success. Always be open to asking any questions you have of any staff or faculty member because everyone is willing to help in any way they can. Take the time to talk with your roommates/project team members/ group members/etc. about anything going on or if you have a conflict before it gets too far and your experience suffers because you feel like you can’t handle it. Lastly, get involved and join something on campus that you are passionate about!</BodyText>
             <BodyText>Feel free to say hi to me if you see me on campus and reach out to our office anytime you have a question!</BodyText>
             </LightGrayPlatform>
-            <HeaderRight>Housing & Residential</HeaderRight>
             <ImageCarousel data={HousingCarouselData}></ImageCarousel>
             <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
             <View style={{ paddingTop: 10 }}>
@@ -81,7 +80,6 @@ export default function Services({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <HeaderRight>Dining Services</HeaderRight>
             <ImageCarousel data={DiningCarouselData}></ImageCarousel>
             <HeaderSubtitle>WPI Dining offers a variety of meal plan options. See their website for hours, locations, and offerings. </HeaderSubtitle>
             <View style={{ paddingTop: 10 }}><GrayTextBeam>Dining services highlights international cuisine</GrayTextBeam> </View>
@@ -91,8 +89,7 @@ export default function Services({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <HeaderRight>Transportation</HeaderRight>
-            <Image style={{width:'100%', height:200}} source={shuttle}/>
+            <ImageHeader image={shuttle}>Transportation</ImageHeader>
             <HeaderSubtitle>WPI offers free transportation services on and around campus, including SNAP, Gateway Shuttle, Price Chopper Shuttle, and South Village Shuttle.</HeaderSubtitle>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources/safety/campus-transportation">VPA Bus</ButtonCentered>
             <ButtonCentered href="http://bustracker.therta.com/bustime/home.jsp">WRTA Bus</ButtonCentered>
@@ -113,61 +110,61 @@ const HousingCarouselData = [
   },
   {
     image: daniels,
-    text: "Daniels Hall"
+    text: "Housing: Daniels Hall"
   },
   {
     image: founders,
-    text: "Founders Hall"
+    text: "Housing: Founders Hall"
   },
   {
     image: institute,
-    text: "Institute Hall"
+    text: "Housing: Institute Hall"
   },
   {
     image: messenger,
-    text: "Messenger Hall"
+    text: "Housing: Messenger Hall"
   },
   {
     image: morgan,
-    text: "Morgan Hall"
+    text: "Housing: Morgan Hall"
   },
   {
     image: sanford,
-    text: "Sanford Riley Hall"
+    text: "Housing: Sanford Riley Hall"
   },
   {
     image: stodd,
-    text: "Stoddard Complex"
+    text: "Housing: Stoddard Complex"
   },
   {
     image: trowbridge,
-    text: "Trowbridge House"
+    text: "Housing: Trowbridge House"
   },
   {
     image: wachusett,
-    text: "Wachusett House"
+    text: "Housing: Wachusett House"
   },
 ]
 
 const DiningCarouselData = [
   {
     image: diningHall,
-    text: ""
+    text: "Dining Services"
   },
   {
     image: halal,
-    text: ""
+    text: "Dining Services"
   },
   {
     image: starbucks,
-    text: ""
+    text: "Dining Services"
   },
   {
     image: loveFood,
-    text: ""
+    text: "Dining Services"
   },
   {
     image: veggies,
-    text: ""
+    text: "Dining Services"
   },
 ]

@@ -47,7 +47,6 @@ export default function Services({ navigation }) {
                     <PageHeader>Facilities and Amenities at WPI</PageHeader>
 
                     <ContentSection>
-                        <HeaderRight>Gordan Library</HeaderRight>
                         <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
                             <Carousel
                                 loop
@@ -64,7 +63,7 @@ export default function Services({ navigation }) {
                                             justifyContent: 'flex-start',
                                         }}
                                     >
-                                        <ImageHeader image={LibraryCarouselData[index].image}>{LibraryCarouselData[index].text}</ImageHeader>
+                                        <ImageHeader image={LibraryCarouselData[index].image}>Gordan Library</ImageHeader>
                                     </View>
                                 )}
                             />
@@ -75,7 +74,6 @@ export default function Services({ navigation }) {
                     </ContentSection>
 
                     <ContentSection>
-                        <HeaderRight>Sports and Recreation Center</HeaderRight>
                         <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
                             <Carousel
                                 loop
@@ -92,7 +90,7 @@ export default function Services({ navigation }) {
                                             justifyContent: 'flex-start',
                                         }}
                                     >
-                                        <ImageHeader image={GymCarouselData[index].image}>{GymCarouselData[index].text}</ImageHeader>
+                                        <ImageHeader image={GymCarouselData[index].image}>Sports and Recreation Center</ImageHeader>
                                     </View>
                                 )}
                             />

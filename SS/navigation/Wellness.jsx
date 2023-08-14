@@ -13,6 +13,7 @@ import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
 import { ImageCarousel } from '../components/Images'
+import Carousel from 'react-native-reanimated-carousel'
 
 // Images
 //SDCC
@@ -41,6 +42,8 @@ const eeoDesk = require("../assets/Wellness/EEODesk.jpg")
 
 export default function Wellness({ navigation }) {
   const width = Dimensions.get('window').width;
+  const carouselWidth = width > 800 ? 800 : width;
+  const carouselHeight = 200;
 
   return (
     <ScrollView>
@@ -62,8 +65,29 @@ export default function Wellness({ navigation }) {
              <BodyText>Charlie Morse <br />Dean of Student Wellness <br />WPI</BodyText>
             </LightGrayPlatform>
           <ContentSection>
-            <HeaderRight>SDCC</HeaderRight>
-            <ImageCarousel data={sdccCarouselData}></ImageCarousel>
+            
+          <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
+              <Carousel
+                  loop
+                  width={carouselWidth}
+                  data={sdccCarouselData}
+                  height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
+                  scrollAnimationDuration={1000}
+                  renderItem={({ index }) => (
+                      <View
+                          style={{
+                              flex: 1,
+                              justifyContent: 'flex-start',
+                          }}
+                      >
+                          <ImageHeader image={sdccCarouselData[index].image}>SDCC</ImageHeader>
+                      </View>
+                  )}
+              />
+          </View>
+
             <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>
             <QuoteRight color="red">
               <Text>“My counselor really listened to my concerns, related to my problems, and validated my feelings.”</Text>
@@ -86,9 +110,27 @@ export default function Wellness({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <HeaderRight>Health Services</HeaderRight>
-            <ImageCarousel data={healthServicesCarouselData}></ImageCarousel>
-
+            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
+              <Carousel
+                  loop
+                  width={carouselWidth}
+                  data={healthServicesCarouselData}
+                  height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
+                  scrollAnimationDuration={1000}
+                  renderItem={({ index }) => (
+                      <View
+                          style={{
+                              flex: 1,
+                              justifyContent: 'flex-start',
+                          }}
+                      >
+                          <ImageHeader image={healthServicesCarouselData[index].image}>Health Services</ImageHeader>
+                      </View>
+                  )}
+              />
+          </View>
             <HeaderSubtitle>
               WPI Health Services provides comprehensive, cost-free healthcare.
             </HeaderSubtitle>
@@ -112,8 +154,29 @@ export default function Wellness({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <HeaderRight>Center for Well-Being</HeaderRight>
-            <ImageCarousel data={wellbeingCarouselData}></ImageCarousel>
+
+            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
+              <Carousel
+                  loop
+                  width={carouselWidth}
+                  data={wellbeingCarouselData}
+                  height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
+                  scrollAnimationDuration={1000}
+                  renderItem={({ index }) => (
+                      <View
+                          style={{
+                              flex: 1,
+                              justifyContent: 'flex-start',
+                          }}
+                      >
+                          <ImageHeader image={wellbeingCarouselData[index].image}>Center for Well-Being</ImageHeader>
+                      </View>
+                  )}
+              />
+          </View>
+
 
             <HeaderSubtitle>
               The Center for Well-Being at WPI is a sanctuary for students.
@@ -130,8 +193,29 @@ export default function Wellness({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <HeaderRight>Equal Opportunity & Outreach</HeaderRight>
-            <ImageCarousel data={EOOCarouselData}></ImageCarousel>
+
+          <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
+              <Carousel
+                  loop
+                  width={carouselWidth}
+                  data={EOOCarouselData}
+                  height={carouselHeight}
+                  autoPlay
+                  autoPlayInterval={4000}
+                  scrollAnimationDuration={1000}
+                  renderItem={({ index }) => (
+                      <View
+                          style={{
+                              flex: 1,
+                              justifyContent: 'flex-start',
+                          }}
+                      >
+                          <ImageHeader image={EOOCarouselData[index].image}>Equal Opportunity & Outreach</ImageHeader>
+                      </View>
+                  )}
+              />
+          </View>
+
             <HeaderSubtitle>
               The Office of Equal Opportunity and Outreach (Title IX) is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
             </HeaderSubtitle>

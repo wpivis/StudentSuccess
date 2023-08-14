@@ -48,8 +48,7 @@ export default function Academics({ navigation }) {
             </LightGrayPlatform>
             </ContentSection>
             
-            <HeaderRight>Academic Advising</HeaderRight>
-            <Image style={{ width: "100%", height: 200 }} source={academicAdvising} />
+            <ImageHeader image={academicAdvising}>Academic Advising</ImageHeader>
             <HeaderSubtitle>Located in Unity Hall, the Office of Academic Advising is there to help you develop a meaningful educational plan. Utilize their website to learn how to register for courses, double count classes, transfer credits, and plan for double majors and minors, amongst other resources.</HeaderSubtitle>
             <Spacer />
             <GrayTextBeam>All WPI students are assigned one academic advisor as well as a faculty advisor within their major’s department</GrayTextBeam>
@@ -62,8 +61,7 @@ export default function Academics({ navigation }) {
             <QuoteRight color="red">“My advisors were very supportive. They would mostly just reach out during times that they would kind of expect us to need support, like during registration. It's more like. I can really only get the benefits I need if I reach out to them first. But they are very welcoming.”</QuoteRight>
             <QuoteLeft color="gray">“Before taking one of your harder classes, you could see on Workday what you need before the class, I'll ask my advisor anything about it as well. Or if I knew a friend took the class I just asked them about it as well before it.”</QuoteLeft>
 
-            <HeaderRight>Academic Resource Center</HeaderRight>
-            <Image style={{ width: "100%", height: 200 }} source={tutor} />
+            <ImageHeader image={tutor}>Academic Resource Center</ImageHeader>
             <HeaderSubtitle>The Academic Resource Center (ARC), located in Unity Hall, offers peer-led individual and group-style tutoring. Schedule an appointment one-on-one with a tutor, or drop in for Math and Science Help (MASH).</HeaderSubtitle>
             <Spacer />
             <GrayTextBeam>Informal resources like the Physics lounge (Located in Olin Hall) are also available to help with coursework</GrayTextBeam>
@@ -75,16 +73,13 @@ export default function Academics({ navigation }) {
               <QuoteRight color="red">“One advice would be to put everything in your outlook calendar. Don't be afraid, put your homeworks, put your meetings, put every single thing in your outlook calendar and then have your outlook calendar on your lock screen. I will put my homeworks. I will put my assignments. I will put when I need to meet my friends on outlook because if not, it will not happen or I'll forget about it. I forgot to go to the fun night yesterday because it wasn't on my outlook. I put everything on my outlook. Obviously, that is one advice I will give everyone is like, put your homeworks on outlook because it will bother you until you finish your homework. That is nice.”</QuoteRight>
             </LightGrayPlatform> */}
 
-            <HeaderRight>Writing Center</HeaderRight>
-              <Image style={{width:'100%', height:200}} source={writingCenter}/>
+            <ImageHeader image={writingCenter}>Writing Center</ImageHeader>
               <HeaderSubtitle>Located in Salisbury Labs 233, the writing center is staffed with 20 peer tutors to help you at any stage of your writing/composing process</HeaderSubtitle>
               <ButtonCentered href='https://www.wpi.edu/student-experience/resources/writing-center'>Visit Writing Center</ButtonCentered>
-              <HeaderRight>Math Tutoring Center</HeaderRight>
-              <Image style={{width:'100%', height:200}} source={mtc}/>
+              <ImageHeader image={mtc}>Math Tutoring Center</ImageHeader>
               <HeaderSubtitle>Located in room 302 in Gordon Library, the drop-in style Math Tutoring Center is staffed with math TAs, PLAs, and master’s students to help with all math-related questions and coursework.</HeaderSubtitle>
               <ButtonCentered href='https://www.wpi.edu/academics/departments/mathematical-sciences/math-tutoring-center-mtc'>Visit MTC</ButtonCentered>
-            <HeaderRight>SWEET Center</HeaderRight>
-            <Image style={{width:'100%', height:200}} source={makerSpace}/>
+            <ImageHeader image={makerSpace}>SWEET Center</ImageHeader>
               <HeaderSubtitle>Individual and Team Consultations are offered by SWEET fellows who are WPI students, staff, faculty, and alumni with lots of project and teamwork experience, and additional training from WPI experts on effective and equitable teamwork. All Teamwork Support SWEET Center offerings are available for free to WPI undergraduate and graduate students.</HeaderSubtitle>
               <ButtonCentered href='https://www.wpi.edu/academics/global-school/departments-programs-offices/sweet-center'>Visit SWEET Center</ButtonCentered>
             </ContentSection>
