@@ -244,7 +244,7 @@ export default function Diversity({ navigation }) {
               <HeaderRight>
                 Undergraduate Diversity
               </HeaderRight>
-              <ScaledImage img={demographics}></ScaledImage>
+              <Image source={demographics} style={{width: imageWidth, height: imageHeight}} />
               <RedTextBoxes text={stats1} type={1} >
               </RedTextBoxes>
               <RedTextBoxes text={stats2} type={2}>
