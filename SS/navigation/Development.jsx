@@ -38,12 +38,12 @@ export default function Development({ navigation }) {
               </SectionContentHeader.Title>
             </SectionContentHeader>
             <GrayTextBeam><TextBold>Workshop Wednesdays available 1x per term:</TextBold> </GrayTextBeam>
-            <GrayTextBeam>    Workshops on discovering majors and careers</GrayTextBeam>
-            <GrayTextBeam>    Workshops on interviewing</GrayTextBeam>
-            <GrayTextBeam>    Workshops on the art of small talk</GrayTextBeam>
-            <GrayTextBeam>    Workshops on how to sell your project experience</GrayTextBeam>
-            <GrayTextBeam>    Workshops on how to work a virtual career fair</GrayTextBeam>
-            <GrayTextBeam>    Workshops on job offer / salary negotiation</GrayTextBeam>
+            <GrayTextBeam>    Discovering majors and careers</GrayTextBeam>
+            <GrayTextBeam>    Interviewing</GrayTextBeam>
+            <GrayTextBeam>    The art of small talk</GrayTextBeam>
+            <GrayTextBeam>    How to sell your project experience</GrayTextBeam>
+            <GrayTextBeam>    How to work a virtual career fair</GrayTextBeam>
+            <GrayTextBeam>    Job offer / salary negotiation</GrayTextBeam>
             <GrayTextBeam>    Help with job searches</GrayTextBeam>
             <GrayTextBeam>    Identity-specific panels and fireside chats</GrayTextBeam>
             <GrayTextBeam><TextBold>GoinGlobal - an international job search platform</TextBold> </GrayTextBeam>

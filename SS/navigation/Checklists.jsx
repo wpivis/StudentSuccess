@@ -28,7 +28,7 @@ export default function Checklists({ navigation }) {
 export function AcademicsChecklist({ missionsPage }) {
   return (
     <Checklist>
-      <Checklist.Title>{missionsPage ? "Academics" : "Missions"}</Checklist.Title>
+      <Checklist.Title>{missionsPage ? "Academics" : "Goals"}</Checklist.Title>
       <Checklist.Item
         itemKey="advisor"
         checklistKey="academics"
@@ -71,7 +71,7 @@ export function AcademicsChecklist({ missionsPage }) {
 export function WellnessChecklist({ missionsPage }) {
   return (
     <Checklist>
-    <Checklist.Title>{missionsPage ? "Wellness" : "Missions"}</Checklist.Title>
+    <Checklist.Title>{missionsPage ? "Wellness" : "Goals"}</Checklist.Title>
       <Checklist.Item
         itemKey="rec"
         checklistKey="wellness"
@@ -114,7 +114,7 @@ export function WellnessChecklist({ missionsPage }) {
 export function CampusInvolvementChecklist({ missionsPage }) {
   return (
     <Checklist>
-    <Checklist.Title>{missionsPage ? "Getting Involved" : "Missions"}</Checklist.Title>
+    <Checklist.Title>{missionsPage ? "Getting Involved" : "Goals"}</Checklist.Title>
       <Checklist.Item
         itemKey="fair"
         checklistKey="campusInvolvement"

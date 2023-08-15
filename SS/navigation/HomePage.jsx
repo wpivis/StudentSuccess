@@ -46,6 +46,7 @@ export default function HomePage({ navigation }) {
             <HeaderSubtitle>
               Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
             </HeaderSubtitle>
+            <CenteredTitle>What is the Student Success Handbook?</CenteredTitle>
             <BodyText>
               The Student Success Handbook is designed to ensure that all students, including those from diverse backgrounds, can access and benefit from the abundance 
               of fundamental resources on campus that foster student success. We emphasize various strategies and tools tailored to support the diverse student body, 
@@ -173,6 +174,19 @@ export default function HomePage({ navigation }) {
                       {key: 'Suicide and Crisis Hotline', href: 'https://988lifeline.org/?utm_source=google&utm_medium=web&utm_campaign=onebox'},
                       ]} />
              </ListSectionAccordion>
+            </AccordionTitle>
+            <AccordionTitle title='Acknowledgments'>
+              <ListSectionAccordion>
+                <BodyText>We extend our heartfelt gratitude to the individuals who contributed to the realization of "The Student Success Handbook" at Worcester Polytechnic Institute. This collaborative effort has been a true testament to the power of teamwork, dedication, and a shared commitment to fostering inclusivity and student success.</BodyText>
+                <BodyText>First and foremost, we would like to express our sincere appreciation to our dynamic team of app developers - Megan Aloise (Computer Science ‘23), Joe Dobbelaar (Computer Science ‘24), and Randy Dyer (Computer Science ‘24). Your determination, innovative thinking, and technical expertise were instrumental in bringing this vision to life. Your coding, designing, and refining have resulted in an app that will impact the lives of countless students.</BodyText>
+                <BodyText>Our gratitude extends to Caroline (Physics, Environmental & Sustainability Studies ‘23), whose insight and dedication played a pivotal role in curating the content for the app. Your thorough research, interviews, and passion for enhancing student experiences have contributed immensely to the depth and relevance of the handbook's resources.</BodyText>
+                <BodyText>We would also like to thank our esteemed professors, Crystal Brown and Hermine Vedogbeton, whose guidance and expertise were invaluable throughout this project. Your commitment to academic excellence, combined with your efforts in curating and validating the content, have ensured that The Student Success Handbook is a comprehensive and cohesive resource.</BodyText>
+                <BodyText>A special note of appreciation goes to our esteemed funder, Tony Laing, Assistant VP for Diversity, Equity, Inclusion, and Belonging. Your visionary support and belief in the importance of accessible resources for all students have been integral to this project's success. Your dedication to fostering a diverse and inclusive campus environment aligns seamlessly with the ethos of the handbook.</BodyText>
+                <BodyText>Finally, we extend our gratitude to the broader WPI community - faculty, staff, and students - whose valuable insights and feedback have shaped the development of this app. Your input has been invaluable in refining the content and ensuring its relevance to the diverse needs of our student body.</BodyText>
+                <BodyText>This app, "The Student Success Handbook," stands as a testament to the collaborative spirit and shared commitment of individuals from various backgrounds to empower students and promote their academic and personal growth. As we move forward, we remain steadfast in our dedication to creating an environment that champions diversity, equity, inclusion, and belonging, and we are excited to witness the positive impact of this app on the WPI community and beyond.</BodyText>
+                <BodyText>With gratitude, <br />Megan Aloise <br />Joe Dobbelaar  <br />Randy Dyer <br />Caroline Jaeger <br />Crystal Brown <br />Hermine Vedogbeton </BodyText>
+                <BodyText></BodyText>
+              </ListSectionAccordion>
             </AccordionTitle>
           </ContentSection>
           <ContentSection>
