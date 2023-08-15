@@ -3,7 +3,7 @@ import React from 'react'
 import { Image } from "expo-image"
 import { ScrollView } from 'react-native-gesture-handler'
 
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam, RedTextBoxes, SubHeader, TextBold } from "../components/Text"
+import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam, RedTextBoxes, SubHeader, TextBold, ScaledImage } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle, Spacer } from '../components/Layout'
@@ -241,8 +241,8 @@ export default function Diversity({ navigation }) {
               <HeaderRight>
                 Undergraduate Diversity
               </HeaderRight>
-              <Image source={demographics} style={{ height: 300, width: "100%", paddingBottom: 200 }} />
-              <RedTextBoxes text={stats1} type={1}>
+              <ScaledImage img={demographics}></ScaledImage>
+              <RedTextBoxes text={stats1} type={1} >
               </RedTextBoxes>
               <RedTextBoxes text={stats2} type={2}>
               </RedTextBoxes>

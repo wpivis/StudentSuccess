@@ -51,7 +51,7 @@ export function HeaderRight(props) {
 export function SubHeader(props) {
   return (
 
-      <Text style={{ fontWeight: "bold", fontSize: 20, color:crimson, paddingVertical:12, paddingHorizontal:10}}>{props.children}</Text>
+    <Text style={{ fontWeight: "bold", fontSize: 20, color: crimson, paddingVertical: 12, paddingHorizontal: 10 }}>{props.children}</Text>
   )
 }
 
@@ -299,8 +299,8 @@ export function QuoteLeft(props) {
     switch (props.color) {
       case "red":
         return crimson;
-       case "white":
-         return "white";
+      case "white":
+        return "white";
       case "gray":
         return "#e4e4e4";
     }
@@ -396,6 +396,41 @@ export function TextBold(props) {
 
 }
 
+export function ScaledImage(props) {
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      padding: 20,
+    }
+  });
+
+  const win_width = Dimensions.get('window').width;
+
+  const width = Math.min(win_width * 0.8, 800 * 0.9)
+  return (
+
+    <View
+      style={[
+        styles.container,
+        {
+          flexDirection: 'row',
+          width: "100%",
+          gap: 10,
+          justifyContent: "space-around",
+          //marginBottom: 80,
+          paddingBottom: 100,
+        },
+      ]}>
+      <Image source={props.img} style={{
+        width: width,
+        height: width / 1.7,
+        // paddingBottom: 100,
+      }} /></View>);
+
+
+}
+
 export function RedTextBoxes(props) {
 
   const width = Dimensions.get('window').width;
@@ -403,7 +438,7 @@ export function RedTextBoxes(props) {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      padding: 20,
+      paddingTop: 20,
     },
     box: {
       width: width * 0.25,
@@ -411,7 +446,6 @@ export function RedTextBoxes(props) {
       maxWidth: 800 * 0.3,
       height: width * 0.25,
       maxHeight: 800 * 0.3,
-      padding: 200,
     },
   });
 
@@ -439,18 +473,16 @@ export function RedTextBoxes(props) {
           width: "100%",
           gap: 10,
           justifyContent: "space-around",
-          //marginBottom: 80,
-          paddingBottom: 10,
         },
       ]}>
 
-      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
         <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : fontSize), color: getColors()[txt1] }}>{props.text[0]}</Text>
       </View>
-      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg2], textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg2], textAlign: "center", paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
         <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : fontSize), color: getColors()[txt2] }}>{props.text[1]}</Text>
       </View>
-      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
         <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : fontSize), color: getColors()[txt1] }}>{props.text[2]}</Text>
       </View>
     </View >
