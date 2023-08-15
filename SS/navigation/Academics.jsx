@@ -47,7 +47,7 @@ export default function Academics({ navigation }) {
             <BodyText>We wish you success in all of your courses at WPI!</BodyText>
             </LightGrayPlatform>
             </ContentSection>
-            
+            </ContentSection>
             <ImageHeader image={academicAdvising}>Academic Advising</ImageHeader>
             <HeaderSubtitle>Located in Unity Hall, the Office of Academic Advising is there to help you develop a meaningful educational plan. Utilize their website to learn how to register for courses, double count classes, transfer credits, and plan for double majors and minors, amongst other resources.</HeaderSubtitle>
             <Spacer />
@@ -72,18 +72,20 @@ export default function Academics({ navigation }) {
             {/* <LightGrayPlatform>
               <QuoteRight color="red">“One advice would be to put everything in your outlook calendar. Don't be afraid, put your homeworks, put your meetings, put every single thing in your outlook calendar and then have your outlook calendar on your lock screen. I will put my homeworks. I will put my assignments. I will put when I need to meet my friends on outlook because if not, it will not happen or I'll forget about it. I forgot to go to the fun night yesterday because it wasn't on my outlook. I put everything on my outlook. Obviously, that is one advice I will give everyone is like, put your homeworks on outlook because it will bother you until you finish your homework. That is nice.”</QuoteRight>
             </LightGrayPlatform> */}
-
+            <ContentSection>
             <ImageHeader image={writingCenter}>Writing Center</ImageHeader>
               <HeaderSubtitle>Located in Salisbury Labs 233, the writing center is staffed with 20 peer tutors to help you at any stage of your writing/composing process</HeaderSubtitle>
               <ButtonCentered href='https://www.wpi.edu/student-experience/resources/writing-center'>Visit Writing Center</ButtonCentered>
+            </ContentSection>
               <ImageHeader image={mtc}>Math Tutoring Center</ImageHeader>
               <HeaderSubtitle>Located in room 302 in Gordon Library, the drop-in style Math Tutoring Center is staffed with math TAs, PLAs, and master's students to help with all math-related questions and coursework.</HeaderSubtitle>
               <ButtonCentered href='https://www.wpi.edu/academics/departments/mathematical-sciences/math-tutoring-center-mtc'>Visit MTC</ButtonCentered>
+            <ContentSection>
             <ImageHeader image={makerSpace}>SWEET Center</ImageHeader>
               <HeaderSubtitle>Individual and Team Consultations are offered by SWEET fellows who are WPI students, staff, faculty, and alumni with lots of project and teamwork experience, and additional training from WPI experts on effective and equitable teamwork. All Teamwork Support SWEET Center offerings are available for free to WPI undergraduate and graduate students.</HeaderSubtitle>
               <ButtonCentered href='https://www.wpi.edu/academics/global-school/departments-programs-offices/sweet-center'>Visit SWEET Center</ButtonCentered>
             </ContentSection>
-            <ContentSection>
+                        <ContentSection>
               <HeaderRight>Diversity Academic Programs</HeaderRight>
               <SubHeader>Africana Studies Program</SubHeader>
               <BracketedText>Housed in the Social Science and Policy Studies department, the Africana Studies Minor examines the experiences of people of African descent whether they live in Africa, the US, the Caribbean, Latin America, Europe, or Asia. The minor requirements offer an interdisciplinary approach for examining the rich cultures, arts, institutions, sciences, technologies, histories, political economies, and philosophies developed and practiced by people of African descent.	To learn more, contact Trent Masiki at tmasiki@wpi.edu. 	</BracketedText>
