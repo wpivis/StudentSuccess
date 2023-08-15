@@ -225,7 +225,7 @@ const carouselItems = [
         <CarouselItemText>Joining clubs</CarouselItemText>
         <CarouselItemText>FIGSA</CarouselItemText>
         <CarouselItemText>NSBE</CarouselItemText>
-        <CarouselItemText>Haunted Higgins House</CarouselItemText>
+        <CarouselItemText>Haunted Higgins <br />House</CarouselItemText>
         <CarouselItemText>Cheese Club</CarouselItemText>
       </View>
     </View>
