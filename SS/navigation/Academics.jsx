@@ -19,11 +19,6 @@ const makerSpace = require("../assets/Academics/makerspace.jpg")
 const academicAdvising = require("../assets/Academics/Academic_Advising.jpg")
 const tutor = require("../assets/Academics/Tutor.jpeg")
 
-const staff = require("../assets/staff.jpg")
-const turtle = require("../assets/turtle.jpg")
-const gps = require("../assets/gps.jpg")
-const gompeiStatue = require("../assets/gompeiStatue.jpg")
-const library = require("../assets/library.jpg")
 const writingCenter = require("../assets/Academics/writingCenter.jpeg")
 const mtc = require("../assets/Academics/MTC.jpeg")
 

@@ -1,18 +1,17 @@
 import { View, Text, Button, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
+import { BodyText, BracketedText, ImageHeader, PageHeader, QuoteRight, QuoteLeft } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 import { AccordionTitle, AccordionLink, ListSectionAccordion, LinkListAccordion } from "../components/Accordion"
+import { ImageCarousel } from '../components/Images'
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
-import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist, WellnessChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
-import { ImageCarousel } from '../components/Images'
 import Carousel from 'react-native-reanimated-carousel'
 import { logEvent } from 'firebase/analytics'
 import { analytics } from '../firebase'
@@ -72,28 +71,8 @@ export default function Wellness({ navigation }) {
              <BodyText>Charlie Morse <br />Dean of Student Wellness <br />WPI</BodyText>
             </LightGrayPlatform>
           <ContentSection>
-            
-          <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
-              <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={sdccCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                      <View
-                          style={{
-                              flex: 1,
-                              justifyContent: 'flex-start',
-                          }}
-                      >
-                          <ImageHeader image={sdccCarouselData[index].image}>SDCC</ImageHeader>
-                      </View>
-                  )}
-              />
-          </View>
+
+          <ImageCarousel data={sdccCarouselData}></ImageCarousel>
 
             <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>
             <QuoteRight color="red">
@@ -117,27 +96,8 @@ export default function Wellness({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
-              <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={healthServicesCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                      <View
-                          style={{
-                              flex: 1,
-                              justifyContent: 'flex-start',
-                          }}
-                      >
-                          <ImageHeader image={healthServicesCarouselData[index].image}>Health Services</ImageHeader>
-                      </View>
-                  )}
-              />
-          </View>
+            
+          <ImageCarousel data={healthServicesCarouselData}></ImageCarousel>
             <HeaderSubtitle>
               WPI Health Services provides comprehensive, cost-free healthcare.
             </HeaderSubtitle>
@@ -162,29 +122,7 @@ export default function Wellness({ navigation }) {
 
           <ContentSection>
 
-            <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
-              <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={wellbeingCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                      <View
-                          style={{
-                              flex: 1,
-                              justifyContent: 'flex-start',
-                          }}
-                      >
-                          <ImageHeader image={wellbeingCarouselData[index].image}>Center for Well-Being</ImageHeader>
-                      </View>
-                  )}
-              />
-          </View>
-
-
+          <ImageCarousel data={wellbeingCarouselData}></ImageCarousel>
             <HeaderSubtitle>
               The Center for Well-Being at WPI is a sanctuary for students.
             </HeaderSubtitle>
@@ -198,31 +136,8 @@ export default function Wellness({ navigation }) {
             </QuoteLeft>
             <ButtonCentered href="https://www.wpi.edu/student-experience/health-wellness/center-for-well-being">Visit the Wellness Center</ButtonCentered>
           </ContentSection>
-
           <ContentSection>
-
-          <View style={{ flex: 1, backgroundColor: "#f4f4f4", }}>
-              <Carousel
-                  loop
-                  width={carouselWidth}
-                  data={EOOCarouselData}
-                  height={carouselHeight}
-                  autoPlay
-                  autoPlayInterval={4000}
-                  scrollAnimationDuration={1000}
-                  renderItem={({ index }) => (
-                      <View
-                          style={{
-                              flex: 1,
-                              justifyContent: 'flex-start',
-                          }}
-                      >
-                          <ImageHeader image={EOOCarouselData[index].image}>Equal Opportunity & Outreach</ImageHeader>
-                      </View>
-                  )}
-              />
-          </View>
-
+          <ImageCarousel data={EOOCarouselData}></ImageCarousel>
             <HeaderSubtitle>
               The Office of Equal Opportunity and Outreach (Title IX) is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
             </HeaderSubtitle>
@@ -232,8 +147,6 @@ export default function Wellness({ navigation }) {
             </BracketedText>
             <ButtonCentered href="https://www.wpi.edu/offices/equal-opportunity-outreach">Visit the EEO office</ButtonCentered>
           </ContentSection>
-            
-          
           <AccordionTitle title="Off-Campus Resources">
             <ListSectionAccordion>
           <LinkListAccordion data={[
@@ -242,9 +155,7 @@ export default function Wellness({ navigation }) {
           ]} />
           </ListSectionAccordion>
           </AccordionTitle>
-
           <WellnessChecklist />
-
           <Footer />
         </View>
       </View>
@@ -257,75 +168,75 @@ export default function Wellness({ navigation }) {
 const sdccCarouselData = [
   {
     image: sdcc,
-    text: ""
+    text: "SDCC"
   },
   {
     image: sdccBuilding,
-    text: ""
+    text: "SDCC"
   },
   {
     image: sdccSession,
-    text: "Group & Individual Counseling"
+    text: "SDCC"
   },
   {
     image: sdccTraining,
-    text: "Peer Support and Training"
+    text: "SDCC"
   },
   {
     image: sdccRoomOne,
-    text: "Self Help & Online Resources"
+    text: "SDCC"
   },
 ]
 
 const healthServicesCarouselData = [
   {
     image: healthLobby,
-    text: ""
+    text: "Health Services"
   },
   {
     image: healthRoomOne,
-    text: ""
+    text: "Health Services"
   },
   {
     image: healthSeat,
-    text: ""
+    text: "Health Services"
   },
   {
     image: healthTools,
-    text: ""
+    text: "Health Services"
   },
 ]
 
 const wellbeingCarouselData = [
   {
     image: cwb,
-    text: ""
+    text: "Center for Well-Being"
   },
   {
     image: cwbLobby,
-    text: ""
+    text: "Center for Well-Being"
   },
   {
     image: cwbSeat,
-    text: ""
+    text: "Center for Well-Being"
   },
   {
     image: CWBZen,
-    text: "Relaxation Games & Activities"
+    text: "Center for Well-Being"
   },
   {
     image: cwbCoffee,
-    text: "Snacks & Tea Available"
+    text: "Center for Well-Being"
   },
 ]
 
 const EOOCarouselData = [
   {
     image: cc,
-    text: ""
+    text: "Equal Opportunity & Outreach"
   },
   {
     image: eeoDesk,
-    text: ""
+    text: "Equal Opportunity & Outreach"
   },
 ]

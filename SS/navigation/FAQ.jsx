@@ -131,9 +131,6 @@ export default function FAQ({ navigation }) {
             <QuoteLeft color="gray">
               "Be aware of your own capacity."
             </QuoteLeft>
-
-
-
           </ContentSection>
 
           <Footer />

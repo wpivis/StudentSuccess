@@ -3,16 +3,16 @@ import React from 'react'
 import { Image } from "expo-image"
 import { ScrollView } from 'react-native-gesture-handler'
 
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam, RedTextBoxes, SubHeader, TextBold, ScaledImage } from "../components/Text"
+import { HeaderRight, BracketedText, ImageHeader, PageHeader, BodyText, GrayTextBeam, RedTextBoxes, TextBold } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle, Spacer } from '../components/Layout'
-import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
+import { ContentSection, Footer, HeaderSubtitle, Spacer } from '../components/Layout'
+import { dropShadow } from '../assets/style'
 import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
-import { AccordionItem, AccordionLink, AccordionTitle, ListSectionAccordion, SectionTitleAccordion, ListPressableAccordion, LinkListAccordion } from '../components/Accordion'
+import { AccordionTitle, ListSectionAccordion, SectionTitleAccordion, ListPressableAccordion, LinkListAccordion } from '../components/Accordion'
 import { analytics } from '../firebase'
 import { logEvent } from 'firebase/analytics'
 

@@ -1,8 +1,6 @@
 import { Text, View } from "react-native";
-
 import {Image} from "expo-image";
-import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow } from "../assets/style";
-import { Component } from "react";
+import { crimson } from "../assets/style";
 
 export function DirectoryEntry(props){
   return (
