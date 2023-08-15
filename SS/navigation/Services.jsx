@@ -14,6 +14,8 @@ import { Navbar, } from '../components/Navigation'
 
 import { ImageCarousel } from '../components/Images'
 import Carousel from 'react-native-reanimated-carousel';
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 
 //images
@@ -42,6 +44,11 @@ const shuttle = require("../assets/Services/Shuttle.jpg")
 
 
 export default function Services({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "services"
+  });
+
   const width = Dimensions.get('window').width;
 
   return (

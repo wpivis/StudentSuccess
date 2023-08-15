@@ -10,12 +10,18 @@ import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 const internships = require("../assets/internships.jpg")
 const coops = require("../assets/coops.jpg")
 const cdc = require("../assets/cdc.png")
 
 export default function Development({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "development"
+  });
 
   return (
     <ScrollView>

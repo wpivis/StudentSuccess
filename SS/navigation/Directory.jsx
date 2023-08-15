@@ -12,8 +12,14 @@ import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { DirectoryEntry } from "../components/Directory"
 import { AccordionTitle, AccordionItem, AccordionLink, AccordionDirectoryEntry } from "../components/Accordion"
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 export default function Directory({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "directory"
+  });
 
   return (
     <ScrollView>

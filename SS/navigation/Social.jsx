@@ -11,6 +11,8 @@ import { AcademicsChecklist, CampusInvolvementChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import Carousel from 'react-native-reanimated-carousel'
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 const width = Dimensions.get('window').width;
 const carouselWidth = width > 800 ? 800 : width;
@@ -24,6 +26,9 @@ const hockey = require("../assets/hockey.jpg")
 
 export default function Social({ navigation }) {
 
+  logEvent(analytics, "page_view", {
+    page_location: "social"
+  });
 
   return (
     <ScrollView>

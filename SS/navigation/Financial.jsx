@@ -12,6 +12,8 @@ import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { AccordionItem, AccordionLink, AccordionTitle, ListSectionAccordion, LinkListAccordion } from '../components/Accordion'
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 const scholarships = require("../assets/financial/scholarships.jpg")
 const grants = require("../assets/financial/grants.jpg")
@@ -21,6 +23,10 @@ const bursar = require("../assets/bursar.jpg")
 const bartlett = require("../assets/financial/bartlett.jpg")
 
 export default function Financial({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "financial"
+  });
 
   return (
     <ScrollView>

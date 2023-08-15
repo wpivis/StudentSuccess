@@ -13,6 +13,8 @@ import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { AccordionItem, AccordionLink, AccordionTitle, ListSectionAccordion, SectionTitleAccordion, ListPressableAccordion, LinkListAccordion } from '../components/Accordion'
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 const imposter = require("../assets/Diversity/imposter.jpg")
 const bias = require("../assets/Diversity/bias.jpg")
@@ -21,6 +23,10 @@ const demographics = require("../assets/Diversity/demographics.png")
 
 export default function Diversity({ navigation }) {
 
+  logEvent(analytics, "page_view", {
+    page_location: "diversity"
+  });
+  
   const imageWidth = Dimensions.get("window").width > 800 ? 800 : Dimensions.get("window").width;
   const imageHeight = imageWidth * .62;
 

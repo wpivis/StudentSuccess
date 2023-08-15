@@ -12,6 +12,8 @@ import Carousel from 'react-native-reanimated-carousel';
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { ButtonCentered } from '../components/Buttons'
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 // images
 const brickWall = require("../assets/brickWall.png")
@@ -19,6 +21,9 @@ const gompeiSunset = require("../assets/gompeiSunset.jpg")
 
 export default function HomePage({ navigation }) {
 
+  logEvent(analytics, "page_view", {
+    page_location: "home"
+  });
 
   const width = Dimensions.get('window').width;
   const carouselWidth = width > 800 ? 800 : width;

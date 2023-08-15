@@ -14,6 +14,8 @@ import { Navbar, } from '../components/Navigation'
 
 import { ImageCarousel } from '../components/Images'
 import Carousel from 'react-native-reanimated-carousel'
+import { logEvent } from 'firebase/analytics'
+import { analytics } from '../firebase'
 
 // Images
 //SDCC
@@ -41,6 +43,11 @@ const cc = require("../assets/Wellness/CC.jpg")
 const eeoDesk = require("../assets/Wellness/EEODesk.jpg")
 
 export default function Wellness({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "wellness"
+  });
+
   const width = Dimensions.get('window').width;
   const carouselWidth = width > 800 ? 800 : width;
   const carouselHeight = 200;

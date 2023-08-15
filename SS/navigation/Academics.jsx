@@ -11,6 +11,8 @@ import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
+import { logEvent } from 'firebase/analytics'
+import { analytics } from '../firebase'
 
 //Images
 const makerSpace = require("../assets/Academics/makerspace.jpg")
@@ -26,6 +28,11 @@ const writingCenter = require("../assets/Academics/writingCenter.jpeg")
 const mtc = require("../assets/Academics/MTC.jpeg")
 
 export default function Academics({ navigation }) {
+
+  
+  logEvent(analytics, "page_view", {
+    page_location: "academics"
+  });
 
   return (
     <ScrollView>

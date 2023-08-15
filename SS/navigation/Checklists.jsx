@@ -8,8 +8,15 @@ import { rippleRed } from '../components/Buttons'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { Image } from 'expo-image'
+import { logEvent } from 'firebase/analytics'
+import { analytics } from '../firebase'
 
 export default function Checklists({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "checklists"
+  });
+
   return (
     <ScrollView>
       <Navbar n={navigation} title={AppDrawerItemName.Checklists} />

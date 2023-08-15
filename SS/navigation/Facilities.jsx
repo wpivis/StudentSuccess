@@ -12,6 +12,8 @@ import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
 import Carousel from 'react-native-reanimated-carousel';
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 
 //images
@@ -33,6 +35,11 @@ const arc = require("../assets/ARC.jpg")
 
 
 export default function Services({ navigation }) {
+
+    logEvent(analytics, "page_view", {
+        page_location: "facilities"
+      });
+
     const width = Dimensions.get('window').width;
     const carouselWidth = width > 800 ? 800 : width;
     const carouselHeight = 200;
