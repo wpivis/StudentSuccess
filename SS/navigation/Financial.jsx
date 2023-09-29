@@ -3,6 +3,7 @@ import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, BodyText, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
+import { Image } from "expo-image"
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
@@ -10,15 +11,22 @@ import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
-import { AccordionItem, AccordionLink, AccordionTitle } from '../components/Accordion'
+import { AccordionItem, AccordionLink, AccordionTitle, ListSectionAccordion, LinkListAccordion } from '../components/Accordion'
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 const scholarships = require("../assets/financial/scholarships.jpg")
 const grants = require("../assets/financial/grants.jpg")
 const registrar = require("../assets/financial/registrar.jpg")
 const financialaid = require("../assets/financialaid.jpg")
 const bursar = require("../assets/bursar.jpg")
+const bartlett = require("../assets/financial/bartlett.jpg")
 
 export default function Financial({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "financial"
+  });
 
   return (
     <ScrollView>
@@ -60,32 +68,43 @@ export default function Financial({ navigation }) {
               Many clubs and organizations you belong to also provide scholarships for students. 
             </GrayTextBeam>
             <AccordionTitle title="Best Scholarship Websites">
-              <AccordionLink title="Scholarships.com" href="https://www.scholarships.com/"/>
-              <AccordionLink title="Fastweb" href="https://www.fastweb.com/"/>
-              <AccordionLink title="Peterson's" href="https://www.petersons.com/"/>
-              <AccordionLink title="Bold.org" href="https://bold.org/"/>
-              <AccordionLink title="CollegeBoard" href="https://bigfuture.collegeboard.org/pay-for-college/scholarship-search#"/>
-              <AccordionLink title="GoingMerry" href="https://www.goingmerry.com/"/>
-              <AccordionLink title="Scholly" href="https://myscholly.com/"/>
-              <AccordionLink title="ScholarshipOwn" href="https://scholarshipowl.com/"/>
-              <AccordionLink title="ProFellow" href="https://www.profellow.com/"/>
-            </AccordionTitle>
-            <AccordionTitle title="Scholarships Based on Background">
-              <AccordionLink title="Forbes 10 Scholarships for Minorities" href="https://www.forbes.com/advisor/student-loans/scholarships-for-minorities/"/>
-              <AccordionLink title="LGBTQIA+ Scholarships" href="https://www.bestcolleges.com/resources/lgbtq-scholarships/"/>
-              <AccordionLink title="Women in STEM" href="https://www.bestcolleges.com/resources/women-in-stem-scholarships/"/>
-              <AccordionLink title="Native Americans" href="https://www.nativeforward.org/our-impact/"/>
-              <AccordionLink title="Asian Americans" href="https://scholaroo.com/asian-american-student-scholarships/"/>
-              <AccordionLink title="International Students" href="https://www.bestcolleges.com/resources/international-student-scholarships/"/>
-              <AccordionLink title="Hispanic and Latino/x" href="https://www.bestcolleges.com/resources/hispanic-latino-scholarships/"/>
-              <AccordionLink title="First Generation Students" href="https://scholarships360.org/scholarships/first-generation-college-student-scholarships/"/>
-              <AccordionLink title="STEM Scholarships" href="https://thescholarshipsystem.com/blog-for-students-families/34-stem-scholarships-to-apply-for-now/"/>
-            </AccordionTitle>
+            <ListSectionAccordion>
+          <LinkListAccordion data={[
+            {key: 'Scholarships.com', href: 'https://www.scholarships.com/'},
+            {key: 'Fastweb', href: 'https://www.fastweb.com/'},
+            {key: "Peterson's", href: 'https://www.petersons.com/'},
+            {key: 'Bold.org', href: 'https://bold.org/'},
+            {key: 'CollegeBoard', href: 'https://bigfuture.collegeboard.org/pay-for-college/scholarship-search#'},
+            {key: 'GoingMerry', href: 'https://www.goingmerry.com/'},
+            {key: 'Scholly', href: 'https://myscholly.com/'},
+            {key: 'ScholarshipOwn', href: 'https://scholarshipowl.com/'},
+            {key: 'ProFellow', href: 'https://www.profellow.com/'},
+            
+          ]} />
+          </ListSectionAccordion>
+          </AccordionTitle>
+
+          <AccordionTitle title="Scholarships Based on Background">
+            <ListSectionAccordion>
+          <LinkListAccordion data={[
+            {key: 'Forbes 10 Scholarships for Minorities', href: 'https://www.forbes.com/advisor/student-loans/scholarships-for-minorities/'},
+            {key: 'LGBTQIA+ Scholarships', href: 'https://www.bestcolleges.com/resources/lgbtq-scholarships/'},
+            {key: 'Women in STEM', href: 'https://www.bestcolleges.com/resources/women-in-stem-scholarships/'},
+            {key: 'Native Americans', href: 'https://www.nativeforward.org/our-impact/'},
+            {key: 'Asian Americans', href: 'https://scholaroo.com/asian-american-student-scholarships/'},
+            {key: 'International Students', href: 'https://www.bestcolleges.com/resources/international-student-scholarships/'},
+            {key: 'Hispanic and Latino/x', href: 'https://www.bestcolleges.com/resources/hispanic-latino-scholarships/'},
+            {key: 'First Generation Students', href: 'https://scholarships360.org/scholarships/first-generation-college-student-scholarships/'},
+            {key: 'STEM Scholarships', href: 'https://thescholarshipsystem.com/blog-for-students-families/34-stem-scholarships-to-apply-for-now/'},
+            
+          ]} />
+          </ListSectionAccordion>
+          </AccordionTitle>
           </ContentSection>
 
           <ContentSection>
             <HeaderRight>
-              Scholarships for Pell Grant Elligible Students
+              Pell Grant Scholarships
             </HeaderRight>
             <LightGrayPlatform>
               <BodyText>
@@ -118,7 +137,7 @@ export default function Financial({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <ImageHeader image={financialaid}>Financial Aid Office</ImageHeader>
+            <ImageHeader image={bartlett}>Financial Aid Office</ImageHeader>
             <HeaderSubtitle>
               The financial aid office at WPI plays a vital role in helping students secure the funds they need for their education.
             </HeaderSubtitle>

@@ -2,13 +2,16 @@ import * as React from 'react';
 import { View, StyleSheet, Text, FlatList, TouchableOpacity, Linking } from 'react-native';
 import { Image } from "expo-image"
 import { List } from 'react-native-paper';
-import { DirectoryEntry } from './Directory';
-import { crimson, textBlockMaxWidth } from '../assets/style';
+import { crimson } from '../assets/style';
 import { BodyText } from './Text';
+import { Pressable } from 'react-native';
 
 const WPICrimson = "#AC2B37";
 const WPIGray = '#A9B0B7';
 const externalLink = require("../assets/externalLink.png")
+const arrow = require("../assets/arrow.png")
+const arrowDown = require("../assets/arrowDown.png")
+
 
 export function AccordionTitle ({title, isExpanded, children}) {
   const [expanded, setExpanded] = React.useState(isExpanded);
@@ -17,11 +20,20 @@ export function AccordionTitle ({title, isExpanded, children}) {
   const childElements = React.Children.map(children, child => {
     return <React.Fragment>{child}</React.Fragment>;
   });
-  return ( <View>
-  <List.Accordion titleStyle={{ color: 'white' }} style = {styles.heading} title= {title} expanded={expanded} onPress={handlePress}>
-    {childElements}
-  </List.Accordion>
-</View>
+  return ( 
+    <>
+  <Pressable onPress={handlePress}>
+      <View style = {{ transform: [{rotateY: 20}],height:44, flexDirection:'row', alignItems:'center', justifyContent:'space-between', backgroundColor:crimson, paddingHorizontal:20}} title= {title}>
+      <Text style={styles.heading}>{title}</Text>
+      {expanded && <Image style={{ height:14, width:14}} source={arrowDown}/>}
+      {!expanded && <Image style={{ height:14, width:14}} source={arrow}/>}
+      
+      </View>
+  </Pressable>
+    <View>
+      {expanded && childElements}
+    </View>
+    </>
   )
 };
 
@@ -60,7 +72,6 @@ export function ListPressableAccordion(props){
       <View>
         <FlatList
           data={props.data}
-          // renderItem={({item}) => <Text style={{fontSize:16, paddingLeft:10,paddingBottom:6}}>• {item.key}</Text>}
           renderItem={({ item }) => (
               <TouchableOpacity onPress={() => item.href ? handleLinkPress(item.href): null}>
             <View style={{paddingTop:0,marginVertical:0, borderWidth: item.href ? 2:0, borderColor:crimson, borderRadius:6, flexDirection: 'row', alignItems: 'center', justifyContent:"space-between", maxWidth:250}}>
@@ -80,7 +91,6 @@ export function ListPressableAccordion(props){
       <View>
         <FlatList
           data={props.data}
-          // renderItem={({item}) => <Text style={{fontSize:16, paddingLeft:10,paddingBottom:6}}>• {item.key}</Text>}
           renderItem={({ item }) => (
               <TouchableOpacity onPress={() => item.href ? handleLinkPress(item.href): null}>
             <View style={{paddingTop:0,marginVertical:0, borderWidth: item.href ? 2:0, borderColor:crimson, borderRadius:6, flexDirection: 'row', alignItems: 'center', justifyContent:"space-between", maxWidth:250}}>
@@ -113,7 +123,6 @@ export function ListAccordion(props){
       <View>
         <FlatList
           data={props.data}
-          // renderItem={({item}) => <Text style={{fontSize:16, paddingLeft:10,paddingBottom:6}}>• {item.key}</Text>}
           renderItem={({ item }) => (
             <View style={{marginBottom:7}}>
               
@@ -159,6 +168,8 @@ const styles = StyleSheet.create({
   heading: {
     backgroundColor: WPICrimson,
     paddingBottom: 5,
+    color: "white",
+    fontSize:16
   },
   item: {
     borderBottomWidth: 1,

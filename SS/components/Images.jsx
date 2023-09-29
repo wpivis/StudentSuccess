@@ -24,7 +24,7 @@ export function ImageCarousel(props){
                   height={carouselHeight}
                   autoPlay
                   autoPlayInterval={4000}
-                  scrollAnimationDuration={3000}
+                  scrollAnimationDuration={1000}
                   renderItem={({ index }) => (
                     <View
                       style={{

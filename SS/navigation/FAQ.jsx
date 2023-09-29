@@ -10,11 +10,17 @@ import { ImageContainer } from '../components/Images'
 import { AcademicsChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 const faq = require("../assets/worcesterSkyline.jpeg")
 const brickWall = require("../assets/brickWall.png")
 
 export default function FAQ({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "faq"
+  });
 
   return (
     <ScrollView>
@@ -125,9 +131,6 @@ export default function FAQ({ navigation }) {
             <QuoteLeft color="gray">
               "Be aware of your own capacity."
             </QuoteLeft>
-
-
-
           </ContentSection>
 
           <Footer />

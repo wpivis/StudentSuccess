@@ -7,10 +7,12 @@ import { ButtonBlock, ButtonCentered } from "../components/Buttons"
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, RedPlatform, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
 import { ImageContainer } from '../components/Images'
-import { AcademicsChecklist } from './Checklists'
+import { AcademicsChecklist, CampusInvolvementChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import Carousel from 'react-native-reanimated-carousel'
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 const width = Dimensions.get('window').width;
 const carouselWidth = width > 800 ? 800 : width;
@@ -24,6 +26,9 @@ const hockey = require("../assets/hockey.jpg")
 
 export default function Social({ navigation }) {
 
+  logEvent(analytics, "page_view", {
+    page_location: "social"
+  });
 
   return (
     <ScrollView>
@@ -51,10 +56,15 @@ export default function Social({ navigation }) {
           <ContentSection>
             <ImageHeader image={connections}>Connections</ImageHeader>
             <HeaderSubtitle>
-              How did other WPI students jumpstart their social lives at WPI? Many students emphasized the importance of Connections in their experiences integrating at WPI.
+              Many students emphasized the importance of Connections in their experiences integrating at WPI.
             </HeaderSubtitle>
             <ButtonCentered href="https://www.wpi.edu/offices/diversity/success-programs/connections">See more on Connections</ButtonCentered>
             <ContentSection>
+              <ContentSection>
+                <BracketedText>
+                  How did other WPI students jumpstart their social lives at WPI? 
+                </BracketedText>
+              </ContentSection>
               <LightGrayPlatform>
                 <Carousel
                   loop
@@ -81,10 +91,10 @@ export default function Social({ navigation }) {
             <ContentSection>
               <GrayTextBeam>Make sure to check out the activities fair to see what clubs WPI has to offer.</GrayTextBeam>
               <GrayTextBeam>ODIME offers a number of different identity-based affinity groups.</GrayTextBeam>
-              <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources">Visit ODIME Affinity Groups</ButtonCentered>
-              <QuoteLeft color="gray">
+              <QuoteLeft color="red">
                 "Definitely try out other clubs, not even just the big ones... don't be afraid to try the smaller clubs. That's where I met my favorite people ever."
               </QuoteLeft>
+              <ButtonCentered href="https://www.wpi.edu/offices/diversity/resources">Visit ODIME Affinity Groups</ButtonCentered>
             </ContentSection>
           </ContentSection>
 
@@ -186,6 +196,8 @@ export default function Social({ navigation }) {
 
           </ContentSection>
 
+          <CampusInvolvementChecklist />
+
           <Footer />
         </View>
       </View>
@@ -196,7 +208,7 @@ export default function Social({ navigation }) {
 }
 
 function CarouselItemText(props) {
-  return <Text style={{ fontSize: 16, marginBottom: 7 }}>"{props.children}"</Text>
+  return <Text style={{ fontSize: 16, marginBottom: 7, textAlign: "center" }}>"{props.children}"</Text>
 }
 
 const carouselItems = [
@@ -213,7 +225,7 @@ const carouselItems = [
         <CarouselItemText>Joining clubs</CarouselItemText>
         <CarouselItemText>FIGSA</CarouselItemText>
         <CarouselItemText>NSBE</CarouselItemText>
-        <CarouselItemText>Haunted Higgins House</CarouselItemText>
+        <CarouselItemText>Haunted Higgins <br />House</CarouselItemText>
         <CarouselItemText>Cheese Club</CarouselItemText>
       </View>
     </View>

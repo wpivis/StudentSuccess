@@ -12,6 +12,8 @@ import Carousel from 'react-native-reanimated-carousel';
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { ButtonCentered } from '../components/Buttons'
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 // images
 const brickWall = require("../assets/brickWall.png")
@@ -19,6 +21,9 @@ const gompeiSunset = require("../assets/gompeiSunset.jpg")
 
 export default function HomePage({ navigation }) {
 
+  logEvent(analytics, "page_view", {
+    page_location: "home"
+  });
 
   const width = Dimensions.get('window').width;
   const carouselWidth = width > 800 ? 800 : width;
@@ -46,6 +51,7 @@ export default function HomePage({ navigation }) {
             <HeaderSubtitle>
               Our Values include Respect, Community, Inclusion, Innovation, and Achievement.
             </HeaderSubtitle>
+            <CenteredTitle>What is the Student Success Handbook?</CenteredTitle>
             <BodyText>
               The Student Success Handbook is designed to ensure that all students, including those from diverse backgrounds, can access and benefit from the abundance 
               of fundamental resources on campus that foster student success. We emphasize various strategies and tools tailored to support the diverse student body, 
@@ -59,7 +65,7 @@ export default function HomePage({ navigation }) {
 
           </ContentSection>
           <CenteredTitle>Welcome Letters</CenteredTitle>
-            <AccordionTitle title="Assistant VP, DEIB">
+            <AccordionTitle isExpanded={false} title="Assistant VP, DEIB">
             <BodyText>Dear WPI Students,</BodyText>
               <BodyText>As we approach the upcoming academic year, I'm thrilled to introduce the Student Success app, designed to support your success and well-being on campus. This app complements Gompei's Guide and provides essential information to enhance your experience during your time at WPI.</BodyText>
               <BodyText>To help you make the most of your journey as a student, here are some valuable tips:</BodyText>
@@ -174,6 +180,19 @@ export default function HomePage({ navigation }) {
                       ]} />
              </ListSectionAccordion>
             </AccordionTitle>
+            <AccordionTitle title='Acknowledgments'>
+              <ListSectionAccordion>
+                <BodyText>We extend our heartfelt gratitude to the individuals who contributed to the realization of "The Student Success Handbook" at Worcester Polytechnic Institute. This collaborative effort has been a true testament to the power of teamwork, dedication, and a shared commitment to fostering inclusivity and student success.</BodyText>
+                <BodyText>First and foremost, we would like to express our sincere appreciation to our dynamic team of app developers - Megan Aloise (Computer Science ‘23), Joe Dobbelaar (Computer Science ‘24), and Randy Dyer (Computer Science ‘24). Your determination, innovative thinking, and technical expertise were instrumental in bringing this vision to life. Your coding, designing, and refining have resulted in an app that will impact the lives of countless students.</BodyText>
+                <BodyText>Our gratitude extends to Caroline (B.S. Physics, B.A. Environmental and Sustainability Studies ‘22; MS Science and Technology for Innovation in Global Development ‘23) , whose insight and dedication played a pivotal role in curating the content for the app. Your thorough research, interviews, and passion for enhancing student experiences have contributed immensely to the depth and relevance of the handbook's resources.</BodyText>
+                <BodyText>We would also like to thank our esteemed professors, Crystal Brown and Hermine Vedogbeton, whose guidance and expertise were invaluable throughout this project. Your commitment to academic excellence, combined with your efforts in curating and validating the content, have ensured that The Student Success Handbook is a comprehensive and cohesive resource.</BodyText>
+                <BodyText>A special note of appreciation goes to our esteemed funder, Tony Laing, Assistant VP for Diversity, Equity, Inclusion, and Belonging. Your visionary support and belief in the importance of accessible resources for all students have been integral to this project's success. Your dedication to fostering a diverse and inclusive campus environment aligns seamlessly with the ethos of the handbook.</BodyText>
+                <BodyText>Finally, we extend our gratitude to the broader WPI community - faculty, staff, and students - whose valuable insights and feedback have shaped the development of this app. Your input has been invaluable in refining the content and ensuring its relevance to the diverse needs of our student body.</BodyText>
+                <BodyText>This app, "The Student Success Handbook," stands as a testament to the collaborative spirit and shared commitment of individuals from various backgrounds to empower students and promote their academic and personal growth. As we move forward, we remain steadfast in our dedication to creating an environment that champions diversity, equity, inclusion, and belonging, and we are excited to witness the positive impact of this app on the WPI community and beyond.</BodyText>
+                <BodyText>With gratitude, <br />Megan Aloise <br />Joe Dobbelaar  <br />Randy Dyer <br />Caroline Jaeger <br />Crystal Brown <br />Hermine Vedogbeton </BodyText>
+                <BodyText></BodyText>
+              </ListSectionAccordion>
+            </AccordionTitle>
           </ContentSection>
           <ContentSection>
             
@@ -202,7 +221,7 @@ class CarouselQuoteCard extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{marginBottom: 7}}>
         {this.props.children}
       </View>
     )
@@ -217,7 +236,7 @@ class CarouselTitleCard extends Component {
 
   static Body(props) {
     return (
-      <View style={{ marginTop: 7, width: "80%" }}>
+      <View style={{ marginTop: 7, marginBottom: 7, width: "80%" }}>
         <BracketedText noMargin>{props.children}</BracketedText>
       </View>
     )
@@ -226,8 +245,7 @@ class CarouselTitleCard extends Component {
   render() {
     return (
       <View
-        style={{
-          flex: 1,
+      style={{
           justifyContent: 'center',
           alignItems: "center"
         }}
@@ -242,7 +260,7 @@ const carouselItems = [
   (
     <CarouselTitleCard>
       <CarouselTitleCard.Title>
-        Contentment, Happiness, and Balance
+        Contentment, Happiness, & Balance
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
         Individual happiness and contentment rather than external validation are important for success. Finding balance in 
@@ -314,7 +332,7 @@ const carouselItems = [
   (
     <CarouselTitleCard>
       <CarouselTitleCard.Title>
-        Financial Stability and Career Satisfaction
+        Career & Financial well-being
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
         Although money is not the end all be all, the ability to support oneself and their family is a key aspect of success for underrepresented 

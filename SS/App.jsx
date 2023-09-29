@@ -35,7 +35,7 @@ import Directory from './navigation/Directory';
  */
 function App() {
 
-  const [checklistsState, setChecklistsState] = useState(defaultChecklistdata);
+  const [checklistsState, setChecklistsState] = useState(localStorage.getItem("wpi-student-success-checklists") ? JSON.parse(localStorage.getItem("wpi-student-success-checklists")) : defaultChecklistdata);
   const [fontsLoaded] = useFonts({
     'MyriadProSemibold': require('./assets/fonts/MyriadProSemibold.ttf'),
   });
@@ -48,7 +48,7 @@ function App() {
           <StatusBar />
           <NavigationContainer>
             <AppDrawer.Navigator
-              initialRouteName={AppDrawerItemName.Academics}
+              initialRouteName={AppDrawerItemName.Welcome}
               screenOptions={{
                 headerTintColor: "#FFFFFF",
                 drawerStyle: {

@@ -1,18 +1,20 @@
 import { View, Text, Button, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
+import { BodyText, BracketedText, ImageHeader, PageHeader, QuoteRight, QuoteLeft } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
-import { AccordionTitle, AccordionLink, ListSectionAccordion } from "../components/Accordion"
+import { AccordionTitle, AccordionLink, ListSectionAccordion, LinkListAccordion } from "../components/Accordion"
+import { ImageCarousel } from '../components/Images'
 
 import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
-import { ImageContainer } from '../components/Images'
-import { AcademicsChecklist } from './Checklists'
+import { AcademicsChecklist, WellnessChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
-import { ImageCarousel } from '../components/Images'
+import Carousel from 'react-native-reanimated-carousel'
+import { logEvent } from 'firebase/analytics'
+import { analytics } from '../firebase'
 
 // Images
 //SDCC
@@ -40,7 +42,14 @@ const cc = require("../assets/Wellness/CC.jpg")
 const eeoDesk = require("../assets/Wellness/EEODesk.jpg")
 
 export default function Wellness({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "wellness"
+  });
+
   const width = Dimensions.get('window').width;
+  const carouselWidth = width > 800 ? 800 : width;
+  const carouselHeight = 200;
 
   return (
     <ScrollView>
@@ -62,8 +71,9 @@ export default function Wellness({ navigation }) {
              <BodyText>Charlie Morse <br />Dean of Student Wellness <br />WPI</BodyText>
             </LightGrayPlatform>
           <ContentSection>
-            <HeaderRight>SDCC</HeaderRight>
-            <ImageCarousel data={sdccCarouselData}></ImageCarousel>
+
+          <ImageCarousel data={sdccCarouselData}></ImageCarousel>
+
             <HeaderSubtitle>Suicide and crisis hotline: 988</HeaderSubtitle>
             <QuoteRight color="red">
               <Text>“My counselor really listened to my concerns, related to my problems, and validated my feelings.”</Text>
@@ -86,9 +96,8 @@ export default function Wellness({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <HeaderRight>Health Services</HeaderRight>
-            <ImageCarousel data={healthServicesCarouselData}></ImageCarousel>
-
+            
+          <ImageCarousel data={healthServicesCarouselData}></ImageCarousel>
             <HeaderSubtitle>
               WPI Health Services provides comprehensive, cost-free healthcare.
             </HeaderSubtitle>
@@ -112,9 +121,8 @@ export default function Wellness({ navigation }) {
           </ContentSection>
 
           <ContentSection>
-            <HeaderRight>Center for Well-Being</HeaderRight>
-            <ImageCarousel data={wellbeingCarouselData}></ImageCarousel>
 
+          <ImageCarousel data={wellbeingCarouselData}></ImageCarousel>
             <HeaderSubtitle>
               The Center for Well-Being at WPI is a sanctuary for students.
             </HeaderSubtitle>
@@ -128,10 +136,8 @@ export default function Wellness({ navigation }) {
             </QuoteLeft>
             <ButtonCentered href="https://www.wpi.edu/student-experience/health-wellness/center-for-well-being">Visit the Wellness Center</ButtonCentered>
           </ContentSection>
-
           <ContentSection>
-            <HeaderRight>Equal Opportunity & Outreach</HeaderRight>
-            <ImageCarousel data={EOOCarouselData}></ImageCarousel>
+          <ImageCarousel data={EOOCarouselData}></ImageCarousel>
             <HeaderSubtitle>
               The Office of Equal Opportunity and Outreach (Title IX) is a dedicated resource committed to supporting individuals in situations involving sexual misconduct.
             </HeaderSubtitle>
@@ -141,17 +147,18 @@ export default function Wellness({ navigation }) {
             </BracketedText>
             <ButtonCentered href="https://www.wpi.edu/offices/equal-opportunity-outreach">Visit the EEO office</ButtonCentered>
           </ContentSection>
-            
-          
           <AccordionTitle title="Off-Campus Resources">
-            <AccordionLink title="Pathways for Change" href="https://pathwaysforchange.help/" />
-            <AccordionLink title="YWCA Daybreak" href="https://ywcacm.org/domestic-violence/" />
+            <ListSectionAccordion>
+          <LinkListAccordion data={[
+            {key: 'Pathways for Change', href: 'https://pathwaysforchange.help/'},
+            {key: 'YWCA Daybreak', href: 'https://ywcacm.org/domestic-violence/'},
+          ]} />
+          </ListSectionAccordion>
           </AccordionTitle>
-
+          <WellnessChecklist />
           <Footer />
         </View>
       </View>
-
 
     </ScrollView>
 
@@ -161,75 +168,75 @@ export default function Wellness({ navigation }) {
 const sdccCarouselData = [
   {
     image: sdcc,
-    text: ""
+    text: "SDCC"
   },
   {
     image: sdccBuilding,
-    text: ""
+    text: "SDCC"
   },
   {
     image: sdccSession,
-    text: "Group & Individual Counseling"
+    text: "SDCC"
   },
   {
     image: sdccTraining,
-    text: "Peer Support and Training"
+    text: "SDCC"
   },
   {
     image: sdccRoomOne,
-    text: "Self Help & Online Resources"
+    text: "SDCC"
   },
 ]
 
 const healthServicesCarouselData = [
   {
     image: healthLobby,
-    text: ""
+    text: "Health Services"
   },
   {
     image: healthRoomOne,
-    text: ""
+    text: "Health Services"
   },
   {
     image: healthSeat,
-    text: ""
+    text: "Health Services"
   },
   {
     image: healthTools,
-    text: ""
+    text: "Health Services"
   },
 ]
 
 const wellbeingCarouselData = [
   {
     image: cwb,
-    text: ""
+    text: "Center for Well-Being"
   },
   {
     image: cwbLobby,
-    text: ""
+    text: "Center for Well-Being"
   },
   {
     image: cwbSeat,
-    text: ""
+    text: "Center for Well-Being"
   },
   {
     image: CWBZen,
-    text: "Relaxation Games & Activities"
+    text: "Center for Well-Being"
   },
   {
     image: cwbCoffee,
-    text: "Snacks & Tea Available"
+    text: "Center for Well-Being"
   },
 ]
 
 const EOOCarouselData = [
   {
     image: cc,
-    text: ""
+    text: "Equal Opportunity & Outreach"
   },
   {
     image: eeoDesk,
-    text: ""
+    text: "Equal Opportunity & Outreach"
   },
 ]

@@ -1,19 +1,22 @@
 import { View, Text, Button } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam } from "../components/Text"
-import { ButtonBlock, ButtonCentered } from "../components/Buttons"
+import { PageHeader} from "../components/Text"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, DirectorySection } from '../components/Layout'
-import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
-import { ImageContainer } from '../components/Images'
-import { AcademicsChecklist } from './Checklists'
+import { ContentSection, Footer } from '../components/Layout'
+import { dropShadow } from '../assets/style'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { DirectoryEntry } from "../components/Directory"
-import { AccordionTitle, AccordionItem, AccordionLink, AccordionDirectoryEntry } from "../components/Accordion"
+import { AccordionTitle } from "../components/Accordion"
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 export default function Directory({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "directory"
+  });
 
   return (
     <ScrollView>

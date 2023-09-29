@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Dimensions } from "react-native";
 
 import { Image } from "expo-image";
 import { crimson, textSecondary, dropShadowDark, dropShadowLeft, dropShadow, textBlockMaxWidth } from "../assets/style";
@@ -40,7 +40,7 @@ export function HeaderRight(props) {
           right: 0
         }}
       >
-        <Text style={{ color: crimson, fontSize: 22, fontWeight: "bold" }}>
+        <Text style={{ color: crimson, fontSize: 20, fontWeight: "bold" }}>
           {props.children}
         </Text>
       </View>
@@ -48,9 +48,10 @@ export function HeaderRight(props) {
   )
 }
 
-export function SubHeader(props){
+export function SubHeader(props) {
   return (
-      <Text style={{ fontWeight: "bold", fontSize: 20, color:crimson, paddingVertical:12, paddingHorizontal:10}}>{props.children}</Text>
+
+    <Text style={{ fontWeight: "bold", fontSize: 20, color: crimson, paddingVertical: 12, paddingHorizontal: 10 }}>{props.children}</Text>
   )
 }
 
@@ -218,8 +219,8 @@ export function QuoteRight(props) {
     switch (props.color) {
       case "red":
         return <Image source={bubblePointRed} style={{ height: 20, width: 20, marginLeft: -10 }} />
-      // case "white":
-      //   return <Image source={bubblePointWhite} style={{ height: 20, width: 20, marginLeft: -10 }} />
+      case "white":
+        return <Image source={bubblePointWhite} style={{ height: 20, width: 20, marginLeft: -10 }} />
       case "gray":
         return <Image source={bubblePointGray} style={{ height: 20, width: 20, marginLeft: -10 }} />
     }
@@ -229,8 +230,8 @@ export function QuoteRight(props) {
     switch (props.color) {
       case "red":
         return crimson;
-      // case "white":
-      //   return white;
+      case "white":
+        return "white";
       case "gray":
         return "#e4e4e4";
     }
@@ -287,8 +288,8 @@ export function QuoteLeft(props) {
     switch (props.color) {
       case "red":
         return <Image source={bubblePointRedLeft} style={{ height: 20, width: 20, }} />
-      // case "white":
-      //   return <Image source={bubblePointWhiteLeft} style={{ height: 20, width: 20 }} />
+      case "white":
+        return <Image source={bubblePointWhiteLeft} style={{ height: 20, width: 20 }} />
       case "gray":
         return <Image source={bubblePointGrayLeft} style={{ height: 20, width: 20 }} />
     }
@@ -298,8 +299,8 @@ export function QuoteLeft(props) {
     switch (props.color) {
       case "red":
         return crimson;
-      // case "white":
-      //   return white;
+      case "white":
+        return "white";
       case "gray":
         return "#e4e4e4";
     }
@@ -371,7 +372,7 @@ export function BodyText(props) {
   if (props.red) { Platform = RedPlatform; }
 
   return (
-    <View style={{ marginBottom: 7 }}>
+    <View style={{ marginBottom: 7, marginTop: 7 }}>
       <Platform maxWidth={textBlockMaxWidth}>
         <Text>{props.children}</Text>
       </Platform>
@@ -388,51 +389,103 @@ export function GrayTextBeam(props) {
 }
 
 
-export function TextBold(props){
-  return(
-    <Text style={{fontWeight:600}}>{props.children}</Text>
+export function TextBold(props) {
+  return (
+    <Text style={{ fontWeight: 600 }}>{props.children}</Text>
   )
-  
+
 }
 
-export function RedTextBoxes(props) {
+export function ScaledImage(props) {
 
   const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 20,
+    }
+  });
+
+  const win_width = Dimensions.get('window').width;
+
+  const width = Math.min(win_width * 0.8, 800 * 0.9)
+  return (
+
+    <View
+      style={[
+        styles.container,
+        {
+          flexDirection: 'row',
+          width: "100%",
+          gap: 10,
+          justifyContent: "space-around",
+          //marginBottom: 80,
+          paddingBottom: 100,
+        },
+      ]}>
+      <Image source={props.img} style={{
+        width: width,
+        height: width / 1.7,
+        // paddingBottom: 100,
+      }} /></View>);
+
+
+}
+
+export function RedTextBoxes(props) {
+
+  const width = Dimensions.get('window').width;
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      paddingTop: 20,
     },
     box: {
-      width: 250,
-      height: 250,
-      padding: 200,
+      width: width * 0.25,
+      //height: window.screen.width * 0.3,
+      maxWidth: 800 * 0.3,
+      height: width * 0.25,
+      maxHeight: 800 * 0.3,
     },
   });
+
+  const bg1 = 0;
+  const txt1 = 1;
+  const bg2 = 2;
+  const txt2 = 3;
+
+  function getColors() {
+    if (props.type == 1) {
+      return [crimson, "#ffffff", "#e4e4e4", crimson]
+    } else if (props.type == 2) {
+      return ["#e4e4e4", crimson, crimson, "#ffffff"]
+    }
+  }
+
+  const fontSize = Math.min(styles.box.width * 0.16, 800 * 0.3 * 0.16)
 
   return (
     <View
       style={[
         styles.container,
         {
-          // Try setting `flexDirection` to `"row"`.
           flexDirection: 'row',
+          width: "100%",
           gap: 10,
           justifyContent: "space-around",
-          //marginBottom: 80,
-          paddingBottom: 10,
         },
       ]}>
 
-      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "space-around", backgroundColor: crimson, textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
-        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#ffffff" }}>{props.text[0]}</Text>
+      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : fontSize), color: getColors()[txt1] }}>{props.text[0]}</Text>
       </View>
-      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "space-around", backgroundColor: "#e4e4e4", textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
-        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#dc143c" }}>{props.text[1]}</Text>
+      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg2], textAlign: "center", paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : fontSize), color: getColors()[txt2] }}>{props.text[1]}</Text>
       </View>
-      <View style={[styles.box, { backgroundColor: crimson, alignItems: "center", justifyContent: "space-around", backgroundColor: crimson, textAlign: "center", paddingTop: 7, paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
-        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : 24), color: "#ffffff" }}>{props.text[2]}</Text>
+      <View style={[styles.box, { alignItems: "center", justifyContent: "space-around", backgroundColor: getColors()[bg1], textAlign: "center", paddingBottom: 7, paddingLeft: 14, paddingRight: 14 }]}>
+        <Text style={{ fontWeight: "bold", fontSize: (props.fontSize ? props.fontSize : fontSize), color: getColors()[txt1] }}>{props.text[2]}</Text>
       </View>
-    </View>
+    </View >
   );
 
 };

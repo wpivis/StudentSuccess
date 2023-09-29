@@ -1,8 +1,9 @@
-import { View, Text, Button, Dimensions, Image } from 'react-native'
+import { View, Text, Button, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
 import { ButtonBlock, ButtonCentered } from "../components/Buttons"
+import { Image } from "expo-image"
 
 import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
 import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
@@ -13,6 +14,8 @@ import { Navbar, } from '../components/Navigation'
 
 import { ImageCarousel } from '../components/Images'
 import Carousel from 'react-native-reanimated-carousel';
+import { analytics } from '../firebase'
+import { logEvent } from 'firebase/analytics'
 
 
 //images
@@ -41,6 +44,11 @@ const shuttle = require("../assets/Services/Shuttle.jpg")
 
 
 export default function Services({ navigation }) {
+
+  logEvent(analytics, "page_view", {
+    page_location: "services"
+  });
+
   const width = Dimensions.get('window').width;
 
   return (
@@ -58,7 +66,6 @@ export default function Services({ navigation }) {
             <BodyText>My name is Matt Foster, he/him/his, and I am the Director of Residential Services. I have been at WPI for over a decade and love the community that is WPI. My few pieces of advice are included here to help you in your success. Always be open to asking any questions you have of any staff or faculty member because everyone is willing to help in any way they can. Take the time to talk with your roommates/project team members/ group members/etc. about anything going on or if you have a conflict before it gets too far and your experience suffers because you feel like you can’t handle it. Lastly, get involved and join something on campus that you are passionate about!</BodyText>
             <BodyText>Feel free to say hi to me if you see me on campus and reach out to our office anytime you have a question!</BodyText>
             </LightGrayPlatform>
-            <HeaderRight>Housing & Residential</HeaderRight>
             <ImageCarousel data={HousingCarouselData}></ImageCarousel>
             <HeaderSubtitle>WPI Residential Services provides valuable information about the residential halls on campus and offers helpful tips for those looking for off-campus apartments.</HeaderSubtitle>
             <View style={{ paddingTop: 10 }}>
@@ -110,39 +117,39 @@ const HousingCarouselData = [
   },
   {
     image: daniels,
-    text: "Daniels Hall"
+    text: "Housing: Daniels Hall"
   },
   {
     image: founders,
-    text: "Founders Hall"
+    text: "Housing: Founders Hall"
   },
   {
     image: institute,
-    text: "Institute Hall"
+    text: "Housing: Institute Hall"
   },
   {
     image: messenger,
-    text: "Messenger Hall"
+    text: "Housing: Messenger Hall"
   },
   {
     image: morgan,
-    text: "Morgan Hall"
+    text: "Housing: Morgan Hall"
   },
   {
     image: sanford,
-    text: "Sanford Riley Hall"
+    text: "Housing: Sanford Riley Hall"
   },
   {
     image: stodd,
-    text: "Stoddard Complex"
+    text: "Housing: Stoddard Complex"
   },
   {
     image: trowbridge,
-    text: "Trowbridge House"
+    text: "Housing: Trowbridge House"
   },
   {
     image: wachusett,
-    text: "Wachusett House"
+    text: "Housing: Wachusett House"
   },
 ]
 
@@ -153,15 +160,15 @@ const DiningCarouselData = [
   },
   {
     image: halal,
-    text: "Dining: Halal Shack"
+    text: "Dining Services"
   },
   {
     image: starbucks,
-    text: "Dining: Starbucks"
+    text: "Dining Services"
   },
   {
     image: loveFood,
-    text: "Dining: Made With Love"
+    text: "Dining Services"
   },
   {
     image: veggies,
