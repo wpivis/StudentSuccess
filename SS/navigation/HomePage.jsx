@@ -280,7 +280,7 @@ const carouselItems = [
         Learning and Growth
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-      Success is about learning from failures and striving towards your goals. Success is linked to personal growth and development. This could be developing communication skills, social skills, or taking time to learn about things that interest you.
+      Success entails learning from failures, personal development, and working towards your goals. Personal development can include communication skills, social skills, and time management.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
