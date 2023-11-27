@@ -53,10 +53,7 @@ export default function HomePage({ navigation }) {
             </HeaderSubtitle>
             <CenteredTitle>What is the Student Success Handbook?</CenteredTitle>
             <BodyText>
-              The Student Success Handbook is designed to ensure that all students, including those from diverse backgrounds, can access and benefit from the abundance 
-              of fundamental resources on campus that foster student success. We emphasize various strategies and tools tailored to support the diverse student body, 
-              making it easier for incoming students to find the right resources for their unique needs at WPI. Here, we suggest strategies and available tools that 
-              promote the success of our diverse student body - there is something for everyone at WPI if you know where to look!
+            The Student Success Handbook is designed to ensure that all students can access the resources on campus that foster student success. We emphasize various strategies and tools tailored to support the diverse student body, allowing incoming students to find the right resources. There is something for everyone at WPI if you know where to look!
             </BodyText>
             <ButtonCentered href="https://www.wpi.edu/sites/default/files/2023-04/GompeisGuide_2022_DIgital.pdf">Visit Gompei's Guide</ButtonCentered>
             <ButtonCentered href="https://www.wpi.edu/student-experience/resources">Student Resources</ButtonCentered>
@@ -132,8 +129,7 @@ export default function HomePage({ navigation }) {
           <ContentSection>
             <ImageHeader image={brickWall}>Different Definitions of Success</ImageHeader>
             <HeaderSubtitle>
-              We interviewed diverse students such as BIPOC, LGBTQIA+, women, people with disabilities, and others at WPI to ask them about how they define success.
-              From their responses, we developed some key takeaways and quotes in their own words.
+            We interviewed students from underrepresented groups such as women, BIPOC, LGBTQIA+, and people with disabilities to see how they define success. From their responses, we developed some key takeaways and quotes in their own words.
             </HeaderSubtitle>
 
             { carouselItems }
@@ -263,8 +259,7 @@ const carouselItems = [
         Contentment, Happiness, & Balance
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        Individual happiness and contentment rather than external validation are important for success. Finding balance in 
-        life is also important. This could involve balancing academics and social life, and balancing work and leisure time.
+      Balance and individual happiness is important for success. This includes balancing academics, social life, work and leisure time.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
@@ -285,9 +280,7 @@ const carouselItems = [
         Learning and Growth
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        Success is about not giving up, learning from failures, and continuing to strive towards your goals. Success for some is 
-        linked to personal growth and development. This could be in the form of developing communication skills, becoming more 
-        social, or learning about things that are useful and interesting to you.
+      Success is about learning from failures and striving towards your goals. Success is linked to personal growth and development. This could be developing communication skills, social skills, or taking time to learn about things that interest you.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
@@ -310,10 +303,7 @@ const carouselItems = [
         Resilience and Perseverance
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        The conventional notion of such as grades or financial wealth are important, but it's crucial to consider other aspects 
-        like intellectual growth, personal joy, and overall contentment. For these diverse student communities, success is also 
-        assessed by the sense of forward momentum, whether that's in their educational journey, personal interests (like playing the piano), 
-        or individual life paths. The process of growth, self-improvement, and forward movement is a meaningful aspect to success.
+      Grades and financial wealth are important, but it's crucial to consider other aspects of success like intellectual growth, pursuing personal interests, navigating individual life paths, and overall fulfillment.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
@@ -335,9 +325,7 @@ const carouselItems = [
         Career & Financial well-being
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        Although money is not the end all be all, the ability to support oneself and their family is a key aspect of success for underrepresented 
-        students at WPI. This could involve achieving a certain level of financial stability or being able to sustain oneself in terms of knowledge 
-        and skills learned in the classroom so that they can provide it to the future of work.
+      The ability to support oneself and their family is a key aspect of success for students at WPI. This could involve achieving financial stability or maintaining one's expertise and skills for future work.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),
@@ -359,10 +347,7 @@ const carouselItems = [
         Social and Personal Relations
       </CarouselTitleCard.Title>
       <CarouselTitleCard.Body>
-        Having satisfying relationships or having a support network is an important part of success for diverse students at WPI. The transition to 
-        university life can be challenging, and this is often exacerbated for students with diverse backgrounds who may face various barriers 
-        related to their racial/ethnic background, gender, sexuality, religious background, or disability. Having a solid network of friends can 
-        provide social and emotional support.
+      Having a support network is an important part of success for students at WPI. The transition to university life can be challenging, and often exacerbating for marginalized students. Having a solid network of friends can provide social and emotional support.
       </CarouselTitleCard.Body>
     </CarouselTitleCard>
   ),

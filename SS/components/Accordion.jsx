@@ -12,7 +12,7 @@ const externalLink = require("../assets/externalLink.png")
 const arrow = require("../assets/arrow.png")
 const arrowDown = require("../assets/arrowDown.png")
 
-
+/* Main bar for an Accordion */
 export function AccordionTitle ({title, isExpanded, children}) {
   const [expanded, setExpanded] = React.useState(isExpanded);
   const handlePress = () => setExpanded(!expanded);
