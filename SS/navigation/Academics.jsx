@@ -23,7 +23,6 @@ const writingCenter = require("../assets/Academics/writingCenter.jpeg")
 const mtc = require("../assets/Academics/MTC.jpeg")
 
 export default function Academics({ navigation }) {
-
   
   logEvent(analytics, "page_view", {
     page_location: "academics"
