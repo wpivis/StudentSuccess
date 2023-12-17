@@ -13,6 +13,8 @@ const bubblePointRedLeft = require("../assets/bubblePointRedLeft.png");
 const bubblePointWhiteLeft = require("../assets/bubblePointWhiteLeft.png");
 const bubblePointGrayLeft = require("../assets/bubblePointGrayLeft.png");
 
+
+
 export function HeaderRight(props) {
   return (
     <View
