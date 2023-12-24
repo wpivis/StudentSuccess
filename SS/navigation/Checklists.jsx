@@ -187,8 +187,8 @@ export const defaultChecklistdata = {
 }
 
 export function StyledCheckbox(props) {
-  const checkedImage = require("../assets/checkboxChecked.png");
-  const uncheckedImage = require("../assets/checkboxUnchecked.png");
+  const checkedImage = require("../assets/icons/checkboxChecked.png");
+  const uncheckedImage = require("../assets/icons/checkboxUnchecked.png");
   return <Image source={props.checked ? checkedImage : uncheckedImage} style={{ width: 20, height: 20 }} />
 }
 

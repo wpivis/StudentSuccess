@@ -1,17 +1,7 @@
-import { View, Dimensions } from "react-native";
-import {Image} from "expo-image"
+import { Text, View, Dimensions } from "react-native";
 import Carousel from 'react-native-reanimated-carousel';
-import { ImageHeader } from "./Text";
 
-export function ImageContainer(props) {
-  return (
-    <View style={{width: "100%", maxHeight: 400, minHeight: 200, display: "flex", padding: (!props.noMargin ? 14 : 0), flexDirection: "column"}}>
-      <Image source={props.imageSource} style={{height: "100%", width: "100%", objectFit: "cover"}}/>
-    </View>
-  )
-}
-
-export function ImageCarousel(props){
+export function TextCarousel(props){
   const width = Dimensions.get('window').width;
   const carouselWidth = width > 800 ? 800 : width;
   const carouselHeight = 200;
@@ -32,7 +22,7 @@ export function ImageCarousel(props){
                         justifyContent: 'flex-start',
                       }}
                     >
-                      <ImageHeader image={props.data[index].image}>{props.data[index].text}</ImageHeader>
+                      <Text>test</Text>
                     </View>
                   )}
                 />

@@ -1,11 +1,6 @@
 import { View, Text, Pressable, Linking, Alert } from 'react-native'
-import React, {Component, useCallback} from 'react'
-import { crimson, dropShadow, textSecondary } from '../assets/style'
-
-import { Image } from "expo-image"
-
-const arrowRight = require("../assets/arrowRight.png")
-
+import React, {useCallback} from 'react'
+import { crimson, textSecondary } from '../../assets/style'
 
 export const rippleRed = {color: crimson} 
 export const rippleGray = {color: textSecondary} 
@@ -62,34 +57,6 @@ export function ButtonCentered(props) {
   <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
   <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
 </svg>
-      </Pressable>
-    </View>
-  )
-}
-
-export function ButtonBlock({header, text, onClick}) {
-  return (
-    <View style={{...dropShadow, paddingBottom: 14, display: "flex", flexDirection: "row"}}>
-      <View style={{marginLeft: 4, marginRight: 4, padding: 14, flex: 1, backgroundColor: "#e4e4e4", display:"flex", flexDirection: "column", alignItems:"flex-start", justifyContent:"center"}}>
-        <Text style={{fontWeight: "bold"}}>{header}</Text>
-        <View style={{width: "100%", height: 1, backgroundColor: "#1F2327", marginTop: 7, marginBottom: 7}}/>
-        <Text>{text}</Text>
-      </View>
-      <Pressable 
-        onPress={onClick} 
-        style={{
-          width: 100,
-          marginLeft: 4, 
-          marginRight: 4,
-          backgroundColor: crimson, 
-          display:"flex", 
-          flexDirection: "column", 
-          alignItems:"center", 
-          justifyContent:"center"
-        }}
-        android_ripple={rippleGray}
-      >
-        <Image source={arrowRight} style={{width: 24, height: 40}}/>
       </Pressable>
     </View>
   )

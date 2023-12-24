@@ -1,6 +1,5 @@
-import { Text, View } from "react-native";
-import {Image} from "expo-image";
-import { crimson } from "../assets/style";
+import { View } from "react-native";
+import { crimson } from "../../assets/style";
 
 export function DirectoryEntry(props){
   return (

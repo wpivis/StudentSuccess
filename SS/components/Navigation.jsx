@@ -56,7 +56,7 @@ export function Navbar({n, title}) {
   return (
     <View style={{zIndex: 2, height: 80, width: '100%', backgroundColor: "#1f2327", display: 'flex', flexDirection: 'row', alignItems: "center", justifyContent: 'flex-start', position: "sticky", top: 0, left: 0}}>
       <Pressable style={{marginLeft: 20}} onPress={() => n.toggleDrawer()}>
-        <Image source={require("../assets/menuIcon.png")} alt="menu-icon" style={{width: 40, height: 40}} />
+      <Image source={require("../assets/icons/menuIcon.png")} alt="menu-icon" style={{width: 40, height: 40}} />
       </Pressable>
       <Text style={{marginLeft: 14, fontSize: 20, color: "white"}}>{title}</Text>
     </View>
