@@ -1,13 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GrayTextBeam, BodyText } from "../components/Text"
-import { ButtonBlock, ButtonCentered } from "../components/Buttons"
+import { HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GrayTextBeam, BodyText } from "../components/Text"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, RedPlatform } from '../components/Layout'
-import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
-import { ImageContainer } from '../components/Images'
-import { AcademicsChecklist } from './Checklists'
+import { ContentSection, Footer, RedPlatform } from '../components/Layout'
+import { dropShadow } from '../assets/style'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { analytics } from '../firebase'

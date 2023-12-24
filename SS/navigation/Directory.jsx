@@ -1,4 +1,4 @@
-import { View, Text, Button } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { PageHeader} from "../components/Text"

@@ -1,13 +1,12 @@
-import { View, Text, Button, Dimensions } from 'react-native'
+import { View, Text, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam, BodyText } from "../components/Text"
-import { ButtonBlock, ButtonCentered } from "../components/Buttons"
+import { HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GrayTextBeam, BodyText } from "../components/Text"
+import { ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, RedPlatform, HeaderSubtitle } from '../components/Layout'
-import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
-import { ImageContainer } from '../components/Images'
-import { AcademicsChecklist, CampusInvolvementChecklist } from './Checklists'
+import { ContentSection, Footer, LightGrayPlatform, HeaderSubtitle } from '../components/Layout'
+import { dropShadow } from '../assets/style'
+import { CampusInvolvementChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import Carousel from 'react-native-reanimated-carousel'

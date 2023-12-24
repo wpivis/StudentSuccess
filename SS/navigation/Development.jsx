@@ -1,20 +1,16 @@
-import { View, Text, Button } from 'react-native'
+import { View} from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam, TextBold } from "../components/Text"
-import { ButtonBlock, ButtonCentered } from "../components/Buttons"
+import { BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GrayTextBeam, TextBold } from "../components/Text"
+import { ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle, Spacer } from '../components/Layout'
-import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
-import { ImageContainer } from '../components/Images'
-import { AcademicsChecklist } from './Checklists'
+import { ContentSection, Footer, HeaderSubtitle, Spacer } from '../components/Layout'
+import { dropShadow } from '../assets/style'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 import { analytics } from '../firebase'
 import { logEvent } from 'firebase/analytics'
 
-const internships = require("../assets/internships.jpg")
-const coops = require("../assets/coops.jpg")
 const cdc = require("../assets/cdc.png")
 
 export default function Development({ navigation }) {

@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { BodyText, BracketedText, CenteredTitle, HeaderRight, ImageHeader, PageHeader, QuoteLeft, QuoteRight, SectionContentHeader } from "../components/Text"
 import { AccordionTitle, LinkListAccordion, ListSectionAccordion, ListAccordion } from "../components/Accordion/index"
-import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
+import { dropShadow } from '../assets/style'
 
-import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, RedBeam, RedPlatform, TransparentPlatform } from '../components/Layout'
+import { ContentSection, Footer, HeaderSubtitle } from '../components/Layout'
 import { View, Text, Dimensions } from 'react-native'
 
 import Carousel from 'react-native-reanimated-carousel';

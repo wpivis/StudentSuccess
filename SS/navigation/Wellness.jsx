@@ -1,18 +1,17 @@
-import { View, Text, Button, Dimensions } from 'react-native'
+import { View, Text, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { BodyText, BracketedText, ImageHeader, PageHeader, QuoteRight, QuoteLeft } from "../components/Text"
-import { ButtonBlock, ButtonCentered } from "../components/Buttons"
-import { AccordionTitle, AccordionLink, ListSectionAccordion, LinkListAccordion } from "../components/Accordion"
+import { BodyText, BracketedText, PageHeader, QuoteRight, QuoteLeft } from "../components/Text"
+import { ButtonCentered } from "../components/Buttons"
+import { AccordionTitle, ListSectionAccordion, LinkListAccordion } from "../components/Accordion"
 import { ImageCarousel } from '../components/Images'
 
-import { ContentSection, Footer, LightGrayPlatform, TransparentPlatform, RedBeam, HeaderSubtitle } from '../components/Layout'
-import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
-import { AcademicsChecklist, WellnessChecklist } from './Checklists'
+import { ContentSection, Footer, LightGrayPlatform, HeaderSubtitle } from '../components/Layout'
+import { dropShadow } from '../assets/style'
+import { WellnessChecklist } from './Checklists'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
-import Carousel from 'react-native-reanimated-carousel'
 import { logEvent } from 'firebase/analytics'
 import { analytics } from '../firebase'
 

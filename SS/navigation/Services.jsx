@@ -1,19 +1,15 @@
-import { View, Text, Button, Dimensions } from 'react-native'
+import { View, Text, Dimensions } from 'react-native'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import { BodyText, CenteredTitle, HeaderRight, BracketedText, ImageHeader, PageHeader, SectionContentHeader, QuoteRight, QuoteLeft, GreayTextBeam, GrayTextBeam } from "../components/Text"
-import { ButtonBlock, ButtonCentered } from "../components/Buttons"
-import { Image } from "expo-image"
+import { BodyText, ImageHeader, PageHeader, GrayTextBeam } from "../components/Text"
+import { ButtonCentered } from "../components/Buttons"
 
-import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform, TransparentPlatform, RedBeam } from '../components/Layout'
-import { dropShadow, lorem, loremShort, textBlockMaxWidth } from '../assets/style'
-import { ImageContainer } from '../components/Images'
-import { AcademicsChecklist } from './Checklists'
+import { ContentSection, Footer, HeaderSubtitle, LightGrayPlatform } from '../components/Layout'
+import { dropShadow } from '../assets/style'
 import { AppDrawerItemName, } from '../api/navigation'
 import { Navbar, } from '../components/Navigation'
 
 import { ImageCarousel } from '../components/Images'
-import Carousel from 'react-native-reanimated-carousel';
 import { analytics } from '../firebase'
 import { logEvent } from 'firebase/analytics'
 

@@ -1,7 +1,6 @@
 import { View, Text, Pressable } from 'react-native'
 import { Component, useContext } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
-import CheckBox from "expo-checkbox"
 import { crimson, dropShadow } from '../assets/style'
 import { ChecklistsContext } from '../Context'
 import { rippleRed } from '../components/Buttons'
